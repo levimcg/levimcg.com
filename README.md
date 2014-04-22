@@ -1,4 +1,4 @@
-blanks
+Blanks
 ======
 
-A decent starting point for building a Jekyll site
+A decent starting point for building a [Jekyll](http://jekyllrb.com/) site
