@@ -1,9 +1,6 @@
-@import "modules/variables";
-@import "utility/reset";
 
-body {
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-  line-height: 1.6;
-}
+@import "global/variables";
+@import "global/reset";
+@import "global/typography";
+
+@import "components/base";
