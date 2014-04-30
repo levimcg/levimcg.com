@@ -9,10 +9,12 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   </head>
 <body>
-  {% include header.html %}
+  <div class="wrapper">
+    {% include header.html %}
 
-    {{ content }}
+      {{ content }}
 
-  {% include footer.html %}
-</body>
+    {% include footer.html %}
+  </div>
+</body><!-- End wrapper -->
 </html>
