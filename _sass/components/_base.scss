@@ -8,14 +8,23 @@ body {
   font-size: $base-font-size;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 a {
 	color: $color-link;
+	text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+}
+
+p {
+	margin-bottom: 1.5em;
 }
 
 .wrapper {
-	width: $site-max-width;
+	max-width: $site-max-width;
 	margin: 0 auto;
 }
