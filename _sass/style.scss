@@ -1,6 +1,8 @@
 
-@import "global/variables";
-@import "global/reset";
-@import "global/typography";
+@import "utilities/variables";
+@import "utilities/reset";
+@import "utilities/typography";
 
 @import "components/base";
+@import "components/header";
+@import "components/footer";

@@ -14,3 +14,8 @@ body {
 a {
 	color: $color-link;
 }
+
+.wrapper {
+	width: $site-max-width;
+	margin: 0 auto;
+}
