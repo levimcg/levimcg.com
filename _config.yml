@@ -3,5 +3,6 @@ description: A good starting point for building a Jekyll site
 
 markdown: redcarpet
 pygments: true
-
 permalink: /:title
+
+exclude: [README.md, Rakefile]
