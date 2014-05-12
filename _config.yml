@@ -4,5 +4,7 @@ description: A good starting point for building a Jekyll site
 markdown: redcarpet
 pygments: true
 permalink: /:title
+sass:
+    sass_dir: _sass
 
 exclude: [README.md, Rakefile]
