@@ -1,0 +1,27 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+		 -moz-border-radius: $radius;
+		  -ms-border-radius: $radius;
+		 	 -o-border-radius: $radius;
+	 				border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+       -o-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+@mixin clear-fix {
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin responsive($size) {
+	@media screen and (max-width: $size) { @content; }
+}
+
