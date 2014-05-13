@@ -2,7 +2,7 @@ title: Blanks
 description: A good starting point for building a Jekyll site
 
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 permalink: /:title
 sass:
     sass_dir: _sass
