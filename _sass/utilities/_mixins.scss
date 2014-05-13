@@ -13,14 +13,6 @@
           box-shadow: $shadow;
 }
 
-@mixin clear-fix {
-	&:after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
-
 @mixin responsive($size) {
 	@media screen and (max-width: $size) { @content; }
 }
