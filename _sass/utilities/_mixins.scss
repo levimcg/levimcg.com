@@ -1,15 +1,15 @@
 @mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-		 -moz-border-radius: $radius;
-		  -ms-border-radius: $radius;
-		 	 -o-border-radius: $radius;
-	 				border-radius: $radius;
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
 }
 
 // Just specify the values for you box shadows
 
 @mixin box-shadow($shadow) {
-	-webkit-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
        -o-box-shadow: $shadow;
           box-shadow: $shadow;
@@ -18,16 +18,16 @@
 // A subtle hover transition effect
 
 @mixin hover-trans($time-params){
-	-webkit-transition: all $time-params ease;
-	 	 -moz-transition: all $time-params ease;
-	 	 	-ms-transition: all $time-params ease;
-	 	 	 -o-transition: all $time-params ease;
-	 				transition: all $time-params ease;
+  -webkit-transition: all $time-params ease;
+     -moz-transition: all $time-params ease;
+      -ms-transition: all $time-params ease;
+       -o-transition: all $time-params ease;
+          transition: all $time-params ease;
 }
 
 // Simple media query mixin. Just specify your breakpoint and added styles
 
 @mixin responsive($size) {
-	@media screen and (max-width: $size) { @content; }
+  @media screen and (max-width: $size) { @content; }
 }
 

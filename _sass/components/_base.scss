@@ -1,6 +1,6 @@
 /*-----------------------------------------------
 
-	Base styles
+  Base styles
 
 -----------------------------------------------*/
 
@@ -12,19 +12,19 @@ body {
 }
 
 a {
-	color: $color-link;
-	text-decoration: underline;
+  color: $color-link;
+  text-decoration: underline;
 
-		&:hover {
-			text-decoration: none;
-		}
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .wrapper {
-	max-width: $site-max-width;
-	margin: 0 auto;
+  max-width: $site-max-width;
+  margin: 0 auto;
 }
