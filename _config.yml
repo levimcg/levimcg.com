@@ -1,10 +1,7 @@
 title: Blanks
 description: A good starting point for building a Jekyll site
-
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title
 sass:
     sass_dir: _sass
-
 exclude: [README.md, Rakefile]
