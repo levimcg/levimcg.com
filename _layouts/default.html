@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta description="" content="{{ site.description }}">
-    <title>{{ site.title }} | {{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  </head>
+{% include html-head.html %}
+
 <body>
-  <div class="wrapper">
-    {% include header.html %}
 
-      {{ content }}
+  {% include header.html %}
 
-    {% include footer.html %}
-  </div>
-</body><!-- End wrapper -->
+    {{ content }}
+
+  {% include footer.html %}
+    
+</body>
 </html>
