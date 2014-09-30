@@ -9,22 +9,12 @@ deploy_path = "public_html/directory"
 
 desc "Fire up Jekyll and watch for changes"
 	task :jekyll do
-		system "jekyll serve -w"
+		system "jekyll serve -w --baseurl '' "
 	end
 
 desc "build _site directory"
 	task :build do
 		system "jekyll build"
-	end
-
-desc "Have Sass watch for changes and compile"
-	task :sass do
-		system "sass --watch _sass/style.scss:css/style.css --style expanded"
-	end
-
-desc "Compile minified css with Sass"
-	task :sass_prod do
-		system "sass --update _sass/style.scss:css/style-min.css --style compressed"
 	end
 
 desc "Upload site to live server"
