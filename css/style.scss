@@ -1,12 +1,11 @@
 ---
 ---
 
-@import "utilities/variables";
-@import "utilities/mixins";
-@import "utilities/reset";
-@import "utilities/clear-fix";
+@import "global/variables";
+@import "global/mixins";
+@import "global/reset";
+@import "global/clear-fix";
 
-@import "components/typography";
 @import "components/base";
 @import "components/header";
 @import "components/footer";
