@@ -1,25 +1,26 @@
 /*-----------------------------------------------
 
-  Base styles
+    Base styles
 
 -----------------------------------------------*/
 
 body {
-  font-size: $base-font-size;
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
-  line-height: 1.5;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: $color-link;
-  text-decoration: underline;
+    color: $color-link;
+    text-decoration: underline;
 
-    &:hover {
-      text-decoration: none;
-    }
+        &:hover {
+          text-decoration: none;
+        }
 }
 
 p {
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }

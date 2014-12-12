@@ -1,0 +1,11 @@
+// Use the @extend directive to add this as need instead of adding
+// "clearfix" classes everywhere in your markup.
+
+%clearix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
