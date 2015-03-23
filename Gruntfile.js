@@ -25,24 +25,24 @@ module.exports = function(grunt) {
                 dest: '_site/js/scripts.js'
             }
         },
-        // Run Jekyll
         exec: {
-            build: {
-                cmd: 'jekyll build --baseurl'
-            },
+            // Run Jekyll, watch for changes
             serve: {
-                cmd: 'jekyll serve --watch'
+                cmd: 'jekyll serve'
+            },
+            // Build Jekyll site for deployment
+            build: {
+                cmd: 'jekyll build --config _config.yml,_build.yml'
             }
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-exec');
 
-    grunt.registerTask('jek', ['exec:serve']);
-    grunt.registerTask('default', ['browserSync']);
+    grunt.registerTask('default', ['exec:serve']);
+    grunt.registerTask('build', ['exec:build'])
+    grunt.registerTask('live', ['browserSync']);
 };
