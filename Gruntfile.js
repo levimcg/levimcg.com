@@ -25,6 +25,11 @@ module.exports = function(grunt) {
                 dest: '_site/js/scripts.js'
             }
         },
+        clean: {
+            build: {
+                src: ['_site']
+            }
+        },
         exec: {
             // Run Jekyll, watch for changes
             serve: {
@@ -43,9 +48,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-exec');
 
     grunt.registerTask('default', ['exec:serve']);
-    grunt.registerTask('build', ['exec:build_message', 'exec:build'])
+    grunt.registerTask('build', ['exec:build_message', 'clean:build', 'exec:build'])
     grunt.registerTask('live', ['browserSync']);
 };
