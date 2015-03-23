@@ -4,9 +4,9 @@ markdown: redcarpet
 highlighter: pygments
 sass:
     sass_dir: _sass
-    style: compressed
+    style: expanded
 permalink: :title
-exclude: [README.md, Rakefile]
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json]
 
 # use this to insert a list of keywords in a <meta> tag in "html-head.html"
 
@@ -14,13 +14,3 @@ exclude: [README.md, Rakefile]
 #   - yaml
 #   - list
 #   - "of keywords"
-
-# Glynn FTP - https://github.com/dmathieu/glynn
-# This is a really simple way to deploy your site with one command.
-# You'll need to Install the gem first.
-# Just delete this part if you are using something else to deploy.
-
-# ftp_host: 'yoursite.com'
-# ftp_dir: 'public_html/your-directory'
-# ftp_passive: false
-# ftp_username: 'your_ftp_user_name'

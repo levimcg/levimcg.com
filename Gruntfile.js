@@ -1,35 +1,5 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        // Compile Sass
-        sass: {
-            dev: {
-                files: {
-                    'css/style.css': '_sass/style.scss'
-                },
-                options: {
-                    style: 'expanded'
-                }
-            },
-            build: {
-                files: {
-                    'css/style.css': '_sass/style.scss'
-                },
-                options: {
-                    style: 'compressed'
-                }
-            }
-        },
-        // Watch task
-        watch: {
-            sass: {
-                files: '_sass/**/*.scss',
-                tasks: ['sass:dev']
-            },
-            js: {
-                files: ['js/**/*.js', '!js/scripts.js'],
-                tasks: ['concat']
-            }
-        },
         // BrowserSync automatically reloads everything
         browserSync: {
             bsFiles: {
@@ -73,9 +43,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-exec');
 
-    grunt.registerTask(
-        'default',
-        'Watches and compiles Sass and js files',
-        ['browserSync', 'exec:serve']
-    );
+    grunt.registerTask('jek', ['exec:serve']);
+    grunt.registerTask('default', ['browserSync']);
 };
