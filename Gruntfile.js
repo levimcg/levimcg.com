@@ -31,6 +31,9 @@ module.exports = function(grunt) {
                 cmd: 'jekyll serve'
             },
             // Build Jekyll site for deployment
+            build_message: {
+                cmd: 'echo "Building a fresh copy of you site ready to deploy!"'
+            },
             build: {
                 cmd: 'jekyll build --config _config.yml,_build.yml'
             }
@@ -43,6 +46,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
 
     grunt.registerTask('default', ['exec:serve']);
-    grunt.registerTask('build', ['exec:build'])
+    grunt.registerTask('build', ['exec:build_message', 'exec:build'])
     grunt.registerTask('live', ['browserSync']);
 };
