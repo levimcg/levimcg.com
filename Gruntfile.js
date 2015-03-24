@@ -1,6 +1,10 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        // BrowserSync automatically reloads everything
+        // Read package.json so that we can store our deploy variables.
+        pkg: grunt.file.readJSON('package.json'),
+        // BrowserSync automatically reloads everything This is a little wonky
+        // right now. You have to run the default "grunt" command now to start Jekyll
+        // and then open a new terminal tab and run "grunt bs" to use BrowserSync
         browserSync: {
             bsFiles: {
                 src: ['css/*.css', 'js/**/*.js', '**/*.html']
@@ -41,6 +45,12 @@ module.exports = function(grunt) {
             },
             build: {
                 cmd: 'jekyll build --config _config.yml,_build.yml'
+            },
+            deploy_message: {
+                cmd: 'echo "Deploying your site to <%= pkg.deployPath %>"'
+            },
+            deploy: {
+                cmd: 'rsync -avze "ssh -p 22" --progress _site/ <%= pkg.deployUser %>:<%= pkg.deployPath %>'
             }
         }
     });
@@ -52,6 +62,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
 
     grunt.registerTask('default', ['exec:serve']);
-    grunt.registerTask('build', ['exec:build_message', 'clean:build', 'exec:build'])
-    grunt.registerTask('live', ['browserSync']);
+    grunt.registerTask('bs', ['browserSync']);
+    grunt.registerTask('build', ['exec:build_message', 'clean:build', 'exec:build']);
+    grunt.registerTask('live', ['exec:deploy_message', 'exec:deploy']);
 };
