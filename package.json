@@ -1,9 +1,9 @@
 {
-  "name": "blanks",
+  "name": "Blanks",
   "version": "1.0.0",
   "description": "A decent starting point for building a Jekyll",
   "deployUser": "you@yoursite.com",
-  "deployPath": "public_html/your-site-dir/",
+  "deployPath": "path/to/your/stuff",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-browser-sync": "~1.3.6",

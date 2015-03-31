@@ -50,7 +50,7 @@ module.exports = function(grunt) {
                 cmd: 'echo "Deploying your site to <%= pkg.deployPath %>"'
             },
             deploy: {
-                cmd: 'rsync -avze "ssh -p 22" --progress _site/ <%= pkg.deployUser %>:<%= pkg.deployPath %>'
+                cmd: 'rsync -avze ssh --progress _site/ <%= pkg.deployUser %>:<%= pkg.deployPath %>'
             }
         }
     });
