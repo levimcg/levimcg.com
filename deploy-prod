@@ -1,0 +1,7 @@
+# Deploy your production site using rsync
+# Change user@your-domain.com your ftp/ssh user name
+# Change "public_html/" to the path you want to deploy your site to
+
+rsync -avze ssh --progress _site/ user@your-domain.com:public_html/
+
+exit 0

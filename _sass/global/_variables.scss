@@ -1,21 +1,14 @@
-// Some sensible typographic defaults
-// 1. Set the base font size to 100%, then use relative units i.e. "ems/rems"
-// 2. Use a default font stack that uses system default fonts as a 
-//    last resort
+// Typography defaults
 $base-font-size: 100%;
 $base-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-
 $heading-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$heading-font-weight: 700;
 
+// Colors
 $color-link: #2b48ff;
 $color-text: #304650;
 $color-quiet: #bbb;
 
-$bold-font-weight: 700;
-
-$site-max-width: 1080px;
-
-$break-point-small: 500px;
-$break-point-medium: 800px;
-$break-point-large: 1080px;
+// Breakpoints
+$bp-small: 500px;
+$bp-medium: 800px;
+$bp-large: 1080px;

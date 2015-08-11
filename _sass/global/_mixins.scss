@@ -26,9 +26,17 @@
             transition: all $time-params ease;
 }
 
+@mixin clear-fix {
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
 // Simple media query mixin. Just specify your breakpoint and added styles
 
 @mixin responsive($size) {
-    @media screen and (max-width: $size) { @content; }
+    @media screen and (min-width: $size) { @content; }
 }
 
