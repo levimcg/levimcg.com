@@ -1,16 +1,8 @@
 title: Blanks
 description: A good starting point for building a Jekyll site
-markdown: redcarpet
 highlighter: pygments
 sass:
     sass_dir: _sass
     style: expanded
 permalink: :title
-exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json]
-
-# use this to insert a list of keywords in a <meta> tag in "html-head.html"
-
-# keywords:
-#   - yaml
-#   - list
-#   - "of keywords"
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod]
