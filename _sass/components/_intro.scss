@@ -1,0 +1,18 @@
+/*-----------------------------------------------
+    Intro
+
+    Intro section for the home page
+
+    _intro.scss
+-----------------------------------------------*/
+
+.intro {
+    padding: 3em 0 10em 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.intro__text {
+    margin: 0;
+    font-size: $font-size-3;
+}

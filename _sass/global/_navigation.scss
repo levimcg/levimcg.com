@@ -1,0 +1,59 @@
+/*-----------------------------------------------
+    Navigation
+
+    Global navigation, modual so it can be used
+    outside of the header if needed.
+
+    _navigation.scss
+-----------------------------------------------*/
+
+@include responsive($bp-medium) {
+    .site-nav {
+        float: right;
+        text-align: right;
+        width: 75%;
+    }
+}
+
+.site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav__item {
+    display: inline-block;
+    margin-right: 1em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color .3s ease;
+        padding-bottom: .25em;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.site-nav--footer a {
+    color: rgba($color-text, .5);
+}
+
+.home .site-header .site-nav__item--home a {
+    border-bottom: 2px solid $color-primary;
+}
+
+.about .site-header .site-nav__item--about a {
+    border-bottom: 2px solid $color-secondary;
+}
+
+.junk-room .site-header .site-nav__item--junk-room a {
+    border-bottom: 2px solid $color-alternate;
+}
+

@@ -1,18 +1,49 @@
 ---
 layout: default
-title: Blanks A clean slate for building a Jekyll site
+title: Home
+body: home
 ---
-
-<!-- ****** 
-
-    A simple Jekyll/Liquid for loop to display your posts. Learn about
-    the awesome stuff you can do with the Liquid template language
-    here: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
-    
-****** -->
-<div class="container">
-    <div class="unit whole">
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
+<section class="intro">
+    <div class="container">
+        <div class="unit three-fourths">
+            <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else.</h1>    
+        </div>
     </div>
-</div>
+</section>
+<section class="projects">
+    <div class="container">
+        <div class="unit whole">
+            <ul class="list-grid-half">
+                {% for project in site.projects %}
+                <li class="projects__item">
+                    <a href="{{ site.baseurl }}{{ project.url }}" class="project">
+                        <img src="{{ project.thumbnail }}">
+                        <div class="project__info">
+                            <h2 class="project__title" {% if project.reverse %}style="color: #2c2f35;"{% endif %}>{{ project.title }}</h2>
+                        </div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>    
+        </div>
+    </div>   
+</section>
+<section class="mini-bio l-slice">
+    <div class="container">
+            <div class="unit half push">
+                <div class="info">
+                    <h3 class="info__title">Oh, hello</h3>
+                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hello</a>.</p> 
+                </div>
+                <div class="info">
+                    <h3 class="info__title">Elsewhere</h3>
+                    <ul class="info__list">
+                        <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
+                        <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
+                        <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
+                        <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+</section>

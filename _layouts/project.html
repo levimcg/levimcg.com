@@ -1,0 +1,47 @@
+{% include html-head.html %}
+<body class="{% if page.body %}{{ page.body }}{% endif %}">
+    {% include header.html %}
+        <div class="container">
+            <div class="unit three-fifths push">
+                <header class="project-header">
+                    <h1 class="project-header__title">{{ page.title }}</h1>
+                    {{ content }}
+                    <h2 class="project-header__sub-head">Filed under</h2>
+                    {% for tag in page.tags %}
+                        <span class="project-header__tag">{{ tag }}</span>
+                    {% endfor %}
+                </header>    
+            </div>
+        </div>
+        <div class="container">
+            <div class="unit whole">
+                <ul class="images-list">
+                    {% for pic in page.pics %}
+                        <li class="images-list__item">
+                            <figure>
+                                <img src="{{ pic }}">
+                            </figure>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="unit whole">
+                <ul class="list-grid-thirds">
+                    {% for project in site.projects %}
+                    <li class="projects__item">
+                        <a href="{{ site.baseurl }}{{ project.url }}" class="project">
+                            <img src="{{ project.thumbnail }}">
+                            <div class="project__info">
+                                <h2 class="project__title" {% if project.reverse %}style="color: #2c2f35;"{% endif %}>{{ project.title }}</h2>
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>  
+            </div>
+        </div>
+    {% include footer.html %}
+</body>
+</html>

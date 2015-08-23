@@ -1,8 +1,14 @@
-title: Blanks
-description: A good starting point for building a Jekyll site
+title: Levi McGranahan
+description: Web and brand identity
 highlighter: pygments
 sass:
     sass_dir: _sass
     style: expanded
 permalink: :title
 exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod]
+
+user: levimcg
+
+collections:
+    projects:
+        output: true

@@ -5,7 +5,12 @@
 @import "global/mixins";
 @import "global/normalize";
 @import "global/grid";
+@import "global/base";
+@import "global/header";
+@import "global/navigation";
+@import "global/footer";
+@import "global/utilities";
 
-@import "components/base";
-@import "components/header";
-@import "components/footer";
+@import "components/intro";
+@import "components/projects";
+@import "components/info-module";

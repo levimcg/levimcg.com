@@ -1,0 +1,85 @@
+/*-----------------------------------------------
+    Projects
+
+    Projects list styles
+
+    _projects.scss
+-----------------------------------------------*/
+
+.project {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-color: $color-background;
+    
+    img {
+        transition: .3s opacity ease;
+    }
+    
+    &:hover {
+        .project-description {
+            display: block;
+        }
+        
+        img {
+            opacity: .25;
+        }    
+    }
+}
+
+.project__info {
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+}
+
+.project__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: $font-size-6;
+}
+
+.project__description {
+    margin: 0;
+}
+
+.project-header {
+    padding-bottom: 3em;
+}
+
+.project-header__title {
+    font-size: $font-size-4;
+    font-weight: 300;
+}
+
+.project-header__sub-head {
+    font-size: 1em;
+    font-family: $font-family-alternate;
+    font-size: .85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    color: $color-text-quiet;
+}
+
+.project-header__tag:after {
+    content: ",";
+}
+
+.project-header__tag:last-child:after {
+    content: "";
+}
+
+.images-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.images-list__item {
+    margin-bottom: 2.25em;
+}
+

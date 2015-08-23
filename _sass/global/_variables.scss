@@ -1,14 +1,29 @@
 // Typography defaults
 $base-font-size: 100%;
-$base-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-$heading-font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$base-font-family: 'Source Serif Pro', serif;
+$font-family-alternate: "Work Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 // Colors
-$color-link: #2b48ff;
-$color-text: #304650;
+$color-primary: #00a887;
+$color-secondary: #0081c9;
+$color-alternate: #ff4237;
+
+
+$color-background: #2c2f35;
+$color-link: $color-primary;
+$color-text: #ffffff;
+$color-text-quiet: rgba($color-text, .5);
 $color-quiet: #bbb;
 
 // Breakpoints
 $bp-small: 500px;
-$bp-medium: 800px;
+$bp-medium: 768px;
 $bp-large: 1080px;
+
+// Font sizes
+$font-size-1: 3em;
+$font-size-2: 2.5em;
+$font-size-3: 2em;
+$font-size-4: 1.85em;
+$font-size-5: 1.25em;
+$font-size-6: 1em;

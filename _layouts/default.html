@@ -1,5 +1,5 @@
 {% include html-head.html %}
-<body>
+<body class="{% if page.body %}{{ page.body }}{% endif %}">
     {% include header.html %}
         {{ content }}
     {% include footer.html %}

@@ -1,0 +1,35 @@
+/*-----------------------------------------------
+    Header
+
+    Global site header
+
+    _header.scss
+-----------------------------------------------*/
+
+.site-header {
+    margin-top: 1em;
+    @include clear-fix;
+}
+
+.site-header__logo {
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color .3s ease;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+@include responsive($bp-medium) {
+    .site-header__logo {
+        float: left;
+        width: 25%;
+    }
+}
