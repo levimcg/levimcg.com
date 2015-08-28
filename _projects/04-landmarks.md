@@ -1,6 +1,6 @@
 ---
 title: Landmarks
-thumbnail: http://www.fillmurray.com/1200/800
+thumbnail: http://placehold.it/600x400
 permalink: :collection/:title/
 layout: default
 ---
