@@ -8,6 +8,8 @@ tags:
 - Brand Identity
 - Website
 pics:
+- http://static.levimcg.com/queen-city/queen-city-mark-only.jpg
 - http://static.levimcg.com/queen-city/queen-city-1.png
+website: http://wearequeencity.com
 ---
-Queen City is a tattoo shop in Terre Haute, IN that works hard to make their customer's experience the best it can be. I worked with the founders to create a identity that would set them apart from other shops that have followed the same formula of harsh and intimidating logos and imagery.
+Queen City is a tattoo shop that works hard to make their customer's experience the best it can be. I worked with the founders to create a identity and website that would set them apart from other shops that follow the same formula.

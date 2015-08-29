@@ -7,7 +7,8 @@
 -----------------------------------------------*/
 
 .intro {
-    padding: 3em 0 10em 0;
+    padding: 4em 0 10em 0;
+    padding: 5vh 0 5vh 0;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -15,4 +16,12 @@
 .intro__text {
     margin: 0;
     font-size: $font-size-3;
+}
+
+@include responsive($bp-medium) {
+    
+    .intro {
+        padding: 4em 0 9em 0;
+        padding: 12vh 0 20vh 0;
+    }
 }

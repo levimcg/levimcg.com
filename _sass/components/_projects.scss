@@ -53,6 +53,23 @@
 .project-header__title {
     font-size: $font-size-4;
     font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1.15em;
+}
+
+.project-header__website {
+    display: inline-block;
+    font-size: .875em;
+    margin-bottom: 1.75em;
+    padding: .25em .8em;
+    background-color: $color-primary;
+    @include border-radius(3px);
+    transition: background-color .3s ease;
+
+    &:hover {
+        color: #ffffff;
+        background-color: $color-secondary;
+    }
 }
 
 .project-header__sub-head {
@@ -63,6 +80,10 @@
     letter-spacing: 1px;
     margin: 0;
     color: $color-text-quiet;
+}
+
+.project-header__tag {
+    color: rgba($color-text, .65);
 }
 
 .project-header__tag:after {

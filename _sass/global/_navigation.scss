@@ -45,7 +45,8 @@
     color: rgba($color-text, .5);
 }
 
-.home .site-header .site-nav__item--home a {
+.home .site-header .site-nav__item--home a,
+.projects .site-header .site-nav__item--home a {
     border-bottom: 2px solid $color-primary;
 }
 
