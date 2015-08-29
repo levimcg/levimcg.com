@@ -58,3 +58,18 @@
     border-bottom: 2px solid $color-alternate;
 }
 
+// Temproary modifier for link to source files
+.site-nav__item--source a {
+    color: #fff;
+    background-color: $color-primary;
+    display: inline-block;
+    padding: .25em .5em;
+    @include border-radius(3px);
+
+    &:hover {
+        background-color: mix($color-primary, black, 90%);
+        color: #fff;
+        box-shadow: 0 3px 0 mix($color-primary, black, 70%);
+    }
+}
+
