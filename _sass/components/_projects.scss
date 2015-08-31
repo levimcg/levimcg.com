@@ -73,7 +73,6 @@
 }
 
 .project-header__sub-head {
-    font-size: 1em;
     font-family: $font-family-alternate;
     font-size: .85em;
     text-transform: uppercase;
@@ -83,6 +82,7 @@
 }
 
 .project-header__tag {
+    font-size: .85em;
     color: rgba($color-text, .65);
 }
 
