@@ -104,3 +104,14 @@
     margin-bottom: 2.25em;
 }
 
+.project-content__figure {
+    margin-bottom: 2em;
+
+    figcaption {
+        color: $color-text-quiet;
+        padding-top: .5em;
+        font-family: $font-family-alternate;
+        font-size: .875em;
+    }
+}
+

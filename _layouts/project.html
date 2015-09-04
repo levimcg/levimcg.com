@@ -3,10 +3,10 @@
     {% include header.html %}
         <header class="project-header">
             <div class="container">
-                <div class="unit two-thirds push">
+                <div class="unit three-fifths push">
                     <h1 class="project-header__title">{{ page.title }}</h1>
                     <span class="project-header__description">
-                        {{ content }}    
+                        <p>{{ page.description }}</p>
                     </span>
                     {% if page.website %}
                         <a class="project-header__website" href="{{ page.website }}" target="_blank">Go to site</a>
@@ -18,19 +18,9 @@
                 </div>
             </div>
         </header>
-        <div class="container">
-            <div class="unit whole">
-                <ul class="images-list">
-                    {% for pic in page.pics %}
-                        <li class="images-list__item">
-                            <figure>
-                                <img src="{{ pic }}">
-                            </figure>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        <section class="project-content">
+            {{ content }}    
+        </section>
         
     {% include footer.html %}
 </body>
