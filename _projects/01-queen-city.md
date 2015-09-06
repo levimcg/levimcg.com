@@ -8,9 +8,6 @@ body: projects
 tags:
 - Brand Identity
 - Website
-pics:
-- http://static.levimcg.com/queen-city/queen-city-mark-only.jpg
-- http://static.levimcg.com/queen-city/queen-city-1.png
 website: http://wearequeencity.com
 ---
 <div class="container">

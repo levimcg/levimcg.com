@@ -12,6 +12,7 @@ $grid-gutters: 1em;
 
 .container {
     max-width: $grid-max-width;
+    width: 94%;
     margin: 0 auto;
 
     &:after {

@@ -1,0 +1,21 @@
+/*-----------------------------------------------
+    Callout
+    _callout.scss
+    
+    Callout module with heading and description
+    text. Used on project pages.
+-----------------------------------------------*/
+
+.callout__heading {
+    font-size: $font-size-4;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+.callout__text {
+    color: mix($color-background, white, 20%);
+
+    a {
+        text-decoration: underline;
+    }
+}

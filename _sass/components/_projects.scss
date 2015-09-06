@@ -42,34 +42,47 @@
     font-size: $font-size-6;
 }
 
-.project__description {
-    margin: 0;
-}
-
 .project-header {
-    padding-bottom: 3em;
+    padding: 12vh 0 6vh 0;
 }
 
 .project-header__title {
-    font-size: $font-size-4;
+    font-size: $font-size-3;
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 1.15em;
 }
 
-.project-header__website {
-    display: inline-block;
-    font-size: .875em;
-    margin-bottom: 1.75em;
-    padding: .25em .8em;
-    background-color: $color-primary;
-    @include border-radius(3px);
-    transition: background-color .3s ease;
+.project-header__description p {
+    color: mix($color-background, white, 20%);
+}
 
-    &:hover {
-        color: #ffffff;
-        background-color: $color-secondary;
+.project-header__meta {
+    margin-bottom: 2em;
+}
+
+.project-header__meta-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.project-header__meta-item {
+    font-size: .85em;
+    display: inline-block;
+
+    &:after {
+        content: ","
     }
+
+    &:last-child:after {
+        content: "";
+    }
+}
+
+.project-header__meta-item a:hover {
+    color: $color-primary;
+    text-decoration: underline;
 }
 
 .project-header__sub-head {
@@ -77,13 +90,9 @@
     font-size: .85em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: .25em;
     color: $color-text-quiet;
-}
-
-.project-header__tag {
-    font-size: .85em;
-    color: rgba($color-text, .65);
 }
 
 .project-header__tag:after {
