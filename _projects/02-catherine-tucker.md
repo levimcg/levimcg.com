@@ -15,11 +15,9 @@ website: http://drcatherinetucker.com
     <div class="unit whole">
         <figure class="project-content__figure">
             <img src="http://static.levimcg.com/catherine-tucker/catherine-tucker-mobile.jpg">
-            <figcaption>Website—Mobile</figcaption>
         </figure>
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-desktop.jpg">
-            <figcaption>Website—desktop</figcaption>
         </figure>
     </div>
 </div>
@@ -33,7 +31,6 @@ website: http://drcatherinetucker.com
     <div class="unit three-fifths pull">
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-style-guide.png">
-            <figcaption>Web style guide</figcaption>
         </figure>        
     </div>
 </div>
@@ -44,10 +41,9 @@ website: http://drcatherinetucker.com
             <p class="callout__text">From the very begining of the project I let the client know that I would not be presenting polished static mockups, but that I would be making look and feel pages using the styles and compontents I was building for the style guide.</p>
         </aside>    
     </div>
-    <div class="unit three-fifths">
+    <div class="unit three-fifths push">
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-look-and-feel.png">
-            <figcaption>Design deliverables</figcaption>
         </figure>   
     </div>
 </div>

@@ -1,3 +1,17 @@
 .l-slice {
-    padding: 2.5em 0;
+    padding: 1em 0;    
+}
+
+@include responsive($bp-medium) {
+    .l-slice {
+        padding: 2.5em 0;    
+    }
+}
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }

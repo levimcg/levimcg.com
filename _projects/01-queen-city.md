@@ -14,19 +14,15 @@ website: http://wearequeencity.com
     <div class="unit whole">
         <figure class="project-content__figure">
             <img src="http://static.levimcg.com/queen-city/queen-city-mark-only.jpg">
-            <figcaption>Logo mark</figcaption>
         </figure>
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/queen-city/queen-city-1.png">
-            <figcaption>Full lockup</figcaption>
         </figure>
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/queen-city/queen-city-web-mobile.jpg">
-            <figcaption>Website—Mobile</figcaption>
         </figure>
         <figure class="project-content__figure">
             <img src="//static.levimcg.com/queen-city/queen-city-web-desktop.jpg">
-            <figcaption>Website—Desktop</figcaption>
         </figure>
     </div>
 </div>

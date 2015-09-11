@@ -29,11 +29,17 @@
 }
 
 .project__info {
-    padding: 1em;
+    padding: .5em;
     position: absolute;
     top: 0;
     left: 0;
     color: #fff;
+}
+
+@include responsive($bp-medium) {
+    .project__info {
+        padding: 1em;
+    }    
 }
 
 .project__title {
@@ -43,12 +49,17 @@
 }
 
 .project-header {
-    padding: 12vh 0 6vh 0;
+    padding: 2em 0;
+    padding: 6vh 0 3vh 0;
+}
+
+@include responsive($bp-medium) {
+    padding: 12vh 0 6vh 0;    
 }
 
 .project-header__title {
     font-size: $font-size-3;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 0;
     margin-bottom: 1.15em;
 }
@@ -101,16 +112,6 @@
 
 .project-header__tag:last-child:after {
     content: "";
-}
-
-.images-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.images-list__item {
-    margin-bottom: 2.25em;
 }
 
 .project-content__figure {
