@@ -54,7 +54,9 @@
 }
 
 @include responsive($bp-medium) {
-    padding: 12vh 0 6vh 0;    
+    .project-header {
+        padding: 12vh 0 8vh 0;
+    }
 }
 
 .project-header__title {
@@ -114,14 +116,55 @@
     content: "";
 }
 
-.project-content__figure {
+.project-content {
     margin-bottom: 2em;
+}
+
+.project-content__figure {
+    margin-bottom: 1em;
 
     figcaption {
         color: $color-text-quiet;
         padding-top: .5em;
-        font-family: $font-family-alternate;
         font-size: .875em;
+    }
+}
+
+@include responsive($bp-medium) {
+    .project-content__figure {
+        margin-bottom: 2em;
+    }
+}
+
+.projects-more {
+    list-style: none;
+    margin: $grid-gutters * -.5;
+    padding: 0;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    li {
+        display: block;
+        float: left;
+        padding: $grid-gutters * .5;
+        width: 50%;
+    }
+}
+
+@include responsive($bp-medium) {
+
+    .projects-more {
+        margin: $grid-gutters * -1;
+
+        li {
+            width: 33.333%;
+            padding: $grid-gutters;    
+        }
+        
     }
 }
 

@@ -17,6 +17,12 @@ body {
      -webkit-font-smoothing: antialiased;
 }
 
+body * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
 body.projects {
     background-image: none;
 }
@@ -30,7 +36,7 @@ body.projects {
 
 @include responsive($bp-medium) {
     body {
-        font-size: 120%;
+        font-size: 125%;
         background-size: 100%;
         background-position: right 0 top 5em;
     }
@@ -38,7 +44,7 @@ body.projects {
 
 @include responsive($bp-large) {
     body {
-        font-size: 130%;
+        font-size: 135%;
     }
 }
 
@@ -54,6 +60,7 @@ a {
 }
 
 p {
+    font-size: 1em;
     margin-bottom: 1.5em;
 }
 
@@ -100,7 +107,7 @@ figure {
 hr {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: block;
     padding: .5em 0;
 }

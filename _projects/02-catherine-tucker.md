@@ -1,7 +1,7 @@
 ---
 title: Catherine Tucker
 description: Catherine Tucker is a play therapist, mental health counselor who recently started offering series of play therapy workshops and consultation services. I worked with her to build a new website where she could manage promotion and information about her workshops and blog as she is working on an upcoming book.
-thumbnail: http://static.levimcg.com/catherine-tucker/catherine-tucker-thumbnail.jpg
+thumbnail: http://static.levimcg.com/catherine-tucker/catherine-tucker-thumbnail
 permalink: :collection/:title/
 layout: project
 body: projects
@@ -14,10 +14,16 @@ website: http://drcatherinetucker.com
 <div class="container">
     <div class="unit whole">
         <figure class="project-content__figure">
-            <img src="http://static.levimcg.com/catherine-tucker/catherine-tucker-mobile.jpg">
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-mobile--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-mobile--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-mobile--large.jpg 2000w">
         </figure>
         <figure class="project-content__figure">
-            <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-desktop.jpg">
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-home--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-home--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-home--large.jpg 2000w">
         </figure>
     </div>
 </div>
@@ -30,8 +36,12 @@ website: http://drcatherinetucker.com
     </div>
     <div class="unit three-fifths pull">
         <figure class="project-content__figure">
-            <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-style-guide.png">
-        </figure>        
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-style-guide--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-style-guide--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-style-guide--large.jpg 2000w">
+            <figcaption>Web style guide</figcaption>
+        </figure>                
     </div>
 </div>
 <div class="container l-slice">
@@ -43,7 +53,27 @@ website: http://drcatherinetucker.com
     </div>
     <div class="unit three-fifths push">
         <figure class="project-content__figure">
-            <img src="//static.levimcg.com/catherine-tucker/catherine-tucker-look-and-feel.png">
-        </figure>   
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-look-and-feel--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-look-and-feel--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-look-and-feel--large.jpg 2000w">
+            <figcaption>Design deliverables</figcaption>
+        </figure>     
+    </div>
+</div>
+<div class="container">
+    <div class="unit whole">
+        <figure class="project-content__figure">
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-events--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-events--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-events--large.jpg 2000w">
+        </figure>
+        <figure class="project-content__figure">
+            <img
+                src="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-blog--small.jpg"
+                srcset="http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-blog--medium.jpg 1200w,
+                http://static.levimcg.com/catherine-tucker/catherine-tucker-desktop-blog--large.jpg 2000w">
+        </figure> 
     </div>
 </div>
