@@ -46,12 +46,12 @@
     border-bottom: 2px solid $color-primary;
 }
 
-.about .site-header .site-nav__item--about a {
-    border-bottom: 2px solid $color-secondary;
+.notes-home .site-header .site-nav__item--notes a {
+    border-bottom: 2px solid $color-alternate;
 }
 
-.junk-room .site-header .site-nav__item--junk-room a {
-    border-bottom: 2px solid $color-alternate;
+.about .site-header .site-nav__item--about a {
+    border-bottom: 2px solid $color-secondary;
 }
 
 // Temproary modifier for link to source files

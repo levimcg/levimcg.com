@@ -5,3 +5,28 @@
 
     _shamefile.scss
 -----------------------------------------------*/
+
+.reverse-theme {
+    background-image: none;
+    background-color: $color-text;
+    background-size: 600px;
+    background-position: top left;
+    color: $color-background;
+
+    .site-header__logo a {
+        color: $color-background;
+    }
+
+    .site-nav__item a {
+        color: $color-background;
+    }
+
+    hr {
+        border-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+// body.post {
+//     background-image: none;
+// }
+

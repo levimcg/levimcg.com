@@ -1,0 +1,114 @@
+/*-----------------------------------------------
+    Notes
+    _notes.scss
+    
+    Styles for different article styles in the
+    Blog/notes section of the site
+-----------------------------------------------*/
+
+.notes {
+    padding: 2em 0;
+    padding: 6vh 0 3vh 0;
+}
+
+@include responsive($bp-medium) {
+    .notes {
+        padding: 2em 0;
+        padding: 12vh 0 8vh 0;
+    }
+}
+
+.notes-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.notes-list__item {
+    padding: 3em 0;
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.note {
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+.note-content {
+    padding-bottom: 1em;
+}
+
+.note-content--square {
+    float: left;
+    padding-right: 3.5em;
+    width: 60%;    
+}
+
+.note-content--landscape {
+    width: 60%;
+    float: right;
+}
+
+.note-content--center {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.note-content__title {
+    margin-top: 0;
+    margin-bottom: .25em;
+    font-size: $font-size-3;
+    line-height: 1;
+}
+
+.note-content__caption p {
+    color: $color-text-quiet;
+}
+
+.note-content__date {
+    display: block;
+    color: $color-quiet;
+    text-transform: uppercase;
+    font-family: $font-family-alternate;
+}
+
+.note-figure--square {
+    width: 60%;
+    margin: 2em auto 0 auto;
+}
+
+.note-figure--landscape {
+    margin-top: 2em;
+}
+
+.note-single {
+    padding: 4em 0;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+.note-single__title {
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.note-single__date {
+    color: $color-quiet;
+}
+
+.note-single__teaser {
+    font-size: $font-size-5;
+}
+

@@ -1,6 +1,6 @@
 // Typography defaults
 $base-font-size: 100%;
-$base-font-family: 'leitura-news', serif;
+$base-font-family: 'Source Serif Pro', serif;
 $font-family-alternate: "Work Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 // Colors
@@ -10,10 +10,11 @@ $color-alternate: #ff4237;
 
 
 $color-background: #2c2f35;
+$color-ruler: mix($color-background, white, 70%);
 $color-link: $color-primary;
 $color-text: #ffffff;
-$color-text-quiet: rgba($color-text, .5);
-$color-quiet: #bbb;
+$color-text-quiet: mix($color-background, white, 20%);
+$color-quiet: mix($color-background, white, 40%);
 
 // Breakpoints
 $bp-small: 500px;

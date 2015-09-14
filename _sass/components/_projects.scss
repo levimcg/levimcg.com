@@ -62,6 +62,7 @@
 .project-header__title {
     font-size: $font-size-3;
     font-weight: 400;
+    line-height: 1;
     margin-top: 0;
     margin-bottom: 1.15em;
 }
@@ -98,14 +99,16 @@
     text-decoration: underline;
 }
 
-.project-header__sub-head {
+.project-header__sub-head,
+.sub-head,
+.note-content__date {
     font-family: $font-family-alternate;
     font-size: .85em;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 0;
     margin-bottom: .25em;
-    color: $color-text-quiet;
+    color: $color-quiet;
 }
 
 .project-header__tag:after {

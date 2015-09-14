@@ -27,6 +27,12 @@ body.projects {
     background-image: none;
 }
 
+body.notes-home {
+    background-size: 600px;
+    background-position: top left;
+    background-image: url("../img/floaters-basic.svg");
+}
+
 
 @include responsive($bp-small) {
     body {

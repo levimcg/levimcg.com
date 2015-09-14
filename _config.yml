@@ -4,7 +4,9 @@ highlighter: pygments
 sass:
     sass_dir: _sass
     style: expanded
-permalink: :title
+permalink: notes/:title
+paginate: 5
+paginate_path: "/notes/page:num/"
 exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod]
 
 user: levimcg
