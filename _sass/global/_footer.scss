@@ -5,16 +5,17 @@
 -----------------------------------------------*/
 .site-footer {
     padding: 1em 0;
+    background-color: mix($color-background, black, 90%);
 }
 
 .site-footer__copyright {
     color: rgba($color-text, .5);
-    float: left;
     margin: 0;
-    width: 25%;
+    float: left;
 
     a {
         color: rgba($color-text, .5);
+        font-size: .875em;
 
         &:hover {
             color: $color-primary;
@@ -22,6 +23,32 @@
     }
 }
 
-.site-nav--footer a {
-    color: rgba($color-text, .5);
+.site-footer__nav {
+    float: right;
+
+    a {
+        display: inline-block;
+        font-size: .875em;
+        background-color: $color-primary;
+        padding: .25em .75em;
+        color: $color-text;
+        @include trans(color, .3s);
+        -webkit-border-radius: 2px;
+           -moz-border-radius: 2px;
+                border-radius: 2px;
+    }
 }
+
+
+@include responsive($bp-medium) {
+    .site-footer__nav a {
+        background-color: transparent;
+        color: rgba($color-text, .5);
+        padding: 0;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+

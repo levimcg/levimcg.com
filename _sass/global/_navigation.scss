@@ -7,9 +7,14 @@
     _navigation.scss
 -----------------------------------------------*/
 
+.site-nav {
+    margin-top: 2em;
+}
+
 @include responsive($bp-medium) {
     .site-nav {
         float: right;
+        margin-top: 0;
         text-align: right;
         width: 75%;
     }
@@ -46,26 +51,12 @@
     border-bottom: 2px solid $color-primary;
 }
 
-.notes-home .site-header .site-nav__item--notes a {
+.notes-home .site-header .site-nav__item--notes a,
+.reverse-theme .site-header .site-nav__item--notes a {
     border-bottom: 2px solid $color-alternate;
 }
 
 .about .site-header .site-nav__item--about a {
     border-bottom: 2px solid $color-secondary;
-}
-
-// Temproary modifier for link to source files
-.site-nav__item--source a {
-    color: #fff;
-    background-color: $color-primary;
-    display: inline-block;
-    padding: .25em .5em;
-    @include border-radius(3px);
-
-    &:hover {
-        background-color: mix($color-primary, black, 90%);
-        color: #fff;
-        box-shadow: 0 3px 0 mix($color-primary, black, 70%);
-    }
 }
 

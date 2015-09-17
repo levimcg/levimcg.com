@@ -25,11 +25,17 @@
 }
 
 .notes-list__item {
-    padding: 3em 0;
+    padding: 1em 0;
 
     &:first-child {
         padding-top: 0;
     }
+}
+
+@include responsive($bp-medium) {
+    .notes-list__item {
+        padding: 3em 0;
+    }    
 }
 
 .note {
@@ -45,22 +51,6 @@
     padding-bottom: 1em;
 }
 
-.note-content--square {
-    float: left;
-    padding-right: 3.5em;
-    width: 60%;    
-}
-
-.note-content--landscape {
-    width: 60%;
-    float: right;
-}
-
-.note-content--center {
-    width: 60%;
-    margin: 0 auto;
-}
-
 .note-content__title {
     margin-top: 0;
     margin-bottom: .25em;
@@ -72,30 +62,40 @@
     color: $color-text-quiet;
 }
 
+.note-content__caption a {
+    color: $color-primary;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+        color: rgba($color-primary, .5);
+    }
+}
+
 .note-content__date {
     display: block;
     color: $color-quiet;
+    margin-bottom: 1em;
     text-transform: uppercase;
     font-family: $font-family-alternate;
 }
 
-.note-figure--square {
-    width: 60%;
-    margin: 2em auto 0 auto;
-}
-
-.note-figure--landscape {
-    margin-top: 2em;
-}
-
 .note-single {
-    padding: 4em 0;
+    padding: 2em 0;
 
     &:after {
         content: "";
         clear: both;
         display: block;
     }
+
+    a {
+        color: $color-primary;
+    }
+}
+
+@include responsive($bp-medium) {
+    padding: 4em 0;
 }
 
 .note-single__title {

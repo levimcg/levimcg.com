@@ -3,6 +3,6 @@
 # Change "public_html/" to the path you want to deploy your site to
 
 jekyll build &&
-rsync -avze ssh --progress _site/ levimcgc@levimcg.com:public_html/stage/
+rsync -avze ssh --progress --delete _site/ levimcgc@levimcg.com:public_html/stage/
 
 exit 0

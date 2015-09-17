@@ -4,46 +4,62 @@ title: Notes
 body: notes-home
 ---
 <main class="notes">
-    <div class="container">
-        <div class="unit whole">
-            <ol class="notes-list">
-                {% for post in paginator.posts %}
-                <li class="notes-list__item">
-                    <!-- Square note layout -->
-                    <article class="note">
-                        {% if post.post_type == "square" %}
-                        <section class="note-content note-content--center">
-                            <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                            <span class="note-content__caption">{{ post.content }}</span>
-                            <time class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                        </section>
-                        <figure class="note-figure--square">
-                            <img src="{{ post.photo }}">
-                        </figure>
-                        {% endif %}
-                        {% if post.post_type == "landscape" %}
-                        <section class="note-content note-content--center">
-                            <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                            <span class="note-content__caption">{{ post.content }}</span>
-                            <time class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                        </section>
-                        <figure class="note-figure--landscape">
-                            <img src="{{ post.photo }}">
-                        </figure>
-                        {% endif %}
-                        {% if post.post_type == "text" %}
-                        <section class="note-content note-content--center">
-                            <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                            <p class="note-content__caption">{{ post.teaser }}</p>
-                            <time class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                        </section>
-                        {% endif %}
-                    </article>
-                </li>
-                {% endfor %}
-            </ol>
-        </div>
-    </div>
+        <ol class="notes-list">
+            {% for post in paginator.posts %}
+            <li class="notes-list__item">
+                <article class="note">
+                    {% if post.post_type == "square" %}
+                    <div class="container container--kill-vertical">
+                        <div class="unit three-fifths centered">
+                            <section class="note-content">
+                                <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                                <span class="note-content__caption">{{ post.content }}</span>
+                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
+                            </section>
+                            <figure class="note-figure--square">
+                                <img 
+                                    src="{{ post.photo }}"
+                                    srcset="{{ post.photo_large }} 1200w">
+                            </figure>    
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if post.post_type == "landscape" %}
+                    <div class="container container--kill-vertical">
+                        <div class="unit three-fifths centered">
+                            <section class="note-content">
+                                <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                                <span class="note-content__caption">{{ post.content }}</span>
+                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
+                            </section>    
+                        </div>
+                    </div>
+                    <div class="container container--kill-vertical">
+                        <div class="unit whole">
+                            <figure class="note-figure--landscape">
+                                <img 
+                                    src="{{ post.photo }}"
+                                    srcset="{{ post.photo_large }} 2000w">
+                            </figure>    
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if post.post_type == "text" %}
+                    <div class="container container--kill-vertical">
+                        <div class="unit three-fifths centered">
+                            <section class="note-content">
+                                <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                                <p class="note-content__caption">{{ post.teaser }}</p>
+                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
+                            </section>    
+                        </div>
+                    </div>
+                    {% endif %}
+                </article>
+            </li>
+            {% endfor %}
+        </ol>
+
     <div class="container">
         <div class="unit whole">
             <div class="pagination">

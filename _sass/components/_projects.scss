@@ -82,8 +82,8 @@
 }
 
 .project-header__meta-item {
-    font-size: .85em;
     display: inline-block;
+    font-size: 1em;
 
     &:after {
         content: ","
@@ -92,6 +92,12 @@
     &:last-child:after {
         content: "";
     }
+}
+
+@include responsive($bp-medium) {
+    .project-header__meta-item {
+        font-size: .85em;
+    }    
 }
 
 .project-header__meta-item a:hover {

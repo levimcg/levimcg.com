@@ -18,12 +18,12 @@
 
 // A subtle hover transition effect
 
-@mixin hover-trans($time-params){
-    -webkit-transition: all $time-params ease;
-       -moz-transition: all $time-params ease;
-        -ms-transition: all $time-params ease;
-         -o-transition: all $time-params ease;
-            transition: all $time-params ease;
+@mixin trans($property, $time){
+    -webkit-transition: $property $time ease;
+       -moz-transition: $property $time ease;
+        -ms-transition: $property $time ease;
+         -o-transition: $property $time ease;
+            transition: $property $time ease;
 }
 
 @mixin clear-fix {

@@ -13,20 +13,48 @@
     background-position: top left;
     color: $color-background;
 
-    .site-header__logo a {
+    .site-header__logo a,
+    .site-nav__item a {
+        color: $color-background;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .site-footer {
+        background-color: mix($color-text, black, 97%);
+    }
+
+    .site-footer__copyright,
+    .site-footer__copyright a {
         color: $color-background;
     }
 
-    .site-nav__item a {
-        color: $color-background;
+    .site-footer__copyright a {
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .site-footer__nav a {
+        background-color: $color-background;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    @include responsive($bp-medium) {
+        .site-footer__nav a {
+            background-color: transparent;
+            color: $color-background;
+        }   
     }
 
     hr {
         border-color: rgba(0, 0, 0, 0.2);
     }
 }
-
-// body.post {
-//     background-image: none;
-// }
 

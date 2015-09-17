@@ -1,12 +1,12 @@
 ---
 layout: default
 ---
-<article class="note-single {% if page.post_body == 'reverse' %}note-single--reverse{% endif %}">
+<article class="note-single">
     <div class="container">
         <div class="unit three-fifths centered">
             <header>
                 <h1 class="note-single__title">{{ page.title }}</h1>
-                <time class="note-single__date">{{ page.date | date: '%b %d, %Y' }}</time>
+                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ page.date | date: '%b %d, %Y' }}</time>
             </header>
         </div>
     </div>
@@ -15,13 +15,17 @@ layout: default
         {% if page.post_type == "square" %}
             <div class="unit three-fifths centered">
                  <figure>
-                    <img src="{{ page.photo }}">
+                    <img
+                        src="{{ page.photo }}"
+                        srcset="{{ page.photo_large }} 2000w">
                 </figure>
             </div>
         {% else %}
             <div class="unit whole">
                 <figure>
-                    <img src="{{ page.photo }}">
+                    <img 
+                        src="{{ page.photo }}"
+                        srcset="{{ page.photo_large }} 2000w">
                 </figure>
             </div>
         {% endif %}
@@ -33,8 +37,3 @@ layout: default
         </div>
     </div>
 </article>
-<div class="container">
-    <div class="unit whole">
-        <hr />
-    </div>
-</div>
