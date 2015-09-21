@@ -15,7 +15,7 @@
 
 .intro__text {
     margin: 0;
-    font-size: $font-size-3;
+    font-size: $font-size-4;
 }
 
 @include responsive($bp-medium) {
@@ -23,5 +23,9 @@
     .intro {
         padding: 4em 0 9em 0;
         padding: 12vh 0 20vh 0;
+    }
+
+    .intro__text {
+        font-size: $font-size-1;
     }
 }

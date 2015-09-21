@@ -32,3 +32,11 @@
     list-style: none;
     padding: 0;
 }
+
+.info__item a {
+    color: $color-text;
+
+    &:hover {
+        color: $color-primary;
+    }
+}

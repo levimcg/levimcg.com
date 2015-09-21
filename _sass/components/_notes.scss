@@ -25,7 +25,7 @@
 }
 
 .notes-list__item {
-    padding: 1em 0;
+    padding: 2em 0;
 
     &:first-child {
         padding-top: 0;
@@ -51,11 +51,22 @@
     padding-bottom: 1em;
 }
 
+.note-content--text {
+    padding-bottom: 0;
+}
+
 .note-content__title {
     margin-top: 0;
     margin-bottom: .25em;
-    font-size: $font-size-3;
     line-height: 1;
+
+    a {
+        color: $color-text;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 
 .note-content__caption p {
@@ -75,9 +86,12 @@
 .note-content__date {
     display: block;
     color: $color-quiet;
-    margin-bottom: 1em;
     text-transform: uppercase;
     font-family: $font-family-alternate;
+}
+
+.note__figure {
+    margin-bottom: 1.5em;
 }
 
 .note-single {
@@ -111,4 +125,5 @@
 .note-single__teaser {
     font-size: $font-size-5;
 }
+
 

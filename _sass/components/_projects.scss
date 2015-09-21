@@ -29,7 +29,7 @@
 }
 
 .project__info {
-    padding: .5em;
+    padding: .25em;
     position: absolute;
     top: 0;
     left: 0;
@@ -38,14 +38,13 @@
 
 @include responsive($bp-medium) {
     .project__info {
-        padding: 1em;
+        padding: .5em .75em;  
     }    
 }
 
 .project__title {
+    font-size: .875em;
     margin: 0;
-    font-weight: 400;
-    font-size: $font-size-6;
 }
 
 .project-header {
@@ -60,11 +59,9 @@
 }
 
 .project-header__title {
-    font-size: $font-size-3;
-    font-weight: 400;
     line-height: 1;
     margin-top: 0;
-    margin-bottom: 1.15em;
+    margin-bottom: .65em;
 }
 
 .project-header__description p {
@@ -100,9 +97,16 @@
     }    
 }
 
-.project-header__meta-item a:hover {
-    color: $color-primary;
-    text-decoration: underline;
+.project-header__meta-item {
+    
+    a {
+        color: $color-text;
+    }
+
+    a:hover {
+        color: $color-primary;
+        text-decoration: underline;
+    }
 }
 
 .project-header__sub-head,
@@ -133,7 +137,7 @@
     margin-bottom: 1em;
 
     figcaption {
-        color: $color-text-quiet;
+        color: $color-quiet;
         padding-top: .5em;
         font-size: .875em;
     }

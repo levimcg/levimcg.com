@@ -17,7 +17,7 @@ body: home
                 {% for project in site.projects %}
                 <li class="projects__item">
                     <a href="{{ site.baseurl }}{{ project.url }}" class="project">
-                        <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--medium.jpg 800w, {{ project.thumbnail }}--large.jpg 1200w">
+                        <img src="{{ project.thumbnail }}--small.{% if project.png %}png{% else %}jpg{% endif %}" srcset="{{ project.thumbnail }}--medium.{% if project.png %}png{% else %}jpg{% endif %} 800w, {{ project.thumbnail }}--large.{% if project.png %}png{% else %}jpg{% endif %} 1200w">
                         <div class="project__info">
                             <h2 class="project__title" {% if project.reverse %}style="color: #2c2f35;"{% endif %}>{{ project.title }}</h2>
                         </div>

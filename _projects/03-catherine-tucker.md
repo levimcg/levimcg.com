@@ -27,7 +27,7 @@ website: http://drcatherinetucker.com
         </figure>
     </div>
 </div>
-<div class="container l-slice">
+<div class="container">
     <div class="unit one-third push">
         <aside class="callout">
             <h2 class="callout__heading">Style Guide Driven</h2>
@@ -44,7 +44,7 @@ website: http://drcatherinetucker.com
         </figure>                
     </div>
 </div>
-<div class="container l-slice">
+<div class="container">
     <div class="unit one-third">
         <aside class="callout">
             <h2 class="callout__heading">Look and feel deliverables</h2>

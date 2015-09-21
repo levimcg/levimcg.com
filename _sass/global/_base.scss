@@ -9,10 +9,13 @@ body {
     color: $color-text;
     font-size: $base-font-size;
     font-family: $base-font-family;
-    line-height: 1.5;
-    background-image: linear-gradient(transparent, transparent), url("../img/floaters.svg");
+    font-weight: $base-font-weight;
+    line-height: 1.4;
+    background-image: linear-gradient(transparent, transparent), url("../img/floaters-less-2.svg");
     background-repeat: no-repeat;
-    background-size: 800px;
+    background-size: 900px;
+    background-position: top left;
+    background-attachment: fixed;
     -moz-osx-font-smoothing: grayscale;
      -webkit-font-smoothing: antialiased;
 }
@@ -55,7 +58,7 @@ body.notes-home {
 }
 
 a {
-    color: $color-text;
+    color: $color-primary;
     text-decoration: none;
     transition: color .3s ease;
 
@@ -80,6 +83,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     line-height: 1.3;
+    margin-top: 2em;
 }
 
 h1 {

@@ -14,13 +14,13 @@ body: notes-home
                             <section class="note-content">
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <span class="note-content__caption">{{ post.content }}</span>
-                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
                             </section>
-                            <figure class="note-figure--square">
+                            <figure class="note__figure">
                                 <img 
                                     src="{{ post.photo }}"
                                     srcset="{{ post.photo_large }} 1200w">
-                            </figure>    
+                            </figure>
+                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>    
                         </div>
                     </div>
                     {% endif %}
@@ -30,24 +30,24 @@ body: notes-home
                             <section class="note-content">
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <span class="note-content__caption">{{ post.content }}</span>
-                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
                             </section>    
                         </div>
                     </div>
                     <div class="container container--kill-vertical">
                         <div class="unit whole">
-                            <figure class="note-figure--landscape">
+                            <figure class="note__figure">
                                 <img 
                                     src="{{ post.photo }}"
                                     srcset="{{ post.photo_large }} 2000w">
-                            </figure>    
+                            </figure> 
+                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>   
                         </div>
                     </div>
                     {% endif %}
                     {% if post.post_type == "text" %}
                     <div class="container container--kill-vertical">
                         <div class="unit three-fifths centered">
-                            <section class="note-content">
+                            <section class="note-content note-content--text">
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <p class="note-content__caption">{{ post.teaser }}</p>
                                 <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
