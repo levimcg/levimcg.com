@@ -9,13 +9,22 @@
 .intro {
     padding: 4em 0 10em 0;
     padding: 5vh 0 10vh 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+.intro--short {
+    padding: 4em 0 4em 0;
+    padding: 5vh 0 5vh 0;
+}
+
+.intro__heading {
+    margin-top: 0;
+    // font-weight: 700;
 }
 
 .intro__text {
     margin: 0;
     font-size: $font-size-4;
+    line-height: 1.2;
 }
 
 @include responsive($bp-medium) {
@@ -23,6 +32,11 @@
     .intro {
         padding: 4em 0 9em 0;
         padding: 12vh 0 20vh 0;
+    }
+
+    .intro--short {
+        padding: 4em 0 2em 0;
+        padding: 12vh 0 4vh 0;
     }
 
     .intro__text {

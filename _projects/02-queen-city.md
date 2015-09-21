@@ -7,7 +7,7 @@ layout: project
 body: projects
 tags:
 - Brand Identity
-- Website
+- Web
 website: http://wearequeencity.com
 ---
 <div class="container">

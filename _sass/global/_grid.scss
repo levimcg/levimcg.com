@@ -44,16 +44,12 @@ $grid-gutters: 1em;
     }
 }
 
-.unit--short {
-    padding-top: .5em;
-    padding-bottom: .5em;
-}
-
 .container.kill-vertical .unit,
 .container--kill-vertical .unit {
     padding-top: 0;
     padding-bottom: 0;
 }
+
 /* Grid nesting */
 
 .unit > .container .unit {
@@ -236,7 +232,7 @@ ul.list-grid-half {
     .container--collapse {
         
         .unit {
-            padding: $grid-gutters 0;
+            padding: 0;
         }
     }
     

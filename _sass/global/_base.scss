@@ -11,7 +11,8 @@ body {
     font-family: $base-font-family;
     font-weight: $base-font-weight;
     line-height: 1.4;
-    background-image: linear-gradient(transparent, transparent), url("../img/floaters-less-2.svg");
+    background-image: url("http://static.levimcg.com/backgrounds/floaters-less-2.png");
+    background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-less-2.svg");
     background-repeat: no-repeat;
     background-size: 900px;
     background-position: top left;
@@ -30,12 +31,13 @@ body.projects {
     background-image: none;
 }
 
-body.notes-home {
+body.notes-home,
+body.about-home {
     background-size: 600px;
     background-position: top left;
-    background-image: linear-gradient(transparent, transparent), url("../img/floaters-basic.svg");
+    background-image: url("http://static.levimcg.com/backgrounds/floaters-basic.png");
+    background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-basic.svg");
 }
-
 
 @include responsive($bp-small) {
     body {
@@ -64,7 +66,7 @@ a {
 
         &:hover {
           text-decoration: none;
-          color: $color-primary;
+          color: mix($color-primary, black, 70%);
         }
 }
 

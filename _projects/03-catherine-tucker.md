@@ -6,7 +6,7 @@ permalink: :collection/:title/
 layout: project
 body: projects
 tags:
-- Website
+- Web
 - CMS
 - Style guide
 website: http://drcatherinetucker.com

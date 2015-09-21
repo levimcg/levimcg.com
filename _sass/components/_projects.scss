@@ -143,10 +143,16 @@
     }
 }
 
+.project-content__figure--no-margin {
+        margin-bottom: .2em !important;
+    }
+
 @include responsive($bp-medium) {
     .project-content__figure {
         margin-bottom: 2em;
     }
+
+
 }
 
 .projects-more {
