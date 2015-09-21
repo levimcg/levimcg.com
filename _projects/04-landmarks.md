@@ -3,7 +3,6 @@ title: Landmarks
 description: I started these drawings as a way to do something for me—no client, no creative director, just scratching an itch I had to make <em>something</em>. Having recently relocated to Bloomington, Indiana, I looked to my new hometown for inspiration. I started posting each drawing on Instagram and after a great reception I decided to make prints of <a href="http://levimcg.com/landmarks/" target="_blank">some of my favorites</a>.
 thumbnail: http://static.levimcg.com/landmarks/landmarks-thumbnail
 png: true
-reverse: true
 permalink: :collection/:title/
 layout: project
 body: projects

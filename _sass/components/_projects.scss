@@ -18,7 +18,7 @@
     }
     
     &:hover {
-        .project-description {
+        .project__info {
             display: block;
         }
         
@@ -29,6 +29,7 @@
 }
 
 .project__info {
+    display: none;
     padding: .25em;
     position: absolute;
     top: 0;
