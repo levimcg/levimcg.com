@@ -306,7 +306,14 @@ ul.list-grid-half {
         li {
             width: 100%;
             float: none;
+            padding-top: .5em;
+            padding-bottom: .5em;
+
+            &:first-child {
+                padding-top: 1em;
+            }
         }
+
 
     }
 }
