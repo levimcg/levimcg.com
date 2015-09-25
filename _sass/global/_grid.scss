@@ -7,6 +7,7 @@
 
 // *** Grid settings  ***
 $grid-max-width: 1200px;
+$grid-max-width--larger: 1340px;
 $grid-max-giant: 100%;
 $grid-gutters: 1em;
 
@@ -24,6 +25,12 @@ $grid-gutters: 1em;
         content: "";
         display: block;
         clear: both;
+    }
+}
+
+@include responsive($bp-superlarge) {
+    .container {
+        max-width: $grid-max-width--larger;
     }
 }
 

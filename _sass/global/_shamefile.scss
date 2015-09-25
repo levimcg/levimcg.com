@@ -61,3 +61,115 @@
 .about-content {
     margin-bottom: 6em;
 }
+
+/*
+**  Article List
+**  A container list without any list styles
+*/
+
+.article-list {
+    display: block;
+    list-style: none;
+    padding: 0;
+}
+
+.article-list__item {
+    display: block;
+    margin-bottom: 2em;
+}
+
+@include responsive($bp-large) {
+    .article-list__item {
+        margin-bottom: 2em;
+    }
+}
+
+/*
+**  Billboard
+*/
+
+.billboard {
+    background-color: $color-text;
+    @include clear-fix;
+    color: $color-background;
+    overflow: hidden;
+}
+
+.billboard__info {
+    padding: 1em;
+}
+
+.billboard__title {
+    margin-top: 0;
+    line-height: 1;
+    font-size: $font-size-2;
+
+    a {
+        color: $color-background;
+    }
+}
+
+.billboard__teaser {
+    margin-bottom: 1.5em;
+    font-size: .875em;
+    color: mix($color-background, white, 60%);
+}
+
+.billboard__cta {
+    display: inline-block;
+    font-size: .9em;
+    padding: .25em .5em;
+    background-color: $color-primary;
+    color: $color-text;
+    border-radius: 3px;
+    transition: background-color .3s ease;
+
+    &:hover {
+        color: $color-text;
+        background-color: mix($color-primary, black, 80%);
+    }
+}
+
+@include responsive($bp-medium) {
+    .billboard__teaser {
+        font-size: 1em;
+    }
+}
+
+@include responsive($bp-large) {
+    .billboard__cover {
+        display: block;
+        width: 50%;
+        float: left;
+    }
+
+    .billboard__info {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 1em;
+    } 
+
+    .billboard__teaser {
+        margin-bottom: 2em;
+        font-size: .9em;
+    }   
+
+    .billboard__cta {
+        padding: .5em 1em;
+    }
+}
+
+@include responsive($bp-xlarge) {
+    .billboard__info {
+        padding: 2.85em;
+    }
+
+    .billboard__teaser {
+        font-size: 1em;
+    }
+}
+
+
+
+

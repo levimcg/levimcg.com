@@ -1,7 +1,7 @@
 ---
 title: UNVEILED
 description: Unveiled is a photography studio specializing in boudoir and modern glamour photography. I helped create and simple identity made up of strong typography contrasted against quirky hand-drawn patterns and lettering.
-thumbnail: http://static.levimcg.com/unveiled/unveiled-thumbnail
+thumbnail: http://static.levimcg.com/unveiled/unveiled-thumbnail-square
 permalink: :collection/:title/
 layout: project
 body: projects

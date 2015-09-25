@@ -11,6 +11,7 @@ $color-alternate: #ff4237;
 
 
 $color-background: #2c2f35;
+$color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-background, white, 85%);
 $color-link: $color-primary;
 $color-text: #ffffff;
@@ -20,7 +21,9 @@ $color-quiet: mix($color-background, white, 40%);
 // Breakpoints
 $bp-small: 500px;
 $bp-medium: 768px;
-$bp-large: 1080px;
+$bp-large: 900px;
+$bp-xlarge: 1100px;
+$bp-superlarge: 1340px;
 
 $font-size-1: 2em;
 $font-size-2: 1.8em;

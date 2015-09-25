@@ -10,23 +10,27 @@ body: home
         </div>
     </div>
 </section>
-<section class="projects" id="projects">
+<section>
     <div class="container">
         <div class="unit whole">
-            <ul class="list-grid-half">
+            <ul class="article-list">
                 {% for project in site.projects %}
-                <li class="projects__item">
-                    <a href="{{ site.baseurl }}{{ project.url }}" class="project">
-                        <img src="{{ project.thumbnail }}--small.{% if project.png %}png{% else %}jpg{% endif %}" srcset="{{ project.thumbnail }}--medium.{% if project.png %}png{% else %}jpg{% endif %} 800w, {{ project.thumbnail }}--large.{% if project.png %}png{% else %}jpg{% endif %} 1200w">
-                        <div class="project__info">
-                            <h2 class="project__title" {% if project.reverse %}style="color: #2c2f35;"{% endif %}>{{ project.title }}</h2>
+                <li class="article-list__item">
+                    <article class="billboard">
+                        <figure class="billboard__cover">
+                            <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--large.jpg 1600w">
+                        </figure>
+                        <div class="billboard__info">
+                            <h1 class="billboard__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                            <p class="billboard__teaser">{{ project.description | truncatewords: 50, "..." }}</p>
+                            <a href="{{ project.url }}" class="billboard__cta">View project</a>
                         </div>
-                    </a>
+                    </article>
                 </li>
                 {% endfor %}
             </ul>    
         </div>
-    </div>   
+    </div>
 </section>
 <section class="mini-bio l-slice">
     <div class="container">
