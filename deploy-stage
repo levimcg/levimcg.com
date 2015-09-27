@@ -1,8 +1,0 @@
-# Deploy your site to a staging server using rsync
-# Change user@your-domain.com your ftp/ssh user name
-# Change "public_html/" to the path you want to deploy your site to
-
-jekyll build &&
-rsync -avze ssh --exclude-from=rsync_exclude.txt --progress --delete _site/ levimcgc@levimcg.com:public_html/stage/
-
-exit 0
