@@ -1,7 +1,10 @@
 # Deploy your production site using rsync
 
 # 1. Make a copy of this script and name it something descriptive like "deploy-prod".
-#    You can make multiple copies for staging and live servers, for example.
+#    You can make multiple copies for staging and live servers, for example. Whatever you
+#    name it, add it to your .gitignore so that you aren't making commits with any secrets
+#    for your server. After you make the new copy you may need to run "chmod +x" on your
+#    new deploy script to make it executable.
 # 2. Change user@your-domain.com your ftp/ssh user name
 # 3. Change "public_html/" to the path you want to deploy your site to on your server
 # 4. Run the script at the top of your Jekyll site's directory with "./deploy-prod"
