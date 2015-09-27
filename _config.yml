@@ -3,7 +3,7 @@ description: Web and brand identity
 highlighter: pygments
 sass:
     sass_dir: _sass
-    style: compressed
+    style: expanded
 permalink: notes/:title
 paginate: 5
 paginate_path: "/notes/page:num/"
