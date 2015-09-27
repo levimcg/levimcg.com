@@ -4,3 +4,5 @@ _site/
 Gemfile.lock
 node_modules/
 rsync_exclude.txt
+deploy-stage
+deploy-prod

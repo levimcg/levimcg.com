@@ -7,7 +7,7 @@ sass:
 permalink: notes/:title
 paginate: 5
 paginate_path: "/notes/page:num/"
-exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod]
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, rsync_exclude.txt]
 
 user: levimcg
 
