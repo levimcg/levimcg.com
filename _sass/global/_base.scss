@@ -10,13 +10,12 @@ body {
     font-size: $base-font-size;
     font-family: $base-font-family;
     font-weight: $base-font-weight;
-    line-height: 1.4;
+    line-height: 1.5;
     background-image: url("http://static.levimcg.com/backgrounds/floaters-less-2.png");
     background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-less-2.svg");
     background-repeat: no-repeat;
     background-size: 900px;
     background-position: top left;
-    background-attachment: fixed;
     -moz-osx-font-smoothing: grayscale;
      -webkit-font-smoothing: antialiased;
 }
@@ -35,6 +34,7 @@ body.notes-home,
 body.about-home {
     background-size: 600px;
     background-position: top left;
+    background-attachment: fixed;
     background-image: url("http://static.levimcg.com/backgrounds/floaters-basic.png");
     background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-basic.svg");
 }
@@ -53,9 +53,15 @@ body.about-home {
     }
 }
 
-@include responsive($bp-large) {
+@include responsive($bp-xlarge) {
     body {
         font-size: 135%;
+    }
+}
+
+@include responsive($bp-superlarge) {
+    body {
+        font-size: 140%;
     }
 }
 

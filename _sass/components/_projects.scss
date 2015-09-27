@@ -18,9 +18,6 @@
     }
     
     &:hover {
-        .project__info {
-            display: block;
-        }
         
         img {
             opacity: .25;
@@ -29,7 +26,6 @@
 }
 
 .project__info {
-    display: none;
     padding: .25em;
     position: absolute;
     top: 0;

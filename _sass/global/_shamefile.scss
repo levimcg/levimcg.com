@@ -80,7 +80,7 @@
 
 @include responsive($bp-large) {
     .article-list__item {
-        margin-bottom: 2em;
+        margin-bottom: 4em;
     }
 }
 
@@ -89,7 +89,7 @@
 */
 
 .billboard {
-    background-color: $color-text;
+    background-color: mix($color-background, black, 80%);
     @include clear-fix;
     color: $color-background;
     overflow: hidden;
@@ -105,14 +105,14 @@
     font-size: $font-size-2;
 
     a {
-        color: $color-background;
+        color: $color-text;
     }
 }
 
 .billboard__teaser {
     margin-bottom: 1.5em;
     font-size: .875em;
-    color: mix($color-background, white, 60%);
+    color: $color-text-quiet;
 }
 
 .billboard__cta {
@@ -130,6 +130,22 @@
     }
 }
 
+.billboard__cta--alternate {
+    background-color: $color-alternate;
+
+    &:hover {
+        background-color: mix($color-alternate, black, 80%);
+    }
+}
+
+.billboard__cta--secondary {
+    background-color: $color-secondary;
+
+    &:hover {
+        background-color: mix($color-secondary, black, 80%);
+    }
+}
+
 @include responsive($bp-medium) {
     .billboard__teaser {
         font-size: 1em;
@@ -137,6 +153,22 @@
 }
 
 @include responsive($bp-large) {
+    .billboard {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+          -webkit-box-align: center;
+             -ms-flex-align: center;
+                align-items: center;
+
+    }
+
+    .billboard--odd {
+        flex-direction: row-reverse;
+    }
+
     .billboard__cover {
         display: block;
         width: 50%;
@@ -152,7 +184,6 @@
 
     .billboard__teaser {
         margin-bottom: 2em;
-        font-size: .9em;
     }   
 
     .billboard__cta {
