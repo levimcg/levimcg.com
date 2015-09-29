@@ -1,5 +1,4 @@
-title: Levi McGranahan
-description: Web and brand identity
+# Jekyll default stuff
 highlighter: pygments
 sass:
     sass_dir: _sass
@@ -7,10 +6,14 @@ sass:
 permalink: notes/:title
 paginate: 5
 paginate_path: "/notes/page:num/"
-exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, rsync_exclude.txt]
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt]
 
+# Global site variables
+title: Levi McGranahan
+description: Web and brand identity
 user: levimcg
 
+# Custom collections
 collections:
     projects:
         output: true

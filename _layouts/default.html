@@ -1,6 +1,5 @@
 {% include html-head.html %}
-<body 
-    class="{% if page.body %}{{ page.body }}{% endif %}" {% if page.custom_bg %}style="background-image: url('{{ page.custom_bg }}');{% endif %}">
+<body {% if page.body %}class="{{ page.body }}"{% endif %} {% if page.custom_bg %}style="background-image: url('{{ page.custom_bg }}');"{% endif %}>
     {% include header.html %}
         {{ content }}
     {% include footer.html %}
