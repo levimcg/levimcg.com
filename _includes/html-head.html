@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta description="description" content="{{ site.description }}">
+    {% if page.is_post == true %}
+        {% include cards.html %}
+    {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
     <script src="{{ site.baseurl }}/js/libs/picturefill.min.js"></script>
     <script src="https://use.typekit.net/iix5nff.js"></script>
