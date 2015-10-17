@@ -11,36 +11,36 @@ body: notes-home
                     {% if post.post_type == "square" %}
                     <div class="container container--kill-vertical">
                         <div class="unit three-fifths centered">
-                            <section class="note-content">
+                            <article class="note-content">
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <span class="note-content__caption">{{ post.content }}</span>
-                            </section>
+                            </article>
                             <figure class="note__figure">
-                                <img 
+                                <img
                                     src="{{ post.photo }}"
                                     srcset="{{ post.photo_large }} 1200w">
                             </figure>
-                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>    
+                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
                         </div>
                     </div>
                     {% endif %}
                     {% if post.post_type == "landscape" %}
                     <div class="container container--kill-vertical">
                         <div class="unit three-fifths centered">
-                            <section class="note-content">
+                            <article class="note-content">
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <span class="note-content__caption">{{ post.content }}</span>
-                            </section>    
+                            </article>
                         </div>
                     </div>
                     <div class="container container--kill-vertical">
                         <div class="unit whole">
                             <figure class="note__figure">
-                                <img 
+                                <img
                                     src="{{ post.photo }}"
                                     srcset="{{ post.photo_large }} 2000w">
-                            </figure> 
-                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>   
+                            </figure>
+                            <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
                         </div>
                     </div>
                     {% endif %}
@@ -51,7 +51,7 @@ body: notes-home
                                 <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
                                 <p class="note-content__caption">{{ post.teaser }}</p>
                                 <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                            </section>    
+                            </section>
                         </div>
                     </div>
                     {% endif %}
@@ -69,8 +69,7 @@ body: notes-home
                 {% if paginator.next_page %}
                 <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
                 {% endif %}
-            </div>    
+            </div>
         </div>
     </div>
 </main>
-
