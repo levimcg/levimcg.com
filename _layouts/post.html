@@ -11,29 +11,29 @@ layout: default
         </div>
     </div>
     {% if page.photo %}
-    <div class="container">
-        {% if page.post_type == "square" %}
-            <div class="unit three-fifths centered">
-                 <figure>
-                    <img
-                        src="{{ page.photo }}"
-                        srcset="{{ page.photo_large }} 2000w">
-                </figure>
-            </div>
-        {% else %}
-            <div class="unit whole">
-                <figure>
-                    <img 
-                        src="{{ page.photo }}"
-                        srcset="{{ page.photo_large }} 2000w">
-                </figure>
-            </div>
-        {% endif %}
-    </div>
+        <div class="container">
+            {% if page.post_type == "square" %}
+                <div class="unit three-fifths centered">
+                     <figure>
+                        <img
+                            src="{{ page.photo }}"
+                            srcset="{{ page.photo_large }} 2000w">
+                    </figure>
+                </div>
+            {% else %}
+                <div class="unit whole">
+                    <figure>
+                        <img
+                            src="{{ page.photo }}"
+                            srcset="{{ page.photo_large }} 2000w">
+                    </figure>
+                </div>
+            {% endif %}
+        </div>
     {% endif %}
     <div class="container">
         <div class="unit three-fifths centered">
-            {{ content }} 
+            {{ content }}
         </div>
     </div>
 </article>

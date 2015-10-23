@@ -6,7 +6,7 @@ body: home
 <section class="intro">
     <div class="container">
         <div class="unit two-thirds">
-            <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else.</h1>    
+            <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else.</h1>
         </div>
     </div>
 </section>
@@ -15,20 +15,20 @@ body: home
         <div class="unit whole">
             <ul class="article-list">
                 {% for project in site.projects %}
-                <li class="article-list__item">
-                    <article class="{% cycle 'billboard', 'billboard billboard--odd' %}">
-                        <figure class="billboard__cover">
-                            <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--large.jpg 1600w">
-                        </figure>
-                        <div class="billboard__info">
-                            <h1 class="billboard__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
-                            <p class="billboard__teaser">{{ project.description }}</p>
-                            <a href="{{ project.url }}" class="billboard__cta{% if project.custom_button %} billboard__cta--{{ project.custom_button }} {% endif %}">View project</a>
-                        </div>
-                    </article>
-                </li>
+                    <li class="article-list__item">
+                        <article class="{% cycle 'billboard', 'billboard billboard--odd' %}">
+                            <figure class="billboard__cover">
+                                <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--large.jpg 1600w">
+                            </figure>
+                            <div class="billboard__info">
+                                <h1 class="billboard__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                                <p class="billboard__teaser">{{ project.description }}</p>
+                                <a href="{{ project.url }}" class="billboard__cta{% if project.custom_button %} billboard__cta--{{ project.custom_button }} {% endif %}">View project</a>
+                            </div>
+                        </article>
+                    </li>
                 {% endfor %}
-            </ul>    
+            </ul>
         </div>
     </div>
 </section>
@@ -37,7 +37,7 @@ body: home
             <div class="unit half push">
                 <div class="info">
                     <h3 class="sub-head">Oh, hello</h3>
-                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p> 
+                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
                 </div>
                 <div class="info">
                     <h3 class="sub-head">Elsewhere</h3>
@@ -49,5 +49,5 @@ body: home
                     </ul>
                 </div>
             </div>
-        </div>    
+        </div>
 </section>
