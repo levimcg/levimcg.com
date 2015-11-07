@@ -1,4 +1,7 @@
 # Jekyll default stuff
+
+source: src/
+
 highlighter: pygments
 sass:
     sass_dir: _sass
