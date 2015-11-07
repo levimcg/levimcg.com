@@ -1,17 +1,23 @@
-# Jekyll default stuff
-
+# Clean up the directory structure
 source: src/
 
-highlighter: pygments
+# Sass settings
 sass:
     sass_dir: _sass
     style: expanded
-permalink: notes/:title
+
+# Permalink setting
+permalink: notes/:title/
+
+# Pagination - this stuff changed a lot as of Jekyll 3.0.0
 paginate: 5
-paginate_path: "/notes/page:num/"
-exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt]
+paginate_path: /notes/page:num/
 gems: [jekyll-paginate]
 
+# Exclude stuff
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt]
+
+# Adds scope for posts so you check "if is post"
 defaults:
     -
         scope:
