@@ -35,6 +35,7 @@ user: levimcg
 collections:
     projects:
         output: true
+        permalink: /projects/:title/
 
 # This will be the default baseurl for development.
 # Make a separate config file for production build

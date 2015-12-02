@@ -1,5 +1,6 @@
 ---
 title: Bloomington Landmarks
+slug: landmarks-project
 description: I started these drawings as a way to do something for me—no client, no creative director, just scratching an itch I had to make <em>something</em>. Having recently relocated to Bloomington, Indiana, I looked to my new hometown for inspiration. I started posting each drawing on Instagram and after a great reception I decided to make prints of some of my favorites.
 thumbnail: http://static.levimcg.com/landmarks/landmarks-thumbnail-square
 permalink: :collection/:title/

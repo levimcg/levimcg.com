@@ -1,5 +1,6 @@
 ---
 title: Queen City
+slug: queen-city
 description: Queen City is a tattoo shop that works hard to make their customer's experience the best it can be. I worked with the founders to create a identity and website that would set them apart from other shops that all seem to follow the same formula.
 thumbnail: http://static.levimcg.com/queen-city/queen-city-thumbnail-square
 permalink: :collection/:title/
