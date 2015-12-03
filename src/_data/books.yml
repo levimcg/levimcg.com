@@ -14,10 +14,10 @@
     thumbnail: http://static.levimcg.com/library/thumbnail-html5.png
     buy_link: http://abookapart.com/products/html5-for-web-designers
 -
-    title: Design For The Real World
-    author: Victor Papanek
-    thumbnail: http://static.levimcg.com/library/thumbnail-design-for-the-real-world.png
-    buy_link: http://www.amazon.com/Design-Real-World-Ecology-Social/dp/0897331532/ref=asap_bc?ie=UTF8
+    title: Pioneers of Spanish Graphic Design
+    author: Emilio Gil
+    thumbnail: http://static.levimcg.com/library/thumbnail-pioneers.png
+    buy_link: http://www.amazon.co.uk/Pioneers-Spanish-Graphic-Design-Emilio/dp/0981780563
 -
     title: Tao Te Ching
     author: Laozi
@@ -38,3 +38,8 @@
     author: "Gabriel García Márquez"
     thumbnail: http://static.levimcg.com/library/thumbnail-solitude.png
     buy_link: http://www.amazon.com/Hundred-Solitude-Harper-Perennial-Classics/dp/0060883286
+# -
+#     title: Design For The Real World
+#     author: Victor Papanek
+#     thumbnail: http://static.levimcg.com/library/thumbnail-design-for-the-real-world.png
+#     buy_link: http://www.amazon.com/Design-Real-World-Ecology-Social/dp/0897331532/ref=asap_bc?ie=UTF8
