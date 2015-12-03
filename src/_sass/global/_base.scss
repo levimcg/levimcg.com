@@ -26,12 +26,13 @@ body * {
             box-sizing: border-box;
 }
 
-body.projects {
+body.projects,
+body.library-home {
     background-image: none;
 }
 
 body.notes-home,
-body.about-home {
+body.about {
     background-size: 600px;
     background-position: top left;
     background-attachment: fixed;

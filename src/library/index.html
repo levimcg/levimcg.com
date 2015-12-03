@@ -1,0 +1,25 @@
+---
+layout: default
+title: Library
+body: library-home
+---
+<main class="library">
+    <div class="container">
+        <div class="unit whole">
+            <ul class="library-list">
+                {% for book in site.data.books reversed %}
+                    <li>
+                        <article class="library-entry">
+                            <figure class="library-entry__thumbnail">
+                                <img src="{{ book.thumbnail }}" alt="{{ book.title }} cover art">
+                            </figure>
+                            <h1 class="library-entry__title">{{ book.title }}</h1>
+                            <p class="library-entry__author">{{ book.author }}</p>
+                            <a class="library-entry__link" href="{{ book.buy_link }}" target="_blank">Buy</a>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</main>

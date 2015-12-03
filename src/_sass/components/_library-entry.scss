@@ -1,0 +1,79 @@
+/*-----------------------------------------------
+    Library Entry
+
+    Style for entries on the library page
+
+    _library-entry.scss
+-----------------------------------------------*/
+
+.library-list {
+    list-style: none;
+    margin: 0 -$grid-gutters;
+    padding-left: 0;
+    @include clear-fix;
+
+    li {
+        float: left;
+        margin-bottom: 4em;
+        padding: 0 $grid-gutters;
+        width: 100%;
+    }
+}
+
+@include responsive($bp-small) {
+    .library-list li {
+        width: 50%;
+    }
+}
+
+@include responsive($bp-medium) {
+    .library-list li {
+        width: 33.3333%;
+    }
+}
+
+@include responsive($bp-xlarge) {
+    .library-list li {
+        width: 25%;
+    }
+}
+
+.library-entry {
+    text-align: center;
+}
+
+.library-entry__thumbnail {
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+.library-entry__title {
+    font-size: $font-size-6;
+    margin-top: 1em;
+    margin-bottom: .15em;
+}
+
+.library-entry__author,
+.library-entry__link {
+    font-size: .875em;
+}
+
+.library-entry__author {
+    color: $color-text-quiet;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.library-entry__link {
+    background-color: $color-secondary;
+    color: $color-text;
+    display: inline-block;
+    padding: .15em 1.25em;
+    border-radius: 3px;
+    transition: background-color .3s ease;
+
+    &:hover {
+        color: $color-text;
+        background-color: mix($color-secondary, black, 80%);
+    }
+}
