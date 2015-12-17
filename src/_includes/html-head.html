@@ -9,7 +9,12 @@
         {% include cards.html %}
     {% endif %}
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
-    <script src="{{ site.baseurl }}/js/libs/picturefill.min.js"></script>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="{{ site.baseurl }}/js/libs/picturefill.min.js" async></script>
+    <!-- <script src="{{ site.baseurl }}/js/libs/picturefill.min.js"></script> -->
     <script src="https://use.typekit.net/iix5nff.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     {% include ga-code.html %}
