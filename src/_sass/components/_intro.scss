@@ -26,8 +26,16 @@
     line-height: 1.2;
 }
 
+/*  While the TypeKit fonts are loading, don't show the intro
+**  text in the hero area.
+*/
+.wf-loading .intro__heading,
+.wf-loading .intro__text {
+    opacity: 0;
+}
+
 @include responsive($bp-medium) {
-    
+
     .intro {
         padding: 4em 0 9em 0;
         padding: 12vh 0 20vh 0;

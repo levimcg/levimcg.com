@@ -9,6 +9,7 @@
 
 .site-nav {
     margin-top: 2em;
+    text-align: center;
 }
 
 @include responsive($bp-medium) {
@@ -24,6 +25,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.wf-loading .site-nav__item a {
+    opacity: 0;
 }
 
 .site-nav__item {

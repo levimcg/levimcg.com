@@ -1,7 +1,7 @@
 /*-----------------------------------------------
     Notes
     _notes.scss
-    
+
     Styles for different article styles in the
     Blog/notes section of the site
 -----------------------------------------------*/
@@ -35,7 +35,11 @@
 @include responsive($bp-medium) {
     .notes-list__item {
         padding: 3em 0;
-    }    
+    }
+}
+
+.wf-loading .note {
+    display: none;
 }
 
 .note {
@@ -125,5 +129,3 @@
 .note-single__teaser {
     font-size: $font-size-5;
 }
-
-
