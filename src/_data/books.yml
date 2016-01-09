@@ -34,13 +34,14 @@
     thumbnail: http://static.levimcg.com/library/thumbnail-on-the-move.png
     buy_link: http://www.amazon.com/On-Move-Life-Oliver-Sacks/dp/0385352549
 -
+    title: JavaScript & jQuery
+    author: Jon Duckett
+    thumbnail: http://static.levimcg.com/library/thumbnail-javascript.png
+    buy_link: http://javascriptbook.com/
+    now_reading: true
+-
     title: One Hundred Years of Solitude
     author: "Gabriel García Márquez"
     thumbnail: http://static.levimcg.com/library/thumbnail-solitude.png
     buy_link: http://www.amazon.com/Hundred-Solitude-Harper-Perennial-Classics/dp/0060883286
     now_reading: true
-# -
-#     title: Design For The Real World
-#     author: Victor Papanek
-#     thumbnail: http://static.levimcg.com/library/thumbnail-design-for-the-real-world.png
-#     buy_link: http://www.amazon.com/Design-Real-World-Ecology-Social/dp/0897331532/ref=asap_bc?ie=UTF8
