@@ -13,6 +13,15 @@ if ( style.webkitFlexWrap == '' || style.msFlexWrap == '' || style.flexWrap == '
 }
 
 /*
+**  Creates a dynamic copyright date and inserts it
+**  into the page.
+*/
+var elCopyRight = document.getElementById('js-copyright');
+var currentDate = new Date().getFullYear();
+
+elCopyRight.innerText = currentDate;
+
+/*
 **  NOTE: Feature detection - if this stuff is true go wild
 **  with the JavaScript features. It means that the browser
 **  is using JavaScript and probably has good CSS3 support.
