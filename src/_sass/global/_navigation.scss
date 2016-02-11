@@ -68,3 +68,11 @@
 .about .site-header .site-nav__item--about a {
     border-bottom: 2px solid $color-text;
 }
+
+.now.reverse-theme .site-header .site-nav__item--about a {
+    border-bottom: 2px solid $color-primary;
+}
+
+.now.reverse-theme .site-header .site-nav__item--notes a {
+    border-bottom: none !important;
+}

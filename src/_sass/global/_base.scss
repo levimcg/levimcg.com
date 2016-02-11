@@ -32,10 +32,10 @@ body.library-home {
 }
 
 body.notes-home,
-body.about {
+body.about,
+body.now {
     background-size: 600px;
     background-position: top left;
-    background-attachment: fixed;
     background-image: url("http://static.levimcg.com/backgrounds/floaters-basic.png");
     background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-basic.svg");
 }
@@ -69,7 +69,6 @@ body.about {
 a {
     color: $color-primary;
     text-decoration: none;
-    transition: color .3s ease;
 
         &:hover {
           text-decoration: none;

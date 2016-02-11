@@ -24,6 +24,17 @@
     margin: 0;
     font-size: $font-size-2;
     line-height: 1.2;
+
+    a {
+        border-bottom: 2px solid $color-text;
+        display: inline-block;
+        color: $color-text;
+
+        &:hover {
+            color: $color-primary;
+            border-bottom-color: $color-primary;
+        }
+    }
 }
 
 /*  While the TypeKit fonts are loading, don't show the intro

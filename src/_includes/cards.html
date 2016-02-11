@@ -1,21 +1,30 @@
 <!-- OG cards -->
 <meta property="og:title" content="{{ page.title }}" />
+{% if page.teaser %}
+    <meta property="og:description" content="{{ page.teaser }}" />
+{% endif %}
 {% if page.card_descirption %}
-<meta property="og:description" content="{{ page.card_descirption }}" />
-{% else %}
-<meta property="og:description" content="{{ page.content }}" />
+    <meta property="og:description" content="{{ page.card_descirption }}" />
 {% endif %}
 <meta property="og:type" content="website" />
-<meta property="og:url" content="{{ site.baseurl }}{{ page.url }}/" />
-<meta property="og:image" content="{{ page.photo_large }}" />
+<meta property="og:url" content="levimcg.com{{ page.url }}" />
+{% if page.photo_large %}
+    <meta property="og:image" content="{{ page.photo_large }}" />
+{% endif %}
+
 <!-- Twitter cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@levimcg">
 <meta name="twitter:creator" content="@levimcg">
 <meta name="twitter:title" content="{{ page.title }}">
-{% if page.card_descirption %}
-<meta name="twitter:description" content="{{ page.card_descirption }}">
-{% else %}
-<meta name="twitter:description" content="{{ page.content }}">
+{% if page.teaser %}
+    <meta name="twitter:description" content="{{ page.teaser }}">
 {% endif %}
-<meta name="twitter:image" content="{{ page.photo_large }}">
+
+{% if page.card_descirption %}
+    <meta name="twitter:description" content="{{ page.card_descirption }}">
+{% endif %}
+
+{% if page.photo_large %}
+    <meta name="twitter:image" content="{{ page.photo_large }}">
+{% endif %}

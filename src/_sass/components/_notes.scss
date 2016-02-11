@@ -38,10 +38,6 @@
     }
 }
 
-.wf-loading .note {
-    display: none;
-}
-
 .note {
 
     &:after {
@@ -49,6 +45,10 @@
         clear: both;
         display: block;
     }
+}
+
+.note-single {
+    padding: 2em 0 6em;
 }
 
 .note-content {
@@ -98,8 +98,7 @@
     margin-bottom: 1.5em;
 }
 
-.note-single {
-    padding: 2em 0 6em;
+.reverse-theme .note-single {
 
     &:after {
         content: "";
@@ -108,8 +107,19 @@
     }
 
     a {
-        color: $color-primary;
+        color: $color-background;
+        text-decoration: underline;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: none;
+        }
     }
+}
+
+ .note-single a {
+    color: $color-primary;
+    text-decoration: underline;
 }
 
 @include responsive($bp-medium) {
@@ -119,7 +129,7 @@
 .note-single__title {
     line-height: 1;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: .25em;
 }
 
 .note-single__date {
