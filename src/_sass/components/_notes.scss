@@ -94,10 +94,6 @@
     font-family: $font-family-alternate;
 }
 
-.note__figure {
-    margin-bottom: 1.5em;
-}
-
 .reverse-theme .note-single {
 
     &:after {
@@ -138,4 +134,27 @@
 
 .note-single__teaser {
     font-size: $font-size-5;
+}
+
+
+/*
+**  Jumbo images
+**
+**  Styling for making images break out of the main content
+**  column on blog posts. You can accomplish this by adding
+**  the alt tag "jumbo" to an image in the Markdown
+*/
+
+@include responsive($bp-medium) {
+    .note-single p img[alt="jumbo"],
+    .note-single p img[alt="jumbo"] + em {
+        display: block;
+        width: 150%;
+        margin-left: -25%;
+    }
+}
+
+.note-single p img[alt="jumbo"] + em {
+    font-size: .8125em;
+    color: $color-quiet;
 }
