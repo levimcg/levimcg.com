@@ -11,6 +11,10 @@
     padding: 6vh 0 3vh 0;
 }
 
+.note__figure {
+    margin-bottom: 1.5em;
+}
+
 @include responsive($bp-medium) {
     .notes {
         padding: 2em 0;
