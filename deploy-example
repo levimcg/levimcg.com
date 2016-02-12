@@ -9,11 +9,14 @@
 # 3. Change "public_html/" to the path you want to deploy your site to on your server
 # 4. Run the script at the top of your Jekyll site's directory with "./deploy-prod"
 
+# Site variables
+deploy_user="user@yoursite.com"
+deploy_path="path/to/your/site"
 
 # Build the site before we deploy. Change the config files/options as needed
 jekyll build --config _config.yml,_config-prod.yml &&
 
 # Deploy the site via SSH. It would be a good idea to set up automatic ssh access on your server.
-rsync -avze ssh --exclude-from=rsync_exclude.txt --progress --delete _site/ user@your-site.com:public_html/
+rsync -avze ssh --exclude-from=rsync_exclude.txt --progress --delete _site/ deploy_user:deploy_path/
 
 exit 0
