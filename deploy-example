@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Deploy your production site using rsync
 
 # 1. Make a copy of this script and name it something descriptive like "deploy-prod".
@@ -17,6 +19,6 @@ deploy_path="path/to/your/site"
 jekyll build --config _config.yml,_config-prod.yml &&
 
 # Deploy the site via SSH. It would be a good idea to set up automatic ssh access on your server.
-rsync -avze ssh --exclude-from=rsync_exclude.txt --progress --delete _site/ deploy_user:deploy_path/
+rsync -avze ssh --exclude-from=rsync_exclude.txt --progress --delete _site/ $deploy_user:$deploy_path/
 
 exit 0
