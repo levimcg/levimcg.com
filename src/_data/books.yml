@@ -39,8 +39,8 @@
     thumbnail: http://static.levimcg.com/library/thumbnail-javascript.png
     buy_link: http://javascriptbook.com/
 -
-    title: One Hundred Years of Solitude
-    author: "Gabriel García Márquez"
-    thumbnail: http://static.levimcg.com/library/thumbnail-solitude.png
-    buy_link: http://www.amazon.com/Hundred-Solitude-Harper-Perennial-Classics/dp/0060883286
+    title: "At the Existentialist Café"
+    author: Sarah Bakewell
+    thumbnail: http://static.levimcg.com/library/thumbnail-existentialist-cafe.jpg
+    buy_link: http://www.amazon.com/gp/product/1590514882
     now_reading: true

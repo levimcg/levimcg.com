@@ -12,16 +12,16 @@
     margin: 0;
     padding: 0;
     background-color: $color-background;
-    
+
     img {
         transition: .3s opacity ease;
     }
-    
+
     &:hover {
-        
+
         img {
             opacity: .25;
-        }    
+        }
     }
 }
 
@@ -35,8 +35,8 @@
 
 @include responsive($bp-medium) {
     .project__info {
-        padding: .5em .75em;  
-    }    
+        padding: .5em .75em;
+    }
 }
 
 .project__title {
@@ -80,7 +80,7 @@
     font-size: 1em;
 
     &:after {
-        content: ","
+        content: ",";
     }
 
     &:last-child:after {
@@ -91,11 +91,11 @@
 @include responsive($bp-medium) {
     .project-header__meta-item {
         font-size: .85em;
-    }    
+    }
 }
 
 .project-header__meta-item {
-    
+
     a {
         color: $color-text;
     }
@@ -178,9 +178,8 @@
 
         li {
             width: 33.333%;
-            padding: $grid-gutters;    
+            padding: $grid-gutters;
         }
-        
+
     }
 }
-

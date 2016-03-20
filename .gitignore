@@ -1,4 +1,5 @@
 _site/
+_build/
 .DS_Store
 .sass-cache/
 Gemfile.lock
@@ -7,3 +8,4 @@ rsync_exclude.txt
 deploy-stage
 deploy-prod
 .jekyll-metadata
+tasks/deploy.js

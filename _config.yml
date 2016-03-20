@@ -1,10 +1,6 @@
 # Clean up the directory structure
 source: src/
-
-# Sass settings
-sass:
-    sass_dir: _sass
-    style: expanded
+destination: _build/
 
 # Permalink setting
 permalink: notes/:title/
@@ -15,7 +11,8 @@ paginate_path: /notes/page:num/
 gems: [jekyll-paginate]
 
 # Exclude stuff
-exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt]
+exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt, scss]
+keep_files: ['_build/css']
 
 # Adds scope for posts so you check "if is post"
 defaults:
@@ -36,8 +33,3 @@ collections:
     projects:
         output: true
         permalink: /projects/:title/
-
-# This will be the default baseurl for development.
-# Make a separate config file for production build
-# with live url and compressed css.
-baseurl: http://stage.levimcg.com

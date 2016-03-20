@@ -1,0 +1,31 @@
+var gulp = require('gulp');
+var runSequence = require('run-sequence');
+var requireDir = require('require-dir');
+
+// Include everything in the "tasks" folder
+requireDir('./tasks');
+
+/*
+**  Frequent Tasks
+*/
+
+gulp.task('stage', function(cb) {
+    runSequence('jekyllStage', 'sass', 'scss-lint', 'prefix', 'cssProd', 'jsProd', cb);
+});
+
+gulp.task('dryRun', function(cb) {
+    runSequence('stage', 'deployStage');
+});
+
+// Build for production
+gulp.task('build', function(cb) {
+    runSequence('jekyllProd', 'sass', 'scss-lint', 'prefix', 'cssProd', 'jsProd', cb);
+});
+
+// Build and deploy for production
+gulp.task('ship', function(cb) {
+    runSequence('build', 'deployProd');
+});
+
+// Default dev task
+gulp.task('default', ['sass', 'jekyllWatch', 'sass:watch', 'reload']);
