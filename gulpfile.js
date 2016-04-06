@@ -9,10 +9,12 @@ requireDir('./tasks');
 **  Frequent Tasks
 */
 
+// Build for staging site
 gulp.task('stage', function(cb) {
     runSequence('jekyllStage', 'sass', 'scss-lint', 'prefix', 'cssProd', 'jsProd', cb);
 });
 
+// Build and deploy to staging site
 gulp.task('dryRun', function(cb) {
     runSequence('stage', 'deployStage');
 });
