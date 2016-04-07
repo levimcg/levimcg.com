@@ -10,42 +10,41 @@ body: home
         </div>
     </div>
 </section>
-<section>
+<section class="section" id="work">
     <div class="container">
-        <div class="unit half">
+        <div class="unit whole">
             <h3 class="sub-head">Projects</h3>
-            <ul class="no-list">
-                {% for project in site.projects reversed %}
-                    <li class="m-top-md m-btm-md">
-                        <div class="mo">
-                            <h1 class="mo__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
-                            {% if project.teaser %}
-                                <p class="mo__teaser">{{ project.teaser }}</p>
-                            {% else %}
-                                <p class="mo__teaser">{{ project.description | truncatewords: 20 }}</p>
-                            {% endif %}
-                            <time class="mo__meta">{{ project.date | date: '%b %d, %Y' }}</time>
-                        </div>
-                    </li>
-                {% endfor %}
+            {% for project in site.projects reversed %}
+                <article class="article">
+                    <h1 class="article__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                    {% if project.teaser %}
+                        <p class="article__teaser">{{ project.teaser }}</p>
+                    {% else %}
+                        <p class="article__teaser">{{ project.description | truncatewords: 25 }}</p>
+                    {% endif %}
+                </article>
+            {% endfor %}
             </ul>
         </div>
     </div>
-
+</section>
+<section class="section section--border">
     <div class="container">
-        <div class="unit half push">
-            <div class="info">
-                <h3 class="sub-head">Oh, hello</h3>
-                <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
-            </div>
-            <div class="info">
-                <h3 class="sub-head">Elsewhere</h3>
-                <ul class="info__list">
-                    <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
-                    <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
-                    <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
-                    <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
-                </ul>
+        <div class="unit whole">
+            <div class="article">
+                <div class="info">
+                    <h3 class="sub-head">Oh, hello</h3>
+                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
+                </div>
+                <div class="info">
+                    <h3 class="sub-head">Elsewhere</h3>
+                    <ul class="info__list">
+                        <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
+                        <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
+                        <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
+                        <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

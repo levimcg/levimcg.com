@@ -1,0 +1,43 @@
+/*
+ * Generic article
+*/
+
+.article {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    &__title {
+        font-size: $font-size-3;
+        margin-top: 0;
+
+        a {
+            color: $color-text;
+            transition: color .2s ease;
+        }
+
+        a:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__teaser {
+        margin: 0;
+        color: $color-text-quiet;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .article {
+        max-width: 50%;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .article {
+        width: 50%;
+        float: left;
+        padding-right: 3em;
+    }
+}

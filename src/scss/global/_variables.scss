@@ -1,5 +1,5 @@
 // Typography defaults
-$base-font-family: "Crimson Text", serif;
+$base-font-family: "Source Sans Pro", sans-serif;
 $base-font-weight: 400;
 $font-family-alternate: "Source Code Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
@@ -11,7 +11,7 @@ $color-alternate: #ff4237;
 
 $color-background: #2c2f35;
 $color-background-darker: mix($color-background, black, 90%);
-$color-ruler: mix($color-background, white, 85%);
+$color-ruler: mix($color-background, white, 90%);
 $color-link: $color-primary;
 $color-text: #ffffff;
 $color-text-quiet: mix($color-background, white, 30%);

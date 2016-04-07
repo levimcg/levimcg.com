@@ -8,4 +8,4 @@ I have 10 years of experience as a professional designer with a strong backgroun
 
 ### About this site
 
-This site is built using [Jekyll](http://jekyllrb.com/), a really great static site generator. You can check out the [source on Github](https://github.com/levimcg/levimcg.com). Type is set in *PT Serif* and *Source Code Pro* from [Google Fonts](https://www.google.com/fonts).
+This site is built using [Jekyll](http://jekyllrb.com/), a really great static site generator. You can check out the [source on Github](https://github.com/levimcg/levimcg.com). Type is set in *Source Sans Pro* from [Google Fonts](https://www.google.com/fonts).

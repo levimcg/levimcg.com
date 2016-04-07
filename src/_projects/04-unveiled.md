@@ -1,6 +1,7 @@
 ---
 title: UNVEILED
 slug: unveiled
+teaser: Elegant and playful identity based on strong typography and hand-drawn patterns
 description: Unveiled is a photography studio specializing in boudoir and modern glamour photography. I helped create and simple identity made up of strong typography contrasted against quirky hand-drawn patterns and lettering.
 thumbnail: http://static.levimcg.com/unveiled/unveiled-thumbnail-square
 permalink: :collection/:title/

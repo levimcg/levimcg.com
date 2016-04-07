@@ -1,0 +1,116 @@
+/*
+**  Billboard
+*/
+
+.billboard {
+    background-color: mix($color-background, black, 80%);
+    @include clear-fix;
+    color: $color-background;
+    overflow: hidden;
+}
+
+.billboard__info {
+    padding: 1em;
+}
+
+.billboard__title {
+    margin-top: 0;
+    line-height: 1;
+    font-size: $font-size-2;
+
+    a {
+        color: $color-text;
+    }
+}
+
+.billboard__teaser {
+    margin-bottom: 1.5em;
+    font-size: .875em;
+    color: $color-text-quiet;
+}
+
+.billboard__cta {
+    display: inline-block;
+    font-size: .9em;
+    padding: .25em .5em;
+    background-color: $color-primary;
+    color: $color-text;
+    border-radius: 3px;
+    transition: background-color .3s ease;
+
+    &:hover {
+        color: $color-text;
+        background-color: mix($color-primary, black, 80%);
+    }
+}
+
+.billboard__cta--alternate {
+    background-color: $color-alternate;
+
+    &:hover {
+        background-color: mix($color-alternate, black, 80%);
+    }
+}
+
+.billboard__cta--secondary {
+    background-color: $color-secondary;
+
+    &:hover {
+        background-color: mix($color-secondary, black, 80%);
+    }
+}
+
+@include responsive($bp-medium) {
+    .billboard__teaser {
+        font-size: 1em;
+    }
+}
+
+@include responsive($bp-large) {
+    .supports-flex .billboard {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+          -webkit-box-align: center;
+             -ms-flex-align: center;
+                align-items: center;
+
+    }
+
+    .billboard--odd {
+        flex-direction: row-reverse;
+    }
+
+    .billboard__cover {
+        display: block;
+        width: 50%;
+        float: left;
+    }
+
+    .billboard__info {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 1em;
+    }
+
+    .billboard__teaser {
+        margin-bottom: 2em;
+    }
+
+    .billboard__cta {
+        padding: .5em 1em;
+    }
+}
+
+@include responsive($bp-xlarge) {
+    .billboard__info {
+        padding: 2.85em;
+    }
+
+    .billboard__teaser {
+        font-size: 1em;
+    }
+}

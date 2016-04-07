@@ -6,6 +6,11 @@
     _library-entry.scss
 -----------------------------------------------*/
 
+.library {
+    padding: 2em 0;
+    padding: 12vh 0 8vh 0;
+}
+
 .library-list {
     list-style: none;
     margin: 0 -$grid-gutters;

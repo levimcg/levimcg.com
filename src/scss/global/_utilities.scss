@@ -30,18 +30,38 @@
  * Margin utilities
 */
 
-.m-btm-sm {
+.mb-sm {
     margin-bottom: 1em;
 }
 
-.m-top-sm {
+.mt-sm {
     margin-top: 1em;
 }
 
-.m-btm-md {
+.mb-md {
     margin-bottom: 2em;
 }
 
-.m-top-md {
+.mt-md {
     margin-top: 2em;
+}
+
+/*
+ * Padding
+*/
+
+.pt-sm {
+    padding-top: 1em;
+}
+
+.pb-sm {
+    padding-bottom: 1em;
+}
+
+.pt-md {
+    padding-top: 2em;
+}
+
+.pb-md {
+    padding-bottom: 2em;
 }
