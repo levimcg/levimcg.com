@@ -80,7 +80,7 @@
 
 @include responsive($bp-large) {
     .article-list__item {
-        margin-bottom: 4em;
+        margin-bottom: 0;
     }
 }
 
