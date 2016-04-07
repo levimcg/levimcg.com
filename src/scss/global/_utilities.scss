@@ -1,10 +1,10 @@
 .l-slice {
-    padding: 1em 0;    
+    padding: 1em 0;
 }
 
 @include responsive($bp-medium) {
     .l-slice {
-        padding: 2.5em 0;    
+        padding: 2.5em 0;
     }
 }
 
@@ -24,4 +24,24 @@
     .u-medium-up-inline {
         display: inline-block;
     }
+}
+
+/*
+ * Margin utilities
+*/
+
+.m-btm-sm {
+    margin-bottom: 1em;
+}
+
+.m-top-sm {
+    margin-top: 1em;
+}
+
+.m-btm-md {
+    margin-bottom: 2em;
+}
+
+.m-top-md {
+    margin-top: 2em;
 }

@@ -5,49 +5,48 @@ body: home
 ---
 <section class="intro">
     <div class="container">
-        <div class="unit three-fifths">
+        <div class="unit three-fourths">
             <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else. Here's what I'm up to <a href="{{ site.baseurl }}/now">Now</a>.</h1>
         </div>
     </div>
 </section>
 <section>
     <div class="container">
-        <div class="unit whole">
-            <ul class="article-list">
+        <div class="unit half">
+            <h3 class="sub-head">Projects</h3>
+            <ul class="no-list">
                 {% for project in site.projects reversed %}
-                    <li class="article-list__item">
-                        <article class="{% cycle 'billboard', 'billboard billboard--odd' %}">
-                            <figure class="billboard__cover">
-                                <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--large.jpg 1600w">
-                            </figure>
-                            <div class="billboard__info">
-                                <h1 class="billboard__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
-                                <p class="billboard__teaser">{{ project.description }}</p>
-                                <a href="{{ project.url }}" class="billboard__cta{% if project.custom_button %} billboard__cta--{{ project.custom_button }} {% endif %}">View project</a>
-                            </div>
-                        </article>
+                    <li class="m-top-md m-btm-md">
+                        <div class="mo">
+                            <h1 class="mo__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                            {% if project.teaser %}
+                                <p class="mo__teaser">{{ project.teaser }}</p>
+                            {% else %}
+                                <p class="mo__teaser">{{ project.description | truncatewords: 20 }}</p>
+                            {% endif %}
+                            <time class="mo__meta">{{ project.date | date: '%b %d, %Y' }}</time>
+                        </div>
                     </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
-</section>
-<section class="mini-bio l-slice">
+
     <div class="container">
-            <div class="unit half push">
-                <div class="info">
-                    <h3 class="sub-head">Oh, hello</h3>
-                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
-                </div>
-                <div class="info">
-                    <h3 class="sub-head">Elsewhere</h3>
-                    <ul class="info__list">
-                        <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
-                        <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
-                        <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
-                        <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
-                    </ul>
-                </div>
+        <div class="unit half push">
+            <div class="info">
+                <h3 class="sub-head">Oh, hello</h3>
+                <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
+            </div>
+            <div class="info">
+                <h3 class="sub-head">Elsewhere</h3>
+                <ul class="info__list">
+                    <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
+                    <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
+                    <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
+                    <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
+                </ul>
             </div>
         </div>
+    </div>
 </section>

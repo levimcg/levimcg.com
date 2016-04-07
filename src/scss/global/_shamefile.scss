@@ -63,25 +63,18 @@
 }
 
 /*
-**  Article List
+**  No List
 **  A container list without any list styles
 */
 
-.article-list {
+.no-list {
     display: block;
     list-style: none;
     padding: 0;
 }
 
-.article-list__item {
+.no-list li {
     display: block;
-    margin-bottom: 2em;
-}
-
-@include responsive($bp-large) {
-    .article-list__item {
-        margin-bottom: 4em;
-    }
 }
 
 /*
@@ -204,4 +197,58 @@
 .library {
     padding: 2em 0;
     padding: 12vh 0 8vh 0;
+}
+
+
+/*
+ * Media Object
+*/
+
+.mo {
+    position: relative;
+}
+
+.mo__title {
+    font-size: 1.15em;
+    margin-top: 0;
+    margin-bottom: .25em;
+    line-height: 1.2;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.mo__teaser {
+    font-size: .875em;
+    line-height: 1.3;
+    margin: 0;
+    color: $color-text-quiet;
+}
+
+.mo__meta {
+    font-size: .75em;
+    font-family: $font-family-alternate;
+    color: $color-text-quiet;
+}
+
+.mo__flag {
+    background-color: #00a887;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: .65em;
+    margin-bottom: .5em;
+    padding: .15em .45em;
+}
+
+@media screen and (min-width: 940px) {
+    .mo__flag {
+        position: absolute;
+        top: .2em;
+        right: -3.5em;
+    }
 }
