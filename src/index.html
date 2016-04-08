@@ -5,34 +5,32 @@ body: home
 ---
 <section class="intro">
     <div class="container">
-        <div class="unit three-fifths">
+        <div class="unit three-fourths">
             <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else. Here's what I'm up to <a href="{{ site.baseurl }}/now">Now</a>.</h1>
         </div>
     </div>
 </section>
-<section>
-
-            <ul class="article-list">
-                {% for project in site.projects reversed %}
-                    <li class="article-list__item">
-                        <article class="{% cycle 'billboard', 'billboard billboard--odd' %}">
-                            <figure class="billboard__cover">
-                                <img src="{{ project.thumbnail }}--small.jpg" srcset="{{ project.thumbnail }}--large.jpg 1600w">
-                            </figure>
-                            <div class="billboard__info">
-                                <h1 class="billboard__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
-                                <p class="billboard__teaser">{{ project.description }}</p>
-                                <a href="{{ project.url }}" class="billboard__cta{% if project.custom_button %} billboard__cta--{{ project.custom_button }} {% endif %}">View project</a>
-                            </div>
-                        </article>
-                    </li>
-                {% endfor %}
-            </ul>
-
-</section>
-<section class="mini-bio l-slice">
+<section class="section" id="work">
     <div class="container">
-            <div class="unit half push">
+        <div class="unit whole">
+            <h3 class="sub-head">Projects</h3>
+            {% for project in site.projects reversed %}
+                <article class="article">
+                    <h1 class="article__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
+                    {% if project.teaser %}
+                        <p class="article__teaser">{{ project.teaser }}</p>
+                    {% else %}
+                        <p class="article__teaser">{{ project.description | truncatewords: 25 }}</p>
+                    {% endif %}
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<section class="section section--border">
+    <div class="container">
+        <div class="unit whole">
+            <div class="article">
                 <div class="info">
                     <h3 class="sub-head">Oh, hello</h3>
                     <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
@@ -48,4 +46,5 @@ body: home
                 </div>
             </div>
         </div>
+    </div>
 </section>

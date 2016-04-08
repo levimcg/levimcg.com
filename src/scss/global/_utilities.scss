@@ -1,10 +1,10 @@
 .l-slice {
-    padding: 1em 0;    
+    padding: 1em 0;
 }
 
 @include responsive($bp-medium) {
     .l-slice {
-        padding: 2.5em 0;    
+        padding: 2.5em 0;
     }
 }
 
@@ -24,4 +24,44 @@
     .u-medium-up-inline {
         display: inline-block;
     }
+}
+
+/*
+ * Margin utilities
+*/
+
+.mb-sm {
+    margin-bottom: 1em;
+}
+
+.mt-sm {
+    margin-top: 1em;
+}
+
+.mb-md {
+    margin-bottom: 2em;
+}
+
+.mt-md {
+    margin-top: 2em;
+}
+
+/*
+ * Padding
+*/
+
+.pt-sm {
+    padding-top: 1em;
+}
+
+.pb-sm {
+    padding-bottom: 1em;
+}
+
+.pt-md {
+    padding-top: 2em;
+}
+
+.pb-md {
+    padding-bottom: 2em;
 }

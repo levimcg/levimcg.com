@@ -1,20 +1,7 @@
-<section class="l-slice">
+<section class="section">
     <div class="container">
-        <div class="unit whole">
-            <ul class="projects-more">
-                {% for project in site.projects reversed | limit: 6 %}
-                    <li class="projects__item">
-                        <a href="{{ site.baseurl }}{{ project.url }}" class="project">
-                            <img
-                                src="{{ project.thumbnail }}--small.jpg"
-                                srcset="{{ project.thumbnail }}--large.jpg 1600w">
-                            <div class="project__info">
-                                <h2 class="project__title" {% if project.reverse %}style="color: #2c2f35;" {% endif %}>{{ project.title }}</h2>
-                            </div>
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
+        <div class="unit whole u-text-center">
+            <a href="{{ site.baseurl }}/#work">+ More Projects</a>
         </div>
     </div>
 </section>
