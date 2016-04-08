@@ -28,15 +28,14 @@
 
 @media screen and (min-width: 900px) {
     .article {
-        max-width: 50%;
+        width: 50%;
         padding-top: 2em;
         padding-bottom: 2em;
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1280px) {
     .article {
-        width: 50%;
         float: left;
         padding-right: 3em;
     }

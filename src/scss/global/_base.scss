@@ -66,12 +66,6 @@ body.now {
     }
 }
 
-@include responsive($bp-superlarge) {
-    body {
-        font-size: 160%;
-    }
-}
-
 a {
     color: $color-primary;
     text-decoration: none;
