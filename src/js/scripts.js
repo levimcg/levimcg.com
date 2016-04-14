@@ -22,11 +22,49 @@ var currentDate = new Date().getFullYear();
 elCopyRight.innerText = currentDate;
 
 /*
-**  NOTE: Feature detection - if this stuff is true go wild
-**  with the JavaScript features. It means that the browser
-**  is using JavaScript and probably has good CSS3 support.
+ * Filtering lists - currently using on the library page to
+ * filter books based on category
 */
+$(function() {
 
-/* if(document.querySelector && window.eventListener) {
-    // Enhance !
-} */
+    var $books = $(".library-list li");
+    var tagged = {};
+
+    $books.each(function() {
+        var book = this;
+        var tags = $(this).data("tags");
+
+        if(tags) {
+            tags.split(", ").forEach(function(tagName) {
+                if (tagged[tagName] == null) {
+                    tagged[tagName] = [];
+                }
+
+                tagged[tagName].push(book);
+            });
+        }
+
+    });
+
+    // Select all filter "buttons"
+    var $filters = $(".filter li");
+
+    $filters.on("click", function(e) {
+        // Capture the what was clicked on.
+        var $target = $(e.target);
+        var currentTag = $target.data("filter-term");
+
+        $target.addClass("is-active").siblings().removeClass("is-active");
+
+        // Show filtered list
+        $books.hide().filter(tagged[currentTag]).fadeIn();
+
+    });
+
+    // Show all books
+    $(".js-filter-all").on("click", function() {
+        $(this).addClass("is-active");
+        $books.hide().fadeIn("fast");
+    });
+
+});

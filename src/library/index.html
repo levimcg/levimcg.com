@@ -3,16 +3,17 @@ layout: default
 title: Library
 body: library-home
 ---
+{% include library-filter.html %}
 <main class="library">
     <div class="container">
         <div class="unit whole">
             <ul class="library-list">
                 {% for book in site.data.books reversed %}
-                    <li>
+                    <li data-tags="{{ book.tags | join: ', ' }}">
                         <article class="library-entry">
                             <figure class="library-entry__thumbnail">
                                 {% if book.now_reading %}
-                                    <span class="libarary-entry__flag">Now Reading!</span>
+                                    <span class="libarary-entry__flag {% if book.flag_btm %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
                                 {% endif %}
                                 <img src="{{ book.thumbnail }}" alt="{{ book.title }} cover art">
                             </figure>
