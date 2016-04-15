@@ -55,6 +55,13 @@
     year_read: 2016
     tags: [web]
 -
+    title: "Letters To A Young Poet"
+    author: Rainer Maria Rilke
+    thumbnail: http://static.levimcg.com/library/thumbnail-letters-to-a-young-poet.jpg
+    buy_link: http://www.amazon.com/Letters-Young-Penguin-Classics-Hardcover/dp/0143107143/
+    year_read: 2016
+    tags: [literature, biography]
+-
     title: "At the Existentialist Café"
     author: Sarah Bakewell
     thumbnail: http://static.levimcg.com/library/thumbnail-existentialist-cafe.jpg
@@ -70,8 +77,8 @@
     tags: [history]
 
     # Now reading flag
-
     now_reading: true
+
     # If present adds a CSS class to reposition the "Now reading" flag.
     # Otherwise the flag shows up at the top.
     flag_btm: true
