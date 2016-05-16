@@ -92,14 +92,6 @@
     }
 }
 
-.note-content__date {
-    display: block;
-    color: $color-quiet;
-    text-transform: uppercase;
-    font-family: $font-family-alternate;
-    font-size: .875em;
-}
-
 .reverse-theme .note-single {
 
     &:after {
@@ -160,7 +152,8 @@
     }
 }
 
-.note-single p img[alt="jumbo"] + em {
+.note-single p img[alt="jumbo"] + em,
+.note-single p img em {
     font-size: .8125em;
     color: $color-quiet;
 }

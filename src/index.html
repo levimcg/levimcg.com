@@ -15,7 +15,7 @@ body: home
         <div class="unit whole">
             <h3 class="sub-head">Projects</h3>
             {% for project in site.projects reversed %}
-                <article class="article">
+                <article class="article article--2up">
                     <h1 class="article__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
                     {% if project.teaser %}
                         <p class="article__teaser">{{ project.teaser }}</p>
@@ -30,7 +30,7 @@ body: home
 <section class="section section--border">
     <div class="container">
         <div class="unit whole">
-            <div class="article">
+            <div class="article article--2up">
                 <div class="info">
                     <h3 class="sub-head">Oh, hello</h3>
                     <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>

@@ -4,61 +4,38 @@ title: Notes
 body: notes-home
 ---
 <main class="notes">
-    <ol class="notes-list">
-        {% for post in paginator.posts %}
-            <li class="notes-list__item">
-                <article class="note">
-                    {% if post.post_type == "square" %}
-                        <div class="container container--kill-vertical">
-                            <div class="unit three-fifths centered">
-                                <article class="note-content">
-                                    <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                                    <span class="note-content__caption">{{ post.content }}</span>
-                                </article>
-                                <figure class="note__figure">
-                                    <img
-                                        src="{{ post.photo }}"
-                                        srcset="{{ post.photo_large }} 1200w">
+    <div class="container">
+        <div class="unit two-thirds centered">
+            <ol class="notes-list">
+                {% for post in paginator.posts %}
+                    <li>
+                        <article class="article">
+                            <div class="article-content">
+                                <h1 class="article__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+                                {% if post.teaser %}
+                                    <p class="article__teaser article__teaser--small">{{ post.teaser }}</p>
+                                {% else %}
+                                    <p class="article__teaser article__teaser--small">{{ post.description | truncatewords: 25 }}</p>
+                                {% endif %}
+                                <time class="article__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+                            </div>
+                            {% if post.cover %}
+                                <figure class="article__cover">
+                                    <img src="{{ post.cover }}" alt="" />
                                 </figure>
-                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if post.post_type == "landscape" %}
-                        <div class="container container--kill-vertical">
-                            <div class="unit three-fifths centered">
-                                <article class="note-content">
-                                    <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                                    <span class="note-content__caption">{{ post.content }}</span>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="container container--kill-vertical">
-                            <div class="unit whole">
-                                <figure class="note__figure">
-                                    <img
-                                        src="{{ post.photo }}"
-                                        srcset="{{ post.photo_large }} 2000w">
+                            {% else %}
+                                <figure class="article__cover">
+                                    <img src="http://static.levimcg.com/notes/default-cover.jpg" alt="" />
                                 </figure>
-                                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% if post.post_type == "text" %}
-                        <div class="container container--kill-vertical">
-                            <div class="unit three-fifths centered">
-                                <section class="note-content note-content--text">
-                                    <h1 class="note-content__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                                    <p class="note-content__caption">{{ post.teaser }}</p>
-                                    <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ post.date | date: '%b %d, %Y' }}</time>
-                                </section>
-                            </div>
-                        </div>
-                    {% endif %}
-                </article>
-            </li>
-        {% endfor %}
-    </ol>
+                            {% endif %}
+                        </article>
+                    </li>
+                {% endfor %}
+            </ol>
+
+        </div>
+    </div>
+
 
     <div class="container">
         <div class="unit whole">

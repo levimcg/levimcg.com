@@ -2,7 +2,7 @@
 layout: post
 title: Paper Cut Ups
 teaser: I did some quick paper cut compositions last week. It's always great to get back to actually using your hands every once in a while.
-post_type: text
+cover: http://static.levimcg.com/notes/paper-cut-ups/paper-cuts-cover.jpg
 body: reverse-theme
 ---
 I did some quick paper cut compositions last week. It's always great to get back to actually using your hands every once in a while.
