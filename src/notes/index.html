@@ -3,50 +3,55 @@ layout: default
 title: Notes
 body: notes-home
 ---
-<main class="notes">
-    <div class="container">
-        <div class="unit two-thirds centered">
-            <ol class="notes-list">
-                {% for post in paginator.posts %}
-                    <li>
-                        <article class="article">
-                            <div class="article-content">
-                                <h1 class="article__title"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-                                {% if post.teaser %}
-                                    <p class="article__teaser article__teaser--small">{{ post.teaser }}</p>
-                                {% else %}
-                                    <p class="article__teaser article__teaser--small">{{ post.description | truncatewords: 25 }}</p>
-                                {% endif %}
-                                <time class="article__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
-                            </div>
-                            {% if post.cover %}
-                                <figure class="article__cover">
-                                    <img src="{{ post.cover }}" alt="" />
-                                </figure>
-                            {% else %}
-                                <figure class="article__cover">
-                                    <img src="http://static.levimcg.com/notes/default-cover.jpg" alt="" />
-                                </figure>
-                            {% endif %}
-                        </article>
-                    </li>
-                {% endfor %}
-            </ol>
+<main>
+    <section class="layout-major layout-major--centered">
+        <ul class="post-list">
+            {% for post in paginator.posts %}
+            <li class="post-list__item">
+                <article class="post">
+                    <h1 class="post__title post__title--{{ post.category | downcase }}">
+                        {% if post.external_link %}
+                            <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
+                        {% else %}
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        {% endif %}
+                    </h1>
 
-        </div>
-    </div>
+                    {% if post.teaser %}
+                        <p class="post__teaser">{{ post.teaser }}</p>
+                    {% else %}
+                        <p class="post__teaser">{{ post.description | truncatewords: 25 }}</p>
+                    {% endif %}
+
+                    <div class="post__meta">
+                        <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+                        {% if post.category %}
+                            <a href="#" class="post__category post__category--{{ post.category | downcase }}">{{ post.category }}</a>
+                        {% endif %}
+                    </div>
 
 
-    <div class="container">
-        <div class="unit whole">
-            <div class="pagination">
-                {% if paginator.previous_page %}
-                    <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
-                {% endif %}
-                {% if paginator.next_page %}
-                    <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
-                {% endif %}
-            </div>
-        </div>
+                    <!-- {% if post.cover %}
+                        <figure>
+                            <img src="{{ post.cover }}" alt="" />
+                        </figure>
+                    {% else %}
+
+                    <figure>
+                        <img src="http://static.levimcg.com/notes/default-cover.jpg" alt="" />
+                    </figure>
+                    {% endif %} -->
+                </article>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
+        {% endif %}
+        {% if paginator.next_page %}
+            <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
+        {% endif %}
     </div>
 </main>

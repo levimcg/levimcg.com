@@ -7,12 +7,8 @@
 -----------------------------------------------*/
 
 .site-header {
-    margin-top: 1em;
     @include clear-fix;
-}
-
-.wf-loading .site-header__logo {
-    opacity: 0;
+    padding: $shim;
 }
 
 .site-header__logo {
@@ -32,10 +28,59 @@
     }
 }
 
+/*
+ * Site navigation
+ */
+
+.site-nav {
+    margin-top: 2em;
+    text-align: center;
+}
+
 @include responsive($bp-medium) {
+    .site-header {
+        padding: $shim*2;
+    }
     .site-header__logo {
         float: left;
         text-align: left;
         width: 25%;
     }
+
+    .site-nav {
+        float: right;
+        margin-top: 0;
+        text-align: right;
+        width: 75%;
+    }
+}
+
+.site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav__item {
+    display: inline-block;
+    margin-right: 1em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color .3s ease;
+        padding-bottom: .25em;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.site-nav__item--notes.is-current {
+    border-bottom: 3px solid $color-note;
 }

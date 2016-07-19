@@ -12,14 +12,14 @@
 
 .library-list {
     list-style: none;
-    margin: 0 -$grid-gutters;
+    margin: 0 -1em;
     padding-left: 0;
     @include clear-fix;
 
     li {
         float: left;
         margin-bottom: 4em;
-        padding: 0 $grid-gutters;
+        padding: 0 1em;
         width: 100%;
     }
 }

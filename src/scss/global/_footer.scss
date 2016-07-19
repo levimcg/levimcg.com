@@ -5,13 +5,16 @@
 -----------------------------------------------*/
 .site-footer {
     padding: 1em 0;
-    background-color: mix($color-background, black, 90%);
+    background-color: mix($color-background, $color-text, 97%);
+
+    &:after {
+        @include clear-fix;
+    }
 }
 
 .site-footer__copyright {
     color: rgba($color-text, .5);
     margin: 0;
-    float: left;
 
     a {
         color: rgba($color-text, .5);
@@ -24,7 +27,6 @@
 }
 
 .site-footer__nav {
-    float: right;
 
     a {
         display: inline-block;
@@ -51,4 +53,3 @@
         }
     }
 }
-

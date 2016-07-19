@@ -1,33 +1,25 @@
 ---
 layout: default
 ---
-<header class="project-header">
-    <div class="container">
-        <div class="unit three-fifths push">
-            <h1 class="project-header__title">{{ page.title }}</h1>
-            <span class="project-header__description">
-                <p>{{ page.description }}</p>
-            </span>
-        </div>
-        <div class="unit two-fifths pull">
-            <div class="project-header__meta">
-                <h2 class="project-header__sub-head">Filed under</h2>
-                <ul class="project-header__meta-list">
-                    {% for tag in page.tags %}
-                        <li class="project-header__meta-item">{{ tag }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="project-header__meta">
-                {% if page.website %}
-                    <h2 class="project-header__sub-head">Website</h2>
-                    <span class="project-header__meta-item"><a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a></span>
-                {% endif %}
-            </div>
-        </div>
-    </div>
+<header>
+    <h1>{{ page.title }}</h1>
+    <span>
+        <p>{{ page.description }}</p>
+    </span>
+
+    <h2>Filed under</h2>
+    <ul>
+        {% for tag in page.tags %}
+            <li>{{ tag }}</li>
+        {% endfor %}
+    </ul>
+
+    {% if page.website %}
+        <h2>Website</h2>
+        <a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a>
+    {% endif %}
 </header>
+
 <section>
     {{ content }}
 </section>
-{% include related.html %}

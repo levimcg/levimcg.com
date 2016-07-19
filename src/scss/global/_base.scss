@@ -11,33 +11,18 @@ body {
     font-family: $base-font-family;
     font-weight: $base-font-weight;
     line-height: 1.5;
-    background-image: url("http://static.levimcg.com/backgrounds/floaters-less-2.png");
-    background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-less-2.svg");
-    background-repeat: no-repeat;
-    background-size: 900px;
-    background-position: top left;
     -moz-osx-font-smoothing: grayscale;
      -webkit-font-smoothing: antialiased;
+    /*
+     * TODO: Remove this, it's temporary for rebuild
+     */
+    // padding: 1em;
 }
 
 body * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
-}
-
-body.projects,
-body.library-home {
-    background-image: none;
-}
-
-body.notes-home,
-body.about,
-body.now {
-    background-size: 400px;
-    background-position: top left;
-    background-image: url("http://static.levimcg.com/backgrounds/floaters-basic.png");
-    background-image: linear-gradient(transparent, transparent), url("http://static.levimcg.com/backgrounds/floaters-basic.svg");
 }
 
 @include responsive($bp-small) {
@@ -67,12 +52,12 @@ body.now {
 }
 
 a {
-    color: $color-primary;
+    color: $color-link;
     text-decoration: none;
 
         &:hover {
           text-decoration: none;
-          color: mix($color-primary, black, 70%);
+          color: mix($color-link, white, 70%);
         }
 }
 
@@ -82,7 +67,7 @@ p {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 }

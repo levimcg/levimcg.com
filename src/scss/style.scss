@@ -1,21 +1,13 @@
 @import "global/variables";
 @import "global/mixins";
 @import "global/normalize";
-@import "global/grid";
 @import "global/base";
 @import "global/header";
-@import "global/navigation";
 @import "global/footer";
 @import "global/utilities";
-@import "global/shamefile";
 
-
-@import "components/intro";
-@import "components/projects";
-@import "components/info-module";
-@import "components/callout";
-@import "components/notes";
 @import "components/pagination";
 @import "components/library-entry";
-@import "components/article";
 @import "components/filter";
+
+@import "global/shamefile";

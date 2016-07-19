@@ -1,15 +1,10 @@
 ---
 layout: default
 ---
-<article class="note-single">
-    <div class="container">
-        <div class="unit three-fifths centered">
-            <header>
-                <h1 class="note-single__title">{{ page.title }}</h1>
-                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ page.date | date: '%b %d, %Y' }}</time>
-            </header>
-
-            {{ content }}
-        </div>
-    </div>
+<article>
+    <header>
+        <h1>{{ page.title }}</h1>
+        <time datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
+    </header>
+    {{ content }}
 </article>

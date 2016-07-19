@@ -1,21 +1,37 @@
 // Typography defaults
-$base-font-family: "Source Sans Pro", sans-serif;
+$base-font-family: "PT Serif", serif;
 $base-font-weight: 400;
 $font-family-alternate: "Source Code Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
-// Colors
+// New Colors
+$color-white: #fff;
+$color-black: #262C58;
+$color-green: #00B688;
+$color-red: #F46B6C;
+$color-yellow: #f1c23b;
+$color-blue: #059FF5;
+
+$color-note: $color-red;
+$color-life: $color-blue;
+
+
+// Old colors
 $color-primary: #00a887;
 $color-secondary: #0081c9;
 $color-alternate: #ff4237;
 
+$color-background: $color-white;
+$color-text: $color-black;
 
-$color-background: #2c2f35;
 $color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-background, white, 90%);
-$color-link: $color-primary;
-$color-text: #ffffff;
+$color-link: $color-red;
+
 $color-text-quiet: mix($color-background, white, 30%);
 $color-quiet: mix($color-background, white, 40%);
+
+$shim: 1em;
+
 
 // Breakpoints
 $bp-small: 500px;
