@@ -4,7 +4,7 @@ title: Notes
 body: notes-home
 ---
 <main>
-    <section class="layout-major layout-major--centered">
+    <section class="layout">
         <ul class="post-list">
             {% for post in paginator.posts %}
             <li class="post-list__item">
@@ -29,24 +29,12 @@ body: notes-home
                             <a href="#" class="post__category post__category--{{ post.category | downcase }}">{{ post.category }}</a>
                         {% endif %}
                     </div>
-
-
-                    <!-- {% if post.cover %}
-                        <figure>
-                            <img src="{{ post.cover }}" alt="" />
-                        </figure>
-                    {% else %}
-
-                    <figure>
-                        <img src="http://static.levimcg.com/notes/default-cover.jpg" alt="" />
-                    </figure>
-                    {% endif %} -->
                 </article>
             </li>
             {% endfor %}
         </ul>
     </section>
-    <div class="pagination">
+    <div class="pagination layout layout--vertical-space">
         {% if paginator.previous_page %}
             <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
         {% endif %}

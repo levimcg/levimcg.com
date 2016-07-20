@@ -6,101 +6,11 @@
     _shamefile.scss
 -----------------------------------------------*/
 
-.post-list {
-    list-style: none;
-    margin: $shim*2 0;
-    padding: 0;
+.layout {
+    @include outer-container(100%);
+    padding: 1em 2em;
 }
 
-.post-list__item {
-    padding: 2em 0;
-}
-
-.post__title {
-    margin: 0;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: $shim*.25;
-
-    a {
-        transition: all .2s ease;
-        color: $color-text;
-    }
-}
-
-.post__title--note a:hover {
-    color: $color-note;
-}
-
-.post__title--link a:hover {
-    color: $color-green;
-}
-
-.post__title--life a:hover {
-    color: $color-life;
-}
-
-.post__teaser {
-    color: mix($color-text, white, 50%);
-    margin: $shim*.75 0;
-}
-
-.post__meta {
-    margin-bottom: $shim;
-}
-
-.post__date {
-    margin-right: $shim;
-}
-
-.post__category {
-    background-color: $color-text;
-    color: $color-white;
-    font-size: .8em;
-    font-family: $font-family-alternate;
-    padding: $shim*.25 $shim*.5;
-    border-radius: 3px;
-    transition: all .2s ease;
-    text-transform: uppercase;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-text, white, 80%);
-    }
-}
-
-.post__category--note {
-    background-color: $color-note;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-note, white, 80%);
-    }
-}
-
-.post__category--link {
-    background-color: $color-green;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-green, white, 80%);
-    }
-}
-
-.post__category--life {
-    background-color: $color-life;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-life, white, 80%);
-    }
-}
-
-
-.layout-major {
-    max-width: 1080px;
-}
-
-.layout-major--centered {
-    margin: 0 auto;
+.layout--vertical-space {
+    padding: 2em;
 }

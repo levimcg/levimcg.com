@@ -7,15 +7,12 @@
 -----------------------------------------------*/
 
 .site-header {
-    @include clear-fix;
-    padding: $shim;
+    margin-bottom: $shim*2;
 }
 
 .site-header__logo {
     font-size: 1em;
-    margin-top: 0;
-    margin-bottom: 1em;
-    text-align: center;
+    margin: 0;
 
     a {
         color: $color-text;
@@ -28,30 +25,17 @@
     }
 }
 
-/*
- * Site navigation
- */
+.site-header__logo {
+    @include media($bp-medium) {
+        @include span-columns(4);
+    }
 
-.site-nav {
-    margin-top: 2em;
-    text-align: center;
 }
 
-@include responsive($bp-medium) {
-    .site-header {
-        padding: $shim*2;
-    }
-    .site-header__logo {
-        float: left;
-        text-align: left;
-        width: 25%;
-    }
-
-    .site-nav {
-        float: right;
-        margin-top: 0;
+.site-nav {
+    @include media($bp-medium) {
+        @include span-columns(8);
         text-align: right;
-        width: 75%;
     }
 }
 
@@ -63,7 +47,7 @@
 
 .site-nav__item {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 2em;
 
     &:last-child {
         margin-right: 0;

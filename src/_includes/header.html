@@ -1,8 +1,11 @@
-<header class="site-header">
+<header class="site-header layout">
     <h1 class="site-header__logo"><a href="{{ site.baseurl }}/">Levi McGranahan</a></h1>
     <nav class="site-nav" role="navigation">
         <ul class="site-nav__list">
             {% for item in site.data.navigation %}
+
+                {% capture notes_url %}{{ page.url | slice: 0, 7 }}{% endcapture %}
+
                 {% if item.url == page.url %}
                     <li class="site-nav__item site-nav__item--{{ item.title | downcase }} is-current">
                         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>

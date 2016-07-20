@@ -22,12 +22,12 @@ $color-alternate: #ff4237;
 
 $color-background: $color-white;
 $color-text: $color-black;
+$color-text-quiet: mix($color-text, white, 50%);
 
 $color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-background, white, 90%);
 $color-link: $color-red;
 
-$color-text-quiet: mix($color-background, white, 30%);
 $color-quiet: mix($color-background, white, 40%);
 
 $shim: 1em;
@@ -40,8 +40,8 @@ $bp-large: 900px;
 $bp-xlarge: 1100px;
 $bp-superlarge: 1340px;
 
-$font-size-1: 2em;
-$font-size-2: 1.8em;
+$font-size-1: 1.8em;
+$font-size-2: 1.7em;
 $font-size-3: 1.5em;
 $font-size-4: 1.35em;
 $font-size-5: 1.15em;

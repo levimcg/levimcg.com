@@ -25,15 +25,19 @@ body * {
             box-sizing: border-box;
 }
 
+/*
+ * TODO: Convert these media queries to use Bourbon Neat mixins
+ */
+
 @include responsive($bp-small) {
     body {
-        font-size: 125%;
+        font-size: 120%;
     }
 }
 
 @include responsive($bp-medium) {
     body {
-        font-size: 135%;
+        font-size: 130%;
         background-size: 100%;
         background-position: right 0 top 5em;
     }
@@ -47,7 +51,7 @@ body * {
 
 @include responsive($bp-xlarge) {
     body {
-        font-size: 150%;
+        font-size: 140%;
     }
 }
 

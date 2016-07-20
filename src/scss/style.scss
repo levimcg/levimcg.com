@@ -1,3 +1,6 @@
+@import "libs/bourbon/bourbon";
+@import "libs/neat/neat";
+
 @import "global/variables";
 @import "global/mixins";
 @import "global/normalize";
@@ -9,5 +12,6 @@
 @import "components/pagination";
 @import "components/library-entry";
 @import "components/filter";
+@import "components/posts";
 
 @import "global/shamefile";
