@@ -11,6 +11,34 @@
     padding: 1em 2em;
 }
 
-.layout--vertical-space {
-    padding: 2em;
+.layout--medium {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.layout--large {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+
+.intro {
+    @include outer-container;
+}
+
+.intro__text {
+    margin: 0;
+
+    @include media($bp-medium) {
+        @include span-columns(8);
+        @include shift(1);
+    }
+}
+
+.subhead {
+    font-size: 1em;
+    font-family: $font-family-alternate;
+    margin-top: 0;
+    text-transform: uppercase;
+    color: $color-text-quiet;
 }

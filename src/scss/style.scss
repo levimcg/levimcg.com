@@ -1,8 +1,10 @@
-@import "libs/bourbon/bourbon";
-@import "libs/neat/neat";
-
 @import "global/variables";
 @import "global/mixins";
+
+@import "libs/bourbon/bourbon";
+@import "libs/neat/neat";
+@import "libs/pygments";
+
 @import "global/normalize";
 @import "global/base";
 @import "global/header";

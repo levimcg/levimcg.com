@@ -68,3 +68,7 @@
 .site-nav__item--notes.is-current {
     border-bottom: 3px solid $color-note;
 }
+
+.site-nav__item--library.is-current {
+    border-bottom: 3px solid $color-green;
+}

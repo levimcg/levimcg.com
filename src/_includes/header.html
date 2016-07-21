@@ -10,6 +10,10 @@
                     <li class="site-nav__item site-nav__item--{{ item.title | downcase }} is-current">
                         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
                     </li>
+                {% elsif item.url == notes_url %}
+                    <li class="site-nav__item site-nav__item--{{ item.title | downcase }} is-current">
+                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    </li>
                 {% else %}
                     <li class="site-nav__item site-nav__item--{{ item.title | downcase }}">
                         <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>

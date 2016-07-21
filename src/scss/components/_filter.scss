@@ -2,14 +2,11 @@
  * Filter interface for library entries
  */
 
-.filter-wrapper {
-    border-bottom: 1px solid $color-ruler;
-}
-
 .filter {
     list-style: none;
     padding-left: 0;
     text-align: center;
+    margin: 0;
 }
 
 .filter__item {
@@ -17,7 +14,7 @@
     font-size: .75em;
     margin-right: .25em;
     margin-bottom: .5em;
-    color: $color-text;
+    color: $color-text-quiet;
     border: 1px solid $color-ruler;
     display: inline-block;
     padding: .25em .45em .4em;
@@ -28,6 +25,7 @@
     &:hover {
         background-color: $color-primary;
         border-color: $color-primary;
+        color: $color-background;
     }
 
 }
@@ -36,6 +34,7 @@
 .filter__item.is-active {
     background-color: $color-primary;
     border-color: $color-primary;
+    color: $color-background;
 }
 
 .filter__label {
@@ -48,6 +47,7 @@
 
 @include responsive($bp-large) {
     .filter {
+        margin-bottom: 2em;
         text-align: left;
     }
 

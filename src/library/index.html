@@ -4,7 +4,7 @@ title: Library
 body: library-home
 ---
 {% include library-filter.html %}
-<main class="library">
+<main class="library layout">
     <ul class="library-list">
         {% for book in site.data.books reversed %}
         <li data-tags="{{ book.tags | join: ', ' }}">

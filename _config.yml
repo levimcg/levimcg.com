@@ -33,3 +33,5 @@ collections:
     projects:
         output: true
         permalink: /projects/:title/
+
+highlighter: pygments
