@@ -31,21 +31,15 @@ body * {
 
 @include responsive($bp-small) {
     body {
-        font-size: 120%;
+        font-size: 110%;
     }
 }
 
 @include responsive($bp-medium) {
     body {
-        font-size: 130%;
+        font-size: 120%;
         background-size: 100%;
         background-position: right 0 top 5em;
-    }
-
-    body.notes-home,
-    body.about,
-    body.now {
-        background-size: 600px;
     }
 }
 
@@ -71,14 +65,13 @@ p {
 }
 
 img {
-    max-width: 100%;
     height: auto;
     display: block;
 }
 
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.3;
     margin-top: 2em;
 }

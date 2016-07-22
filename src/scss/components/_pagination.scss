@@ -7,7 +7,12 @@
 -----------------------------------------------*/
 
 .pagination {
-
+    margin: 2em 0;
+    
+    @include media($bp-medium) {
+        @include span-columns(9);
+        @include shift(1.5);
+    }
 }
 
 .pagination__link {

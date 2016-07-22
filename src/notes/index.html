@@ -1,45 +1,49 @@
 ---
 layout: default
 title: Notes
-body: notes-home
 ---
 <main>
     <section class="layout">
         <ul class="post-list">
             {% for post in paginator.posts %}
             <li class="post-list__item">
-                <article class="post">
-                    <h1 class="post__title post__title--{{ post.category | downcase }}">
-                        {% if post.external_link %}
-                            <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
-                        {% else %}
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        {% endif %}
-                    </h1>
-
-                    {% if post.teaser %}
-                        <p class="post__teaser">{{ post.teaser }}</p>
-                    {% else %}
-                        <p class="post__teaser">{{ post.description | truncatewords: 25 }}</p>
+                <article class="mo {% if post.cover %}mo--has-image{% endif %}">
+                    {% if post.cover %}
+                        <figure class="mo__img">
+                            <img src="{{ post.cover }}" alt="Artilce thumbnail" />
+                        </figure>
                     {% endif %}
-
-                    <div class="post__meta">
-                        <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
-                        {% if post.category %}
-                            <a href="#" class="post__category post__category--{{ post.category | downcase }}">{{ post.category }}</a>
-                        {% endif %}
+                    <div class="mo__body">
+                        <h1 class="mo__title mo__title--{{ post.category | downcase }}">
+                            {% if post.external_link %}
+                                <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
+                            {% else %}
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            {% endif %}
+                        </h1>
+                        <p class="mo__teaser">
+                            {% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}</p>
+                        <div class="mo__meta">
+                            <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+                            <ul class="mo-tags">
+                                <li class="mo-tags__item mo-tags__item--{{ post.category | downcase }}"><a href="#">{{ post.category }}</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </article>
             </li>
             {% endfor %}
         </ul>
     </section>
-    <div class="pagination layout layout--medium">
-        {% if paginator.previous_page %}
-            <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
-        {% endif %}
-        {% if paginator.next_page %}
-            <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
-        {% endif %}
-    </div>
+    <section class="layout">
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
+            {% endif %}
+            {% if paginator.next_page %}
+                <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
+            {% endif %}
+        </div>
+    </section>
+
 </main>

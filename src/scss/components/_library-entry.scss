@@ -52,6 +52,10 @@
     max-width: 180px;
     margin: 0 auto;
     position: relative;
+
+    img {
+        width: 100%;
+    }
 }
 
 .library-entry__title {

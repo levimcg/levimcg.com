@@ -7,20 +7,21 @@
 -----------------------------------------------*/
 
 .layout {
-    @include outer-container(100%);
-    padding: 1em 2em;
+    @include outer-container(1200px);
+    padding: 2em;
+}
+
+.layout--jumbo {
+    @include outer-container(1600px);
 }
 
 .layout--medium {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    @include outer-container(1000px);
 }
 
-.layout--large {
-    padding-top: 3em;
-    padding-bottom: 3em;
+.layout--fluid {
+    @include outer-container(100%);
 }
-
 
 .intro {
     @include outer-container;

@@ -1,20 +1,4 @@
 .post {
-    display: block;
-}
-
-.post--single {
-    margin-bottom: 4em;
-    @include media($bp-medium) {
-        @include span-columns(7);
-        @include shift(2.5);
-    }
-}
-
-.post__content {
-
-    p {
-        color: mix($color-text, white, 80%);
-    }
 
 }
 
@@ -30,97 +14,82 @@
         @include span-columns(8);
         @include shift(2);
     }
+
+    @include media($bp-large) {
+        @include span-columns(10);
+        @include shift(1);
+    }
 }
 
 .post-list__item {
-    padding: 2em 0;
+    padding: 3em 0;
+    border-bottom: 1px solid mix($color-text, white, 10%);
 
     &:first-child {
         padding-top: 0;
     }
 }
 
+.post__header {
+    display: flex;
+    flex-direction: column;
+}
+
 .post__title {
-    margin: 0;
-    font-weight: 700;
+    font-size: 3em;
+    margin-top: .25em;
+    margin-bottom: .25em;
     line-height: 1;
-
-    a {
-        transition: all .2s ease;
-        color: $color-text;
-    }
+    order: 2;
 }
 
 .post__date {
-    font-size: .9em;
+    order: 3;
+    color: mix($color-text, white, 50%);
     font-family: $font-family-alternate;
+}
+
+.post__content {
+    margin: 2em 0;
+    line-height: 1.55;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 3rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @include media($bp-medium) {
+        @include span-columns(9);
+        @include shift(1.5);
+    }
+}
+
+/*
+ * Jumbo images
+ *
+ * Styling for making images break out of the main content
+ * column on blog posts. You can accomplish this by adding
+ * the alt tag "jumbo" to an image in the Markdown
+*/
+
+@include responsive($bp-medium) {
+    .post__content p img[alt="jumbo"],
+    .post__content p img[alt="jumbo"] + em {
+        display: block;
+        width: 134%;
+        margin-left: -17%;
+    }
+}
+
+.post__content p img[alt="jumbo"] + em,
+.post__content p img em {
+    font-size: .8125em;
     color: $color-text-quiet;
-}
-
-.post__title--note a:hover {
-    color: $color-note;
-}
-
-.post__title--link a:hover {
-    color: $color-green;
-}
-
-.post__title--life a:hover {
-    color: $color-life;
-}
-
-.post__teaser {
-    color: $color-text-quiet;
-    margin: $shim*.75 0;
-}
-
-.post__meta {
-    margin-bottom: $shim;
-}
-
-.post__date {
-    margin-right: $shim;
-}
-
-.post__category {
-    background-color: $color-text;
-    color: $color-white;
-    font-size: .8em;
-    font-family: $font-family-alternate;
-    padding: $shim*.25 $shim*.5;
-    border-radius: 3px;
-    transition: all .2s ease;
-    text-transform: uppercase;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-text, white, 80%);
-    }
-}
-
-.post__category--note {
-    background-color: $color-note;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-note, white, 80%);
-    }
-}
-
-.post__category--link {
-    background-color: $color-green;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-green, white, 80%);
-    }
-}
-
-.post__category--life {
-    background-color: $color-life;
-
-    &:hover {
-        color: $color-white;
-        background-color: mix($color-life, white, 80%);
-    }
 }

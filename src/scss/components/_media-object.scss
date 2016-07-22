@@ -1,0 +1,146 @@
+.mo {
+    display: flex;
+    flex-direction: column;
+}
+
+.mo__img {
+    margin: 0;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}
+
+.mo__title {
+    margin-top: .5em;
+    line-height: 1;
+    font-weight: 700;
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color .2s ease;
+    }
+
+    a:hover {
+        color: $color-text-quiet
+    }
+}
+
+.mo__title--note a:hover {
+    color: $color-note;
+}
+
+.mo__title--link a:hover {
+    color: $color-green;
+}
+
+.mo__title--life a:hover {
+    color: $color-life;
+}
+
+.mo__teaser {
+    margin: $shim 0;
+}
+
+.mo__date {
+    color: $color-text-quiet;
+    display: inline-block;
+    font-family: $font-family-alternate;
+    font-size: .9em;
+    margin-right: .5rem;
+}
+
+.mo-tags {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: inline-block;
+
+        a {
+            background-color: $color-text;
+            color: $color-white;
+            font-size: .8em;
+            font-family: $font-family-alternate;
+            padding: $shim*.25 $shim*.5;
+            border-radius: 3px;
+            transition: all .2s ease;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $color-white;
+                background-color: mix($color-text, white, 80%);
+            }
+        }
+    }
+}
+
+.mo-tags__item--note a {
+    background-color: $color-note;
+
+    &:hover {
+        color: $color-white;
+        background-color: mix($color-note, white, 80%);
+    }
+}
+
+.mo-tags__item--link a {
+    background-color: $color-green;
+
+    &:hover {
+        color: $color-white;
+        background-color: mix($color-green, white, 80%);
+    }
+}
+
+.mo-tags__item--life a {
+    background-color: $color-life;
+
+    &:hover {
+        color: $color-white;
+        background-color: mix($color-life, white, 80%);
+    }
+}
+
+@media screen and (min-width: $bp-small) {
+    .mo--has-image {
+
+        .mo__body {
+            padding-left: $shim*2;
+        }
+
+        .mo__title {
+            margin-top: 0;
+        }
+
+    }
+}
+
+@media screen and (min-width: $bp-small) {
+    .mo {
+        flex-direction: row;
+    }
+
+    .mo__img {
+        max-width: 250px;
+        height: auto;
+        overflow: visible;
+    }
+
+    .mo--reverse {
+        .mo__img {
+            order: 2;
+        }
+
+        .mo__body {
+            padding-left: 0;
+            padding-right: $shim*2;
+            order: 1;
+        }
+    }
+}
