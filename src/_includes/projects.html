@@ -1,0 +1,23 @@
+<ul class="grid-list grid-list--3up">
+    {% for project in site.projects reversed %}
+        <li class="grid-list__item">
+            <article class="card">
+                <figure class="card__cover">
+                    {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail }}" alt="">
+                    {% else %}
+                        <img src="http://www.fillmurray.com/300/300" alt="">
+                    {% endif %}
+                </figure>
+                <div class="card__body">
+                    <h2 class="card__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+                    {% if project.teaser %}
+                        <p>{{ project.teaser }}</p>
+                    {% else %}
+                        <p>{{ project.description | truncatewords: 25 }}</p>
+                    {% endif %}
+                </div>
+            </article>
+        </li>
+    {% endfor %}
+</ul>

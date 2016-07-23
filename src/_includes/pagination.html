@@ -1,0 +1,8 @@
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
+    {% endif %}
+</div>

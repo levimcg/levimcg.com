@@ -13,6 +13,6 @@ gulp.task('browserSync', function() {
 });
 
 // Watch _build folder for changes and reload
-gulp.task('reload', ['browserSync'], function()   {
+gulp.task('reload', ['browserSync'], function() {
     gulp.watch('_build/**/*.*').on('change', browserSync.reload);
 });

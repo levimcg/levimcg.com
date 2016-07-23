@@ -8,7 +8,12 @@
 
 .layout {
     @include outer-container(1200px);
-    padding: 2em;
+    padding: 2rem;
+}
+
+.layout--tall {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
 .layout--jumbo {
@@ -29,6 +34,7 @@
 
 .intro__text {
     margin: 0;
+    font-weight: 400;
 
     @include media($bp-medium) {
         @include span-columns(8);
@@ -39,7 +45,74 @@
 .subhead {
     font-size: 1em;
     font-family: $font-family-alternate;
+    font-weight: 400;
     margin-top: 0;
     text-transform: uppercase;
     color: $color-text-quiet;
+}
+
+
+
+
+
+
+.grid-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 -$shim;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+.grid-list__item {
+    padding: $shim;
+}
+
+.grid-list--2up {
+    .grid-list__item {
+        width: 50%;
+        float: left;
+    }
+}
+
+.grid-list--3up {
+    @include media($bp-small) {
+        .grid-list__item {
+            width: 33%;
+            float: left;
+        }
+    }
+}
+
+
+
+.card {
+    position: relative;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+    &__body {
+
+    }
+
+    &__title {
+        font-size: $font-size-4;
+        margin-top: $shim;
+
+        a {
+            color: $color-text;
+        }
+
+    }
+
+    &__title--center {
+        text-align: center;
+    }
 }

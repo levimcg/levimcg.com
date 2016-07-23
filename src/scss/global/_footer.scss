@@ -41,7 +41,10 @@
     }
 }
 
-
+/*
+ * FIXME: Switch this over the the Burbon media query mixin.
+ */
+ 
 @include responsive($bp-medium) {
     .site-footer__nav a {
         background-color: transparent;

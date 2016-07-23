@@ -22,7 +22,8 @@ title: Notes
                             {% endif %}
                         </h1>
                         <p class="mo__teaser">
-                            {% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}</p>
+                            {% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}
+                        </p>
                         <div class="mo__meta">
                             <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
                             <ul class="mo-tags">
@@ -36,14 +37,7 @@ title: Notes
         </ul>
     </section>
     <section class="layout">
-        <div class="pagination">
-            {% if paginator.previous_page %}
-                <a class="pagination__link pagination__link--next" href="{{ paginator.previous_page_path }}" class="previous">&#8592; Newer</a>
-            {% endif %}
-            {% if paginator.next_page %}
-                <a class="pagination__link pagination__link--prev" href="{{ paginator.next_page_path }}" class="next">Older &#8594;</a>
-            {% endif %}
-        </div>
+        {% include pagination.html %}
     </section>
 
 </main>

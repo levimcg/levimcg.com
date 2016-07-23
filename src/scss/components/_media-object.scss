@@ -38,6 +38,19 @@
     color: $color-green;
 }
 
+.mo__title--link:after {
+    content: url("../img/external-link-icon.svg");
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+    transition: all .2s ease;
+}
+
+.mo__title--link:hover:after {
+    opacity: 1;
+}
+
 .mo__title--life a:hover {
     color: $color-life;
 }
