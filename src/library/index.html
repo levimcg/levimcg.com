@@ -2,7 +2,13 @@
 layout: default
 title: Library
 ---
-{% include library-filter.html %}
+
+<!-- Make books a category and loop through them here. -->
+{% for post in site.categories.book %}
+    {{ post.title }}
+{% endfor %}
+
+<!-- {% include library-filter.html %}
 <main class="library layout layout--jumbo">
     <ul class="library-list">
         {% for book in site.data.books reversed %}
@@ -21,4 +27,4 @@ title: Library
         </li>
         {% endfor %}
     </ul>
-</main>
+</main> -->

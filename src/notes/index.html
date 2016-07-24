@@ -3,7 +3,7 @@ layout: default
 title: Notes
 ---
 <main>
-    <section class="layout">
+    <section class="layout layout--medium">
         <ul class="post-list">
             {% for post in paginator.posts %}
             <li class="post-list__item">
@@ -22,7 +22,7 @@ title: Notes
                             {% endif %}
                         </h1>
                         <p class="mo__teaser">
-                            {% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}
+                            {% if post.teaser %}{{ post.teaser | markdownify }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}
                         </p>
                         <div class="mo__meta">
                             <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>

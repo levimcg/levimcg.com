@@ -52,7 +52,7 @@
 }
 
 .mo__title--life a:hover {
-    color: $color-life;
+    color: $color-article;
 }
 
 .mo__teaser {
@@ -111,16 +111,29 @@
     }
 }
 
-.mo-tags__item--life a {
-    background-color: $color-life;
+.mo-tags__item--article a {
+    background-color: $color-article;
 
     &:hover {
         color: $color-white;
-        background-color: mix($color-life, white, 80%);
+        background-color: mix($color-article, white, 80%);
+    }
+}
+
+.mo-tags__item--book a {
+    background-color: $color-book;
+
+    &:hover {
+        color: $color-white;
+        background-color: mix($color-book, white, 80%);
     }
 }
 
 @media screen and (min-width: $bp-small) {
+    .mo__title {
+        margin-top: 0;
+    }
+
     .mo--has-image {
 
         .mo__body {
