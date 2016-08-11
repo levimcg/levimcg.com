@@ -14,6 +14,7 @@ $color-blue: #059FF5;
 $color-note: $color-red;
 $color-article: $color-blue;
 $color-book: $color-yellow;
+$color-work: $color-green;
 
 
 // Old colors
@@ -29,7 +30,13 @@ $color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-text, white, 25%);
 $color-link: $color-red;
 
-$shim: 1rem;
+$shim: 1em;
+
+$site-max-width: 1380px;
+
+$outer-container-padding: 1.5;
+$outer-container-rem: #{$outer-container-padding}rem;
+$outer-container-px: #{$outer-container-padding * 16}px;
 
 
 // Breakpoints

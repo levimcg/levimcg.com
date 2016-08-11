@@ -6,40 +6,31 @@
     _shamefile.scss
 -----------------------------------------------*/
 
-.layout {
-    @include outer-container(1200px);
-    padding: 2rem;
+.content {
+    @include outer-container(960px);
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 2em;
 }
 
-.layout--tall {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-
-.layout--jumbo {
-    @include outer-container(1600px);
-}
-
-.layout--medium {
-    @include outer-container(1000px);
-}
-
-.layout--fluid {
-    @include outer-container(100%);
+.content--line-width {
+    @include outer-container(780px);
 }
 
 .intro {
-    @include outer-container;
+
+    @include media($bp-medium) {
+        @include span-columns(8);
+        @include shift(2);
+    }
+
+
+    padding: 4em 0;
 }
 
 .intro__text {
     margin: 0;
     font-weight: 400;
-
-    @include media($bp-medium) {
-        @include span-columns(8);
-        @include shift(1);
-    }
 }
 
 .subhead {
@@ -49,43 +40,6 @@
     margin-top: 0;
     text-transform: uppercase;
     color: $color-text-quiet;
-}
-
-
-
-
-
-
-.grid-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 -$shim;
-
-    &:after {
-        content: "";
-        clear: both;
-        display: block;
-    }
-}
-
-.grid-list__item {
-    padding: $shim;
-}
-
-.grid-list--2up {
-    .grid-list__item {
-        width: 50%;
-        float: left;
-    }
-}
-
-.grid-list--3up {
-    @include media($bp-small) {
-        .grid-list__item {
-            width: 33%;
-            float: left;
-        }
-    }
 }
 
 
@@ -115,4 +69,115 @@
     &__title--center {
         text-align: center;
     }
+}
+
+
+
+/*
+ * Make this so that the title is centered vertically and horizontally using
+ * flex-box
+ */
+.tile {
+    position: relative;
+    color: $color-background;
+    max-height: 450px;
+    overflow: hidden;
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background-color: rgba($color-green, .9);
+        z-index: 2;
+        opacity: 0;
+        transition: all .2s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &__info-inner {
+        width: 100%;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: $font-size-3;
+        margin: 0;
+    }
+
+    &__thumbnail {
+        z-index: 1;
+        position: relative;
+    }
+}
+
+.tile__meta {
+    list-style: none;
+    padding: 0;
+
+    &-item {
+        display: inline-block;
+        font-size: .8125em;
+    }
+}
+
+.color-book {
+    color: $color-book;
+}
+
+.color-article {
+    color: $color-article;
+}
+
+.color-work {
+    color: $color-work;
+}
+
+a.color-article {
+    &:hover {
+        color: $color-article;
+        text-decoration: underline;
+    }
+}
+
+a.color-book {
+    &:hover {
+        color: $color-book;
+        text-decoration: underline;
+    }
+}
+
+a.color-work {
+    &:hover {
+        color: $color-work;
+        text-decoration: underline;
+    }
+}
+
+.recent {
+    // padding: 3em 0;
+}
+
+.section-header {
+    padding: 1em 0 2em 0;
+}
+
+.section-header--centered {
+    text-align: center;
+}
+
+.section-header__title {
+    margin: 0;
+}
+
+.section-header__teaser {
+    margin: 0;
+    color: mix($color-background, $color-text, 70%);
 }

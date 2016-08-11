@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-snippet
 title: The Elements of Typographic Style
 teaser: This book should be required reading for every designer. It's a bit dry at times, but an invaluable resource—the first place I go if I have a question about type.  
 category: Book

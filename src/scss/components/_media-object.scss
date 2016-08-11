@@ -153,7 +153,8 @@
     }
 
     .mo__img {
-        max-width: 250px;
+        flex-basis: 250px;
+        min-width: 250px;
         height: auto;
         overflow: visible;
     }
@@ -169,4 +170,17 @@
             order: 1;
         }
     }
+}
+
+.mo--compact {
+
+    .mo__img {
+        flex-basis: 150px;
+        min-width: 150px;
+    }
+
+    .mo__title {
+        font-size: 1.25em;
+    }
+
 }

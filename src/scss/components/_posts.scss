@@ -1,24 +1,12 @@
-.post {
-
-}
-
 .post-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 4em;
+}
 
-    /*
-     * Grid stuff
-     */
-    @include media($bp-medium) {
-        @include span-columns(8);
-        @include shift(2);
-    }
-
-    @include media($bp-large) {
-        @include span-columns(10);
-        @include shift(1);
-    }
+.post-list--two-thirds {
+    margin-left: 0;
+    @include span-columns(6);
 }
 
 .post-list__item {
@@ -32,14 +20,21 @@
 }
 
 .post__header {
-    display: flex;
-    flex-direction: column;
+    @include outer-container(860px);
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+    span {
+        color: $color-text-quiet;
+    }
 }
 
 .post__title {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-top: .25em;
-    margin-bottom: .25em;
+    margin-bottom: .15em;
     line-height: 1;
     order: 2;
 }
@@ -48,53 +43,61 @@
     order: 3;
     color: mix($color-text, white, 50%);
     font-family: $font-family-alternate;
+    margin-right: .5em;
+}
+
+.post__category {
+    font-family: $font-family-alternate;
+    margin-left: .5em;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &--book {
+        color: $color-book;
+        &:hover {
+            color: mix($color-book, $color-background, 50%);
+        }
+    }
+
+    &--article {
+        color: $color-article;
+        &:hover {
+            color: mix($color-article, $color-background, 50%);
+        }
+    }
 }
 
 .post__content {
-    margin: 2em 0;
-    line-height: 1.55;
-
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-top: 3rem;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    @include media($bp-medium) {
-        @include span-columns(9);
-        @include shift(1.5);
-    }
+    line-height: 1.6;
 }
 
 /*
- * Jumbo images
- *
- * Styling for making images break out of the main content
- * column on blog posts. You can accomplish this by adding
- * the alt tag "jumbo" to an image in the Markdown
-*/
-
-
-/*
- * FIXME: Switch this over the the Burbon media query mixin.
+ * Breakout images
  */
-@include responsive($bp-medium) {
-    .post__content p img[alt="jumbo"],
-    .post__content p img[alt="jumbo"] + em {
-        display: block;
-        width: 134%;
-        margin-left: -17%;
+.post__breakout {
+    margin: 2em -2em;
+
+
+    &-caption {
+        padding: .5em;
+        font-size: .8125em;
+        font-style: italic;
+        color: $color-text-quiet;
     }
 }
 
-.post__content p img[alt="jumbo"] + em,
-.post__content p img em {
-    font-size: .8125em;
-    color: $color-text-quiet;
+@include media(980px) {
+    .post__breakout {
+        margin-right: -4em;
+        margin-left: -4em;
+    }
+}
+
+@include media(1100px) {
+    .post__breakout {
+        margin-right: -8em;
+        margin-left: -8em;
+    }
 }

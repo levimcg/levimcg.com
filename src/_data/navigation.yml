@@ -1,9 +1,6 @@
 -
-    title: "Work"
-    url: "/#work/"
--
-    title: "Notes"
-    url: "/notes/"
+    title: "Posts"
+    url: "/posts/"
 -
     title: "Library"
     url: "/library/"

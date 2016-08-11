@@ -7,7 +7,8 @@
 -----------------------------------------------*/
 
 .site-header {
-    margin-bottom: $shim*2;
+    @include outer-container($site-max-width);
+    padding: 1em;
 }
 
 .site-header__logo {
@@ -28,14 +29,14 @@
 
 .site-header__logo {
     @include media($bp-medium) {
-        @include span-columns(4);
+        @include span-columns(3);
     }
 
 }
 
 .site-nav {
     @include media($bp-medium) {
-        @include span-columns(8);
+        @include span-columns(9);
         text-align: right;
     }
 }
@@ -66,7 +67,11 @@
     }
 }
 
-.site-nav__item--notes.is-current {
+.site-nav__item.is-current {
+    border-bottom: 3px solid $color-text;
+}
+
+.site-nav__item--posts.is-current {
     border-bottom: 3px solid $color-note;
 }
 

@@ -1,23 +1,22 @@
-<ul class="grid-list grid-list--3up">
-    {% for project in site.projects reversed %}
-        <li class="grid-list__item">
-            <article class="card">
-                <figure class="card__cover">
+<section class="layout layout--jumbo layout--tall" id="work">
+    <h2 class="subhead">Projects</h2>
+        {% for project in site.projects reversed %}
+            <article class="mo mo--has-image">
+                <figure class="mo__img">
                     {% if project.thumbnail %}
                         <img src="{{ project.thumbnail }}" alt="">
                     {% else %}
                         <img src="http://www.fillmurray.com/300/300" alt="">
                     {% endif %}
                 </figure>
-                <div class="card__body">
-                    <h2 class="card__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+                <div class="mo__body">
+                    <h2 class="mo__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
                     {% if project.teaser %}
-                        <p>{{ project.teaser }}</p>
+                        <p class="mo__teaser">{{ project.teaser }}</p>
                     {% else %}
-                        <p>{{ project.description | truncatewords: 25 }}</p>
+                        <p class="mo__teaser">{{ project.description | truncatewords: 25 }}</p>
                     {% endif %}
                 </div>
             </article>
-        </li>
-    {% endfor %}
-</ul>
+        {% endfor %}
+</section>

@@ -1,5 +1,5 @@
 ---
-layout: post-link
+layout: post-snippet
 # Here is a good list of ascii html codes that are safe to use
 # in post titles in Jekyll: http://www.ascii.cl/htmlcodes.htm
 title: Rational&#58; A lovely new type family from Rene Bieder

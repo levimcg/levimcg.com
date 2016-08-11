@@ -3,11 +3,11 @@ source: src/
 destination: _build/
 
 # Permalink setting
-permalink: notes/:title/
+permalink: posts/:title/
 
 # Pagination - this stuff changed a lot as of Jekyll 3.0.0
 paginate: 5
-paginate_path: /notes/page:num/
+paginate_path: /posts/page:num/
 gems: [jekyll-paginate]
 
 # Exclude stuff

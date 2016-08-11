@@ -9,9 +9,10 @@
 .pagination {
     margin: 2em 0;
 
-    @include media($bp-medium) {
-        @include span-columns(10);
-        @include shift(1);
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
     }
 }
 

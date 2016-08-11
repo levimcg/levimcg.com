@@ -1,17 +1,13 @@
 ---
 layout: default
 ---
-<main class="layout layout--medium">
-    <article class="post">
-        <header class="post__header">
-            <h1 class="post__title">{{ page.title }}</h1>
-            <ul class="mo-tags">
-                <li class="mo-tags__item mo-tags__item--{{ page.category | downcase }}"><a href="#">{{ page.category }}</a></li>
-            </ul>
-            <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
-        </header>
-        <section class="post__content">
-            {{ content }}
-        </section>
-    </article>
+<main>
+    <header class="post__header">
+        <h1 class="post__title">{{ page.title }}</h1>
+        <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
+        <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
+    </header>
+    <section class="content content--line-width">
+        {{ content }}
+    </section>
 </main>

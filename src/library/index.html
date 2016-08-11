@@ -2,29 +2,23 @@
 layout: default
 title: Library
 ---
-
-<!-- Make books a category and loop through them here. -->
-{% for post in site.categories.book %}
-    {{ post.title }}
-{% endfor %}
-
-<!-- {% include library-filter.html %}
-<main class="library layout layout--jumbo">
+{% include library-filter.html %}
+<main>
     <ul class="library-list">
-        {% for book in site.data.books reversed %}
-        <li data-tags="{{ book.tags | join: ', ' }}">
+        {% for post in site.categories.Book %}
+        <li data-tags="{{ post.tags | join: ', ' }}">
             <article class="library-entry">
                 <figure class="library-entry__thumbnail">
-                    {% if book.now_reading %}
-                    <span class="libarary-entry__flag {% if book.flag_btm %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
+                    {% if post.now_reading %}
+                    <span class="libarary-entry__flag {% if post.flag_btm %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
                     {% endif %}
-                    <img src="{{ book.thumbnail }}" alt="{{ book.title }} cover art">
+                    <img src="{{ post.thumbnail }}" alt="{{ post.title }} cover art">
                 </figure>
-                <h1 class="library-entry__title">{{ book.title }}</h1>
-                <p class="library-entry__author">{{ book.author }}</p>
-                <a class="library-entry__link" href="{{ book.buy_link }}" target="_blank">Buy</a>
+                <h1 class="library-entry__title">{{ post.title }}</h1>
+                <p class="library-entry__author">{{ post.author }}</p>
+                <a class="library-entry__link" href="{{ post.buy_link }}" target="_blank">Buy</a>
             </article>
         </li>
         {% endfor %}
     </ul>
-</main> -->
+</main>

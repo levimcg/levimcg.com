@@ -13,10 +13,6 @@ body {
     line-height: 1.5;
     -moz-osx-font-smoothing: grayscale;
      -webkit-font-smoothing: antialiased;
-    /*
-     * TODO: Remove this, it's temporary for rebuild
-     */
-    // padding: 1em;
 }
 
 body * {
@@ -65,6 +61,7 @@ p {
 }
 
 img {
+    max-width: 100%;
     height: auto;
     display: block;
 }
