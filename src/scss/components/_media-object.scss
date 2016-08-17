@@ -183,4 +183,8 @@
         font-size: 1.25em;
     }
 
+    .mo__teaser {
+        color: mix($color-text, $color-background, 50%);
+    }
+
 }

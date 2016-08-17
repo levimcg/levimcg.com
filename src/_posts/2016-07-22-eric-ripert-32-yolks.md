@@ -1,7 +1,7 @@
 ---
 layout: post-snippet
 title: 32 Yolks
-teaser: Just finished reading _32 Yolks_ Eric Ripert's new memoir. It's lovely and I hope you read it.
+teaser: "Just finished reading <em>32 Yolks</em> Eric Ripert's new memoir. It's lovely and I hope you read it."
 cover: http://static.levimcg.com/notes/32-yolks/32-yolks-cover.jpg
 category: Book
 

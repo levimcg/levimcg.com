@@ -3,70 +3,24 @@ layout: default
 title: Home
 body: home
 ---
-<div class="wrapper">
-    <section class="intro">
-        <h1 class="intro__text">Hi, I’m Levi. I do my best to communicate complex ideas more simply. I'm trying to <a class="color-book" href="{{ site.baseurl }}/library">read</a> and <a class="color-article" href="{{ site.baseurl }}/posts">write</a> more. Have a look at some of my <a class="color-work" href="#work">work</a>, or read about what I'm up to <a href="{{ site.baseurl }}/now">now</a>.</h1>
-    </section>
+<div class="wrapper wrapper--tall">
+    <div class="three-fourths">
+        {% include intro.html %}
+    </div>
 </div>
 <div class="wrapper">
-    <section id="work" class="work">
-        <h2 class="subhead">Selected Work</h2>
-        <ul class="project-grid">
-            {% for project in site.projects reversed limit: 4 offset: 2 %}
-                <li class="project-grid__item">
-                    <a href="{{ project.url }}">
-                        <article class="tile">
-                            <div class="tile__info">
-                                <div class="tile__info-inner">
-                                    <h1 class="tile__title">{{ project.title }}</h1>
-                                    <ul class="tile__meta">
-                                        {% for tag in project.tags %}
-                                            <li class="tile__meta-item">{{ tag }}{% unless forloop.last %}, {% endunless %}</li>
-                                        {% endfor %}
-                                    </ul>
-                                </div>
-                            </div>
-                            <figure class="tile__thumbnail">
-                                <img src="{{ project.thumbnail }}" alt="">
-                            </figure>
-                        </article>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+    {% include project-grid.html %}
 </div>
-
-<section class="recent">
-    <div class="wrapper">
-        <header class="section-header section-header--centered">
-            <h2 class="section-header__title">Recent Posts</h2>
-            <p class="section-header__teaser">Quick notes, articles, and links I like to share.</p>
-        </header>
-        <ul class="grid-list grid-list--2up">
-        {% for post in site.posts limit: 4 %}
-            <li class="grid-list__item">
-                <article class="mo mo--compact {% if post.cover %}mo--has-image{% endif %}">
-                    {% if post.cover %}
-                        <figure class="mo__img">
-                            <img src="{{ post.cover }}" alt="Artilce thumbnail" />
-                        </figure>
-                    {% endif %}
-                    <div class="mo__body">
-                        <h1 class="mo__title mo__title--{{ post.category | downcase }}">
-                            {% if post.external_link %}
-                                <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
-                            {% else %}
-                                <a href="{{ post.url }}">{{ post.title }}</a>
-                            {% endif %}
-                        </h1>
-                        <p class="mo__teaser">
-                            {% if post.teaser %}{{ post.teaser | markdownify }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}
-                        </p>
-                    </div>
-                </article>
-            </li>
-        {% endfor %}
+<div class="wrapper wrapper--jumbo">
+    <div class="half">
+        <h2 class="subhead">Oh, Hello</h2>
+        <p>If you have an idea and are interested in working together please, take a look at my work and say hi.</p>
+        <h2 class="subhead">Elsewhere</h2>
+        <ul class="u-no-list">
+            <li><a class="u-color-text"href="https://twitter.com/levimcg">Twitter</a></li>
+            <li><a class="u-color-text"href="https://www.instagram.com/levimcg/">Instagram</a></li>
+            <li><a class="u-color-text"href="https://github.com/levimcg">Github</a></li>
+            <li><a class="u-color-text"href="https://dribbble.com/levimcg">Dribbble</a></li>
         </ul>
     </div>
-</section>
+</div>

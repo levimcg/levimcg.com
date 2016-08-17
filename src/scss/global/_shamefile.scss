@@ -7,25 +7,11 @@
 -----------------------------------------------*/
 
 .content {
-    @include outer-container(960px);
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding: 2em;
+    @include outer-container(760px);
 }
 
-.content--line-width {
-    @include outer-container(780px);
-}
-
-.intro {
-
-    @include media($bp-medium) {
-        @include span-columns(8);
-        @include shift(2);
-    }
-
-
-    padding: 4em 0;
+.content--margin-top {
+    margin-top: 4em;
 }
 
 .intro__text {
@@ -161,10 +147,6 @@ a.color-work {
     }
 }
 
-.recent {
-    // padding: 3em 0;
-}
-
 .section-header {
     padding: 1em 0 2em 0;
 }
@@ -174,6 +156,7 @@ a.color-work {
 }
 
 .section-header__title {
+    font-weight: 400;
     margin: 0;
 }
 

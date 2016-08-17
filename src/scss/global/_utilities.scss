@@ -1,16 +1,4 @@
-.l-slice {
-    padding: 1em 0;
-}
 
-/*
- * FIXME: Switch this over the the Burbon media query mixin.
- */
-
-@include responsive($bp-medium) {
-    .l-slice {
-        padding: 2.5em 0;
-    }
-}
 
 .u-text-center {
     text-align: center;
@@ -75,4 +63,13 @@
 
 .pb-md {
     padding-bottom: 2em;
+}
+
+.u-no-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.u-color-text {
+    color: $color-text;
 }

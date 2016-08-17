@@ -1,25 +1,29 @@
 ---
 layout: default
 ---
-<header>
-    <h1>{{ page.title }}</h1>
-    <span>
-        <p>{{ page.description }}</p>
-    </span>
+<div class="wrapper">
+    <div class="one-third">
+        <header>
+            <h1>{{ page.title }}</h1>
+            <span>
+                <p>{{ page.description }}</p>
+            </span>
 
-    <h2>Filed under</h2>
-    <ul>
-        {% for tag in page.tags %}
-            <li>{{ tag }}</li>
-        {% endfor %}
-    </ul>
+            <h2>Filed under</h2>
+            <ul>
+                {% for tag in page.tags %}
+                    <li>{{ tag }}</li>
+                {% endfor %}
+            </ul>
 
-    {% if page.website %}
-        <h2>Website</h2>
-        <a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a>
-    {% endif %}
-</header>
+            {% if page.website %}
+                <h2>Website</h2>
+                <a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a>
+            {% endif %}
+        </header>
+    </div>
 
 <section>
     {{ content }}
 </section>
+</div>

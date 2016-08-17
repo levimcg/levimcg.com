@@ -1,6 +1,26 @@
 .wrapper {
     @include outer-container($site-max-width);
     padding: 1em;
+
+    &--tall {
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        @include media($bp-medium) {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
+    }
+
+    &--jumbo {
+        padding-top: 3em;
+        padding-bottom: 3em;
+
+        @include media($bp-medium) {
+            padding-top: 6em;
+            padding-bottom: 6em;
+        }
+    }
 }
 
 .center-column {
@@ -16,8 +36,16 @@
     }
 }
 
-.work {
-    padding: 2em 0 4em 0;
+.three-fourths {
+    @include media($bp-medium) {
+        @include span-columns(8);
+    }
+}
+
+.one-third {
+    @include media($bp-medium) {
+        @include span-columns(4);
+    }
 }
 
 .project-grid {
@@ -58,6 +86,7 @@
         .grid-list__item {
             @include span-columns(6);
             @include omega(2n);
+            margin-bottom: 3em;
         }
     }
 

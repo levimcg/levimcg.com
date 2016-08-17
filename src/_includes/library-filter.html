@@ -7,12 +7,10 @@
 {% assign tagArray = tagArray | join: " " %}
 {% assign tagArray = tagArray | split: " " | uniq %}
 
-<div>
-    <ul class="filter">
-        <span class="filter__label">Filter: </span>
-        <li class="filter__item js-filter-all is-active">All</li>
-        {% for item in tagArray %}
-            <li class="filter__item" data-filter-term="{{ item }}">{{ item | capitalize }}</li>
-        {% endfor %}
-    </ul>
-</div>
+<ul class="filter">
+    <span class="filter__label">Filter: </span>
+    <li class="filter__item js-filter-all is-active">All</li>
+    {% for item in tagArray %}
+        <li class="filter__item" data-filter-term="{{ item }}">{{ item | capitalize }}</li>
+    {% endfor %}
+</ul>

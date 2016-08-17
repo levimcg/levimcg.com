@@ -8,7 +8,12 @@
 
 .site-header {
     @include outer-container($site-max-width);
-    padding: 1em;
+    padding: 2em 1em;
+    text-align: center;
+
+    @include media($bp-medium) {
+        text-align: left;
+    }
 }
 
 .site-header__logo {
@@ -35,9 +40,12 @@
 }
 
 .site-nav {
+    margin-top: 1em;
+
     @include media($bp-medium) {
         @include span-columns(9);
         text-align: right;
+        margin-top: 0;
     }
 }
 
@@ -71,10 +79,18 @@
     border-bottom: 3px solid $color-text;
 }
 
+.site-nav__item--posts a:hover {
+    color: $color-article;
+}
+
 .site-nav__item--posts.is-current {
-    border-bottom: 3px solid $color-note;
+    border-bottom: 3px solid $color-article;
+}
+
+.site-nav__item--library a:hover {
+    color: $color-book;
 }
 
 .site-nav__item--library.is-current {
-    border-bottom: 3px solid $color-green;
+    border-bottom: 3px solid $color-book;
 }

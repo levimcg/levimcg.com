@@ -2,12 +2,20 @@
 layout: default
 ---
 <main>
-    <header class="post__header">
-        <h1 class="post__title">{{ page.title }}</h1>
-        <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
-        <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
-    </header>
-    <section class="content content--line-width">
-        {{ content }}
-    </section>
+    <div class="wrapper wrapper--tall">
+        <div class="center-column">
+        <header class="post__header">
+            <h1 class="post__title">{{ page.title }}</h1>
+            {% if page.category %}
+                <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
+                <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
+            {% endif %}
+        </header>
+
+        <div class="content content--margin-top">
+            {{ content }}
+        </div>
+    </div>
+
+    </div>
 </main>

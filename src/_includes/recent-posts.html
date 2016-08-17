@@ -1,0 +1,31 @@
+<section class="recent">
+    <div class="wrapper">
+        <header class="section-header section-header--centered">
+            <h2 class="section-header__title">Recent Posts</h2>
+            <p class="section-header__teaser">Quick notes, articles, and links I like to share.</p>
+        </header>
+        <ul class="grid-list grid-list--2up">
+        {% for post in site.posts limit: 4 %}
+            <li class="grid-list__item">
+                <article class="mo mo--compact {% if post.cover %}mo--has-image{% endif %}">
+                    {% if post.cover %}
+                        <figure class="mo__img">
+                            <img src="{{ post.cover }}" alt="Artilce thumbnail" />
+                        </figure>
+                    {% endif %}
+                    <div class="mo__body">
+                        <h1 class="mo__title mo__title--{{ post.category | downcase }}">
+                            {% if post.external_link %}
+                                <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
+                            {% else %}
+                                <a href="{{ post.url }}">{{ post.title }}</a>
+                            {% endif %}
+                        </h1>
+                        <p class="mo__teaser">{% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}</p>
+                    </div>
+                </article>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>

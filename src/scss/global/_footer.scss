@@ -4,8 +4,6 @@
 
 -----------------------------------------------*/
 .site-footer {
-    padding: 1em 0;
-    background-color: mix($color-background, $color-text, 97%);
 
     &:after {
         content: "";
@@ -17,10 +15,16 @@
 .site-footer__copyright {
     color: rgba($color-text, .5);
     margin: 0;
+    float: left;
+    font-size: .875em;
+    padding-top: .18em;
+
+    @include media($bp-medium) {
+        font-size: 1em;
+    }
 
     a {
         color: rgba($color-text, .5);
-        font-size: .875em;
 
         &:hover {
             color: $color-primary;
@@ -29,17 +33,23 @@
 }
 
 .site-footer__nav {
+    float: right;
 
     a {
         display: inline-block;
         font-size: .875em;
-        background-color: $color-primary;
+        background-color: $color-green;
         padding: .25em .75em;
-        color: $color-text;
+        color: $color-background;
         @include trans(color, .3s);
         -webkit-border-radius: 2px;
            -moz-border-radius: 2px;
                 border-radius: 2px;
+
+
+        @include media($bp-medium) {
+            font-size: 1em;
+        }
     }
 }
 
@@ -52,6 +62,7 @@
         background-color: transparent;
         color: rgba($color-text, .5);
         padding: 0;
+        font-size: 1em;
 
         &:hover {
             color: $color-primary;
