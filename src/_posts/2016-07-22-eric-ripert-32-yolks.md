@@ -11,5 +11,4 @@ thumbnail: https://images-na.ssl-images-amazon.com/images/I/41OcFAZXmIL.jpg
 buy_link: https://www.amazon.com/32-Yolks-Mothers-Table-Working/dp/0812992989
 year_read: 2016
 tags: [food, biography]
-now_reading: true
 ---

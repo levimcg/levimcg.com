@@ -1,7 +1,7 @@
 {% assign tagArray = "" | split: "|" %}
 
-{% for book in site.data.books %}
-    {% assign tagArray = tagArray | push: book.tags %}
+{% for post in site.categories.Book %}
+    {% assign tagArray = tagArray | push: post.tags %}
 {% endfor %}
 
 {% assign tagArray = tagArray | join: " " %}

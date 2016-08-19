@@ -1,7 +1,7 @@
 
 .project-info {
     @include media($bp-medium) {
-        @include row(100%);
+        @include outer-container(100%);
         margin-top: 2em;
         margin-bottom: 4em;
     }
