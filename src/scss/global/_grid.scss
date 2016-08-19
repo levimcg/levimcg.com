@@ -1,326 +1,132 @@
-/*-----------------------------------------------
-    Underwear CSS
-    _underwear.scss
-    
-    A simple grid system for basic layout
------------------------------------------------*/
+.wrapper {
+    @include outer-container($site-max-width);
+    padding: 1em;
 
-// *** Grid settings  ***
-$grid-max-width: 1200px;
-$grid-max-width--larger: 1340px;
-$grid-max-giant: 100%;
-$grid-gutters: 1em;
-
-.container {
-    max-width: $grid-max-width;
-    margin: 0 auto;
-
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
+    @include media($bp-medium) {
+        padding: 2em;
     }
 
-    &:before {
-        content: "";
-        display: block;
-        clear: both;
-    }
-}
+    &--tall {
+        padding-top: 2em;
+        padding-bottom: 2em;
 
-@include responsive($bp-superlarge) {
-    .container {
-        max-width: $grid-max-width--larger;
-    }
-}
-
-.unit {
-    padding-left: $grid-gutters;
-    padding-right: $grid-gutters;
-    padding-top: $grid-gutters;
-    padding-bottom: $grid-gutters;
-    float: left;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-}
-
-.container.kill-vertical .unit,
-.container--kill-vertical .unit {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* Grid nesting */
-
-.unit > .container .unit {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    &:first-child {
-        padding-left: 0;
+        @include media($bp-medium) {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
     }
 
-    &:last-child {
-        padding-right: 0;
+    &--jumbo {
+        padding-top: 3em;
+        padding-bottom: 3em;
+
+        @include media($bp-medium) {
+            padding-top: 6em;
+            padding-bottom: 6em;
+        }
     }
+
+    &--inner {
+        padding: 0;
+    }
+
+    &--inset {
+        @include media(1240px) {
+            padding: 2em 4em;
+        }
+    }
+
 }
 
-.centered {
-    margin: 0 auto;
-    float: none !important;
-}
-
-.last {
-    float: right;
-}
-
-.whole {
-    width: 100%;
+.center-column {
+    @include media($bp-medium) {
+        @include span-columns(8);
+        @include shift(2);
+    }
 }
 
 .half {
-    width: 50%;
+    @include media($bp-medium) {
+        @include span-columns(6);
+    }
 }
 
-.one-third {
-    width: 33.33333%;
-}
-
-.two-thirds {
-    width: 66.666666666667%;
-}
-
-.one-fourth {
-    width: 25%;
+.half--push {
+    @include media($bp-medium) {
+        @include shift(6);
+    }
 }
 
 .three-fourths {
-    width: 75%;
+    @include media($bp-medium) {
+        @include span-columns(8);
+    }
 }
 
-.one-fifth {
-    width: 20%;
+.one-third {
+    @include media($bp-medium) {
+        @include span-columns(4);
+    }
 }
 
-.two-fifths {
-    width: 40%;
+.one-third--push {
+    @include media($bp-medium) {
+        @include shift(8);
+    }
 }
 
-.three-fifths {
-    width: 60%;
+.two-thirds {
+    @include media($bp-medium) {
+        @include span-columns(8);
+    }
 }
 
-.four-fifths {
-    width: 80%;
-}
-/* Push and pull classes */
-
-.push {
-    float: right;
+.two-thirds--pull {
+    @include media($bp-medium) {
+        @include shift(-12);
+    }
 }
 
-.pull {
-    float: left;
-}
-
-/* List grid */
-
-ul.list-grid-fourths {
-    display: block;
-    list-style-type: none;
-    margin: $grid-gutters * -1;
+.project-grid {
+    list-style: none;
     padding: 0;
+    margin: 0 -.5em;
 
     &:after {
         content: "";
-        display: block;
         clear: both;
+        display: block;
     }
 
-    li {
-        display: block;
-        float: left;
-        width: 25%;
-        padding: $grid-gutters;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
+    &__item {
+        padding: .5em;
+
+        @include media($bp-medium) {
+            float: left;
+            width: 50%;
+        }
     }
 }
 
-ul.list-grid-thirds {
-    display: block;
-    list-style-type: none;
-    margin: $grid-gutters * -1;
+.grid-list {
+    list-style: none;
     padding: 0;
 
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    li {
-        display: block;
-        float: left;
-        width: 33.333333333333%;
-        padding: $grid-gutters;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+    @include outer-container($site-max-width);
 }
 
-ul.list-grid-half {
-    display: block;
-    list-style-type: none;
-    margin: $grid-gutters * -1;
-    padding: 0;
+.grid-list__item {
 
-    &:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-
-    li {
-        display: block;
-        float: left;
-        width: 50%;
-        padding: $grid-gutters;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
 }
 
-@media screen and (max-width: 768px) {
-    // Stack columns and decreas outer gutters for mobile
-    .unit {
-        float: none;
-        padding-top: $grid-gutters / 2;
-        padding-bottom: $grid-gutters / 2;
-    }
+.grid-list--2up {
 
-    // Kill top padding on first nested unit to keep vertical spacing consistent
-    .unit .container .unit:first-child {
-        padding-top: 0;
-    }
-
-    /*
-        May have fixed some of the grid nesting issues here?
-        Needs more testing.
-    */
-    .unit > .container .unit {
-        padding-top: $grid-gutters / 2;
-        padding-bottom: $grid-gutters / 2;
-        padding-left: 0;
-        padding-right: 0;
-
-        &:first-child {
-            padding-top: 0;
-            padding-right: 0;
-        }
-
-        &:last-child {
-            padding-bottom: 0;
-            padding-left: 0;
+    @include media($bp-small) {
+        .grid-list__item {
+            @include span-columns(6);
+            @include omega(2n);
+            margin-bottom: 3em;
         }
     }
 
-    /* Gets rid of left and right padding on grid units */
-    .container--collapse {
-        
-        .unit {
-            padding: 0;
-        }
-    }
-    
-    /* Small grid - This will keep the proportions of the grid even on small devices */
-    .container.small-grid .unit.half {
-        width: 50%;
-        float: left;
-    }
-
-    .container.small-grid .unit.one-third {
-        width: 33.333333333333%;
-        float: left;
-    }
-
-    .container.small-grid .unit.two-thirds {
-        width: 66.666666666667%;
-        float: left;
-    }
-
-    .container.small-grid .unit.one-fourth {
-        width: 25%;
-        float: left;
-    }
-    .container.small-grid .unit.three-fourths {
-        width: 75%;
-        float: left;
-    }
-
-    .container.small-grid .unit.one-fifth {
-        width: 20%;
-        float: left;
-    }
-
-    .container.small-grid .unit.two-fifths {
-        width: 40%;
-        float: left;
-    }
-
-    .container.small-grid .unit.three-fifths {
-        width: 60%;
-        float: left;
-    }
-
-    .container.small-grid .unit.four-fifths {
-        width: 80%;
-        float: left;
-    }
-
-    .whole,
-    .half,
-    .one-third,
-    .two-thirds,
-    .one-fourth,
-    .three-fourths,
-    .one-fifth,
-    .two-fifths,
-    .three-fifths,
-    .four-fifths {
-        width: 100% !important;
-    }
-
-    .push,
-    .pull {
-        float: none;
-    }
-
-    ul.list-grid-fourths,
-    ul.list-grid-thirds,
-    ul.list-grid-half {
-
-        li {
-            width: 100%;
-            float: none;
-            padding-top: .5em;
-            padding-bottom: .5em;
-
-            &:first-child {
-                padding-top: 1em;
-            }
-        }
-
-
-    }
 }

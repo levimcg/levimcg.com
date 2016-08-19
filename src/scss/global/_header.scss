@@ -7,19 +7,19 @@
 -----------------------------------------------*/
 
 .site-header {
-    margin-top: 1em;
-    @include clear-fix;
-}
+    @include outer-container($site-max-width);
+    padding: 2em;
+    text-align: center;
 
-.wf-loading .site-header__logo {
-    opacity: 0;
+    @include media($bp-medium) {
+        text-align: left;
+    }
 }
 
 .site-header__logo {
     font-size: 1em;
-    margin-top: 0;
-    margin-bottom: 1em;
-    text-align: center;
+    font-weight: 400;
+    margin: 0;
 
     a {
         color: $color-text;
@@ -32,10 +32,65 @@
     }
 }
 
-@include responsive($bp-medium) {
-    .site-header__logo {
-        float: left;
-        text-align: left;
-        width: 25%;
+.site-header__logo {
+    @include media($bp-medium) {
+        @include span-columns(3);
     }
+
+}
+
+.site-nav {
+    margin-top: 1em;
+
+    @include media($bp-medium) {
+        @include span-columns(9);
+        text-align: right;
+        margin-top: 0;
+    }
+}
+
+.site-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-nav__item {
+    display: inline-block;
+    margin-right: 2em;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    a {
+        color: $color-text;
+        text-decoration: none;
+        transition: color .3s ease;
+        padding-bottom: .25em;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.site-nav__item.is-current {
+    border-bottom: 3px solid $color-text;
+}
+
+.site-nav__item--posts a:hover {
+    color: $color-article;
+}
+
+.site-nav__item--posts.is-current {
+    border-bottom: 3px solid $color-article;
+}
+
+.site-nav__item--library a:hover {
+    color: $color-book;
+}
+
+.site-nav__item--library.is-current {
+    border-bottom: 3px solid $color-book;
 }

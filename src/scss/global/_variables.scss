@@ -1,21 +1,43 @@
 // Typography defaults
-$base-font-family: "Source Sans Pro", sans-serif;
+$base-font-family: "PT Serif", serif;
 $base-font-weight: 400;
 $font-family-alternate: "Source Code Pro", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
-// Colors
+// New Colors
+$color-white: #fff;
+$color-black: #262C58;
+$color-green: #00B688;
+$color-red: #eb3d3e;
+$color-yellow: #f1c23b;
+$color-blue: #059FF5;
+
+$color-note: $color-red;
+$color-article: $color-blue;
+$color-book: $color-yellow;
+$color-work: $color-green;
+
+
+// Old colors
 $color-primary: #00a887;
 $color-secondary: #0081c9;
 $color-alternate: #ff4237;
 
+$color-background: $color-white;
+$color-text: $color-black;
+$color-text-quiet: mix($color-text, white, 50%);
 
-$color-background: #2c2f35;
 $color-background-darker: mix($color-background, black, 90%);
-$color-ruler: mix($color-background, white, 90%);
-$color-link: $color-primary;
-$color-text: #ffffff;
-$color-text-quiet: mix($color-background, white, 30%);
-$color-quiet: mix($color-background, white, 40%);
+$color-ruler: mix($color-text, white, 25%);
+$color-link: $color-red;
+
+$shim: 1em;
+
+$site-max-width: 1380px;
+
+$outer-container-padding: 1.5;
+$outer-container-rem: #{$outer-container-padding}rem;
+$outer-container-px: #{$outer-container-padding * 16}px;
+
 
 // Breakpoints
 $bp-small: 500px;
@@ -24,8 +46,8 @@ $bp-large: 900px;
 $bp-xlarge: 1100px;
 $bp-superlarge: 1340px;
 
-$font-size-1: 2em;
-$font-size-2: 1.8em;
+$font-size-1: 1.8em;
+$font-size-2: 1.7em;
 $font-size-3: 1.5em;
 $font-size-4: 1.35em;
 $font-size-5: 1.15em;

@@ -1,15 +1,22 @@
 ---
 layout: default
 ---
-<article class="note-single">
-    <div class="container">
-        <div class="unit three-fifths centered">
-            <header>
-                <h1 class="note-single__title">{{ page.title }}</h1>
-                <time datetime="{{ post.date | date: '%F'}}" class="note-content__date">{{ page.date | date: '%b %d, %Y' }}</time>
-            </header>
+<main>
+    <div class="wrapper wrapper--tall">
+        <div class="center-column">
 
+        <header class="post__header content">
+            <h1 class="post__title">{{ page.title }}</h1>
+            <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
+            {% if page.category %}
+                <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
+            {% endif %}
+        </header>
+
+        <div class="content content--margin-top">
             {{ content }}
         </div>
     </div>
-</article>
+
+    </div>
+</main>

@@ -3,48 +3,24 @@ layout: default
 title: Home
 body: home
 ---
-<section class="intro">
-    <div class="container">
-        <div class="unit two-thirds">
-            <h1 class="intro__text">Hi, I’m Levi. I specialize in helping to communicate complex ideas more simply. I try to generalize in everything else. Here's what I'm up to <a href="{{ site.baseurl }}/now">Now</a>.</h1>
-        </div>
+<div class="wrapper wrapper--tall">
+    <div class="three-fourths">
+        {% include intro.html %}
     </div>
-</section>
-<section class="section" id="work">
-    <div class="container">
-        <div class="unit whole">
-            <h3 class="sub-head">Projects</h3>
-            {% for project in site.projects reversed %}
-                <article class="article article--2up">
-                    <h1 class="article__title"><a href="{{ project.url }}">{{ project.title }}</a></h1>
-                    {% if project.teaser %}
-                        <p class="article__teaser">{{ project.teaser }}</p>
-                    {% else %}
-                        <p class="article__teaser">{{ project.description | truncatewords: 25 }}</p>
-                    {% endif %}
-                </article>
-            {% endfor %}
-        </div>
+</div>
+<div class="wrapper wrapper--tall">
+    {% include project-grid.html %}
+</div>
+<div class="wrapper wrapper--jumbo">
+    <div class="half half--push">
+        <h2 class="subhead">Oh, Hello</h2>
+        <p>If you have an idea and are interested in working together please, take a look at my work and say hi.</p>
+        <h2 class="subhead">Elsewhere</h2>
+        <ul class="u-no-list">
+            <li><a class="u-color-text"href="https://twitter.com/levimcg">Twitter</a></li>
+            <li><a class="u-color-text"href="https://www.instagram.com/levimcg/">Instagram</a></li>
+            <li><a class="u-color-text"href="https://github.com/levimcg">Github</a></li>
+            <li><a class="u-color-text"href="https://dribbble.com/levimcg">Dribbble</a></li>
+        </ul>
     </div>
-</section>
-<section class="section section--border">
-    <div class="container">
-        <div class="unit whole">
-            <div class="article article--2up">
-                <div class="info">
-                    <h3 class="sub-head">Oh, hello</h3>
-                    <p>If you have an idea and are interested in working together please, take a look at my work and <a href="mailto:levimcg@gmail.com">say hi</a>.</p>
-                </div>
-                <div class="info">
-                    <h3 class="sub-head">Elsewhere</h3>
-                    <ul class="info__list">
-                        <li class="info__item"><a href="https://twitter.com/{{ site.user }}" target="_blank">Twitter</a></li>
-                        <li class="info__item"><a href="https://instagram.com/{{ site.user }}" target="_blank">Instagram</a></li>
-                        <li class="info__item"><a href="https://github.com/{{ site.user }}" target="_blank">Github</a></li>
-                        <li class="info__item"><a href="https://dribbble.com/{{ site.user }}" target="_blank">Dribbble</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</div>

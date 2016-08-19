@@ -1,33 +1,26 @@
 ---
 layout: default
 ---
-<header class="project-header">
-    <div class="container">
-        <div class="unit three-fifths push">
+<div class="wrapper">
+    <div class="project-info">
+        <header class="project-header">
             <h1 class="project-header__title">{{ page.title }}</h1>
-            <span class="project-header__description">
-                <p>{{ page.description }}</p>
-            </span>
-        </div>
-        <div class="unit two-fifths pull">
-            <div class="project-header__meta">
-                <h2 class="project-header__sub-head">Filed under</h2>
-                <ul class="project-header__meta-list">
-                    {% for tag in page.tags %}
-                        <li class="project-header__meta-item">{{ tag }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <div class="project-header__meta">
-                {% if page.website %}
-                    <h2 class="project-header__sub-head">Website</h2>
-                    <span class="project-header__meta-item"><a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a></span>
-                {% endif %}
-            </div>
+            <p class="project-header__description">{{ page.description }}</p>
+        </header>
+        <div class="project-meta">
+            <h2 class="project-meta__subhead">Filed under</h2>
+            <ul class="project-meta__tags">
+                {% for tag in page.tags %}
+                    <li class="project-meat__tags-item">{{ tag }}</li>
+                {% endfor %}
+            </ul>
+            {% if page.website %}
+                <h2 class="project-meta__subhead">Website</h2>
+                <a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a>
+            {% endif %}
         </div>
     </div>
-</header>
-<section>
-    {{ content }}
-</section>
-{% include related.html %}
+    <section class="project-content">
+        {{ content }}
+    </section>
+</div>

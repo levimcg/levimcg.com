@@ -1,9 +1,9 @@
-/*-----------------------------------------------
+/*-------------------------------------------------------------------------
     Library Entry
     _library-entry.scss
 
     Style for entries on the library page
------------------------------------------------*/
+-------------------------------------------------------------------------*/
 
 .library {
     padding: 2em 0;
@@ -12,18 +12,21 @@
 
 .library-list {
     list-style: none;
-    margin: 0 -$grid-gutters;
+    margin: 0;
     padding-left: 0;
     @include clear-fix;
 
     li {
         float: left;
         margin-bottom: 4em;
-        padding: 0 $grid-gutters;
+        padding: 0 1em;
         width: 100%;
     }
 }
 
+/*
+ * FIXME: Switch this over the the Burbon media query mixin.
+ */
 @include responsive($bp-small) {
     .library-list li {
         margin-bottom: 2em;
@@ -52,10 +55,15 @@
     max-width: 180px;
     margin: 0 auto;
     position: relative;
+
+    img {
+        width: 100%;
+    }
 }
 
 .library-entry__title {
     font-size: $font-size-6;
+    font-weight: 400;
     line-height: 1.1;
     margin-top: 1em;
     margin-bottom: .15em;
@@ -73,16 +81,15 @@
 }
 
 .library-entry__link {
-    background-color: $color-secondary;
-    color: $color-text;
+    background-color: $color-book;
+    color: $color-background;
     display: inline-block;
     padding: .15em 1.25em;
     border-radius: 3px;
-    transition: background-color .3s ease;
 
     &:hover {
-        color: $color-text;
-        background-color: mix($color-secondary, black, 80%);
+        color: $color-background;
+        background-color: mix($color-book, white, 80%);
     }
 }
 
@@ -95,7 +102,8 @@
     top: 20px;
     left: 0;
     display: inline-block;
-    background-color: rgba($color-secondary, .8);
+    background-color: rgba($color-text, .8);
+    color: $color-background;
     padding: .25em;
     font-size: .8125em;
     border-top-right-radius: 4px;

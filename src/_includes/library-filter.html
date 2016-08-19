@@ -1,22 +1,16 @@
 {% assign tagArray = "" | split: "|" %}
 
-{% for book in site.data.books %}
-    {% assign tagArray = tagArray | push: book.tags %}
+{% for post in site.categories.Book %}
+    {% assign tagArray = tagArray | push: post.tags %}
 {% endfor %}
 
 {% assign tagArray = tagArray | join: " " %}
 {% assign tagArray = tagArray | split: " " | uniq %}
 
-<div class="container container--kill-vertical">
-    <div class="unit whole">
-        <div class="filter-wrapper">
-            <ul class="filter">
-                <span class="filter__label">Filter: </span>
-                <li class="filter__item js-filter-all is-active">All</li>
-                {% for item in tagArray %}
-                    <li class="filter__item" data-filter-term="{{ item }}">{{ item | capitalize }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</div>
+<ul class="filter">
+    <span class="filter__label">Filter: </span>
+    <li class="filter__item js-filter-all is-active">All</li>
+    {% for item in tagArray %}
+        <li class="filter__item" data-filter-term="{{ item }}">{{ item | capitalize }}</li>
+    {% endfor %}
+</ul>

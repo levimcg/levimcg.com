@@ -24,7 +24,7 @@ elCopyRight.innerText = currentDate;
 /*
  * Filtering lists - currently using on the library page to
  * filter books based on category
-*/
+ */
 $(function() {
 
     var $books = $(".library-list li");

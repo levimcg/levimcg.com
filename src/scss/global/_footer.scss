@@ -4,18 +4,27 @@
 
 -----------------------------------------------*/
 .site-footer {
-    padding: 1em 0;
-    background-color: mix($color-background, black, 90%);
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
 }
 
 .site-footer__copyright {
     color: rgba($color-text, .5);
     margin: 0;
     float: left;
+    font-size: .875em;
+    padding-top: .18em;
+
+    @include media($bp-medium) {
+        font-size: 1em;
+    }
 
     a {
         color: rgba($color-text, .5);
-        font-size: .875em;
 
         &:hover {
             color: $color-primary;
@@ -29,26 +38,34 @@
     a {
         display: inline-block;
         font-size: .875em;
-        background-color: $color-primary;
+        background-color: $color-green;
         padding: .25em .75em;
-        color: $color-text;
+        color: $color-background;
         @include trans(color, .3s);
         -webkit-border-radius: 2px;
            -moz-border-radius: 2px;
                 border-radius: 2px;
+
+
+        @include media($bp-medium) {
+            font-size: 1em;
+        }
     }
 }
 
+/*
+ * FIXME: Switch this over the the Burbon media query mixin.
+ */
 
 @include responsive($bp-medium) {
     .site-footer__nav a {
         background-color: transparent;
         color: rgba($color-text, .5);
         padding: 0;
+        font-size: 1em;
 
         &:hover {
             color: $color-primary;
         }
     }
 }
-

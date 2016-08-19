@@ -1,0 +1,22 @@
+<section class="layout layout--jumbo layout--tall" id="work">
+    <h2 class="subhead">Projects</h2>
+        {% for project in site.projects reversed %}
+            <article class="mo mo--has-image">
+                <figure class="mo__img">
+                    {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail }}" alt="">
+                    {% else %}
+                        <img src="http://www.fillmurray.com/300/300" alt="">
+                    {% endif %}
+                </figure>
+                <div class="mo__body">
+                    <h2 class="mo__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+                    {% if project.teaser %}
+                        <p class="mo__teaser">{{ project.teaser }}</p>
+                    {% else %}
+                        <p class="mo__teaser">{{ project.description | truncatewords: 25 }}</p>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+</section>

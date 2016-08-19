@@ -1,75 +1,70 @@
-/*-----------------------------------------------
+/*-------------------------------------------------------------------------
     Shamefile
 
     shameful stuff that has no home
 
     _shamefile.scss
------------------------------------------------*/
+-------------------------------------------------------------------------*/
 
-.reverse-theme {
-    background-image: none;
-    background-color: $color-text;
-    background-size: 600px;
-    background-position: top left;
-    color: $color-background;
+.content {
+    @include outer-container(760px);
+}
 
-    .site-header__logo a,
-    .site-nav__item a {
-        color: $color-background;
+.content--margin-top {
+    margin-top: 4em;
+}
 
-        &:hover {
-            color: $color-primary;
-        }
-    }
+.intro__text {
+    margin: 0;
+    font-weight: 400;
 
-    .site-footer {
-        background-color: mix($color-text, black, 97%);
-    }
-
-    .site-footer__copyright,
-    .site-footer__copyright a {
-        color: $color-background;
-    }
-
-    .site-footer__copyright a {
-
-        &:hover {
-            color: $color-primary;
-        }
-    }
-
-    .site-footer__nav a {
-        background-color: $color-background;
-
-        &:hover {
-            color: $color-primary;
-        }
-    }
-
-    @include responsive($bp-medium) {
-        .site-footer__nav a {
-            background-color: transparent;
-            color: $color-background;
-        }
-    }
-
-    hr {
-        border-color: rgba(0, 0, 0, 0.2);
+    a:hover {
+        text-decoration: underline;
     }
 }
 
-.page-content {
-    margin-bottom: 6em;
+.subhead {
+    font-size: 1em;
+    font-family: $font-family-alternate;
+    font-weight: 400;
+    margin-top: 0;
+    text-transform: uppercase;
+    color: $color-text-quiet;
 }
 
-/*
- * Generic section container
-*/
-
-.section {
-    padding: 1em 0;
+.color-book {
+    color: $color-book;
 }
 
-.section--border {
-    border-top: 1px solid $color-ruler;
+.color-article {
+    color: $color-article;
+}
+
+.color-work {
+    color: $color-work;
+}
+
+a.color-article {
+    &:hover {
+        color: $color-article;
+
+    }
+}
+
+a.color-book {
+    &:hover {
+        color: $color-book;
+
+    }
+}
+
+a.color-work {
+    &:hover {
+        color: $color-work;
+
+    }
+}
+
+a.color-link {
+
 }
