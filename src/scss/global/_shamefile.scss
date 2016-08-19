@@ -1,10 +1,10 @@
-/*-----------------------------------------------
+/*-------------------------------------------------------------------------
     Shamefile
 
     shameful stuff that has no home
 
     _shamefile.scss
------------------------------------------------*/
+-------------------------------------------------------------------------*/
 
 .content {
     @include outer-container(760px);
@@ -17,6 +17,10 @@
 .intro__text {
     margin: 0;
     font-weight: 400;
+
+    a:hover {
+        text-decoration: underline;
+    }
 }
 
 .subhead {
@@ -26,92 +30,6 @@
     margin-top: 0;
     text-transform: uppercase;
     color: $color-text-quiet;
-}
-
-
-
-.card {
-    position: relative;
-
-    img {
-        width: 100%;
-        display: block;
-    }
-
-    &__body {
-
-    }
-
-    &__title {
-        font-size: $font-size-4;
-        margin-top: $shim;
-
-        a {
-            color: $color-text;
-        }
-
-    }
-
-    &__title--center {
-        text-align: center;
-    }
-}
-
-
-
-/*
- * Make this so that the title is centered vertically and horizontally using
- * flex-box
- */
-.tile {
-    position: relative;
-    color: $color-background;
-    max-height: 450px;
-    overflow: hidden;
-
-    &__info {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        background-color: rgba($color-green, .9);
-        z-index: 2;
-        opacity: 0;
-        transition: all .2s ease;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    &__info-inner {
-        width: 100%;
-    }
-
-    &__title {
-        font-weight: 400;
-        font-size: $font-size-3;
-        margin: 0;
-    }
-
-    &__thumbnail {
-        z-index: 1;
-        position: relative;
-    }
-}
-
-.tile__meta {
-    list-style: none;
-    padding: 0;
-
-    &-item {
-        display: inline-block;
-        font-size: .8125em;
-    }
 }
 
 .color-book {
@@ -129,38 +47,24 @@
 a.color-article {
     &:hover {
         color: $color-article;
-        text-decoration: underline;
+
     }
 }
 
 a.color-book {
     &:hover {
         color: $color-book;
-        text-decoration: underline;
+
     }
 }
 
 a.color-work {
     &:hover {
         color: $color-work;
-        text-decoration: underline;
+
     }
 }
 
-.section-header {
-    padding: 1em 0 2em 0;
-}
+a.color-link {
 
-.section-header--centered {
-    text-align: center;
-}
-
-.section-header__title {
-    font-weight: 400;
-    margin: 0;
-}
-
-.section-header__teaser {
-    margin: 0;
-    color: mix($color-background, $color-text, 70%);
 }

@@ -8,7 +8,7 @@
 
 .site-header {
     @include outer-container($site-max-width);
-    padding: 2em 1em;
+    padding: 2em;
     text-align: center;
 
     @include media($bp-medium) {

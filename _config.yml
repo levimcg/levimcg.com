@@ -12,7 +12,7 @@ gems: [jekyll-paginate]
 
 # Exclude stuff
 exclude: [README.md, Rakefile, node_modules, Gruntfile.js, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt, scss]
-keep_files: ['_build/css']
+keep_files: ['css/style.css']
 
 # Adds scope for posts so you check "if is post"
 defaults:

@@ -19,7 +19,7 @@ title: Notes
                                 {% if post.external_link %}
                                     <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
                                 {% else %}
-                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                                 {% endif %}
                             </h1>
                             <p class="mo__teaser">

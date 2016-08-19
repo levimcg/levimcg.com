@@ -11,7 +11,7 @@ requireDir('./tasks');
 
 // Build for staging site
 gulp.task('stage', function(cb) {
-    runSequence('jekyllStage', 'sass', 'scss-lint', 'prefix', 'cssProd', 'jsProd', cb);
+    runSequence('jekyllStage', 'sass', 'prefix', 'cssProd', 'jsProd', cb);
 });
 
 // Build and deploy to staging site
@@ -21,7 +21,7 @@ gulp.task('dryRun', function(cb) {
 
 // Build for production
 gulp.task('build', function(cb) {
-    runSequence('jekyllProd', 'sass', 'scss-lint', 'prefix', 'cssProd', 'jsProd', cb);
+    runSequence('jekyllProd', 'sass', 'prefix', 'cssProd', 'jsProd', cb);
 });
 
 // Build and deploy for production
@@ -30,4 +30,4 @@ gulp.task('ship', function(cb) {
 });
 
 // Default dev task
-gulp.task('default', ['sass', 'jekyllWatch', 'sass:watch', 'reload']);
+gulp.task('default', ['jekyllWatch', 'sass', 'sass:watch', 'reload']);

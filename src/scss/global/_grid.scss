@@ -2,6 +2,10 @@
     @include outer-container($site-max-width);
     padding: 1em;
 
+    @include media($bp-medium) {
+        padding: 2em;
+    }
+
     &--tall {
         padding-top: 2em;
         padding-bottom: 2em;
@@ -21,6 +25,17 @@
             padding-bottom: 6em;
         }
     }
+
+    &--inner {
+        padding: 0;
+    }
+
+    &--inset {
+        @include media(1240px) {
+            padding: 2em 4em;
+        }
+    }
+
 }
 
 .center-column {
@@ -36,6 +51,12 @@
     }
 }
 
+.half--push {
+    @include media($bp-medium) {
+        @include shift(6);
+    }
+}
+
 .three-fourths {
     @include media($bp-medium) {
         @include span-columns(8);
@@ -45,6 +66,24 @@
 .one-third {
     @include media($bp-medium) {
         @include span-columns(4);
+    }
+}
+
+.one-third--push {
+    @include media($bp-medium) {
+        @include shift(8);
+    }
+}
+
+.two-thirds {
+    @include media($bp-medium) {
+        @include span-columns(8);
+    }
+}
+
+.two-thirds--pull {
+    @include media($bp-medium) {
+        @include shift(-12);
     }
 }
 

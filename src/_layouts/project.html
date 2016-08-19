@@ -2,28 +2,26 @@
 layout: default
 ---
 <div class="wrapper">
-    <div class="one-third">
-        <header>
-            <h1>{{ page.title }}</h1>
-            <span>
-                <p>{{ page.description }}</p>
-            </span>
-
-            <h2>Filed under</h2>
-            <ul>
+    <div class="project-info">
+        <header class="project-header">
+            <h1 class="project-header__title">{{ page.title }}</h1>
+            <p class="project-header__description">{{ page.description }}</p>
+        </header>
+        <div class="project-meta">
+            <h2 class="project-meta__subhead">Filed under</h2>
+            <ul class="project-meta__tags">
                 {% for tag in page.tags %}
-                    <li>{{ tag }}</li>
+                    <li class="project-meat__tags-item">{{ tag }}</li>
                 {% endfor %}
             </ul>
 
             {% if page.website %}
-                <h2>Website</h2>
+                <h2 class="project-meta__subhead">Website</h2>
                 <a href="{{ page.website }}" target="_blank">{{ page.website | remove: "http://" }}</a>
             {% endif %}
-        </header>
+        </div>
     </div>
-
-<section>
-    {{ content }}
-</section>
+    <section class="project-content">
+        {{ content }}
+    </section>
 </div>

@@ -4,10 +4,11 @@ layout: default
 <main>
     <div class="wrapper wrapper--tall">
         <div class="center-column">
-        <header class="post__header">
+
+        <header class="post__header content">
             <h1 class="post__title">{{ page.title }}</h1>
+            <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
             {% if page.category %}
-                <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
                 <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
             {% endif %}
         </header>
