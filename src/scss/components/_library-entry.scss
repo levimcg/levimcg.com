@@ -1,9 +1,9 @@
-/*-----------------------------------------------
+/*-------------------------------------------------------------------------
     Library Entry
     _library-entry.scss
 
     Style for entries on the library page
------------------------------------------------*/
+-------------------------------------------------------------------------*/
 
 .library {
     padding: 2em 0;
@@ -102,7 +102,8 @@
     top: 20px;
     left: 0;
     display: inline-block;
-    background-color: rgba($color-secondary, .8);
+    background-color: rgba($color-text, .8);
+    color: $color-background;
     padding: .25em;
     font-size: .8125em;
     border-top-right-radius: 4px;

@@ -75,7 +75,8 @@
     &__item {
         display: inline-block;
 
-        a {
+        a,
+        span {
             background-color: $color-text;
             color: $color-white;
             font-size: .8em;
@@ -87,45 +88,44 @@
 
             &:hover {
                 color: $color-white;
-                background-color: mix($color-text, white, 80%);
             }
         }
     }
 }
 
-.mo-tags__item--note a {
+.mo-tags__item--note a,
+.mo-tags__item--note span {
     background-color: $color-note;
 
     &:hover {
         color: $color-white;
-        background-color: mix($color-note, white, 80%);
     }
 }
 
-.mo-tags__item--link a {
+.mo-tags__item--link a,
+.mo-tags__item--link span {
     background-color: $color-green;
 
     &:hover {
         color: $color-white;
-        background-color: mix($color-green, white, 80%);
     }
 }
 
-.mo-tags__item--article a {
+.mo-tags__item--article a,
+.mo-tags__item--article span {
     background-color: $color-article;
 
     &:hover {
         color: $color-white;
-        background-color: mix($color-article, white, 80%);
     }
 }
 
-.mo-tags__item--book a {
+.mo-tags__item--book a,
+.mo-tags__item--book span {
     background-color: $color-book;
 
     &:hover {
         color: $color-white;
-        background-color: mix($color-book, white, 80%);
     }
 }
 

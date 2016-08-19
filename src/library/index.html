@@ -13,7 +13,7 @@ title: Library
                 <article class="library-entry">
                     <figure class="library-entry__thumbnail">
                         {% if post.now_reading %}
-                        <span class="libarary-entry__flag {% if post.flag_btm %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
+                        <span class="libarary-entry__flag {% if post.flag_bottom %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
                         {% endif %}
                         <img src="{{ post.thumbnail }}" alt="{{ post.title }} cover art">
                     </figure>

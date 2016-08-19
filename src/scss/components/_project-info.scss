@@ -18,6 +18,15 @@
     @include media($bp-medium) {
         @include span-columns(4);
     }
+
+    a {
+        color: $color-text;
+
+        &:hover {
+            color: $color-work;
+            text-decoration: underline;
+        }
+    }
 }
 
 .project-header__title {
