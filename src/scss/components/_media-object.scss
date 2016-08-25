@@ -39,6 +39,10 @@
     color: $color-green;
 }
 
+.mo__title--book a:hover {
+    color: $color-book;
+}
+
 .mo__title--link:after {
     content: url("../img/external-link-icon.svg");
     display: inline-block;

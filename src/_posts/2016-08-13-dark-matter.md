@@ -16,8 +16,7 @@ I bought this book on a whim after hearing an interview with the author on [Fres
 
 {% include post-aside.html
     image=page.thumbnail
-    caption=page.title
-%}
+    caption=page.title %}
 
 It's a great thriller that was a super fast and enjoyable read. Everything about it made me think it would make a pretty great movie too. And, according to the acknowledgements in the back, the author is currently in talks to adapt it for film.
 
