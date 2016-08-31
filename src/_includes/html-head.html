@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
 <head>
-    <title>{{ site.title }} | {{ page.title }}</title>
+    <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
+    <meta description="description" content="{{ site.description }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta description="description" content="{{ site.description }}">
     {% if page.is_post == true %}
         {% include cards.html %}
     {% endif %}
