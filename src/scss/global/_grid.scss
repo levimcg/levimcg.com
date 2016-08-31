@@ -7,8 +7,8 @@
     }
 
     &--tall {
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
 
         @include media($bp-medium) {
             padding-top: 3em;

@@ -9,7 +9,7 @@ layout: default
             <h1 class="post__title">{{ page.title }}</h1>
             <time class="post__date" datetime="{{ post.date | date: '%F'}}">{{ page.date | date: '%b %d, %Y' }}</time>
             {% if page.category %}
-                <span>|</span> <a class="post__category post__category--{{ page.category | downcase }}" href="#">{{ page.category }}</a>
+                <span>|</span> <sapn class="post__category post__category--{{ page.category | downcase }}">{{ page.category }}</span>
             {% endif %}
         </header>
 

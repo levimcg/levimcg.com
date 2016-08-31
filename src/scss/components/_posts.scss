@@ -51,23 +51,20 @@
 .post__category {
     font-family: $font-family-alternate;
     margin-left: .5em;
+    display: inline-block;
 
-    &:hover {
-        text-decoration: underline;
-    }
+
 
     &--book {
         color: $color-book;
-        &:hover {
-            color: mix($color-book, $color-background, 50%);
-        }
     }
 
     &--article {
         color: $color-article;
-        &:hover {
-            color: mix($color-article, $color-background, 50%);
-        }
+    }
+
+    &--note {
+        color: $color-note;
     }
 }
 
@@ -83,7 +80,7 @@
 
 
     &-caption {
-        padding: .5em;
+        padding: .5em 1.1em;
         font-size: .8125em;
         font-style: italic;
         color: $color-text-quiet;
