@@ -13,7 +13,7 @@ layout: default
             {% endif %}
         </header>
 
-        <div class="content content--margin-top">
+        <div class="content content--{{ page.category | downcase }} content--margin-top">
             {{ content }}
         </div>
     </div>
