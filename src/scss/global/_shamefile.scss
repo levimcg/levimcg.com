@@ -8,6 +8,8 @@
 
 .content {
     @include outer-container(760px);
+
+    line-height: 1.7;
 }
 
 .content--margin-top {

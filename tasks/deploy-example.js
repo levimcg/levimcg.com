@@ -1,12 +1,12 @@
 var gulp = require('gulp');
 var rsync = require('gulp-rsync');
 
-/*
-**  Deployment Tasks
-**
-**  Set up all your deployment paths here in these
-**  variables. It's a little cleaner.
-*/
+/**
+ *  Deployment Tasks
+ *
+ *  Set up all your deployment paths here in these
+ *  variables. It's a little cleaner.
+ */
 
 var deployHost = 'example.com';
 var deployUser = 'username';
@@ -26,9 +26,9 @@ gulp.task('deploy', function() {
             'to',
             'exlcude'
         ],
-        /* BE CAREFUL! "clean: true" will keep everything synced but will delete
+        /** BE CAREFUL! "clean: true" will keep everything synced but will delete
          * anything not in the 'exclude' array above.
-        */
+         */
         clean: true,
         compress: true,
         incremental: true

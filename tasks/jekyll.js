@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var shell = require('gulp-shell');
 var del = require('del');
 
-/*
-**  Jekyll Tasks
-*/
+/**
+ *  Jekyll Tasks
+ */
 
 // Build the Jeyll site for production
 gulp.task('jekyllBuild', shell.task([
@@ -13,7 +13,7 @@ gulp.task('jekyllBuild', shell.task([
 
 //Jekyll and watch and rebuild
 gulp.task('jekyllWatch', shell.task([
-    'jekyll build --incremental --watch'
+    'jekyll build --watch'
 ]));
 
 // Clean the _build folder

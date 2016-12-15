@@ -1,4 +1,4 @@
-/*
+/**
  * Linting CSS stylesheets with Stylelint
  * http://www.creativenightly.com/2016/02/How-to-lint-your-css-with-stylelint/
  */

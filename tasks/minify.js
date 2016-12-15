@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var minifyCSS = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
-/*
-**  Minification
-*/
+/**
+ *  Minification
+ */
 
 // Minfy CSS Task
 gulp.task('cssProd', function() {
