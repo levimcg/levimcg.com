@@ -10,6 +10,15 @@
     @include outer-container(760px);
 
     line-height: 1.7;
+
+    a {
+        color: $color-red;
+
+        &:hover {
+            color: mix($color-red, $color-text, 75%);
+            text-decoration: underline;
+        }
+    }
 }
 
 .content--margin-top {
@@ -22,6 +31,17 @@
 
         &:hover {
             color: mix($color-article, $color-text, 75%);
+            text-decoration: underline;
+        }
+    }
+}
+
+.content--book {
+    a {
+        color: mix($color-book, $color-text, 95%);
+
+        &:hover {
+            color: mix($color-book, $color-text, 75%);
             text-decoration: underline;
         }
     }

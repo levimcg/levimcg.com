@@ -14,9 +14,12 @@ layout: default
             </header>
 
             <div class="content content--{{ page.category | downcase }} content--margin-top">
+
                 {{ content }}
+
             </div>
 
+            {% include post-pagination.html %}
         </div>
     </div>
 </main>

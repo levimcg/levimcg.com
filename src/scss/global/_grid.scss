@@ -71,6 +71,7 @@
 
 .one-third--push {
     @include media($bp-medium) {
+        @include span-columns(4);
         @include shift(8);
     }
 }
