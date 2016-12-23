@@ -7,6 +7,8 @@
 -----------------------------------------------*/
 
 .pagination {
+    margin-top: 3em;
+    margin-bottom: 3em;
 
     &:after {
         content: "";
@@ -16,10 +18,12 @@
 }
 
 .pagination__link {
-    color: $color-text;
+    color: $color-text-quiet;
     display: block;
+    font-family: $font-family-alternate;
+    text-transform: uppercase;
     width: 50%;
-    padding: 1em;
+    padding: .5em;
     transition: background-color .3s ease;
 
     &:hover {
