@@ -5,11 +5,16 @@ body: home
 <div class="wrapper wrapper--tall">
     {% include intro.html %}
 </div>
-<div class="wrapper wrapper--tall">
+
+<section id="work" class="work">
+    <div class="wrapper">
+        <h2 class="subhead">Selected Work</h2>
+    </div>
     {% include project-grid.html %}
-</div>
+</section>
+
 <div class="wrapper wrapper--jumbo" id="hello">
-    <div class="half half--push">
+    <div class="half">
         <h2 class="subhead">Oh, Hello</h2>
         <p>If you have an idea and are interested in working together please, take a look at my work and say hi.</p>
         <h2 class="subhead">Elsewhere</h2>
@@ -19,5 +24,10 @@ body: home
             <li><a class="u-color-text"href="https://github.com/levimcg">Github</a></li>
             <li><a class="u-color-text"href="https://dribbble.com/levimcg">Dribbble</a></li>
         </ul>
+    </div>
+    <div class="half">
+        <h2 class="subhead">Get in Touch</h2>
+        <p>If you are interested in working together or just want to say hi please feel free to send me an email using the form below.</p>
+        {% include contact-form.html %}
     </div>
 </div>

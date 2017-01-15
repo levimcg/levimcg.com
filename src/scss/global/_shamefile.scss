@@ -66,9 +66,13 @@
     font-size: .8em;
     font-family: $font-family-alternate;
     font-weight: 400;
-    margin-top: 0;
+    margin-top: 3em;
     text-transform: uppercase;
     color: $color-text-quiet;
+
+    @include media($bp-medium) {
+        margin-top: 0;
+    }
 }
 
 .color-book {
@@ -110,5 +114,14 @@ a.color-work {
     &:hover {
 
         color: $color-text;
+    }
+}
+
+.contact-link {
+    color: $color-red;
+
+    &:hover {
+
+        color: mix($color-red, $color-text, 70%);
     }
 }

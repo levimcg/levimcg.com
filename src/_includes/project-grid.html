@@ -1,26 +1,27 @@
-<section id="work" class="work">
-    <h2 class="subhead">Selected Work</h2>
-    <ul class="project-grid">
-        {% for project in site.projects reversed %}
-            <li class="project-grid__item">
+<ul class="project-grid">
+    {% for project in site.projects reversed %}
+        <li class="project-grid__item">
+            {% if project.external_link %}
+                <a href="{{ project.external_link }}" target="_blank">
+            {% else %}
                 <a href="{{ project.url }}">
-                    <article class="tile">
-                        <div class="tile__info">
-                            <div class="tile__info-inner">
-                                <h1 class="tile__title">{{ project.title }}</h1>
-                                <ul class="tile__meta">
-                                    {% for tag in project.tags %}
-                                        <li class="tile__meta-item">{{ tag }}{% unless forloop.last %}, {% endunless %}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+            {% endif %}
+                <article class="tile">
+                    <div class="tile__info">
+                        <div class="tile__info-inner">
+                            <h1 class="tile__title">{{ project.title }}</h1>
+                            <ul class="tile__meta">
+                                {% for tag in project.tags %}
+                                    <li class="tile__meta-item">{{ tag }}{% unless forloop.last %}, {% endunless %}</li>
+                                {% endfor %}
+                            </ul>
                         </div>
-                        <figure class="tile__thumbnail">
-                            <img src="{{ project.thumbnail }}" alt="">
-                        </figure>
-                    </article>
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</section>
+                    </div>
+                    <figure class="tile__thumbnail">
+                        <img src="{{ project.thumbnail }}" alt="">
+                    </figure>
+                </article>
+            </a>
+        </li>
+    {% endfor %}
+</ul>

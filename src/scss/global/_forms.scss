@@ -1,0 +1,50 @@
+
+
+#{$all-text-inputs} {
+    display: block;
+    width: 100%;
+    min-height: 2.5em;
+    padding: .5em;
+    border: 1px solid $color-text-quiet;
+    border-radius: 3px;
+    font-family: $base-font-family;
+}
+
+#{$all-text-inputs-focus} {
+
+}
+
+#{$all-text-inputs-active} {
+
+}
+
+label {
+    font-family: $font-family-alternate;
+    font-size: .75em;
+    color: $color-text-quiet;
+}
+
+input[type="submit"] {
+    background-color: $color-blue;
+    border: none;
+    min-height: 2.5em;
+    padding: .25em 1em;
+    color: $color-background;
+    font-family: $font-family-alternate;
+    border-radius: 3px;
+    box-shadow: 0px 4px 0px mix($color-blue, $color-text, 65%);
+
+    &:hover,
+    &:focus {
+        background-color: mix($color-blue, $color-text, 85%);
+        box-shadow: 0px 4px 0px mix($color-blue, $color-text, 30%);
+    }
+
+    &:active {
+        background-color: mix($color-blue, $color-text, 65%);
+    }
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
