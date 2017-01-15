@@ -2,8 +2,7 @@
 layout: page
 title: Now
 intro_text: A brief overview of what I'm working on and what's happening in my life.
-body: now reverse-theme
-post_type: text
+body: now
 ---
 I love this time of year and the sense of optimism it brings. That's what resolutions are all about—looking at the future and deciding that we want to be a better version of ourselves.
 
