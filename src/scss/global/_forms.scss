@@ -19,7 +19,6 @@
 }
 
 label {
-    font-family: $font-family-alternate;
     font-size: .75em;
     color: $color-text-quiet;
 }
@@ -30,7 +29,6 @@ input[type="submit"] {
     min-height: 2.5em;
     padding: .25em 1em;
     color: $color-background;
-    font-family: $font-family-alternate;
     border-radius: 3px;
     box-shadow: 0px 4px 0px mix($color-blue, $color-text, 65%);
 

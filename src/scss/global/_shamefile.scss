@@ -8,7 +8,7 @@
 
 .content {
     @include outer-container(760px);
-
+    font-family: $font-family-body;
     line-height: 1.7;
 
     a {

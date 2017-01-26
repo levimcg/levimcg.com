@@ -20,6 +20,11 @@
     font-size: 1em;
     font-weight: 400;
     margin: 0;
+    /**
+     * Magic Number: this gets the site title to set even with the
+     * site nav. Padding on shop link causes this.
+     */
+    padding-top: .35em;
 
     a {
         color: $color-text;
@@ -93,4 +98,19 @@
 
 .site-nav__item--library.is-current {
     border-bottom: 3px solid $color-book;
+}
+
+.site-nav__item--shop a {
+    display: inline-block;
+    border: 2px solid $color-text;
+    padding: .25em 1em;
+    border-radius: 3px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $color-blue;
+        border-color: $color-blue;
+        color: $color-background;
+    }
 }
