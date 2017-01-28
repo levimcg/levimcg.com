@@ -47,7 +47,7 @@ $(function() {
     });
 
     // Select all filter "buttons"
-    var $filters = $(".filter li");
+    var $filters = $(".filter button");
 
     $filters.on("click", function(e) {
         // Capture the what was clicked on.
