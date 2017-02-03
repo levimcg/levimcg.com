@@ -5,7 +5,7 @@
 .tile {
     position: relative;
     color: $color-background;
-    max-height: 450px;
+    max-height: 600px;
     overflow: hidden;
 
     &__info {
@@ -40,6 +40,10 @@
     &__thumbnail {
         z-index: 1;
         position: relative;
+
+        img {
+            width: 100%;
+        }
     }
 }
 

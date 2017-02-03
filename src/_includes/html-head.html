@@ -1,6 +1,10 @@
 <head>
-    <title>{{ site.title }}{% if page.title %} | {{ page.title }}{% endif %}</title>
-    <meta description="description" content="{{ site.description }}">
+    <title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.title }}</title>
+    {% if page.teaser %}
+    <meta name="description" content="{{ page.teaser }}">
+    {% else %}
+    <meta name="description" content="{{ site.description }}">
+    {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if page.is_post == true %}
