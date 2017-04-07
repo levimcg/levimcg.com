@@ -1,6 +1,6 @@
 ## levimcg.com
 
-My website files, man.
+My website files, man. Probably need to redesign soon.
 
 ### URLs
 
