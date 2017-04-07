@@ -1,6 +1,6 @@
 ## levimcg.com
 
-I'm designing and developing my new website here. You can follow along with the [staging site](http://stage.levimcg.com/) to see how things are coming along.
+My website files, man.
 
 ### URLs
 
