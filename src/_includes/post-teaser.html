@@ -1,9 +1,4 @@
 <article class="mo {% if post.cover %}mo--has-image{% endif %}">
-    {% if post.cover %}
-        <figure class="mo__img">
-            <img src="{{ post.cover }}" alt="Artilce thumbnail" />
-        </figure>
-    {% endif %}
     <div class="mo__body">
         <h1 class="mo__title mo__title--{{ post.category | downcase }}">
             {% if post.external_link %}
@@ -12,14 +7,6 @@
                 <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             {% endif %}
         </h1>
-        <p class="mo__teaser">
-            {% if post.teaser %}{{ post.teaser }}{% else %}{{ post.teaser | truncatewords: 25 }}{% endif %}
-        </p>
-        <div class="mo__meta">
-            <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
-            <ul class="mo-tags">
-                <li class="mo-tags__item mo-tags__item--{{ post.category | downcase }}"><span>{{ post.category }}</span></li>
-            </ul>
-        </div>
+        <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
     </div>
 </article>

@@ -1,31 +1,25 @@
 ---
 layout: default
-body: home
+title: Home
 ---
-<div class="wrapper wrapper--tall">
-    {% include intro.html %}
-</div>
-
-<section id="work" class="work">
-    <div class="wrapper">
-        <h2 class="subhead">Selected Work</h2>
+<div class="mcg-intro mcg-block">
+    <div class="mcg-intro__image">
+        <h1 class="sr-only">Hey!</h1>
+        <img class="mcg-intro__hey" src="{{ site.baseurl }}/img/hey-sm.png" aria-hidden="true">
     </div>
-    {% include project-grid.html %}
-</section>
-
-<div class="wrapper wrapper--jumbo">
-    <div class="one-third">
-        <h2 class="subhead">Elsewhere</h2>
-        <ul class="u-no-list">
-            <li><a class="u-color-text"href="https://twitter.com/levimcg">Twitter</a></li>
-            <li><a class="u-color-text"href="https://www.instagram.com/levimcg/">Instagram</a></li>
-            <li><a class="u-color-text"href="https://github.com/levimcg">Github</a></li>
-            <li><a class="u-color-text"href="https://dribbble.com/levimcg">Dribbble</a></li>
-        </ul>
+    <div class="mcg-intro__content">
+        <p class="mcg-intro__heading">I'm a UX designer trying to help make the web a more usable and accessible for everyone.</p>
+        <p class="m-bottom-remove">I'm Levi, a designer, front-end developer, and <a href="https://shop.levimcg.com">sometimes artist</a> living in <a href="https://www.visitbloomington.com/">the coolest town in Indiana</a>. I'm currently working
+        to improve the user experience of software <a href="https://uxo.iu.edu/">in higher-ed</a>.</p>
     </div>
-    <div class="two-thirds">
-        <h2 class="subhead" id="hello">Get in Touch</h2>
-        <p>If you are interested in working together or just want to say hi please feel free to send me an email using the form below.</p>
-        {% include contact-form.html %}
+    <div class="mcg-info">
+        <h2 class="ts-23">Posts</h2>
+        <p>When something good happens in my life, or I read a good book I try to <a href="{{ site.baseurl }}/posts">write about it here</a>.
+            I don't feel guilty about how infrequently I post :)</p>
+        <h2 class="ts-23 m-top-10">Projects</h2>
+        <p>These are a collections of the side projects and random Web Things I've made over the last few years.</p>
+    </div>
+    <div class="mcg-pattern" aria-hidden="true">
+        <img src="{{ site.baseurl }}/img/dot-pattern.png" alt="">
     </div>
 </div>

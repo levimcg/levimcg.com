@@ -1,5 +1,5 @@
 // Typography defaults
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
+$base-font-family: "Source Serif Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
 $base-font-weight: 400;
 $font-family-alternate: "Andale Mono", "Monaco", "Lucida Sans Typewriter", monospace;
 $font-family-body: "Georgia", "Cambria", "Times New Roman", Times, serif;
@@ -31,25 +31,72 @@ $color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-text, white, 25%);
 $color-link: $color-text;
 
-$shim: 1em;
-
-$site-max-width: 1380px;
-
-$outer-container-padding: 1.5;
-$outer-container-rem: #{$outer-container-padding}rem;
-$outer-container-px: #{$outer-container-padding * 16}px;
-
 
 // Breakpoints
-$bp-small: 500px;
-$bp-medium: 768px;
-$bp-large: 900px;
-$bp-xlarge: 1100px;
-$bp-superlarge: 1340px;
 
-$font-size-1: 1.8em;
-$font-size-2: 1.7em;
-$font-size-3: 1.5em;
-$font-size-4: 1.35em;
-$font-size-5: 1.15em;
-$font-size-6: 1em;
+$breakpoints: (
+    sm: 500px,
+    md: 768px,
+    lg: 900px,
+    xl: 1100px,
+    xxl: 1340px
+);
+
+
+
+// Spacing units
+
+$spacing-unit: .25rem; // 4px
+
+$sp-1: $spacing-unit;
+$sp-2: $spacing-unit * 2;
+$sp-3: $spacing-unit * 3;
+$sp-4: $spacing-unit * 4;
+$sp-5: $spacing-unit * 5;
+$sp-6: $spacing-unit * 6;
+$sp-7: $spacing-unit * 7;
+$sp-8: $spacing-unit * 8;
+$sp-9: $spacing-unit * 9;
+$sp-10: $spacing-unit * 10;
+$sp-11: $spacing-unit * 11;
+$sp-12: $spacing-unit * 12;
+$sp-13: $spacing-unit * 13;
+$sp-14: $spacing-unit * 14;
+$sp-15: $spacing-unit * 15;
+
+
+// $key = pixel size, $value = relational units
+$type-sizes: (
+    12: .75rem,
+    14: .875rem,
+    16: 1rem,
+    18: 1.125rem,
+    20: 1.25rem,
+    23: 1.4375rem,
+    26: 1.625rem,
+    29: 1.8125rem,
+    32: 2rem,
+    36: 2.25rem,
+    41: 2.5625rem,
+    46: 2.875rem,
+    52: 3.25rem,
+);
+
+// Type Size variables
+$ts-12: map-get($type-sizes, 12);
+$ts-14: map-get($type-sizes, 14);
+$ts-16: map-get($type-sizes, 16);
+$ts-base: $ts-16;
+$ts-18: map-get($type-sizes, 18);
+$ts-20: map-get($type-sizes, 20);
+$ts-23: map-get($type-sizes, 23);
+$ts-26: map-get($type-sizes, 26);
+$ts-29: map-get($type-sizes, 29);
+$ts-32: map-get($type-sizes, 32);
+$ts-36: map-get($type-sizes, 36);
+$ts-41: map-get($type-sizes, 41);
+$ts-46: map-get($type-sizes, 46);
+$ts-52: map-get($type-sizes, 52);
+
+
+

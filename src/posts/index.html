@@ -6,14 +6,13 @@ title: Posts
     <section class="wrapper wrapper--tall">
         <div class="center-column">
             <ul class="post-list">
-                {% for post in paginator.posts %}
+                {% for post in site.posts %}
                 <li class="post-list__item">
                     {% include post-teaser.html %}
                 </li>
                 {% endfor %}
             </ul>
-
-            {% include pagination.html %}
+            <!-- {% include pagination.html %} -->
         </div>
     </section>
     <section>

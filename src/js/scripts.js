@@ -19,7 +19,9 @@ if ( style.webkitFlexWrap == '' || style.msFlexWrap == '' || style.flexWrap == '
 var elCopyRight = document.getElementById('js-copyright');
 var currentDate = new Date().getFullYear();
 
-elCopyRight.innerText = currentDate;
+if(elCopyRight) {
+    elCopyRight.innerText = currentDate;
+}
 
 /*
  * Filtering lists - currently using on the library page to

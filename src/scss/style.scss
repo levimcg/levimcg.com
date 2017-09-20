@@ -1,25 +1,74 @@
 @import "global/settings";
-@import "global/mixins";
-
-@import "libs/bourbon/bourbon";
-@import "libs/neat/neat";
+@import "global/tools";
 @import "libs/pygments";
-
-@import "global/normalize";
+@import "libs/normalize";
 @import "global/base";
-@import "global/grid";
-@import "global/header";
-@import "global/footer";
-@import "global/forms";
-@import "global/utilities";
+@import "utilities/display";
+@import "utilities/type-scale";
+@import "utilities/spacing";
 
-@import "components/pagination";
-@import "components/library-entry";
-@import "components/filter";
-@import "components/posts";
-@import "components/media-object";
-@import "components/project-info";
-@import "components/tiles";
-@import "components/post-aside";
+.mcg-block {
+    padding: $sp-8;
+}
 
-@import "global/shamefile";
+.mcg-intro {
+    &__hey {
+        width: 150px;
+    }
+
+    &__heading {
+        line-height: 1.2;
+        font-size: $ts-32;
+        margin-bottom: $sp-8;
+    }
+}
+
+.mcg-info {
+    margin-top: $sp-8;
+}
+
+.mcg-pattern {
+    display: none;
+}
+
+@include mq(bp(sm)) {
+    .mcg-intro {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: $sp-12;
+        max-width: 1140px;
+        margin: 0 auto;
+
+        &__hey {
+            width: 100%;
+        }
+
+        &__heading {
+            margin-top: 0;
+        }
+    }
+
+    .mcg-info {
+        margin-top: 0;
+    }
+
+    .mcg-pattern {
+        display: block;
+    }
+}
+
+@include mq(bp(xl)) {
+    .mcg-intro {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 470px auto;
+        max-width: 1320px;
+    }
+
+    .mcg-intro__content {
+        padding: 4rem 2rem;
+    }
+
+    .mcg-info {
+        padding: 2rem 4rem 2rem 0;
+    }
+}
