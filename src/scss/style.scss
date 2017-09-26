@@ -72,3 +72,22 @@
         padding: 2rem 4rem 2rem 0;
     }
 }
+
+
+.mcg-project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.mcg-post-list {
+    list-style: none;
+    padding: 4rem;
+
+    li {
+        margin-bottom: $sp-4;
+    }
+}
+
+.mcg-post-teaser__title {
+    font-size: $ts-20;
+}

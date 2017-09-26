@@ -3,20 +3,13 @@ layout: default
 title: Posts
 ---
 <main>
-    <section class="wrapper wrapper--tall">
-        <div class="center-column">
-            <ul class="post-list">
-                {% for post in site.posts %}
-                <li class="post-list__item">
-                    {% include post-teaser.html %}
-                </li>
-                {% endfor %}
-            </ul>
-            <!-- {% include pagination.html %} -->
-        </div>
-    </section>
     <section>
-
+        <ul class="mcg-post-list">
+            {% for post in site.posts %}
+            <li>
+                {% include post-teaser.html %}
+            </li>
+            {% endfor %}
+        </ul>
     </section>
-
 </main>

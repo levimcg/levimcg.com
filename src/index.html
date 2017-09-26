@@ -18,6 +18,12 @@ title: Home
             I don't feel guilty about how infrequently I post :)</p>
         <h2 class="ts-23 m-top-10">Projects</h2>
         <p>These are a collections of the side projects and random Web Things I've made over the last few years.</p>
+
+        <ul class="mcg-project-list">
+            {% for project in site.data.projects %}
+            <li><a href="{{ project.url }}">{{ project.title }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
     <div class="mcg-pattern" aria-hidden="true">
         <img src="{{ site.baseurl }}/img/dot-pattern.png" alt="">

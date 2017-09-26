@@ -1,12 +1,8 @@
-<article class="mo {% if post.cover %}mo--has-image{% endif %}">
-    <div class="mo__body">
-        <h1 class="mo__title mo__title--{{ post.category | downcase }}">
-            {% if post.external_link %}
-                <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
-            {% else %}
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            {% endif %}
-        </h1>
-        <time class="mo__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
-    </div>
+<article class="mcg-post-teaser {% if post.cover %}mcg-post-teaser--has-image{% endif %}">
+    <h1 class="mcg-post-teaser__title">
+        {% if post.external_link %}
+        <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a> {% else %}
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> {% endif %}
+    </h1>
+    <time class="mcg-post-teaser__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
 </article>
