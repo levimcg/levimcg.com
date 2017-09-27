@@ -1,28 +1,12 @@
-<header class="site-header">
-    <a href="{{ site.baseurl }}/">Levi McGranahan</a>
-    <nav class="site-nav" role="navigation">
-        <ul class="site-nav__list">
+<header class="mcg-site-header mcg-wrapper">
+    <a class="mcg-site-header__title" href="{{ site.baseurl }}/">Levi McGranahan</a>
+    <nav class="mcg-site-nav" role="navigation">
+        <ul class="mcg-site-nav__list">
             {% for item in site.data.navigation %}
-
-                {% capture notes_url %}{{ page.url | slice: 0, 7 }}{% endcapture %}
-
-                {% if item.url == page.url %}
-                    <li class="site-nav__item site-nav__item--{{ item.title | downcase }} is-current">
-                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                    </li>
-                {% elsif item.url == notes_url %}
-                    <li class="site-nav__item site-nav__item--{{ item.title | downcase }} is-current">
-                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                    </li>
-                {% else %}
-                    <li class="site-nav__item site-nav__item--{{ item.title | downcase }}">
-                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-                    </li>
-                {% endif %}
-            {% endfor %}
-            <li class="site-nav__item site-nav__item--shop">
-                <a href="https://shop.levimcg.com">Shop</a>
+            <li class="{% if item.url == page.url %}is-current{% endif %}">
+                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
             </li>
+            {% endfor %}
         </ul>
     </nav>
 </header>

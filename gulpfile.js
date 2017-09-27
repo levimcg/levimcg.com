@@ -9,16 +9,6 @@ requireDir('./tasks');
 **  Frequent Tasks
 */
 
-// Build for staging site
-gulp.task('stage', function(cb) {
-    runSequence('jekyllStage', 'sass', 'prefix', 'cssProd', 'jsProd', cb);
-});
-
-// Build and deploy to staging site
-gulp.task('dryRun', function(cb) {
-    runSequence('stage', 'deployStage');
-});
-
 // Build for production
 gulp.task('build', function(cb) {
     runSequence('jekyllProd', 'sass', 'prefix', 'cssProd', 'jsProd', cb);
@@ -26,7 +16,7 @@ gulp.task('build', function(cb) {
 
 // Build and deploy for production
 gulp.task('ship', function(cb) {
-    runSequence('build', 'deployProd');
+    runSequence('build', 'deploy');
 });
 
 // Default dev task
