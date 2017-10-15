@@ -3,9 +3,22 @@
     <nav class="mcg-site-nav" role="navigation">
         <ul class="mcg-site-nav__list">
             {% for item in site.data.navigation %}
-            <li class="{% if item.url == page.url %}is-current{% endif %}">
-                <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
-            </li>
+            
+                {% capture posts_url %}{{ page.url | slice: 0, 7 }}{% endcapture %}
+
+                {% if item.url == page.url %}
+                    <li class="is-current">
+                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% elsif item.url == posts_url %}
+                    <li class="is-current">
+                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+                    </li>
+                {% endif %}
             {% endfor %}
         </ul>
     </nav>

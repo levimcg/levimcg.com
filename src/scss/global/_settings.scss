@@ -1,7 +1,7 @@
 // Typography defaults
 $base-font-family: "Source Serif Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
 $base-font-weight: 400;
-$font-family-alternate: "Andale Mono", "Monaco", "Lucida Sans Typewriter", monospace;
+$font-family-alternate: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
 $font-family-body: "Georgia", "Cambria", "Times New Roman", Times, serif;
 
 // New Colors
@@ -10,7 +10,7 @@ $color-black: #28333c;
 $color-green: #00B688;
 $color-red: #eb3d3e;
 $color-orange: #fa6323;
-$color-blue: #059FF5;
+$color-blue: #2858e3;
 
 $color-note: $color-red;
 $color-article: $color-blue;
@@ -97,6 +97,3 @@ $ts-36: map-get($type-sizes, 36);
 $ts-41: map-get($type-sizes, 41);
 $ts-46: map-get($type-sizes, 46);
 $ts-52: map-get($type-sizes, 52);
-
-
-

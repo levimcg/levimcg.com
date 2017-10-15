@@ -3,11 +3,13 @@ layout: default
 title: Posts
 ---
 <main class="mcg-wrapper">
-    <ul class="mcg-post-list">
-        {% for post in site.posts %}
-        <li>
-            {% include post-teaser.html %}
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="mcg-main-content">
+        <ul class="mcg-post-list">
+            {% for post in site.posts %}
+            <li>
+                {% include post-teaser.html %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </main>
