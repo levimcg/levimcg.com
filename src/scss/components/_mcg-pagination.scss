@@ -1,0 +1,33 @@
+.mcg-post-pagination {
+    display: flex;
+    margin-top: $sp-15;
+    border-top: 1px solid #ddd;
+
+    &__prev,
+    &__next {
+        padding: $sp-4;
+        display: block;
+        text-decoration: none;
+        flex-basis: 50%;
+        font-size: $ts-14;
+        line-height: 1.2;
+
+        &:hover {
+            background-color: mix($color-text, $color-background, 5%);
+        }
+
+        span {
+            display: block;
+            font-family: $font-family-alternate;
+            font-size: $ts-12;
+            text-transform: uppercase;
+            color: $color-text;
+            letter-spacing: .04rem;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__prev {
+        border-right: 1px solid #ddd;
+    }
+}

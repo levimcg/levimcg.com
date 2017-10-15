@@ -1,0 +1,37 @@
+.mcg-site-nav {
+    margin-top: 1rem;
+}
+
+.mcg-site-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    li a {
+        text-decoration: none;
+    }
+
+    li.is-current a {
+        box-shadow: 0 2px 0 $color-blue;
+    }
+}
+
+@include mq(bp(md)) {
+    .mcg-site-header {
+        display: flex;
+
+        &__title {
+            text-decoration: none;
+        }
+    }
+
+    .mcg-site-nav {
+        margin-top: 0;
+        margin-left: 4rem;
+    }
+}

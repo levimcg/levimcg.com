@@ -1,0 +1,10 @@
+.mcg-figure {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    &__caption {
+        font-size: $ts-14;
+        font-style: italic;
+        margin-top: .25rem;
+    }
+}

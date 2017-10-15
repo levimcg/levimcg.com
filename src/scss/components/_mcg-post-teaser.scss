@@ -1,0 +1,13 @@
+.mcg-post-teaser {
+    border-bottom: 1px solid #eee;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    &__date {
+        font-size: $ts-14;
+    }
+
+    &__title {
+        font-size: $ts-20;
+    }
+}

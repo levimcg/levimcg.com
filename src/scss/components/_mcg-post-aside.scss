@@ -1,0 +1,14 @@
+.mcg-post-aside {
+    &__caption {
+        font-size: $ts-14;
+        font-style: italic;
+    }
+}
+
+@include mq(600px) {
+    .mcg-post-aside {
+        float: right;
+        padding-left: 2rem;
+        max-width: 300px;
+    }
+}
