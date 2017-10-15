@@ -5,9 +5,22 @@
 
     &__date {
         font-size: $ts-14;
+        color: mix($color-text, $color-background, 70%);
+        margin-left: auto;
     }
 
     &__title {
         font-size: $ts-20;
+    }
+}
+
+@include mq(720px) {
+    .mcg-post-teaser {
+        display: flex;
+        align-items: center;
+
+        &__date {
+            padding-left: 2rem;
+        }
     }
 }
