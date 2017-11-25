@@ -1,9 +1,17 @@
+.mcg-site-header {
+    &__title {
+        text-decoration: none;
+        color: $color-text;
+    }
+}
+
 .mcg-site-nav {
     margin-top: 1rem;
 }
 
 .mcg-site-nav__list {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     padding: 0;
     list-style: none;
 
@@ -24,14 +32,10 @@
 @include mq(bp(md)) {
     .mcg-site-header {
         display: flex;
-
-        &__title {
-            text-decoration: none;
-        }
     }
 
     .mcg-site-nav {
         margin-top: 0;
-        margin-left: 4rem;
+        margin-left: auto;
     }
 }

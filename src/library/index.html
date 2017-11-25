@@ -3,24 +3,50 @@ layout: default
 title: Library
 teaser: The books I'm reading right now, or have read and want to recommend to you!
 ---
-<main>
-    <div class="wrapper wrapper--tall">
-        {% include library-filter.html %}
-    </div>
-    <div class="wrapper">
-        <ul class="library-list">
+<main class="library no-mustard">
+    <div class="mcg-wrapper">
+        {% raw %}
+        <div id="library-app" class="enhance">
+            <div class="mcg-library-filter">
+                <button @click.prevent="resetFilter"
+                        data-filter="all"
+                        :aria-expanded="[currentTag === 'all' ? 'true' : 'false']"
+                        :aria-pressed="[currentTag === 'all' ? 'true' : 'false']">
+                        All
+                </button>
+                <button v-for="tag in bookTags"
+                        :data-filter="tag"
+                        :aria-expanded="tag === currentTag ? 'true' : 'false'"
+                        :aria-pressed="tag === currentTag ? 'true': 'false'"
+                        @click.prevent="handleFilter">
+                    {{ tag | capitalize }}
+                </button>
+            </div>
+            <div aria-live="polite">
+                <ul class="mcg-library-list">
+                    <li class="mcg-library-list__item" v-for="book in filteredBooks">
+                        <div class="mcg-book">
+                            <figure class="mcg-book__cover">
+                                <img :src="book.cover" :alt="'This is an image of the ' + book.title + ' book cover art.'">
+                            </figure>
+                            <h2 class="mcg-book__title">
+                                <a :href="book.buyLink"> {{ book.title }} </a>
+                            </h2>
+                            <p class="mcg-book__author">{{ book.author }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% endraw %}
+
+        <ul class="library-list-fallback">
             {% for post in site.categories.Book %}
-            <li data-tags="{{ post.tags | join: ', ' }}">
-                <article class="library-entry">
-                    <figure class="library-entry__thumbnail">
-                        {% if post.now_reading %}
-                        <span class="libarary-entry__flag {% if post.flag_bottom %}libarary-entry__flag--bottom{% endif %}">Now Reading!</span>
-                        {% endif %}
-                        <img src="{{ post.thumbnail }}" alt="{{ post.title }} cover art">
-                    </figure>
-                    <h1 class="library-entry__title">{{ post.title }}</h1>
-                    <p class="library-entry__author">{{ post.author }}</p>
-                    <a class="library-entry__link" href="{{ post.buy_link }}" target="_blank">Buy</a>
+            <li>
+                <article>
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.author }}</p>
+                    <a href="{{ post.buy_link }}">Buy</a>
                 </article>
             </li>
             {% endfor %}

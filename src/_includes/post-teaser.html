@@ -1,10 +1,10 @@
-<article class="mcg-post-teaser {% if post.cover %}mcg-post-teaser--has-image{% endif %}">
-    <h1 class="mcg-post-teaser__title">
+<article class="mcg-post-teaser h-entry">
+    <h1 class="mcg-post-teaser__title p-name">
         {% if post.external_link %}
             <a href="{{ post.external_link }}" target="_blank">{{ post.title }}</a>
         {% else %}
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         {% endif %}
     </h1>
-    <time class="mcg-post-teaser__date" datetime="{{ post.date | date: '%F'}}">{{ post.date | date: '%b %d, %Y' }}</time>
+    <time class="mcg-post-teaser__date dt-published" datetime="{{ post.date }}">{{ post.date | date: '%b %d, %Y' }}</time>
 </article>

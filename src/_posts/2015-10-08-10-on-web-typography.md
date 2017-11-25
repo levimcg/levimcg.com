@@ -8,5 +8,8 @@ author: Jason Santa Maria
 thumbnail: http://static.levimcg.com/library/thumbnail-web-typography.png
 buy_link: http://abookapart.com/products/on-web-typography
 year_read: 2015
-tags: [typography, web, design]
+tags:
+    - typography
+    - web
+    - design
 ---

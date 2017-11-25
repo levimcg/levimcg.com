@@ -2,29 +2,21 @@
 <meta property="og:title" content="{{ page.title }}" />
 {% if page.teaser %}
     <meta property="og:description" content="{{ page.teaser }}" />
-{% endif %}
-{% if page.card_descirption %}
-    <meta property="og:description" content="{{ page.card_descirption }}" />
+{% else %}
+    <meta name="og:description" content="{{ site.description }}">
 {% endif %}
 <meta property="og:type" content="website" />
 <meta property="og:url" content="levimcg.com{{ page.url }}" />
-{% if page.photo_large %}
-    <meta property="og:image" content="{{ page.photo_large }}" />
-{% endif %}
+<meta property="og:image" content="{{ site.baseurl }}/img/headshot-2017-600x600.jpg" />
 
 <!-- Twitter cards -->
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@levimcg">
 <meta name="twitter:creator" content="@levimcg">
 <meta name="twitter:title" content="{{ page.title }}">
 {% if page.teaser %}
     <meta name="twitter:description" content="{{ page.teaser }}">
+{% else %}
+    <meta name="twitter:description" content="{{ site.description }}">
 {% endif %}
-
-{% if page.card_descirption %}
-    <meta name="twitter:description" content="{{ page.card_descirption }}">
-{% endif %}
-
-{% if page.photo_large %}
-    <meta name="twitter:image" content="{{ page.photo_large }}">
-{% endif %}
+<meta name="twitter:image" content="{{ site.baseurl }}/img/headshot-2017-600x600.jpg">
