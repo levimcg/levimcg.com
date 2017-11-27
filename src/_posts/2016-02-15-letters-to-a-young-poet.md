@@ -2,7 +2,7 @@
 layout: post-snippet
 title: "Letters To A Young Poet"
 teaser: Rainer Maria Rilke's classic and most well-know work—I wish I'd read this when I was 21.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Rainer Maria Rilke

@@ -2,7 +2,7 @@
 layout: post-snippet
 title: "Destiny Disrupted"
 teaser: If you want to understand what's happening in the middle part of the world today, this book is a must read.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Tamim Ansary

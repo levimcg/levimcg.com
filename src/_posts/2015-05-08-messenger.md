@@ -3,7 +3,7 @@ layout: post
 title: Messenger
 teaser: Another fake poster commemorating the end of MESSENGER’s mission.
 card_descirption: Another fake poster commemorating the end of MESSENGER’s mission.
-category: Note
+category: note
 ---
 {% include post-breakout.html
    image="http://static.levimcg.com/notes/messenger/messenger--large.jpg"

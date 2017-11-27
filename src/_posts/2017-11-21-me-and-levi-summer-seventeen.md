@@ -2,7 +2,7 @@
 layout: post
 title: "Summer Seventeen EP"
 teaser: I played drums on my first studio recording this last September
-category: Note
+category: note
 ---
 I played drums on my frst studio recording a couple of months ago. I've been in a handful of bands over the years and have played guitar and bass on studio records, but this was a totally new (slightly stressful) experience for me. We booked a Satruday back in September at [Russian Recording](http://www.russianrecording.com/) and it ended up being such a great experience. Our goal was to get three songs recorded in one day, but we ended up finishing six! **Here's the result**:
 

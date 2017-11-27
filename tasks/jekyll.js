@@ -13,7 +13,7 @@ gulp.task('jekyllBuild', shell.task([
 
 //Jekyll and watch and rebuild
 gulp.task('jekyllWatch', shell.task([
-    'jekyll build --watch'
+    'jekyll build --watch --drafts'
 ]));
 
 // Clean the _build folder

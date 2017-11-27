@@ -2,7 +2,7 @@
 layout: post-snippet
 title: Thoughts On Design
 teaser: Paul Rand's seminal design manifesto was reissued in 2014 exposing it to a whole new generation of designers.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Paul Rand

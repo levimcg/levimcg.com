@@ -21,6 +21,10 @@
         clear: both;
         display: block;
     }
+
+    header {
+        font-family: $base-font-family
+    }
 }
 
 .mcg-intro {
@@ -69,7 +73,7 @@
     }
 
     .mcg-intro__content {
-        padding: 4rem 2rem;
+        padding: 0 2rem;
     }
 
     .mcg-info {
@@ -80,6 +84,6 @@
 .mcg-date {
     color: mix($color-black, white, 80%);
     display: block;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
 }

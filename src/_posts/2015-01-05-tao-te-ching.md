@@ -2,7 +2,7 @@
 layout: post-snippet
 title: Tao Te Ching
 teaser: The Eastern philosophy classic. I keep this around as reference like you would a dictionary or encyclopedia.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Laozi

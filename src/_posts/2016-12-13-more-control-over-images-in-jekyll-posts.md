@@ -2,7 +2,7 @@
 layout: post
 title: More Control Over Images In Jekyll Posts
 teaser: Using Jekyll includes to give you more options when working with posts
-category: Article
+category: article
 ---
 I use [Jekyll](http://jekyllrb.com/) for most personal sites I build these days if I can get away with it. I love being able to write  my content in [Markdown](https://daringfireball.net/projects/markdown/) and having Jekyll spit out the HTML. The only sticky point for me is the lack of options when it comes to dealing with images in a markdown files. I know the whole point of Markdown is to be simple and readable on it's own, but sometimes I'd really like to have control over the way images are marked up. For instance, what if I wanted to add a caption to an image in my post? As it stands, Markdown doesn't really have an easy way to do that.
 

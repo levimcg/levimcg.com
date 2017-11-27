@@ -2,7 +2,7 @@
 layout: post-snippet
 title: JavaScript & jQuery
 teaser: This book will help you go from a copy-and-paste hacker to actually understanding how to write JavaScript. It's also one of the best and most gentle introductions to programming that I've ever read.
-category: Book
+category: book
 
 # Book stuff
 author: Jon Duckett

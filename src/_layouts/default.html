@@ -2,9 +2,7 @@
 <html lang="en">
     {% include html-head.html %}
     <body>
-        {% unless page.title == "Home" %}
-        {% include header.html %}
-        {% endunless %}
+         {% include header.html %}
             {{ content }}
         {% include footer.html %}
     </body>

@@ -2,7 +2,7 @@
 layout: post
 title: Designing a Wine Collection
 teaser: Some thoughts about not waiting to start and building something
-category: Note
+category: note
 ---
 I started a wine collection over the holiday break. This is my first iteration of the racks I'll use to store my bottles. My cellar is a 2x4' space on the floor of a storage unit I rent in the basement of my apartment building and none of these bottles cost more than $20.
 

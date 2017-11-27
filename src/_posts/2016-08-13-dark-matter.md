@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Dark Matter
-teaser: I really enjoyed this new novel from Blake Crouch about infinite parallel universes and the possible paths our lives can take.   
+teaser: I really enjoyed this new novel from Blake Crouch about infinite parallel universes and the possible paths our lives can take.
 cover: http://static.levimcg.com/notes/dark-matter/dark-matter-cover.jpg
-category: Book
+category: book
 
 # Book-specific stuff
 author: Blake Crouch

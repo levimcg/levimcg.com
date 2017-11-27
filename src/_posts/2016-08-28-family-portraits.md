@@ -3,7 +3,7 @@ layout: post
 title: Family Portraits August 2016
 teaser: My wife has been asking me to do some portraits of our family and I finally got around to it.
 cover: http://static.levimcg.com/notes/family-portraits/portraits-cover.png
-category: Note
+category: note
 ---
 My wife and son were out of town for the weekend visiting some family, so I got a house all to myself. I spent all of Friday night drawing and listening to records. It was so much fun and totally refreshing.
 

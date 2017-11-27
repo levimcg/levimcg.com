@@ -2,7 +2,7 @@
 layout: post-snippet
 title: Pioneers of Spanish Graphic Design
 teaser: This books opened a whole new world of designers to me. This thing is a gold mine of graphic inspiration.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Emilio Gil

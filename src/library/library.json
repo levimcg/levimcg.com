@@ -1,7 +1,7 @@
 ---
 ---
 [
-{% for post in site.categories.Book %}
+{% for post in site.categories.book %}
     {% assign booktags = "" %}
 
     {% for item in post.tags %}

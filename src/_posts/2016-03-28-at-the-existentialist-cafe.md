@@ -2,7 +2,7 @@
 layout: post-snippet
 title: "At the Existentialist Café"
 teaser: A great primer on the history of Existentialism and the lives of it's most influential philosophers.
-category: Book
+category: book
 
 # Book-specific stuff
 author: Sarah Bakewell
