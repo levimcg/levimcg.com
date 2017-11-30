@@ -3,12 +3,12 @@
 }
 
 .mcg-wrapper {
-    margin: 2rem;
+    padding: 1.5rem;
 }
 
 @include mq(bp(md)) {
     .mcg-wrapper {
-        margin: 4rem;
+        padding: 4rem;
     }
 }
 
@@ -21,35 +21,41 @@
         clear: both;
         display: block;
     }
-
-    header {
-        font-family: $base-font-family
-    }
 }
 
 .mcg-intro {
+    padding: 1.5rem;
+
     &__hey {
         width: 150px;
     }
 
     &__heading {
-        line-height: 1.2;
-        font-size: $ts-32;
+        line-height: 1.4;
+        font-size: $ts-26;
         margin-bottom: $sp-8;
     }
-}
 
-.mcg-info {
-    margin-top: $sp-8;
+    &__content {
+        line-height: 1.8;
+    }
 }
 
 @include mq(bp(sm)) {
     .mcg-intro {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-gap: $sp-12;
-        max-width: 1140px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        &__image {
+            flex-basis: 40%;
+            margin-left: auto;
+        }
+
+        &__content {
+            flex-basis: 45%;
+        }
 
         &__hey {
             width: 100%;
@@ -59,31 +65,26 @@
             margin-top: 0;
         }
     }
-
-    .mcg-info {
-        margin-top: 0;
-    }
 }
 
-@include mq(bp(xl)) {
+@include mq(bp(md)) {
     .mcg-intro {
-        grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 470px auto;
-        max-width: 1320px;
-    }
-
-    .mcg-intro__content {
-        padding: 0 2rem;
-    }
-
-    .mcg-info {
-        padding: 2rem 4rem 2rem 0;
+        padding: 4rem;
     }
 }
 
-.mcg-date {
-    color: mix($color-black, white, 80%);
-    display: block;
-    margin-top: .5rem;
-    margin-bottom: 3rem;
+.mcg-post-header {
+    &__title {
+        font-family: $font-family-serif;
+        font-size: $ts-26;
+    }
+
+    &__date {
+        color: mix($color-black, white, 80%);
+        display: block;
+        font-size: $ts-14;
+        margin-top: .5rem;
+        font-style: italic;
+        margin-bottom: 3rem;
+    }
 }

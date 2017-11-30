@@ -5,7 +5,7 @@
 -----------------------------------------------*/
 
 html {
-    font-size: 110%;
+    font-size: 100%;
 }
 
 body {
@@ -24,13 +24,7 @@ body * {
 
 @include mq(bp(md)) {
     html {
-        font-size: 120%;
-    }
-}
-
-@include mq(bp(xl)) {
-    html {
-        font-size: 130%;
+        font-size: 115%;
     }
 }
 

@@ -1,8 +1,8 @@
 // Typography defaults
-$base-font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
+$font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
+$font-family-serif: "Libre Baskerville", "Cambria", "Times New Roman", Times, serif;
+$base-font-family: $font-family-serif;
 $base-font-weight: 400;
-$font-family-alternate: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "Helvetica", sans-serif;
-$font-family-body: "Georgia", "Cambria", "Times New Roman", Times, serif;
 
 // New Colors
 $color-white: #fff;

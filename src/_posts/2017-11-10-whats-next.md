@@ -30,6 +30,4 @@ Designing a reusable system of components that can be applied to all the product
 
 In working mostly with other designers and developers, I've been thinking a lot more about giving and receiving feedback, helping others work through design problems, and helping less experienced designers learn. I get a lot of enjoyment out of this stuff on a personal level, but it's also important to share what you know. It makes you and (if you do it right) the ones you're sharing with smarter.
 
-## Onward!
-
 I'm definitely in the middle of some sort of transition in my career and I'm excited. Seems like a good time to take a quick look at how I got here and write it down. Mostly as a reminder to be open to change and the opportunity to move on to what's next.

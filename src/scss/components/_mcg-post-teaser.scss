@@ -5,6 +5,7 @@
 
     &__date {
         font-size: $ts-14;
+        font-family: $font-family-sans;
         color: mix($color-text, $color-background, 70%);
         margin-left: auto;
     }

@@ -1,33 +1,16 @@
 .mcg-typeset {
-    font-family: $font-family-body;
-    line-height: 1.7;
+    line-height: 1.8;
 
     h1, h2, h3, h4, h5, h6 {
         color: $color-black;
-        line-height: 1.1;
-        font-family: $base-font-family;
-    }
-
-    h1 {
-        font-size: $ts-36;
-        font-family: $base-font-family;
-
+        line-height: 1.2;
     }
 
     h2, h3, h4, h5, h6 {
+        font-family: $font-family-sans;
+        font-size: $ts-20;
+        // font-weight: 400;
         margin-top: 4rem;
-    }
-
-    h2 {
-        font-size: $ts-26;
-    }
-
-    h3 {
-        font-size: $ts-20;
-    }
-
-    h4 {
-        font-size: $ts-20;
     }
 
     p {
