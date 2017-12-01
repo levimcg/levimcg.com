@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} -{% endif %} {{ site.title }}</title>
     {% if page.teaser %}
-    <meta name="description" content="{{ page.teaser }}">
+    <meta name="description" content="{{ page.teaser | strip_html }}">
     {% else %}
     <meta name="description" content="{{ site.description }}">
     {% endif %}
@@ -12,5 +12,5 @@
         {% include cards.html %}
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css?{{ site.time | remove: " " | remove: "-" | remove: ":" }}">
 </head>
