@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Now
 intro_text: A brief overview of what I'm working on and what's happening in my life.
 body: now

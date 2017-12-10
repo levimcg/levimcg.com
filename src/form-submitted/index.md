@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Thanks!
 body: from-submitted
 ---
