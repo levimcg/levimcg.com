@@ -25,7 +25,7 @@ $color-alternate: #ff4237;
 
 $color-background: $color-white;
 $color-text: $color-black;
-$color-text-quiet: mix($color-text, white, 50%);
+$color-text-quiet: #767676;
 
 $color-background-darker: mix($color-background, black, 90%);
 $color-ruler: mix($color-text, white, 25%);

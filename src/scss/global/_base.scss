@@ -35,6 +35,10 @@ p {
 
 a {
     color: $color-blue;
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 img {
