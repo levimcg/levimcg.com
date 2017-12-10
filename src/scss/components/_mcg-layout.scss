@@ -24,8 +24,6 @@
 }
 
 .mcg-intro {
-    padding: 1.5rem;
-
     &__hey {
         width: 150px;
     }
@@ -64,12 +62,6 @@
         &__heading {
             margin-top: 0;
         }
-    }
-}
-
-@include mq(bp(md)) {
-    .mcg-intro {
-        padding: 4rem;
     }
 }
 

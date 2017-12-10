@@ -1,6 +1,6 @@
 <header class="mcg-site-header mcg-wrapper" role="banner">
     <a class="mcg-site-header__title" href="{{ site.baseurl }}/">Levi McGranahan</a>
-    <nav class="mcg-site-nav" role="navigation" aria-label="global">
+    <nav class="mcg-site-nav" role="navigation" aria-label="Global menu">
         <ul class="mcg-site-nav__list">
             {% for item in site.data.navigation %}
                 {% capture posts_url %}{{ page.url | slice: 0, 7 }}{% endcapture %}
