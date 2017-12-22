@@ -61,3 +61,16 @@ h6 {
 figure {
     margin: 0;
 }
+
+blockquote {
+    margin-left: 0;
+    border-left: .25rem solid mix($color-text, $color-background, 20%);
+    padding-left: 1rem;
+}
+
+blockquote p {
+    font-size: $ts-26;
+    font-style: italic;
+    line-height: 1.6;
+    color: mix($color-black, $color-background, 70%);
+}
