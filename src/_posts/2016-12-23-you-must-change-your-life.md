@@ -22,4 +22,4 @@ I only first read _Letters to a Young Poet_ earlier this year, but I was already
 
 The book is a very thorough biography of each of the two artists, but what struck me about it was the behind-the-scenes look the cost of putting work above all else in one's life. As it turns out, both Rodin and Rilke were irresponsible dicks who took advantage of most of the women in their lives, and refused take part in raising (or being financially responsible for) their children.
 
-If you are a fan of Rilke or Rodin this is a great great read. You can [pick up a copy here]({{page.buy_link}}).
+If you are a fan of Rilke or Rodin this is a great great read.
