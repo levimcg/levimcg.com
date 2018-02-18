@@ -11,6 +11,7 @@
     {% if page.is_post == true %}
         {% include cards.html %}
     {% endif %}
+    <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css?{{ site.time | remove: " " | remove: "-" | remove: ":" }}">
 </head>

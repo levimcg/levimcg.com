@@ -23,7 +23,7 @@ gulp.task('jekyllClean', function() {
 
 // Build the Jeyll site for production
 gulp.task('jekyllProd', shell.task([
-    'jekyll build --config _config.yml,_config-prod.yml'
+    'jekyll build --config _config.yml'
 ]));
 
 // Build the Jeyll site for staging
