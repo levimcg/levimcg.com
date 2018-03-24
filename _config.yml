@@ -8,7 +8,7 @@ permalink: posts/:title/
 # Pagination - this stuff changed a lot as of Jekyll 3.0.0
 # paginate: 10
 paginate_path: /posts/page:num/
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Exclude stuff
 exclude: [README.md, node_modules, package.json, deploy-stage, deploy-prod, deploy-example, rsync_exclude.txt, scss]
@@ -33,5 +33,3 @@ collections:
     projects:
         output: true
         permalink: /projects/:title/
-
-highlighter: pygments

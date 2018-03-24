@@ -10,18 +10,17 @@ I use [Jekyll](http://jekyllrb.com/) for most personal sites I build these days 
 
 I'd really like to mark up some of the images in my post using the HTML5 `figure` and `figcaption` elements. I'd also like to style these images so that they break out of the main content column to give them a little more emphasis. Ideally, I'm looking for something like this:
 
-{% highlight html %}
+
 <figure>
     <img src="http://www.fillmurray.com/600/400" alt="A portrait of Greatness">
     <figcaption>Bill Murray</figcaption>
 </figure>
-{% endhighlight %}
+
 
 What you get with default [Markdown syntax](https://daringfireball.net/projects/markdown/syntax#link) is some HTML that looks like this:
 
-{% highlight html %}
+
 <img src="http://www.fillmurray.com/600/400" alt="A portrait of Greatness">
-{% endhighlight %}
 
 That's actually pretty great if all you want to do is throw a couple of images in your post and aren't that concerned with the markup. Add some top and bottom margin to the `img` element in your CSS and you're good. This is perfectly acceptable, but here's a couple of things that I want to have:
 
@@ -34,20 +33,16 @@ One of the great things about using Markdown in Jekyll is that you can also writ
 
 An normal Jekyll include containing my image markup above might look something like this:
 
-{% highlight liquid %}
 {% raw %}{% include breakout-image.html %}{% endraw %}
-{% endhighlight %}
 
 When Jekyll builds your post it will look inside a folder called `_includes` for a file called `figure.hml` and include that bit of HTML in your post or page. Here's the really cool thing about Jekyll includes. You can use them in your Markdown posts just like in your templates, and you can dynamically assign unique values you define inside the include file each time you use it in a post. Using includes like this saves you the hassle of writing regular HTML in your Markdown files, keeps your markup consistent, and allows you to be flexible with your content. Let's use my `figure.html` include as an example.
 
 The first thing you need to do is define the dynamic values you want inside your include. Based on the example above mine would look like this:
 
-{% highlight html %}
 <figure>
     <img src="{% raw %}{{ include.image }}{% endraw %}" alt="{% raw %}{{ include.alt-text }}{% endraw %}">
     <figcaption>{% raw %}{{ include.caption }}{% endraw %}</figcaption>
 </figure>
-{% endhighlight %}
 
 In this file I've defined three values, or parameters that I want to be able to use as custom values each time I include this file. The `include` keyword refers to the include itself and tells Jekyll to look inside the file for these values. My dynamic values are:
 
@@ -57,7 +52,6 @@ In this file I've defined three values, or parameters that I want to be able to 
 
 Now that these values have been defined, I can specify unique values every time I use this include in my posts. So I can do this inside my normal Markdown:
 
-{% highlight liquid %}
 {% raw %}
 {% include breakout-image.html
            image="http://www.fillmurray.com/600/400"
@@ -65,16 +59,14 @@ Now that these values have been defined, I can specify unique values every time 
            caption="Bill Murray"
 %}
 {% endraw %}
-{% endhighlight %}
 
 And the resulting output will be the same as my original static markup above:
 
-{% highlight html %}
+
 <figure>
     <img src="http://www.fillmurray.com/600/400" alt="A portrait of Greatness">
     <figcaption>Bill Murray</figcaption>
 </figure>
-{% endhighlight %}
 
 ### Conclusion & Resources
 
