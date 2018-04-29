@@ -10,12 +10,12 @@ I use [Jekyll](http://jekyllrb.com/) for most personal sites I build these days 
 
 I'd really like to mark up some of the images in my post using the HTML5 `figure` and `figcaption` elements. I'd also like to style these images so that they break out of the main content column to give them a little more emphasis. Ideally, I'm looking for something like this:
 
-
+{% highlight html %}
 <figure>
     <img src="http://www.fillmurray.com/600/400" alt="A portrait of Greatness">
     <figcaption>Bill Murray</figcaption>
 </figure>
-
+{% endhighlight %}
 
 What you get with default [Markdown syntax](https://daringfireball.net/projects/markdown/syntax#link) is some HTML that looks like this:
 
