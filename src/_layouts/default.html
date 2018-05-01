@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include html-head.html %}
-    <body>
+    <body{% if page.title == "Artwork" %} class="mcg-artwork-page"{% endif %}>
         {% include header.html %}
         <main class="mcg-wrapper" role="main">
             {{ content }}

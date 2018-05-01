@@ -28,6 +28,12 @@ body * {
     }
 }
 
+@include mq(bp(lg)) {
+    html {
+        font-size: 130%;
+    }
+}
+
 p {
     font-size: 1rem;
     margin: $sp-4 0;
@@ -38,6 +44,11 @@ a {
 
     &:hover {
         text-decoration: none;
+    }
+
+    &:focus {
+        outline: dotted 2px $color-blue;
+        outline-offset: 2px;
     }
 }
 

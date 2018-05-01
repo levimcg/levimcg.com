@@ -31,5 +31,5 @@ user: levimcg
 # Custom collections
 collections:
     projects:
-        output: true
+        output: false
         permalink: /projects/:title/

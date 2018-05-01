@@ -29,7 +29,7 @@
     }
 
     &__heading {
-        line-height: 1.4;
+        line-height: 1.3;
         font-size: $ts-26;
         margin-bottom: $sp-8;
     }
@@ -55,6 +55,10 @@
             flex-basis: 45%;
         }
 
+        &__content--larger {
+            flex-basis: 55%;
+        }
+
         &__hey {
             width: 100%;
         }
@@ -67,7 +71,6 @@
 
 .mcg-post-header {
     &__title {
-        font-family: $font-family-serif;
         font-size: $ts-26;
     }
 
@@ -79,4 +82,56 @@
         font-style: italic;
         margin-bottom: 3rem;
     }
+}
+
+.mcg-grid {
+    margin-top: 3rem;
+    list-style: none;
+    padding: 0;
+
+    &__item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@include mq(bp(md)) {
+    .mcg-grid {
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        &__item {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include mq(1441px) {
+    .mcg-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.mcg-artwork-page {
+    background-image: url("../img/dot-pattern.jpg");
+    background-size: 800px;
+    background-position-x: right;
+    background-position-y: 20vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.mcg-artwork-entry__caption {
+    font-size: $ts-14;
+    padding-top: $sp-2;
+}
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
 }

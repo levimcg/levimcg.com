@@ -1,6 +1,5 @@
 .mcg-site-header {
     font-family: $font-family-sans;
-    display: flex;
 
     &__title {
         text-decoration: none;
@@ -8,9 +7,21 @@
     }
 }
 
+@include mq(bp(sm)) {
+    .mcg-site-header {
+        display: flex;
+    }
+}
+
 .mcg-site-nav {
-    margin-top: 0;
+    margin-top: $sp-4;
     margin-left: auto;
+}
+
+@include mq(bp(sm)) {
+    .mcg-site-nav {
+        margin-top: 0;
+    }
 }
 
 .mcg-site-nav__list {

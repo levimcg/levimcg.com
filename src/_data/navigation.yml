@@ -2,5 +2,8 @@
     title: "Posts"
     url: "/posts/"
 -
-    title: Library
-    url: "/library/"
+    title: Bookshelf
+    url: "/bookshelf/"
+-
+    title: Artwork
+    url: "/artwork/"

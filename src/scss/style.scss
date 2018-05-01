@@ -72,15 +72,18 @@
         border-radius: 4px;
         padding: .25rem .5rem;
         line-height: 1.5;
-        box-shadow: 0 4px 0 mix($color-blue, $color-text, 50%);
         margin-bottom: 1rem;
         font-family: $font-family-sans;
         font-size: $ts-14;
         letter-spacing: .03rem;
 
-        &[aria-expanded="true"] {
+        &[aria-pressed="true"] {
             background-color: mix($color-blue, $color-text, 35%);
-            box-shadow: 0 4px 0 mix($color-blue, $color-text, 35%);
+        }
+
+        &:focus {
+            outline: dotted 2px $color-blue;
+            outline-offset: 2px;
         }
     }
 

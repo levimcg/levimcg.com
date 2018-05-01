@@ -3,9 +3,11 @@
     <p class="mcg-site-footer__copy">&copy; <span id="mcg-copy-year"></span> Levi McGranahan</p>
 </footer>
 
-{% if page.title == "Library" %}
+{% if page.title == "Bookshelf" %}
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script src="{{ site.baseurl }}/js/library.js"></script>
+<script src="{{ site.baseurl }}/js/bookshelf.js"></script>
+{% endif %}
+{% if page.title == "Artwork" %}
+<script src="{{ site.baseurl }}/js/libs/lazysizes.min.js" async=""></script>
 {% endif %}
 <script src="{{ site.baseurl }}/js/scripts.js"></script>
-{% include ga-code.html %}
