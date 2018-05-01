@@ -1,0 +1,53 @@
+---
+layout: default
+title: Bookshelf
+teaser: The books I'm reading right now, or have read and want to recommend to you!
+---
+<div class="library no-mustard">
+    {% raw %}
+    <div id="library-app" class="enhance">
+        <div class="mcg-library-filter">
+            <button @click.prevent="resetFilter"
+                    data-filter="all"
+                    :aria-expanded="[currentTag === 'all' ? 'true' : 'false']"
+                    :aria-pressed="[currentTag === 'all' ? 'true' : 'false']">
+                    All
+            </button>
+            <button v-for="tag in bookTags"
+                    :data-filter="tag"
+                    :aria-expanded="tag === currentTag ? 'true' : 'false'"
+                    :aria-pressed="tag === currentTag ? 'true': 'false'"
+                    @click.prevent="handleFilter">
+                {{ tag | capitalize }}
+            </button>
+        </div>
+        <div aria-live="polite">
+            <ul class="mcg-library-list">
+                <li class="mcg-library-list__item" v-for="book in filteredBooks">
+                    <div class="mcg-book">
+                        <figure class="mcg-book__cover">
+                            <img :src="book.cover" :alt="'This is an image of the ' + book.title + ' book cover art.'">
+                        </figure>
+                        <h2 class="mcg-book__title">
+                            <a :href="book.buyLink"> {{ book.title }} </a>
+                        </h2>
+                        <p class="mcg-book__author">{{ book.author }}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% endraw %}
+
+    <ul class="library-list-fallback">
+        {% for post in site.categories.book %}
+        <li>
+            <article>
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.author }}</p>
+                <a href="{{ post.buy_link }}">Buy</a>
+            </article>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
