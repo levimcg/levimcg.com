@@ -11,6 +11,9 @@
     {% if page.is_post == true %}
         {% include cards.html %}
     {% endif %}
+    {% if page.title == "Artwork" %}
+        {% include cards.html %}
+    {% endif %}
     <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css?{{ site.time | remove: " " | remove: "-" | remove: ":" }}">
