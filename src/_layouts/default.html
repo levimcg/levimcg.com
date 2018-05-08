@@ -3,7 +3,7 @@
     {% include html-head.html %}
     <body{% if page.title == "Artwork" %} class="mcg-artwork-page"{% endif %}>
         {% include header.html %}
-        <main class="mcg-wrapper" role="main">
+        <main class="mcg-wrapper" role="main" id="mcg-main-content">
             {{ content }}
         </main>
         {% include footer.html %}

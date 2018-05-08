@@ -1,5 +1,6 @@
 .mcg-site-header {
     font-family: $font-family-sans;
+    position: relative;
 
     &__title {
         text-decoration: none;
@@ -51,5 +52,17 @@
 @include mq(bp(md)) {
     .mcg-site-nav__list li {
         margin-right: 2rem;
+    }
+}
+
+.mcg-skip-link {
+    position: fixed;
+    top: -6rem;
+    padding: .5rem;
+
+    &:focus {
+        top: 0;
+        text-decoration: none;
+        background-color: $color-background;
     }
 }
