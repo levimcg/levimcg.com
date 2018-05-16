@@ -1,4 +1,0 @@
-# This will be the default baseurl for development.
-# Make a separate config file for production build
-# with live url and compressed css.
-baseurl: http://stage.levimcg.com
