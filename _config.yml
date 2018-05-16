@@ -16,12 +16,12 @@ keep_files: ['css/style.css']
 
 # Adds scope for posts so you check "if is post"
 defaults:
-    -
-        scope:
-            path: ""      # empty string for all files
-            type: posts   # limit to posts
-        values:
-            is_post: true # automatically set is_post=true for all posts
+  -
+    scope:
+      path: ""      # empty string for all files
+      type: posts   # limit to posts
+    values:
+      is_post: true # automatically set is_post=true for all posts
 
 # Global site variables
 title: Levi McGranahan
@@ -30,6 +30,6 @@ user: levimcg
 
 # Custom collections
 collections:
-    projects:
-        output: false
-        permalink: /projects/:title/
+  projects:
+    output: false
+    permalink: /projects/:title/

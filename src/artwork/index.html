@@ -4,16 +4,16 @@ title: Artwork
 teaser: I occasionally make art and illustration pieces. Here are a selection of my favorites.
 ---
 <div class="mcg-intro mcg-intro--pattern">
-    <div class="mcg-intro__content mcg-intro__content--larger">
-        <p class="mcg-intro__heading">I occasionally make art and illustration pieces. Here are a selection of my favorites. You can <a href="https://www.instagram.com/levimcg/">see more on Instagram</a>.</p>
-    </div>
+  <div class="mcg-intro__content mcg-intro__content--larger">
+    <p class="mcg-intro__heading">I occasionally make art and illustration pieces. Here are a selection of my favorites. You can <a href="https://www.instagram.com/levimcg/">see more on Instagram</a>.</p>
+  </div>
 </div>
 <ol class="mcg-grid">
-    {% for image in site.data.artwork %}
-    <li class="mcg-grid__item" id="{{ image.title | downcase | replace: ' ', '-' }}">
-        <figure class="mcg-artwork-entry">
-            <img class="lazyload" data-src="../img/artwork/{{ image.url }}" alt="{{ image.title }}">
-        </figure>
-    </li>
-    {% endfor %}
+  {% for image in site.data.artwork %}
+  <li class="mcg-grid__item" id="{{ image.title | downcase | replace: ' ', '-' }}">
+    <figure class="mcg-artwork-entry">
+      <img class="lazyload" data-src="../img/artwork/{{ image.url }}" alt="{{ image.title }}">
+    </figure>
+  </li>
+  {% endfor %}
 </ol>
