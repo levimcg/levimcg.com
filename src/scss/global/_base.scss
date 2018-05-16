@@ -5,56 +5,56 @@
 -----------------------------------------------*/
 
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-    background-color: $color-background;
-    color: $color-text;
-    font-family: $base-font-family;
-    font-weight: $base-font-weight;
-    line-height: 1.5;
+  background-color: $color-background;
+  color: $color-text;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: 1.5;
 }
 
 body * {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @include mq(bp(md)) {
-    html {
-        font-size: 115%;
-    }
+  html {
+      font-size: 115%;
+  }
 }
 
 @include mq(bp(lg)) {
-    html {
-        font-size: 130%;
-    }
+  html {
+      font-size: 130%;
+  }
 }
 
 p {
-    font-size: 1rem;
-    margin: $sp-4 0;
+  font-size: 1rem;
+  margin: $sp-4 0;
 }
 
 a {
-    color: $color-blue;
+  color: $color-blue;
 
-    &:hover {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+  }
 
-    &:focus {
-        outline: dotted 2px $color-blue;
-        outline-offset: 2px;
-    }
+  &:focus {
+    outline: dotted 2px $color-blue;
+    outline-offset: 2px;
+  }
 }
 
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 h1,
@@ -63,25 +63,25 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: $ts-16;
-    font-weight: 400;
-    line-height: 1.2;
-    margin: 0;
+  font-size: $ts-16;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
 }
 
 figure {
-    margin: 0;
+  margin: 0;
 }
 
 blockquote {
-    margin-left: 0;
-    border-left: .25rem solid mix($color-text, $color-background, 20%);
-    padding-left: 1rem;
+  margin-left: 0;
+  border-left: .25rem solid mix($color-text, $color-background, 20%);
+  padding-left: 1rem;
 }
 
 blockquote p {
-    font-size: $ts-26;
-    font-style: italic;
-    line-height: 1.6;
-    color: mix($color-black, $color-background, 70%);
+  font-size: $ts-26;
+  font-style: italic;
+  line-height: 1.6;
+  color: mix($color-black, $color-background, 70%);
 }

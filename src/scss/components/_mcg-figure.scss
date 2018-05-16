@@ -1,11 +1,11 @@
 .mcg-figure {
-    margin: 2rem auto;
-    max-width: 44rem;
+  margin: 2rem auto;
+  max-width: 44rem;
 
-    &__caption {
-        color: mix($color-black, $color-background, 65%);
-        font-size: $ts-14;
-        font-style: italic;
-        margin-top: .25rem;
-    }
+  &__caption {
+    color: mix($color-black, $color-background, 65%);
+    font-size: $ts-14;
+    font-style: italic;
+    margin-top: .25rem;
+  }
 }

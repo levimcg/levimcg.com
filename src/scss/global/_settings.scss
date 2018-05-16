@@ -34,11 +34,11 @@ $color-link: $color-text;
 // Breakpoints
 
 $breakpoints: (
-    sm: 500px,
-    md: 768px,
-    lg: 900px,
-    xl: 1100px,
-    xxl: 1340px
+  sm: 500px,
+  md: 768px,
+  lg: 900px,
+  xl: 1100px,
+  xxl: 1340px
 );
 
 
@@ -66,19 +66,19 @@ $sp-15: $spacing-unit * 15;
 
 // $key = pixel size, $value = relational units
 $type-sizes: (
-    12: .75rem,
-    14: .875rem,
-    16: 1rem,
-    18: 1.125rem,
-    20: 1.25rem,
-    23: 1.4375rem,
-    26: 1.625rem,
-    29: 1.8125rem,
-    32: 2rem,
-    36: 2.25rem,
-    41: 2.5625rem,
-    46: 2.875rem,
-    52: 3.25rem,
+  12: .75rem,
+  14: .875rem,
+  16: 1rem,
+  18: 1.125rem,
+  20: 1.25rem,
+  23: 1.4375rem,
+  26: 1.625rem,
+  29: 1.8125rem,
+  32: 2rem,
+  36: 2.25rem,
+  41: 2.5625rem,
+  46: 2.875rem,
+  52: 3.25rem,
 );
 
 // Type Size variables

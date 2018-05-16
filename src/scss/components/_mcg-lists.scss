@@ -1,18 +1,18 @@
 .mcg-project-list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .mcg-post-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-    li a {
-       text-decoration: none;
+  li a {
+    text-decoration: none;
 
-       &:hover {
-           text-decoration: underline;
-       }
+    &:hover {
+      text-decoration: underline;
     }
+  }
 }

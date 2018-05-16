@@ -5,7 +5,7 @@
 // Gets breakpoints out of the $breakpoints map
 
 @function bp($key) {
-    @return map-get($breakpoints, $key);
+  @return map-get($breakpoints, $key);
 }
 
 
@@ -13,7 +13,7 @@
 // of the type-sizes map. see "core/_varibales.scss".
 
 @function ts($key) {
-    @return map-get($type-sizes, $key);
+  @return map-get($type-sizes, $key);
 }
 
 
@@ -34,7 +34,7 @@
 //     }
 
 @mixin mq($size) {
-    @media screen and (min-width: $size) {
-        @content
-    }
+  @media screen and (min-width: $size) {
+    @content
+  }
 }

@@ -1,24 +1,24 @@
 .mcg-typeset {
-    line-height: 1.7;
+  line-height: 1.7;
 
-    h1, h2, h3, h4, h5, h6 {
-        color: $color-black;
-        line-height: 1.2;
-    }
+  h1, h2, h3, h4, h5, h6 {
+    color: $color-black;
+    line-height: 1.2;
+  }
 
-    h2, h3, h4, h5, h6 {
-        font-size: $ts-20;
-        margin-top: 4rem;
-    }
+  h2, h3, h4, h5, h6 {
+    font-size: $ts-20;
+    margin-top: 4rem;
+  }
 
-    p {
-        margin-top: 2rem;
-    }
+  p {
+    margin-top: 2rem;
+  }
 
-    p code,
-    ul li code,
-    ol li code {
-        color: $color-red;
-        background-color: mix($color-black, $color-background, 5%);
-    }
+  p code,
+  ul li code,
+  ol li code {
+    color: $color-red;
+    background-color: mix($color-black, $color-background, 5%);
+  }
 }
