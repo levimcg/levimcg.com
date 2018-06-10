@@ -4,15 +4,15 @@ title: The Blogs Are Back!
 teaser: "Seems to me that folks are going back publishing content on their own sites, and I like it"
 category: note
 tags:
-    - thoughts
-    - blogs
+  - thoughts
+  - blogs
 ---
 If you hadn't notice, Twitter has become a toxic shit pile. It seems to me that a growing number of the folks that I admire and follow there are starting to walk away from the platform. It's a total bum out and Twitter has totally allowed it to happen. Mike Monteiro's [one of those folks](https://medium.com/@monteiro/jack-dorseys-resignation-letter-to-twitter-b04e8a63b0a9) and he really nailed it here:
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">I wish you’d spent just a portion of the energy you use defending fascists listening to the people they’re attacking <a href="https://twitter.com/jack?ref_src=twsrc%5Etfw">@jack</a>. Some of those voices are silenced forever. You did nothing. Except make sure their attackers still had a platform. I hope they haunt your dreams.</p>&mdash; Mike Monteiro wants @jack fired. (@monteiro) <a href="https://twitter.com/monteiro/status/947314123871633408?ref_src=twsrc%5Etfw">December 31, 2017</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It's sad to watch Twitter slowly die like this, but it's happening and they know it. It's why they allow the abusive fascists to flourish and a maniac with millions of followers and the ability to destroy the world threaten nuclear war. Whatver drives engagment, I guess.
+It's sad to watch Twitter slowly die like this, but it's happening and they know it. It's why they allow the abusive fascists to flourish and a maniac with millions of followers and the ability to destroy the world threaten nuclear war. Whatever drives engagment, I guess.
 
 All that said, there's at least one good thing to come out of all this. It seems, at least a little bit, that people are starting to take control of their own content. I don't think it's a mass exodus by any means, but I've noticed a lot of those same folks I follow starting to publish more of their content on their own sites or via newsletters. That's exciting to me so I thought I'd share some of my favorite blogs I read and newsletters I subscribe to. I might try to keep it up to date as I discover new stuff.
 

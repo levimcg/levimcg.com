@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="h-entry">
+  {% include post-header.html %}
+  <div class="mcg-main-content mcg-typeset">
+    {{ page.content }}
+  </div>
+  <ol class="mcg-grid">
+    {% for item in page.sketchbookPages %}
+    <li class="mcg-grid__item">
+      <img class="lazyload" data-src="{{ item }}">
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+<div class="mcg-main-content">
+  {% include post-pagination.html %}
+</div>
