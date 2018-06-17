@@ -1,7 +1,19 @@
 <footer class="mcg-wrapper mcg-site-footer" role="contentinfo">
-    <p><em>@levimcg</em> on <a href="https://twitter.com/levimcg" rel="me">Twitter</a>, <a href="https://www.instagram.com/levimcg/" rel="me">Instagram</a>, <a href="https://github.com/levimcg" rel="me">Github</a>.</p>
-    <p class="mcg-site-footer__copy">&copy; <span id="mcg-copy-year"></span> Levi McGranahan</p>
+  <p><em>@levimcg</em> on <a href="https://twitter.com/levimcg" rel="me">Twitter</a>, <a href="https://www.instagram.com/levimcg/" rel="me">Instagram</a>, <a href="https://github.com/levimcg" rel="me">Github</a>.</p>
+  <p class="mcg-site-footer__copy">&copy; <span id="mcg-copy-year"></span> Levi McGranahan</p>
 </footer>
+<script>
+  /*
+  *  Creates a dynamic copyright date and inserts it
+  *  into the page.
+  */
+  var elCopyRight = document.getElementById('mcg-copy-year');
+  var currentDate = new Date().getFullYear();
+
+  if (elCopyRight) {
+    elCopyRight.innerText = currentDate;
+  }
+</script>
 
 {% if page.title == "Bookshelf" %}
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -10,4 +22,3 @@
 {% if page.title == "Artwork" or page.layout == "sketchbook" %}
 <script src="{{ site.baseurl }}/js/libs/lazysizes.min.js" async=""></script>
 {% endif %}
-<script src="{{ site.baseurl }}/js/scripts.js"></script>

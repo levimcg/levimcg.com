@@ -10,6 +10,7 @@ if (
 ) {
   // Select our library container.
   var library = document.querySelector(".library")
+
   // If our browser is capable, remove our fallback.
   library.classList.remove("no-mustard")
 
