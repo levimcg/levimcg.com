@@ -12,4 +12,4 @@ It's that last one that is most cruel. _The worst thing you can do is try to for
 
 ![Burnout image](https://s3.amazonaws.com/static.levimcg.com/notes/scribble-brain-transparent.png)
 
-I've been in this situation enought times to know what works for me, and the answer is, **walk away**. Step back and think about something else for the weekend. You're smart, and good at what you do, and you'll figure out that problem you are trying to solve. But first, give yourself a break.
+I've been in this situation enough times to know what works for me. **Walk away**. Step back and think about something else for the weekend. You're smart, and good at what you do, and you'll figure out that problem you are trying to solve. But first, give yourself a break.
