@@ -1,0 +1,19 @@
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+  <div class="mcg-wrapper">
+    {% include 'components/post-header.njk' %}
+    <div class="mcg-longform">
+      {{ content | safe }}
+    </div>
+  </div>
+  <div class="mcg-wrapper mcg-wrapper--full">
+    <ol class="mcg-grid">
+      {% for page in sketchbookPages %}
+      <li>
+        <img src="{{ page }}" alt="">
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}

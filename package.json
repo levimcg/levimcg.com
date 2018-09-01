@@ -1,0 +1,16 @@
+{
+  "name": "levimcg.com",
+  "version": "4.0.0",
+  "description": "Levi McGranahan's personal website",
+  "main": ".eleventy.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.3",
+    "clean-css": "^4.2.1"
+  }
+}

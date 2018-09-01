@@ -1,0 +1,10 @@
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+  <article class="mcg-wrapper h-entry">
+    {% include 'components/post-header.njk' %}
+    <div class="mcg-longform">
+      {{ content | safe }}
+    </div>
+  </article>
+{% endblock %}

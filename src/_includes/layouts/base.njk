@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title }} - {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set css %}
+    {% include 'css/site.css' %}
+    {% include 'css/prism.css' %}
+  {% endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+</head>
+<body {% if bodyClass %}class="{{bodyClass}}"{% endif %}>
+  {% include 'components/header.njk' %}
+  <main role="main">
+    {% block main %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+  {% include 'components/footer.njk' %}
+</body>
+</html>

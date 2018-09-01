@@ -1,0 +1,15 @@
+---
+layout: 'layouts/post.njk'
+title: Bowie McG
+teaser: "We lost our dog Bowie this week and it's been rough."
+tags: post
+date: 2018-02-03
+---
+Our dog Bowie passed unexpectedly on Thursday, February 1 2018. As far as we (and the vet) could tell he had a pretty rough life before he came to live with us almost two years ago. I think we were able to give him a pretty good last couple of years of life.
+
+Dealing with any kind of death is such a helpless and frustrating experience and it never gets easier. We miss him and we're still feeling pretty low, but I'm thankful for the time he got to live with us and the great memories we have to share forever.
+
+![Bowie's first day with us](https://s3.amazonaws.com/static.levimcg.com/posts/bowie/bowie-first-day.jpg)
+
+![Amazing watercolor protrait by our friend Priscilla](https://s3.amazonaws.com/static.levimcg.com/posts/bowie/bowie-mcg-watercolor-800.jpg)
+

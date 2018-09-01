@@ -1,0 +1,18 @@
+<ol class="mcg-feed-list">
+  {% for post in collections.latestPosts %}
+    <li>
+      <article class="h-entry">
+        {%- if post.data.external_link -%}
+          <a class="p-name" href="{{ post.data.external_link }}" target="_blank" rel="noopener">
+            {{ post.data.title }}
+          </a>
+        {%- else -%}
+        <a class="p-name" href="{{ post.url }}">
+          {{ post.data.title }}
+        </a>
+        {%- endif -%}
+        <time class="dt-published" datetime="{{ post.date }}">{{ post.date | dateFormatted }}</time>
+      </article>
+    </li>
+  {% endfor %}
+</ol>

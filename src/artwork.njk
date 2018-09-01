@@ -1,0 +1,21 @@
+---
+title: I occasionally make art and illustration pieces. Here are a selection of my favorites. You can see more on Instagram.
+bodyClass: mcg-artwork-page
+lazyLoad: true
+---
+{% extends 'layouts/base.njk' %}
+
+{% block main %}
+  <div class="mcg-wrapper">
+    <h1>{{ title }}</h1>
+  </div>
+  <div class="mcg-wrapper mcg-wrapper--full">
+    <ol class="mcg-grid">
+      {% for item in artwork %}
+      <li>
+        <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+{% endblock %}
