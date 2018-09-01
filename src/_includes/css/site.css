@@ -145,7 +145,8 @@ code {
  */
 .mcg-wrapper {
   max-width: 40em;
-  padding: calc(var(--spacing-unit) * 4);
+  padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
+  position: relative;
 }
 
 .mcg-wrapper h1:first-child {
@@ -206,6 +207,26 @@ code {
   background-position-y: 20vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 36em) {
+  .mcg-intro svg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .mcg-intro {
+    postion: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .mcg-intro svg {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 /* fade image in after load */

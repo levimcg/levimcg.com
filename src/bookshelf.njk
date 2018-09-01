@@ -11,11 +11,7 @@ lazyLoad: true
     <ol class="mcg-grid mcg-grid--gallery">
       {% for post in collections.book | reverse %}
       <li>
-        <div class="mcg-card">
-          <img class="lazyload mcg-card__image" data-src="{{ post.data.thumbnail }}" alt="">
-          <h2 class="mcg-card__title">{{ post.data.title }}</h2>
-          <span class="mcg-card__meta">{{ post.data.author }}</span>
-        </div>
+        {% include 'components/card.njk' %}
       </li>
       {% endfor %}
     </ol>
