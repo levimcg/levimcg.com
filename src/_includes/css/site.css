@@ -78,7 +78,7 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 img {
@@ -90,7 +90,7 @@ pre {
 }
 
 pre code {
-  font-size: .875em;
+  font-size: .75em;
 }
 
 code {
