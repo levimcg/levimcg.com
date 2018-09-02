@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,7 @@
     {{ css | cssmin | safe }}
   </style>
 </head>
-<body {% if bodyClass %}class="{{bodyClass}}"{% endif %}>
+<body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
   {% include 'components/header.njk' %}
   <main role="main">
     {% block main %}

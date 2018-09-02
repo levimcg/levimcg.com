@@ -6,12 +6,11 @@ bodyClass: mcg-home-page
 
 {% block main %}
 <div class="mcg-wrapper">
-  <h1>{{ title }}</h1>
-
+  <h1 class="mcg-mb-md">{{ title }}</h1>
   <p>I'm Levi, a designer, front-end developer, and <a href="./artwork">sometimes artist</a> living in the <a href="https://www.visitbloomington.com/">coolest town in Indiana</a>. I'm currently working to improve the user experience of software in higher-ed.</p>
   <p>When something good happens in my life, or I read a good book I try to <a href="./posts">write about it here</a>. I don't feel guilty about how infrequently I post 😊</p>
 
-  <h2 class="mcg-sub-heading">Latest posts</h2>
+  <h2 class="mcg-sub-heading mcg-mt-md">Latest posts</h2>
   {% include 'components/recent-posts.njk' %}
 </div>
 {% endblock %}

@@ -10,7 +10,7 @@ lazyLoad: true
     <h1 class="mcg-sr-only">{{ title }}</h1>
     <ol class="mcg-grid mcg-grid--gallery">
       {% for post in collections.book | reverse %}
-      <li>
+      <li class="mcg-grid__item">
         {% include 'components/card.njk' %}
       </li>
       {% endfor %}

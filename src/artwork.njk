@@ -6,13 +6,13 @@ lazyLoad: true
 {% extends 'layouts/base.njk' %}
 
 {% block main %}
-  <div class="mcg-wrapper">
+  <div class="mcg-wrapper mcg-wrapper--wider">
     <h1>{{ title | safe }}</h1>
   </div>
   <div class="mcg-wrapper mcg-wrapper--full">
     <ol class="mcg-grid">
       {% for item in artwork %}
-      <li>
+      <li class="mcg-grid__item">
         <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
       </li>
       {% endfor %}
