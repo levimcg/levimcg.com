@@ -1,5 +1,7 @@
 <ol class="mcg-feed-list">
   {% for post in collections.latestPosts %}
+    {# This is a hacky workaround for "draft" functionality #}
+    {% if post.data.draft !== true %}
     <li>
       <article class="h-entry">
         {%- if post.data.external_link -%}
@@ -14,5 +16,6 @@
         <time class="dt-published" datetime="{{ post.date }}">{{ post.date | dateFormatted }}</time>
       </article>
     </li>
+    {% endif %}
   {% endfor %}
 </ol>
