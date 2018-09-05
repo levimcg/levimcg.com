@@ -5,7 +5,7 @@ date: 2017-10-05
 teaser: A great book that tells the history of modern man from the forming of our species to what we may become in the not too distant future.
 # Book-specific stuff
 author: Yuval Noah Harari
-thumbnail: http://static.levimcg.com/library/thumbnail-sapiens.jpg
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-sapiens.jpg
 buy_link: https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316095
 year_read: 2017
 tags: [post, book]

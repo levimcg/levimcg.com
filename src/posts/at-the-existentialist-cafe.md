@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book-specific stuff
 author: Sarah Bakewell
-thumbnail: http://static.levimcg.com/library/thumbnail-existentialist-cafe.jpg
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-existentialist-cafe.jpg
 buy_link: http://www.amazon.com/gp/product/1590514882
 year_read: 2016
 ---

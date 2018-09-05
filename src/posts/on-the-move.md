@@ -7,7 +7,7 @@ tags: post
 
 # Book stuff
 author: Oliver Sacks
-thumbnail: http://static.levimcg.com/library/thumbnail-on-the-move.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-on-the-move.png
 buy_link: http://www.amazon.com/On-Move-Life-Oliver-Sacks/dp/0385352549
 year_read: 2015
 ---

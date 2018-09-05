@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book-specific stuff
 author: Laozi
-thumbnail: http://static.levimcg.com/library/thumbnail-tao-te-ching.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-tao-te-ching.png
 buy_link: http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451
 year_read: 2015
 ---

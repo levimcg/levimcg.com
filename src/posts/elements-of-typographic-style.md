@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book-specific stuff
 author: Robert Bringhurst
-thumbnail: http://static.levimcg.com/library/thumbnail-elements-of-typographic-style.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-elements-of-typographic-style.png
 buy_link: http://www.amazon.com/Elements-Typographic-Style-Robert-Bringhurst/dp/0881791326
 year_read: 2012
 ---

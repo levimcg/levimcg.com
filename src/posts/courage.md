@@ -7,4 +7,4 @@ tags: post
 ---
 Construction paper, scissors, glue stick, and liquid courage.
 
-![Courage](http://static.levimcg.com/notes/courage/courage--small.png)
+![Courage](https://s3.amazonaws.com/static.levimcg.com/notes/courage/courage--small.png)

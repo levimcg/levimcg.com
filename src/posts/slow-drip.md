@@ -11,13 +11,13 @@ I don't think there will ever be a time where I don't have the urge to make _som
 
 I still carve out a little time here and there to make new stuff. It's a slow drip, but here are some new pieces I've made over the last few months.
 
-![This is an image of three colorfull abstract compositions](http://static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-1.jpg)
+![This is an image of three colorfull abstract compositions](https://s3.amazonaws.com/static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-1.jpg)
 
-![](http://static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-2.jpg)
+![](https://s3.amazonaws.com/static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-2.jpg)
 
-![](http://static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-3.jpg)
+![](https://s3.amazonaws.com/static.levimcg.com/posts/slow-drip/mcg-slow-drip-shape-studies-3.jpg)
 
-![This is an image of a lot of colorful abstract compositions next to each other.](http://static.levimcg.com/posts/slow-drip/mcg-slow-drip-group-shot.jpg)
+![This is an image of a lot of colorful abstract compositions next to each other.](https://s3.amazonaws.com/static.levimcg.com/posts/slow-drip/mcg-slow-drip-group-shot.jpg)
 
 ## Small Works Holiday Group Show
 I'll be showing a handful of pieces (maybe some of these new ones ☝️) at the Blueline Gallery again this coming month. It's a [group show](https://www.visitbloomington.com/event/small-works-holiday-show/36492/) with a few other local artists and it'll be up until December 29.

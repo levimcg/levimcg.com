@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book-specific stuff
 author: Emilio Gil
-thumbnail: http://static.levimcg.com/library/thumbnail-pioneers.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-pioneers.png
 buy_link: http://www.amazon.co.uk/Pioneers-Spanish-Graphic-Design-Emilio/dp/0981780563
 year_read: 2012
 ---

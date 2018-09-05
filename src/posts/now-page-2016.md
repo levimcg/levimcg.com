@@ -13,7 +13,7 @@ Like many others I've decided that I want to be more healthy this year and just 
 
 On January 1 I started a new project called [Relatives](http://relatives.levimcg.com/). I’m trying to go a whole month posting one abstract composition everyday. There are two ideas driving this. First, I thought it would be good to start of the year with a creative cleansing of sorts.
 
-![Relatives Logo](http://static.levimcg.com/relatives/relatives-logo--large.jpg)
+![Relatives Logo](https://s3.amazonaws.com/static.levimcg.com/relatives/relatives-logo--large.jpg)
 
 I’ve set try strict constraints on this project. Limited color palette, only simple primitive shapes, and no literal forms i.e. only abstract form(s)—that’s it. Second, it’s a commitment. I’m looking to build up the muscle memory for creating more often whether that’s images or words, or both.
 

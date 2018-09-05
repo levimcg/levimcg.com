@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book stuff
 author: Jon Duckett
-thumbnail: http://static.levimcg.com/library/thumbnail-javascript.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-javascript.png
 buy_link: http://javascriptbook.com/
 year_read: 2016
 ---

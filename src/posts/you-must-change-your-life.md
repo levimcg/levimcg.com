@@ -2,13 +2,13 @@
 layout: "layouts/post.njk"
 title: You Must Change Your Life
 teaser: A fascinating look at the relationship between Rainer Maria Rilke and Auguste Rodin
-cover: http://static.levimcg.com/notes/you-must-change-your-life/cover-you-must-change-your-life.jpg
+cover: https://s3.amazonaws.com/static.levimcg.com/notes/you-must-change-your-life/cover-you-must-change-your-life.jpg
 tags: [post, book]
 date: 2016-12-23
 
 # Book-specific stuff
 author: Rachel Corbett
-thumbnail: http://static.levimcg.com/notes/you-must-change-your-life/thumbnail-you-must-change-your-life.jpg
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/notes/you-must-change-your-life/thumbnail-you-must-change-your-life.jpg
 buy_link: https://www.amazon.com/You-Must-Change-Your-Life/dp/0393245055
 year_read: 2016
 ---

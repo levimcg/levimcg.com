@@ -8,4 +8,4 @@ tags: post
 ---
 All three coffee ritual illustrations in row. Prints are available on [my Society6 page](https://society6.com/levimcg/collection/coffee).
 
-![Coffee](http://static.levimcg.com/notes/coffee/coffee-3up--small.png)
+![Coffee](https://s3.amazonaws.com/static.levimcg.com/notes/coffee/coffee-3up--small.png)

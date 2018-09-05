@@ -9,7 +9,7 @@ Last Friday, Febreuary 3 was the opening for my show called Deep Cuts at [Blueli
 
 I didn't get a ton of photos from the event, but here's one of the shots of the main wall I grabbed with my phone on the night. I know it's kinda blurry.
 
-![Deep cuts opening](http://static.levimcg.com/notes/deep-cuts/deep-cuts-opening.jpg)
+![Deep cuts opening](https://s3.amazonaws.com/static.levimcg.com/notes/deep-cuts/deep-cuts-opening.jpg)
 
 ## Sketchbook video
 

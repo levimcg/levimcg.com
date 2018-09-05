@@ -7,4 +7,4 @@ tags: post
 ---
 Looking for a little more balance—a weekend like this one is a great start.
 
-![Balance](http://static.levimcg.com/notes/balance/balance--small.png)
+![Balance](https://s3.amazonaws.com/static.levimcg.com/notes/balance/balance--small.png)

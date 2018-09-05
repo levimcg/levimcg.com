@@ -7,7 +7,7 @@ tags: [post, book]
 
 # Book-specific stuff
 author: Jeremy Keith
-thumbnail: http://static.levimcg.com/library/thumbnail-html5.png
+thumbnail: https://s3.amazonaws.com/static.levimcg.com/library/thumbnail-html5.png
 buy_link: http://abookapart.com/products/html5-for-web-designers
 year_read: 2014
 ---
