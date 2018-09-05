@@ -15,7 +15,7 @@
 </head>
 <body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
   {% include 'components/header.njk' %}
-  <main role="main">
+  <main role="main" id="main-content">
     {% block main %}
       {{ content | safe }}
     {% endblock %}
