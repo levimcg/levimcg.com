@@ -1,0 +1,14 @@
+{% macro postTeaser(params) %}
+<article class="h-entry">
+  {%- if params.external_link -%}
+    <a class="p-name" href="{{ params.external_link }}" target="_blank" rel="noopener">
+      {{ params.title }}
+    </a>
+  {%- else -%}
+  <a class="p-name" href="{{ params.url }}">
+    {{ params.title }}
+  </a>
+  {%- endif -%}
+  <time class="dt-published" datetime="{{ params.date }}">{{ params.date | dateFormatted }}</time>
+</article>
+{% endmacro %}

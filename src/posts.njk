@@ -2,29 +2,26 @@
 title: Posts
 ---
 {% extends 'layouts/base.njk' %}
+{% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
   <div class="mcg-wrapper">
     <ol class="mcg-feed-list">
-      {% for post in collections.post | reverse %}
+      {%- for post in collections.post | reverse -%}
         {# This is a hacky workaround for "draft" functionality #}
         {% if post.data.draft !== true %}
         <li>
-          <article class="h-entry">
-            {%- if post.data.external_link -%}
-              <a class="p-name" href="{{ post.data.external_link }}" target="_blank" rel="noopener">
-                {{ post.data.title }}
-              </a>
-            {%- else -%}
-            <a class="p-name" href="{{ post.url }}">
-              {{ post.data.title }}
-            </a>
-            {%- endif -%}
-            <time class="dt-published" datetime="{{ post.date }}">{{ post.date | dateFormatted }}</time>
-          </article>
+          {{-
+            postTeaser({
+              title: post.data.title,
+              date: post.date,
+              url: post.url,
+              external_link: post.data.external_link
+            })
+          -}}
         </li>
         {% endif %}
-      {% endfor %}
+      {%- endfor -%}
     </ol>
   </div>
 {% endblock %}
