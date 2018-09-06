@@ -1,3 +1,17 @@
 {
-  "title": "Levi McGranahan"
+  "title": "Levi McGranahan",
+  "navigation": [
+    {
+      "label": "Posts",
+      "url": "/posts/"
+    },
+    {
+      "label": "Bookshelf",
+      "url": "/bookshelf/"
+    },
+    {
+      "label": "Artwork",
+      "url": "/artwork/"
+    }
+  ]
 }
