@@ -2,7 +2,7 @@
 title: "Skyscrapers and gardens"
 teaser: "Some thoughts on how we define and then evolve design standards"
 date: 2018-09-05
-footnote: This post is totally a riff off of a post by <a href="https://ethanmarcotte.com/wrote/design-system/">Ethan Marcotte</a>. He is much smarter than me, but I've thought about this post a lot since reading his.
+footnote: This post is a riff off of <a href="https://ethanmarcotte.com/wrote/design-system/">a post by Ethan Marcotte</a>. He is much smarter than me, but I've thought about this post a lot since reading his.
 ---
 I've been the lead on a [design system project](https://rivet.iu.edu/) that serves dozens of development teams across a fairly large organization for a little over a year now. I've done a lot of work defining and documenting design standards in that time and have really enjoyed it.
 
