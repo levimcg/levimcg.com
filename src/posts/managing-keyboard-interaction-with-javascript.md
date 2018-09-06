@@ -25,10 +25,10 @@ Good news though. It's fairly simple to convert a `nodeList` to an `Array` with 
 
 ```js
 // Find all the elements a class of .button
-const buttonsNodeList = document.querySelectorAll('.button');
+var buttonsNodeList = document.querySelectorAll('.button');
 
 // Convert the resulting nodeList to an Array
-const buttonsArray = Array.prototype.slice.call(buttonsNodeList);
+var buttonsArray = Array.prototype.slice.call(buttonsNodeList);
 ```
 
 Now you can use all the handy array methods on the resulting `buttonsArray`. 👍
@@ -42,26 +42,34 @@ Anyway, this is a handy little snippet that I picked up along the way that I fin
 
 ```js
 // Stores a String/CSS selector of anything focus-able.
-const anythingFocusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]';
+var anythingFocusable = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), [tabindex="0"]';
 
 // Creates a nodeList of anything that can be focused
-const focusables = element.querySelector(anythingFocusable);
+var focusables = component.querySelector(anythingFocusable);
+
+// Convert the focusables nodeList to an Array
+var focusablesArray = Array.prototype.slice.call(focusables);
 ```
 
 Once you have all of the focus-able elements in a component, you can convert it to an array as described earlier which will make it easier work with when managing focus.
 
 ### 2. Finding the first and last element
+Once you have found all of the focus-able items inside and element like a dropdown menu or a set of tabs and converted it to an array, it's fairly straight-forward to find the first and last focus-able elements by storing a reference to them based on their position in the array.
 
-TODO:
+So building on the previous example where we've created our `focusablesArray` we can set up a reference to the first and last item:
 
-- This pattern is helpful for Tabs, Dropdowns, modals, etc.
-- When the last item has focus and tab/arrow key is pressed, move focus to the first element and vice versa
+```js
+// First focus-able item in our component
+var first = focusablesArray[0];
 
+// Last focus-able item in our component
+var last = focusablesArray[focusablesArray.length - 1];
+```
 
 ### 3. Keeping track of the focused element
 
 TODO:
-
+- Build off of previous example
 - use activeTab example e.g. when tab is focused store a reference to it so you can find the next/prev tab
 - `nextTab = tabs.indexOf(activeTab) + 1`;
 - `prevTab = tabs.indexOf(activeTab) - 1`;
