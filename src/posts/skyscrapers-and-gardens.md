@@ -17,14 +17,14 @@ I don't have universal answers as to _how_ you design those processes, or what t
 ## Partial design system kick-off checklist
 Looking back, here are few questions I wish I would've thought more deeply about before I jumped into building a design system.
 
-- **How do you build a community around your design system?**
+- **How will you build a community around your design system?**
     - Do you have a clear process for contributing to your system?
     - How do you recognize teams/individuals that are using the system well?
     - How do you get teams to share work back with you?
 - **What happens when designers/developers deviate form the system?**
     - What if the result of their deviation is good and would be a valuable addition to the system?
     - What if it's really inaccessible, or a bad UX?
-- **How do you define the lifecycles of your design system?**
+- **How will you define the lifecycles of your design system?**
     - How often will you do releases?
     - How do you retire components from your design system?
     - How do you deal with breaking changes?
