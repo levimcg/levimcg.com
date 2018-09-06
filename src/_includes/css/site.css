@@ -48,7 +48,7 @@ body {
   background-color: var(--color-background);
   font-family: var(--font-base);
   color: var(--color-text);
-  line-height: 1.7;
+  line-height: 1.65;
   padding: 0;
   margin: 0;
 }
@@ -369,6 +369,15 @@ code {
   margin-right: calc(var(--spacing-unit) * 2);
 }
 
+.mcg-main-nav a {
+  padding-top: calc(var(--spacing-unit) * .25);
+  padding-bottom: calc(var(--spacing-unit) * .25);
+}
+
+.mcg-main-nav ul li a[aria-current] {
+  box-shadow: 0 .125em 0 0 var(--color-primary);
+}
+
 @media screen and (min-width: 36em) {
   .mcg-main-nav {
     margin-top: 0;
@@ -476,6 +485,17 @@ code {
   font-weight: 700;
 }
 
+.mcg-longform ul, ol {
+  padding-left: 1em;
+}
+
+.mcg-longform ul li strong {
+  display: block;
+  margin-top: calc(var(--spacing-unit) * 2);
+  margin-bottom: var(--spacing-unit);
+  line-height: 1.1;
+}
+
 /**
  * Card
  */
@@ -499,4 +519,13 @@ code {
   color: var(--color-black-lighter);
   display: block;
   margin-top: .5em;
+}
+
+.mcg-footnotes {
+  margin-top: calc(var(--spacing-unit) * 4);
+  color: var(--color-black-lighter);
+  font-style: italic;
+  font-size: .75em;
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--color-black-lightest);
 }

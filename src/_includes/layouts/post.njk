@@ -6,5 +6,10 @@
     <div class="mcg-longform">
       {{ content | safe }}
     </div>
+    {% if footnote %}
+    <div class="mcg-footnotes">
+      {{ footnote | safe }}
+    </div>
+    {% endif %}
   </article>
 {% endblock %}
