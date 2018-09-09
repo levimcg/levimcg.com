@@ -10,9 +10,9 @@ As the project grows and real humans start to use it (sometimes abuse it), and i
 
 I worked in a brand identity agency years ago and remember reading and article back then (I can't for the life of me find a link 😬, I'm sorry 🙏) about how companies tend to think of their brand as a solid structure like a skyscraper—something rigid that will never change. But really successful brands are more like gardens—you plant them and they grow and bloom. Sometimes they turn into something more beautiful than you could have imagined, and sometimes they become overgrown and need to be pruned back.
 
-Maybe this is just a really overblown metaphor to say "Plan for change", but _I think_ there's more to it than that. Before you fire up Sketch, write a line of CSS, or pick which front-end JavaScript framework you're going to use, I suggest you zoom out and some time _designing_ how you'll manage the growth and ultimately, pruning of the system over time.
+Maybe this is just a overblown metaphor for saying "Plan for change", but _I think_ there's more to it than that. Before you fire up Sketch, write a line of CSS, or pick which front-end JavaScript framework you're going to use, I suggest you zoom out and spend some time _designing_ how you'll manage the growth and ultimately, pruning of the system over time.
 
-I don't have universal answers as to _how_ you design those processes, or what they look like, but I _do_ have a handful of questions to get started.
+I don't have universal answers to how you design those processes, or what they look like, but I _do_ have a handful of questions to get started.
 
 ## Partial design system kick-off checklist
 Looking back, here are few questions I wish I would've thought more deeply about before I jumped into building a design system.

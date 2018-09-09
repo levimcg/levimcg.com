@@ -54,7 +54,7 @@ var focusablesArray = Array.prototype.slice.call(focusables);
 Once you have all of the focus-able elements in a component, you can convert it to an array as described earlier which will make it easier work with when managing focus.
 
 ### 2. Finding the first and last element
-Once you have found all of the focus-able items inside and element like a dropdown menu or a set of tabs and converted it to an array, it's fairly straight-forward to find the first and last focus-able elements by storing a reference to them based on their position in the array.
+Once you have found all of the focus-able items inside and element like a dropdown menu or a set of tabs and converted it to an array, you'll typically need to find the first and last focus-able elements. You do this by storing a reference to each based on their position in the array.
 
 So building on the previous example where we've created our `focusablesArray` we can set up a reference to the first and last item:
 
@@ -66,14 +66,63 @@ var first = focusablesArray[0];
 var last = focusablesArray[focusablesArray.length - 1];
 ```
 
-### 3. Keeping track of the focused element
+### 3. Finding the next and previous element
+Now that you know how many focus-able elements you're working with and you also know the first and last element you are in good shape to manage focus when a user interacts with your component using their keyboard.
 
-TODO:
-- Build off of previous example
-- use activeTab example e.g. when tab is focused store a reference to it so you can find the next/prev tab
-- `nextTab = tabs.indexOf(activeTab) + 1`;
-- `prevTab = tabs.indexOf(activeTab) - 1`;
+I usually set up a function for handling keyboard interaction that I can use as the event handler in side of `document.addEventListener()`. So something like:
 
+```js
+function handleKeydown(event) {
+  // Check to see if the keyboard event happened on a tab
+  var activeTab = event.target.closest('.tab');
+
+  // If the event target was not a tab, no need to continue
+  if (!activeTab) return;
+
+  // 39 is the keycode value for the right arrow key
+  if (event.keyCode === 39) {
+    // move focus to the next tab
+  }
+}
+
+// Later in my script
+document.addEventListener('keydown', handleKeydown, false);
+```
+
+#### Note on event delegation
+If you notice I'm using an event delegation approach here where I attach one event listener to the `document`. When the user presses a key on their keyboard, that `keydown` event will bubble all of the way up to the `document` where my event lister is attached. Once the event lister hears the event it fires of my `handleKeydown()` function where I'll put all the logic that checks to see if the event is one of the keyboard events I'm listening for (right arrow key, left arrow key, etc.).
+
+If you want to learn more about the event delegation approach, [Chris Ferdinandi](https://gomakethings.com/) has [written a lot about it](https://gomakethings.com/checking-event-target-selectors-with-event-bubbling-in-vanilla-javascript/), and I highly recommend subscribing to his newsletter if you're interested in learning and getting better at vanilla JavaScript.
+
+Inside of the `handleKeydown()` function, I'll typically store a reference to the tab that was just activated so that I can use it to determine the previous and next tabs, if they exist. so building on the code example above, each time a matching keyboard event happens, I'll find the previous and next tabs
+
+```js
+function handleKeydown(event) {
+  // Check to see if the keyboard event happened on a tab
+  var activeTab = event.target.closest('.tab');
+
+  // If the event target was not a tab, no need to continue
+  if (!activeTab) return;
+
+  // Find all the sibling tabs in the tabset
+  var tabSet =
+    Array.prototype.slice.call(activeTab.parentNode.querySelectorAll('.tab'));
+
+  // the next tab
+  var nextTab = tabSet.indexOf(activeTab) + 1;
+
+  // the previous tab
+  var nextTab = tabSet.indexOf(activeTab) -1;
+
+  // 39 is the keycode value for the right arrow key
+  if (event.keyCode === 39) {
+    // move focus to the next tab
+  }
+}
+
+// Later in my script
+document.addEventListener('keydown', handleKeydown, false);
+```
 
 
 
