@@ -1,5 +1,6 @@
 ---
-title: I occasionally make art and illustration pieces. Here are a selection of my favorites. You can see more on <a href="https://www.instagram.com/levimcg/">Instagram</a>.
+title: Artwork
+teaser: I occasionally make art and illustration pieces. Here are a selection of my favorites. You can see more on <a href="https://www.instagram.com/levimcg/">Instagram</a>.
 bodyClass: mcg-artwork-page
 lazyLoad: true
 ---
@@ -7,7 +8,8 @@ lazyLoad: true
 
 {% block main %}
   <div class="mcg-wrapper mcg-wrapper--wider">
-    <h1>{{ title | safe }}</h1>
+    <h1 class="mcg-sr-only">{{ title }}</h1>
+    <p class="mcg-section-heading">{{ teaser | safe }}</p>
   </div>
   <div class="mcg-wrapper mcg-wrapper--full">
     <ol class="mcg-grid">

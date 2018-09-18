@@ -204,6 +204,11 @@ code {
 /**
  * Typography
  */
+.mcg-section-heading {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-top: 0;
+}
 
 .mcg-sub-heading {
   margin-top: 3em;
