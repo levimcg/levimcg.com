@@ -5,7 +5,8 @@
   "main": ".eleventy.js",
   "scripts": {
     "build": "rm -rf build && npx eleventy",
-    "serve": "npx eleventy --serve"
+    "serve": "npx eleventy --serve",
+    "start": "npm run serve"
   },
   "author": "",
   "license": "ISC",
