@@ -2,7 +2,9 @@
 title: The HTML Straw Man Fallacy
 date: 2018-12-08
 ---
-When I write CSS I generally favor clarity over brevity when choosing the way I name classes/components. I will admit that this can make for some pretty long class names and can look a little weird if you're using a naming convention like BEM. For example:
+When I write CSS I generally favor clarity over brevity when choosing the way I name classes/components. I will admit that this can make for some pretty long class names and can look a little weird if you're using a naming convention like BEM.
+
+For example:
 
 ```html
 <div class="profile profile--compact">
@@ -15,7 +17,7 @@ When I write CSS I generally favor clarity over brevity when choosing the way I 
 </div>
 ```
 
-To me those class names are perfectly descriptive and the easy to remember, especially after six months away from a project when I have to come back and work on this code. Yes, class names like this cause a few extra keystrokes for developers, but I tend to feel the extra effort typing is worth it. Also, we have great tools for writing code that do things like [auto-complete class names for us](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion).
+To me those class names are perfectly descriptive and easy to remember, especially after six months away from a project when I have to come back and work on this code. Yes, class names like this cause a few extra keystrokes for developers, but I tend to feel the extra effort is worth it. Also, we have great tools that do things like [auto-complete class names for us](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion).
 
 Recently, a couple of developers have tried to make the argument to me that long class names make the HTML sent over the network larger in file size and therefore slower. What this argument really boils down to is prioritizing convenience and developer experience over clarity and maintainability.
 
