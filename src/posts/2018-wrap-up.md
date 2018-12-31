@@ -1,0 +1,16 @@
+---
+title: Bye, 2018
+date: 2018-12-31
+---
+It's almost 4pm on the last day of 2018 and after reading so many wonderful end-of-year wrap up posts and [top three accomplishments tweets](https://twitter.com/adamjk/status/1075078948235599872) I'm motivated enough to at least record some of my thoughts about this past year, even if it's just for me.
+
+This year has seen lots of highs and lows for my family and me. In early February [we lost one of our dogs Bowie](/posts/bowie-mcg/). A little over six months later we lost [our other dog Malcolm](/posts/i-will-never-be-good-at-this/). We love our dogs like family and that's a lot of loss to deal with in one year. I still miss them both a lot and we still talk about them quite often as a family. All that said, we did bring a new puppy into our home named Murray. He'll be a year old this January 31 and [he's the best](https://www.instagram.com/explore/tags/murray_mcg/).
+
+Professionally, this has been the most successful year of my career both in terms of projects and finances. In April we launched the v1 of the [design system](https://rivet.iu.edu/) I've been working on and I was officially made the lead of the project. We've had some decent success with adoption and have been given funding to actually build a team around the project so we can better serve the developers and designers who use it. I've worked very hard on this project for the last year and a half and I couldn't be more excited that I get to help build the team that will move it forward.
+
+My family and I [bought a house this summer](/posts/i-felt-more-permantent-today/)! After, four and a half years of living in apartments this was a big step for us. We love our new home and have settled in nicely. We even hosted our first Thanksgiving dinner in our new place this year. We're happy here in Bloomington and are excited to put down some roots in this community.
+
+## Hey, 2019
+2018 was a hell of a year, but I gotta admit—I'm tired. I've never pushed myself this hard in trying to move my career forward. I'm still dealing with a lot of issues around how to balance that drive with being happy, healthy, a good husband, and a good dad. I don't really have any specific resolutions for 2019 but those three areas are where I'm going to put my focus.
+
+Happy New Year! 🎉
