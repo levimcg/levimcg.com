@@ -14,6 +14,7 @@
   <style>
     {{ css | cssmin | safe }}
   </style>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
 </head>
 <body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
   {% include 'components/header.njk' %}
