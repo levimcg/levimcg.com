@@ -15,5 +15,26 @@
       "label": "Artwork",
       "url": "/artwork/"
     }
+  ],
+  "links": [
+    {
+      "title": "Twitter",
+      "url": "https://twitter.com/levimcg/",
+      "me": true
+    },
+    {
+      "title": "Instagram",
+      "url": "https://www.instagram.com/levimcg/",
+      "me": true
+    },
+    {
+      "title": "GitHub",
+      "url": "https://github.com/levimcg/",
+      "me": true
+    },
+    {
+      "title": "RSS",
+      "url": "/feed.xml"
+    }
   ]
 }

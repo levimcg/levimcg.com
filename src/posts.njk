@@ -1,11 +1,16 @@
 ---
 title: Posts
+teaser: Random thoughts about life, design, books, code, etc. Here's a <a href="/feed.xml">feed</a>, if that's your thing.
 bodyClass: mcg-posts-page
 ---
 {% extends 'layouts/base.njk' %}
 {% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
+  <div class="mcg-wrapper">
+    <h1 class="mcg-sr-only">{{ title }}</h1>
+    <p class="mcg-section-heading mcg-mb-none">{{ teaser | safe }}</p>
+  </div>
   <div class="mcg-wrapper">
     <ol class="mcg-feed-list">
       {%- for post in collections.post | reverse -%}

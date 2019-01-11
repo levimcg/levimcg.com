@@ -1,9 +1,13 @@
 const CleanCSS = require('clean-css');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function(eleventyConfig) {
   // Syntax highlighting
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // RSS feed
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addFilter(
     'cssmin',

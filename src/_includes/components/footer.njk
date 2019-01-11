@@ -1,5 +1,12 @@
 <footer class="mcg-footer" role="contentinfo">
-  <p><em>@levimcg</em> on <a href="https://twitter.com/levimcg" rel="me">Twitter</a>, <a href="https://www.instagram.com/levimcg/" rel="me">Instagram</a>, <a href="https://github.com/levimcg" rel="me">Github</a>.</p>
+  <p><em>@levimcg</em></p>
+  <ul class="mcg-inline-list">
+    {%- for link in site.links -%}
+      <li>
+        <a href="{{ link.url }}"{%- if link.me -%} rel="me"{%- endif -%}>{{ link.title }}</a>{%- if not loop.last -%}, {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
   <p class="mcg-footer__copy">&copy; <span id="mcg-copy-year"></span> Levi McGranahan</p>
 </footer>
 
