@@ -3,7 +3,6 @@ layout: "layouts/post.njk"
 title: You Must Change Your Life
 teaser: A fascinating look at the relationship between Rainer Maria Rilke and Auguste Rodin
 cover: https://s3.amazonaws.com/static.levimcg.com/notes/you-must-change-your-life/cover-you-must-change-your-life.jpg
-tags: [post, book]
 date: 2016-12-23
 
 # Book-specific stuff

@@ -3,7 +3,6 @@ layout: "layouts/post.njk"
 title: Dark Matter
 teaser: I really enjoyed this new novel from Blake Crouch about infinite parallel universes and the possible paths our lives can take.
 cover: https://s3.amazonaws.com/static.levimcg.com/notes/dark-matter/dark-matter-cover.jpg
-tags: [post, book]
 date: 2016-08-13
 
 # Book-specific stuff

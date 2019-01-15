@@ -31,6 +31,10 @@ module.exports = function(eleventyConfig) {
       .reverse();
   });
 
+  eleventyConfig.addCollection('books', collection => {
+    return collection.getFilteredByGlob('**/books/*.md');
+  });
+
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
