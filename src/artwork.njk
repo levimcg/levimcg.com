@@ -15,7 +15,11 @@ lazyLoad: true
     <ol class="mcg-grid">
       {% for item in artwork %}
       <li class="mcg-grid__item">
-        <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
+        {% if item.external %}
+          <img class="lazyload" data-src="{{ item.url }}" alt="">
+        {% else %}
+          <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
+        {% endif %}
       </li>
       {% endfor %}
     </ol>
