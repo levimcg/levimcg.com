@@ -36,7 +36,7 @@ One of the great things about using Markdown in Jekyll is that you can also writ
 An normal Jekyll include containing my image markup above might look something like this:
 
 ```html
-{% raw %}{% include breakout-image.html %}{% endraw %}
+{% raw %}{% include breakout-image.html %}{% raw %}
 ```
 
 When Jekyll builds your post it will look inside a folder called `_includes` for a file called `figure.hml` and include that bit of HTML in your post or page. Here's the really cool thing about Jekyll includes. You can use them in your Markdown posts just like in your templates, and you can dynamically assign unique values you define inside the include file each time you use it in a post. Using includes like this saves you the hassle of writing regular HTML in your Markdown files, keeps your markup consistent, and allows you to be flexible with your content. Let's use my `figure.html` include as an example.

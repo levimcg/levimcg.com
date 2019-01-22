@@ -616,3 +616,7 @@ code {
     right: 1.5rem;
   }
 }
+
+.highlight-line:empty {
+  margin-top: 1rem;
+}

@@ -30,6 +30,7 @@ metadata:
     <email>{{ metadata.author.email }}</email>
   </author>
   {%- for post in collections.post %}
+  {% if post.data.draft !== true %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
@@ -38,5 +39,6 @@ metadata:
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
+  {% endif %}
   {%- endfor %}
 </feed>
