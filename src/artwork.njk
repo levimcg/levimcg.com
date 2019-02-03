@@ -20,6 +20,7 @@ lazyLoad: true
         {% else %}
           <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
         {% endif %}
+        <div class="mcg-caption">{{ item.title }}</div>
       </li>
       {% endfor %}
     </ol>

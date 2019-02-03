@@ -620,3 +620,8 @@ code {
 .highlight-line:empty {
   margin-top: 1rem;
 }
+
+.mcg-caption {
+  font-size: .825rem;
+  margin-top: 1rem;
+}
