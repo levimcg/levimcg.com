@@ -1,10 +1,5 @@
 [
   {
-    "title": "Lost in 2018 #01",
-    "url": "https://s3.amazonaws.com/levimcg-artwork/02-03-2019-01.jpg",
-    "external": true
-  },
-  {
     "title": "Lost in 2018 #02",
     "url": "https://s3.amazonaws.com/levimcg-artwork/02-03-2019-02.jpg",
     "external": true
@@ -32,6 +27,11 @@
   {
     "title": "Lost in 2018 #07",
     "url": "https://s3.amazonaws.com/levimcg-artwork/02-03-2019-07.jpg",
+    "external": true
+  },
+  {
+    "title": "Lost in 2018 #01",
+    "url": "https://s3.amazonaws.com/levimcg-artwork/02-03-2019-01.jpg",
     "external": true
   },
   {
