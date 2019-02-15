@@ -4,7 +4,7 @@ date: 2019-02-14
 tags:
   - post
 ---
-I made this shitty stool in design school. It was supposed be able to hold the weight of a person. It did not. I'm don't know why, or how I ended up hanging on to it for all these years. I was a bad designer and I’m not really quite sure how I graduated. 
+I made this shitty stool in design school. It was supposed be able to hold the weight of a person. It did not. I don't know why, or how I ended up hanging on to it for all these years. I was a bad designer and I’m not quite sure how I graduated. 
 
 ![Small meta stool with a plan setting on it](https://s3.amazonaws.com/static.levimcg.com/posts/my-stool.jpg)
 
@@ -14,4 +14,4 @@ But, I ended up doing ok. My career took a winding path. I got jobs selling TVs 
 
 > If you can design one thing, you can design everything.
 
-I believe that idea. It's what allowed me a career. I’m lucky to do what I do.
+I believe in that. It's what allowed me to have a career. I’m lucky to do what I do.
