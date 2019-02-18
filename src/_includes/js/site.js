@@ -8,12 +8,16 @@ const copyright = (function() {
   }
 
   function init(container) {
-    document.addEventListener('DOMContentLoaded', createCopyright(container), false);
+    document.addEventListener(
+      'DOMContentLoaded',
+      createCopyright(container),
+      false
+    );
   }
 
   return {
     init: init
-  }
+  };
 })();
 
 const themeSwitcher = (function() {
@@ -38,7 +42,9 @@ const themeSwitcher = (function() {
   function handleThemeSwitch() {
     const darkModeEnabled = localStorage.getItem('darkMode');
 
-    darkModeEnabled === 'false' ? enableDarkMode(toggle) : disableDarkMode(toggle);
+    darkModeEnabled === 'false'
+      ? enableDarkMode(toggle)
+      : disableDarkMode(toggle);
   }
 
   function init() {
@@ -57,7 +63,7 @@ const themeSwitcher = (function() {
 
   return {
     init: init
-  }
+  };
 })();
 
 copyright.init('mcg-copy-year');

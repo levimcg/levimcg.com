@@ -11,8 +11,10 @@
   {% include "components/theme-switcher.njk" %}
 </footer>
 
-<script src="/js/site.js"></script>
-
 {% if lazyLoad %}
 <script src="/js/lazysizes.js"></script>
 {% endif %}
+
+<script>
+{% include 'js/site.js' %}
+</script>
