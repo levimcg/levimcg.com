@@ -20,51 +20,12 @@ const copyright = (function() {
   };
 })();
 
-const themeSwitcher = (function() {
-  const toggle = document.getElementById('theme-switcher');
-
-  function enableDarkMode(element) {
-    element.setAttribute('aria-checked', 'true');
-
-    localStorage.setItem('darkMode', 'true');
-
-    document.body.classList.add('mcg-dark-theme');
-  }
-
-  function disableDarkMode(element) {
-    element.setAttribute('aria-checked', 'false');
-
-    localStorage.setItem('darkMode', 'false');
-
-    document.body.classList.remove('mcg-dark-theme');
-  }
-
-  function handleThemeSwitch() {
-    const darkModeEnabled = localStorage.getItem('darkMode');
-
-    darkModeEnabled === 'false'
-      ? enableDarkMode(toggle)
-      : disableDarkMode(toggle);
-  }
-
-  function init() {
-    const darkMode = localStorage.getItem('darkMode');
-
-    if (!darkMode) localStorage.setItem('darkMode', false);
-
-    if (darkMode === 'true') {
-      document.body.classList.add('mcg-dark-theme');
-
-      enableDarkMode(toggle);
-    }
-
-    toggle.addEventListener('click', handleThemeSwitch, false);
-  }
-
-  return {
-    init: init
-  };
-})();
-
+// Kick off copyright
 copyright.init('mcg-copy-year');
-themeSwitcher.init();
+
+// Theme switcher
+const theme = new Themur({
+  toggleElement: document.getElementById('theme-switcher'),
+  themeClass: 'mcg-dark-theme',
+  useLocalStorage: true
+});
