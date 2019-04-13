@@ -44,7 +44,8 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addCollection('books', collection => {
-    return collection.getFilteredByGlob('**/books/*.md');
+    return collection
+      .getFilteredByGlob('**/books/*.md');
   });
 
   eleventyConfig.addPassthroughCopy('src/img');
