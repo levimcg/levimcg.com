@@ -35,7 +35,22 @@ module.exports = function(eleventyConfig) {
       year: 'numeric'
     });
   });
-
+  
+  eleventyConfig.addFilter('getYear', value => {
+    let dateObject = new Date(value)
+    
+    return dateObject.getFullYear();
+  });
+  
+  eleventyConfig.addCollection('sortedBooks', function(collection) {
+    const allBooks = collection.getFilteredByGlob('**/books/*.md');
+    const bookYears =
+      allBooks.map(item => item.date.getFullYear());
+    const dedupedBookYears = [...new Set(bookYears)];
+    
+    return dedupedBookYears;
+  });
+  
   eleventyConfig.addCollection('latestPosts', collection => {
     return collection
       .getFilteredByGlob('**/posts/*.md')
