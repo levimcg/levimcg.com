@@ -9,12 +9,17 @@ lazyLoad: true
 {% block main %}
   <div class="mcg-wrapper mcg-wrapper--full">
     <h1 class="mcg-sr-only">{{ title }}</h1>
-    <ol class="mcg-grid mcg-grid--gallery">
-      {% for post in collections.books | reverse %}
-      <li class="mcg-grid__item">
-        {% include 'components/card.njk' %}
-      </li>
+    {%- for year in collections.sortedBooks | reverse -%}
+      <h2 class="mcg-mb-sm mcg-alt-heading">{{ year }}</h2>
+      <ol class="mcg-grid mcg-grid--library">
+      {% for post in collections.books %}
+        {% if post.data.year_read == year %}
+          <li class="mcg-grid__item mcg-mb-md">
+            {% include 'components/card.njk' %}
+          </li>
+        {% endif %}
       {% endfor %}
-    </ol>
+      </ol>
+    {%- endfor -%}
   </div>
 {% endblock %}

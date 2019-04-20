@@ -295,48 +295,11 @@ code {
   .mcg-grid__item {
     margin-bottom: 0;
   }
-}
-/*
-.mcg-artwork-page {
-  background-image: url("../img/dot-pattern.jpg");
-  background-size: 800px;
-  background-position-x: right;
-  background-position-y: 20vh;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-.mcg-posts-page {
-  background-image: url("../img/scribble.jpg");
-  background-size: 200px;
-  background-position-x: right;
-  background-position-y: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-@media screen and (min-width: 36em) {
-  .mcg-posts-page {
-    background-size: 400px;
+  
+  .mcg-grid--library {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
   }
 }
-
-@media screen and (min-width: 75em) {
-  .mcg-posts-page {
-    background-size: 600px;
-    background-position-y: 10vh;
-  }
-
-  .mcg-home-page {
-    background-image: url("../img/hey-background.jpg");
-    background-size: 600px;
-    background-position-x: 95%;
-    background-position-y: 20vh;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-  }
-}
-*/
 
 @media screen and (min-width: 36em) {
   .mcg-intro svg {
@@ -568,10 +531,6 @@ code {
   text-align: center;
 }
 
-.mcg-card__image {
-  padding: 1em;
-}
-
 .mcg-card__title {
   font-size: 1.25em;
   font-weight: 400;
@@ -579,7 +538,7 @@ code {
 }
 
 .mcg-card__meta {
-  color: var(--color-black-lighter);
+  color: var(--color-text-lighter);
   display: block;
   font-family: var(--font-mono);
   font-size: .825em;
@@ -669,4 +628,10 @@ code {
   position: absolute;
   left: calc(var(--spacing-unit) * 3.5);
   top: calc(var(--spacing-unit) * 3);
+}
+
+.mcg-alt-heading {
+  color: var(--color-text-lighter);
+  font-family: var(--font-mono);
+  font-size: 1rem;
 }
