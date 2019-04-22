@@ -12,8 +12,8 @@ lazyLoad: true
     {%- for year in collections.sortedBooks | reverse -%}
       <h2 class="mcg-mb-sm mcg-alt-heading">{{ year }}</h2>
       <ol class="mcg-grid mcg-grid--library">
-      {% for post in collections.books %}
-        {% if post.data.year_read == year %}
+      {% for post in collections.books | reverse %}
+        {% if post.date | getYear == year %}
           <li class="mcg-grid__item mcg-mb-md">
             {% include 'components/card.njk' %}
           </li>
