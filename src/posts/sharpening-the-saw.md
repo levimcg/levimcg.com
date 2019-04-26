@@ -2,7 +2,7 @@
 title: "Sharpening the saw"
 date: 2019-04-19
 ---
-I saw [James Victore](https://www.jamesvictore.com/) (I'm pretty sure it was him) speak at a conference back in 2013 where he talked about *sharpening the saw*. The idea being that you need to take the time to rest, to read books, and practice your craft. 
+I saw [James Victore](https://www.jamesvictore.com/) (I'm pretty sure it was him) speak at a conference a long time ago where he talked about *sharpening the saw*. The idea being that you need to take the time to rest, to read books, and practice your craft. 
 
 I think about this a lot when it comes to design and development. As you move through your career there will be times where your responsibilities start to change. This means that sometimes it will be your job to do other things besides design screens or write code.
 

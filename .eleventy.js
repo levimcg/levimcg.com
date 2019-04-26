@@ -21,10 +21,7 @@ module.exports = function(eleventyConfig) {
   // RSS feed
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addFilter(
-    'cssmin',
-    code => new CleanCSS({}).minify(code).styles
-  );
+  eleventyConfig.addFilter('cssmin', code => new CleanCSS({}).minify(code).styles);
 
   eleventyConfig.addFilter('dateFormatted', value => {
     let dateObject = new Date(value);
@@ -38,11 +35,10 @@ module.exports = function(eleventyConfig) {
   
   eleventyConfig.addFilter('getYear', value => {
     let dateObject = new Date(value)
-    
     return dateObject.getFullYear();
   });
   
-  eleventyConfig.addCollection('sortedBooks', function(collection) {
+  eleventyConfig.addCollection('sortedBooks', collection => {
     const allBooks = collection.getFilteredByGlob('**/books/*.md');
     const bookYears =
       allBooks.map(item => item.date.getFullYear());
