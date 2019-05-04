@@ -529,6 +529,17 @@ code {
 
 .mcg-card {
   text-align: center;
+  position: relative;
+}
+
+.mcg-card__tag {
+  position: absolute;
+  top: calc(var(--spacing-unit));
+  left: 0;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: calc(var(--spacing-unit) / 2);
+  line-height: 1.2;
 }
 
 .mcg-card__title {

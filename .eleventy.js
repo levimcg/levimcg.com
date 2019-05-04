@@ -42,9 +42,9 @@ module.exports = function(eleventyConfig) {
     const allBooks = collection.getFilteredByGlob('**/books/*.md');
     const bookYears =
       allBooks.map(item => item.date.getFullYear());
-    const dedupedBookYears = [...new Set(bookYears)];
     
-    return dedupedBookYears;
+    // Return a deduped array of sorted books using Set
+    return [...new Set(bookYears)];
   });
   
   eleventyConfig.addCollection('latestPosts', collection => {
