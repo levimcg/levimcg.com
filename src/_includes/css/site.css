@@ -26,6 +26,7 @@
   --color-background: var(--color-black);
   --color-text: var(--color-white);
   --color-text-lighter: var(--color-white);
+  --color-black-lighter: var(--color-white);
 }
 
 html {
@@ -514,8 +515,8 @@ code {
 }
 
 .mcg-longform blockquote {
-  font-size: 1.5rem;
-  line-height: 1.2;
+  font-size: 1.25rem;
+  line-height: 1.3;
   margin-left: 0;
   padding-left: calc(var(--spacing-unit) * 2);
   border-left: var(--color-ruler) calc(var(--spacing-unit) / 3) solid;

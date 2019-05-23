@@ -1,9 +1,7 @@
 const copyright = (function() {
   function createCopyright(container) {
     const containerEl = document.getElementById(container);
-
     const currentDate = new Date().getFullYear();
-
     containerEl.innerText = currentDate;
   }
 

@@ -4,15 +4,6 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const markdownIt = require('markdown-it');
 
 module.exports = function(eleventyConfig) {
-  // Markdown
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true
-  };
-  
-  eleventyConfig.setLibrary('md', markdownIt(options));
-  
   // Syntax highlighting
   
   // NOTE: this plugin is stripping new line/br tags in HTML output.

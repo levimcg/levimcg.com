@@ -10,12 +10,4 @@
   <p class="mcg-footer__copy">&copy; <span id="mcg-copy-year"></span> Levi McGranahan</p>
   {% include "components/theme-switcher.njk" %}
 </footer>
-
-{% if lazyLoad %}
-<script src="/js/lazysizes.js"></script>
-{% endif %}
-
-<script src="https://cdn.jsdelivr.net/npm/themur@0.2.0/dist/themur.umd.js"></script>
-<script>
-{% include 'js/site.js' %}
-</script>
+{% include "misc/scripts.njk" %}
