@@ -8,7 +8,7 @@ I finished _Where Good Ideas Come From_ by Stephen Johnson a couple of weeks ago
 
 The _tangled bank_ is a reference from _Origin of Species_ where Darwin remarks on the diversity of systems in nature and how they thrive given the right circumstances.
 
-Right now it's my job to think in systems and create abstractions like reusable UI components. Creating systems and standards seem to be at odds with embracing serendipity and novel solutions. If you take the long view, most of the stuff we consider a _best practice_ probably started out as novel solution in the past. What if there is no room for improvisation and novel solutions in the systems we are creating? Will they thrive?
+Right now it's my job to think in systems and create abstractions like reusable UI components. Creating systems and standards seem to be at odds with embracing serendipity and novel solutions. If you take the long view, most of the stuff we consider to be a _best practice_ probably started out as novel solution in the past. What if there is no room for improvisation and novel solutions in the systems we are creating? Will they thrive?
 
 I am a designer and I enjoy creating consistency and order, but lately I feel like it's important to be building more tangled banks.
 
