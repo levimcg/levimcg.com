@@ -17,17 +17,24 @@ For more info on focus requirements for dialogs and other common UI components, 
 ## Focus Trapper Web Component
 I've been spending a lot of time learning about [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) recently and have been itching to build one that was actually useful. So, I decided to see what it would take to bundle up focus trapping functionality into my own Web Component from scratch.
 
-The idea of being able to build functionality that makes it easier to create more accessible interfaces into a Web Component is super interesting to me. Abstracting away all keyboard event listening and focus management into a declarative component that I can use in my HTML sounds like an ideal solution. I'm really interested to explore other tricky keyboard navigation concepts crucial to making UI components accessible that could similarly be rolled up into a Web Component.
-
 The demo below shows how to use the `focus-trapper` element. When the `trapped` attribute is added, focus will cycle through all the focusable elements inside.
 
 ```html
+<!-- User the <focus-trapper> element in your HTML -->
 <focus-trapper trapped>
   <button type="button">Button one</button>
   <button type="button">Button two</button>
   <button type="button">Button three</button>
 </focus-trapper>
+
+<!-- Import focus trapper and register it with the browser -->
+<script type="module">
+  import FocusTrapper from './path/to/FocusTrapper.js';
+  customElements.define('focus-trapper', FocusTrapper);
+</script>
 ```
+
+The idea of being able to build functionality that makes it easier to create more accessible interfaces into a Web Component is super interesting to me. Abstracting away all keyboard event listening and focus management into a declarative component that I can use in my HTML sounds like an ideal solution. I'm really interested to explore other tricky keyboard navigation concepts crucial to making UI components accessible that could similarly be rolled up into a Web Component.
 
 ### Focus trapper on GitHub
 I put the code for my `focus-trapper` Web Component up on GitHub. I'm sure there are some bugs, and it's mostly an experiment at this point, but I'd love to hear any feedback.
