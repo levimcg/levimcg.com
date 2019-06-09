@@ -99,18 +99,26 @@ img {
 pre {
   border-radius: .25em;
   line-height: 1.75;
-}
-
-pre code {
-  font-size: .75em;
+  font-family: var(--font-mono);
 }
 
 code {
   color: #e0533a;
   background-color: var(--color-black-lightest);
   display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .825em;
   padding: 0 .25em;
   border-radius: .25em;
+}
+
+kbd {
+  font-family: var(--font-mono);
+  border: 1px solid var(--color-black-lightest);
+  font-size: .825rem;
+  padding: .125rem .5rem;
+  box-shadow: 0 .125rem 0 0 var(--color-black-lightest);
+  border-radius: .125rem;
 }
 
 /**
