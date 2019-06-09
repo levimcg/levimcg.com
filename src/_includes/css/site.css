@@ -272,6 +272,11 @@ code {
   max-width: 100%;
 }
 
+.mcg-wrapper--centered {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /**
  * Grid stuff
  */
