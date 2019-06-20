@@ -258,7 +258,8 @@ kbd {
  * Layout
  */
 .mcg-wrapper {
-  max-width: 40em;
+  max-width: 45rem;
+  max-width: 74ch;
   padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
   position: relative;
 }
