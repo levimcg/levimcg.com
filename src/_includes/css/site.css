@@ -61,7 +61,7 @@ body {
   background-color: var(--color-background);
   font-family: var(--font-base);
   color: var(--color-text);
-  line-height: 1.65;
+  line-height: 1.6;
   padding: 0;
   margin: 0;
 }
@@ -643,19 +643,6 @@ kbd {
   z-index: 0;
 }
 
-.mcg-avatar::after {
-  z-index: -1;
-  content: "";
-  width: calc(var(--spacing-unit) * 7);
-  height: calc(var(--spacing-unit) * 5);
-  color: var(--color-blue-lighter);
-  background-image: url('img/dot.svg');
-  display: block;
-  position: absolute;
-  left: calc(var(--spacing-unit) * 3.5);
-  top: calc(var(--spacing-unit) * 3);
-}
-
 .mcg-alt-heading {
   color: var(--color-text-lighter);
   font-family: var(--font-mono);
@@ -665,6 +652,6 @@ kbd {
 /* Feed grid */
 .mcg-feed-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(var(--spacing-unit) * 1.25);
 }
