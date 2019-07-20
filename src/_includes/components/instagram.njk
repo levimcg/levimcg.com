@@ -1,0 +1,17 @@
+<h2 class="mcg-sub-heading mcg-mt-md">Instagram</h2>
+<p>I post some of the artwork I make here, plus pictures of my dogs. Please <a href="https://www.instagram.com/{{ site.username }}">follow along</a> if you're into those things.</p>
+<div class="mcg-mt-sm mcg-feed-grid">
+  {% if site.env == "dev" %}
+    {% for image in instagramdev.data %}
+    <a href="{{ image.link }}" target="_blank" rel="noopener">
+      <img src="{{ image.images.thumbnail.url }}" alt="">
+    </a>
+    {% endfor %}
+  {% else %}
+    {% for image in instagram.data %}
+    <a href="{{ image.link }}" target="_blank" rel="noopener">
+      <img src="{{ image.images.thumbnail.url }}" alt="">
+    </a>
+    {% endfor %}
+  {% endif %}
+</div>
