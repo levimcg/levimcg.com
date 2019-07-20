@@ -4,8 +4,8 @@
   "description": "Levi McGranahan's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "rm -rf build && npx eleventy",
-    "serve": "npx eleventy --serve",
+    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy",
+    "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "npm run serve"
   },
   "author": "",

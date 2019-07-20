@@ -12,7 +12,11 @@
     {% include 'css/prism.css' %}
   {% endset %}
   <style>
+    {% if site.env == "prod" %}
     {{ css | cssmin | safe }}
+    {% else %}
+    {{ css | safe }}
+    {% endif %}
   </style>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
