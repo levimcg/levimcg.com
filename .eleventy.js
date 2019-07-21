@@ -1,39 +1,26 @@
-const CleanCSS = require('clean-css');
+// 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
-const markdownIt = require('markdown-it');
+
+// Import filters
+const dateFormatted = require('./src/filters/dateFormatted');
+const cssmin = require('./src/filters/cssmin');
+const getYear = require('./src/filters/getYear');
 
 module.exports = function(eleventyConfig) {
-  // Syntax highlighting
-  
+  // Plugins
   // NOTE: this plugin is stripping new line/br tags in HTML output.
   eleventyConfig.addPlugin(syntaxHighlight);
-
-  // RSS feed
   eleventyConfig.addPlugin(pluginRss);
-
-  eleventyConfig.addFilter('cssmin', code => new CleanCSS({}).minify(code).styles);
-
-  eleventyConfig.addFilter('dateFormatted', value => {
-    let dateObject = new Date(value);
-
-    return dateObject.toLocaleString('en-us', {
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric'
-    });
-  });
   
-  eleventyConfig.addFilter('getYear', value => {
-    let dateObject = new Date(value)
-    return dateObject.getFullYear();
-  });
+  // Filters
+  eleventyConfig.addFilter('cssmin', cssmin);
+  eleventyConfig.addFilter('dateFormatted', dateFormatted);
+  eleventyConfig.addFilter('getYear', getYear);
   
   eleventyConfig.addCollection('sortedBooks', collection => {
     const allBooks = collection.getFilteredByGlob('**/books/*.md');
-    const bookYears =
-      allBooks.map(item => item.date.getFullYear());
-    
+    const bookYears = allBooks.map(item => item.date.getFullYear());
     // Return a deduped array of sorted books using Set
     return [...new Set(bookYears)];
   });
