@@ -1,6 +1,9 @@
 ---
 title: The HTML Straw Man Fallacy
 date: 2018-12-08
+tags:
+  - code
+  - post
 ---
 When I write CSS I generally favor clarity over brevity when choosing the way I name classes/components. I will admit that this can make for some pretty long class names and can look a little weird if you're using a naming convention like BEM.
 
