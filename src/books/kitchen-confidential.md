@@ -5,5 +5,4 @@ thumbnail: https://images-na.ssl-images-amazon.com/images/I/51EoGohsmiL._SX331_B
 buy_link: https://www.amazon.com/Kitchen-Confidential-Deluxe-Adventures-Underbelly/dp/0062899546
 author: Anthony Bourdain
 year_read: 2019
-reading: true
 ---
