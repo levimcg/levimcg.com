@@ -10,7 +10,7 @@
   {% else %}
     {% for image in instagram.data.slice(0, 9) %}
     <a href="{{ image.link }}" target="_blank" rel="noopener">
-      <img src="{{ image.images.standard_resolution.url }}" alt="">
+      <img src="{{ image.images.standard_resolution.url }}" alt="{{ image.caption.text | safe }}">
     </a>
     {% endfor %}
   {% endif %}
