@@ -1,0 +1,25 @@
+.mcg-theme-switcher {
+  position: fixed;
+  bottom: calc(var(--spacing-unit) * 4);
+  right: calc(var(--spacing-unit) * 4);
+  font-size: .825rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  color: var(--color-background);
+  background-color: var(--color-primary);
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .5rem;
+}
+
+@media screen and (min-width: 36em) {
+  .mcg-theme-switcher {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}

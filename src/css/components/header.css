@@ -1,0 +1,22 @@
+/**
+ * Header
+ */
+
+.mcg-header {
+  padding: calc(var(--spacing-unit) * 4);
+  position: relative;
+}
+
+@media screen and (min-width: 36em) {
+  .mcg-header {
+    display: flex;
+  }
+}
+
+.mcg-header a {
+  text-decoration: none;
+}
+
+.mcg-header__title {
+  color: var(--color-text);
+}

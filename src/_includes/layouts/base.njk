@@ -7,20 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" conent="{{ site.tagline }}" />
   {%- include 'misc/meta-cards.njk' -%}
-  {% set css %}
-    {% include 'css/site.css' %}
-    {% include 'css/prism.css' %}
-  {% endset %}
-  <style>
-    {% if site.env == "prod" %}
-    {{ css | cssmin | safe }}
-    {% else %}
-    {{ css | safe }}
-    {% endif %}
-  </style>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
   {% include 'components/header.njk' %}

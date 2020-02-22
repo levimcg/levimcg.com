@@ -1,0 +1,63 @@
+/**
+ * Typography
+ */
+.mcg-section-heading {
+  font-size: 2em;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.mcg-sub-heading {
+  margin-top: 3em;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+/**
+ * Typeset for longform content
+ */
+
+.mcg-longform {
+  margin-top: 3em;
+}
+
+.mcg-longform h2,
+.mcg-longform h3,
+.mcg-longform h4,
+.mcg-longform h5,
+.mcg-longform h6 {
+  margin-top: 2.5em;
+  font-weight: 500;
+}
+
+.mcg-longform ul, ol {
+  padding-left: 1em;
+}
+
+.mcg-longform ul li strong {
+  display: block;
+  margin-top: calc(var(--spacing-unit) * 2);
+  margin-bottom: var(--spacing-unit);
+  line-height: 1.1;
+}
+
+.mcg-longform blockquote {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-left: 0;
+  padding-left: calc(var(--spacing-unit) * 2);
+  border-left: var(--color-ruler) calc(var(--spacing-unit) / 3) solid;
+  color: var(--color-black-lighter);
+  font-style: italic;
+}
+
+.mcg-alt-heading {
+  color: var(--color-text-lighter);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.mcg-caption {
+  font-size: .825rem;
+  margin-top: 1rem;
+}

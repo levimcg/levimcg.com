@@ -120,3 +120,7 @@ pre[class*="language-"] {
 .token.inserted {
 	color: green;
 }
+
+.highlight-line:empty {
+  margin-top: 1rem;
+}

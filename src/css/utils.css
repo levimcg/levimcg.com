@@ -1,0 +1,127 @@
+/**
+ * Visually hide elements but leave them accessible to screen readers
+ */
+
+.mcg-sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the
+ * keyboard: h5bp.com/p
+ */
+
+.mcg-sr-only.focusable:active,
+.mcg-sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/**
+ * Spacing utils
+ */
+
+.mcg-pt-sm {
+  padding-top: calc(var(--spacing-unit) * 2) !important;
+}
+
+.mcg-pt-md {
+  padding-top: calc(var(--spacing-unit) * 4) !important;
+}
+
+.mcg-pt-lg {
+  padding-top: calc(var(--spacing-unit) * 6) !important;
+}
+
+.mcg-pt-xl {
+  margin-top: calc(var(--spacing-unit) * 8) !important;
+}
+
+.mcg-mt-sm {
+  margin-top: calc(var(--spacing-unit) * 2) !important;
+}
+
+.mcg-mt-md {
+  margin-top: calc(var(--spacing-unit) * 4) !important;
+}
+
+.mcg-mt-lg {
+  margin-top: calc(var(--spacing-unit) * 6) !important;
+}
+
+.mcg-mt-xl {
+  margin-top: calc(var(--spacing-unit) * 8) !important;
+}
+
+.mcg-ml-sm {
+  margin-left: calc(var(--spacing-unit) * 2) !important;
+}
+
+.mcg-ml-md {
+  margin-left: calc(var(--spacing-unit) * 4) !important;
+}
+
+.mcg-ml-lg {
+  margin-left: calc(var(--spacing-unit) * 6) !important;
+}
+
+.mcg-ml-xl {
+  margin-left: calc(var(--spacing-unit) * 8) !important;
+}
+
+.mcg-pb-sm {
+  padding-bottom: calc(var(--spacing-unit) * 2) !important;
+}
+
+.mcg-pb-md {
+  padding-bottom: calc(var(--spacing-unit) * 4) !important;
+}
+
+.mcg-pb-lg {
+  padding-bottom: calc(var(--spacing-unit) * 6) !important;
+}
+
+.mcg-pb-xl {
+  margin-bottom: calc(var(--spacing-unit) * 8) !important;
+}
+
+.mcg-mb-none {
+  margin-bottom: 0 !important;
+}
+
+.mcg-mb-sm {
+  margin-bottom: calc(var(--spacing-unit) * 2) !important;
+}
+
+.mcg-mb-md {
+  margin-bottom: calc(var(--spacing-unit) * 4) !important;
+}
+
+.mcg-mb-lg {
+  margin-bottom: calc(var(--spacing-unit) * 6) !important;
+}
+
+.mcg-mb-xl {
+  margin-bottom: calc(var(--spacing-unit) * 8) !important;
+}
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}

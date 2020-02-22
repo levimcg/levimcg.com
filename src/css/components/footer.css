@@ -1,0 +1,26 @@
+/**
+ * Footer
+ */
+
+.mcg-footer {
+  color: var(--color-text-lighter);
+  padding: calc(var(--spacing-unit) * 4);
+}
+
+.mcg-footer p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 600px) {
+  .mcg-footer {
+    display: flex;
+  }
+  .mcg-footer p {
+    font-size: 1rem;
+  }
+  .mcg-footer__copy {
+    margin-left: auto;
+  }
+}

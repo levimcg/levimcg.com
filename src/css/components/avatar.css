@@ -1,0 +1,12 @@
+.mcg-avatar {
+  width: calc(var(--spacing-unit) * 7);
+  height: calc(var(--spacing-unit) * 7);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  position: relative;
+}
+
+.mcg-avatar__wrap {
+  border-radius: 999rem;
+  overflow: hidden;
+  z-index: 0;
+}

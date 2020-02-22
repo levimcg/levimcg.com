@@ -1,0 +1,8 @@
+.mcg-footnotes {
+  margin-top: calc(var(--spacing-unit) * 4);
+  color: var(--color-black-lighter);
+  font-style: italic;
+  font-size: .75em;
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--color-black-lightest);
+}

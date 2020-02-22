@@ -1,0 +1,34 @@
+/**
+ * Main nav
+ */
+
+.mcg-main-nav {
+  margin-left: auto;
+  margin-top: var(--spacing-unit);
+}
+
+.mcg-main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mcg-main-nav ul li:not(:last-child) {
+  margin-right: calc(var(--spacing-unit) * 2);
+}
+
+.mcg-main-nav a {
+  padding-top: calc(var(--spacing-unit) * .25);
+  padding-bottom: calc(var(--spacing-unit) * .25);
+}
+
+.mcg-main-nav ul li a[aria-current] {
+  box-shadow: 0 .125em 0 0 var(--color-primary);
+}
+
+@media screen and (min-width: 36em) {
+  .mcg-main-nav {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,7 @@
+.mcg-dark-theme {
+  --color-primary: var(--color-blue-lighter);
+  --color-background: var(--color-black);
+  --color-text: var(--color-white);
+  --color-text-lighter: var(--color-white);
+  --color-black-lighter: var(--color-white);
+}
