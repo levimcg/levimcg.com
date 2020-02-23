@@ -11,11 +11,11 @@ module.exports = {
       url: "/posts/"
     },
     {
-      label: "Bookshelf",
-      url: "/bookshelf/"
+      label: "Projects",
+      url: "/projects/"
     },
     {
-      label: "Artwork",
+      label: "About",
       url: "/artwork/"
     }
   ],

@@ -1,5 +1,6 @@
 ---
 title: Progressive enhancement doesn't have to be hard
+description: Implementing a strategy for progressive enhancement might be easier than you think
 date: 2019-12-15
 tags:
   - code
