@@ -1,12 +1,22 @@
 .mcg-avatar {
-  width: calc(var(--spacing-unit) * 7);
-  height: calc(var(--spacing-unit) * 7);
-  margin-bottom: calc(var(--spacing-unit) * 3);
+  width: 100%;
+  max-width: 6rem;
+  height: auto;
   position: relative;
+  margin-bottom: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .mcg-avatar__wrap {
   border-radius: 999rem;
   overflow: hidden;
   z-index: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .mcg-avatar {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -1,9 +1,20 @@
 ---
-title: Hey!
+title: Hey, welcome
 bodyClass: mcg-home-page
 ---
 {% extends 'layouts/base.njk' %}
 
 {% block main %}
-hi
+<div class="mcg-wrapper mcg-wrapper--wider mcg-wrapper--centered">
+  <h1 class="mcg-sr-only">{{ title }}</h1>
+  <div class="mcg-media-object">
+    <div class="mcg-avatar">
+      <div class="mcg-avatar__wrap">
+        <img src="https://www.gravatar.com/avatar/6da168321e6ddbbcf0382e02ceb4989b?s=500" alt="">
+      </div>
+    </div>
+    <p class="mcg-section-heading">{{ site.tagline }}</p>
+  </div>
+  {% include "components/recent-posts.njk" %}
+</div>
 {% endblock %}

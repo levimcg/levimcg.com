@@ -1,17 +1,17 @@
 ---
 title: Posts
-teaser: Random thoughts about life, design, books, code, etc. Here's a <a href="/feed.xml">feed</a>, if that's your thing.
+description: Random thoughts about life, design, books, code, etc. Here's a <a href="/feed.xml">feed</a>, if that's your thing.
 bodyClass: mcg-posts-page
 ---
 {% extends 'layouts/base.njk' %}
 {% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
-  <div class="mcg-wrapper">
+  <div class="mcg-wrapper mcg-wrapper--wider">
     <h1 class="mcg-sr-only">{{ title }}</h1>
-    <p class="mcg-section-heading mcg-mb-none">{{ teaser | safe }}</p>
+    <p class="mcg-section-heading mcg-mb-none">{{ description | safe }}</p>
   </div>
-  <div class="mcg-wrapper">
+  <div class="mcg-wrapper mcg-wrapper--wider">
     <ol class="mcg-feed-list">
       {%- for post in collections.post | reverse -%}
         {# This is a hacky workaround for "draft" functionality #}
@@ -20,6 +20,7 @@ bodyClass: mcg-posts-page
           {{-
             postTeaser({
               title: post.data.title,
+              description: post.data.description,
               date: post.date,
               url: post.url,
               external_link: post.data.external_link

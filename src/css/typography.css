@@ -9,8 +9,11 @@
 
 .mcg-sub-heading {
   margin-top: 3em;
-  font-size: 1.25em;
-  font-weight: 500;
+  font-size: .8255em;
+  text-transform: uppercase;
+  letter-spacing: .02rem;
+  color: var(--color-text-lighter);
+  font-family: var(--font-mono);
 }
 
 /**

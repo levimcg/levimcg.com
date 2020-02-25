@@ -1,7 +1,7 @@
 ---
 title: "Sketchbook Snapshot #3"
 date: 2019-07-20
-teaser: "Documenting a snapshot in time with recent pages from my sketchbook July 2019"
+description: "Documenting a snapshot in time with recent pages from my sketchbook July 2019"
 tags:
   - post
   - sketchbook

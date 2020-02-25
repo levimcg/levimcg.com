@@ -13,7 +13,8 @@
 }
 
 .mcg-wrapper--wider {
-  max-width: 48em;
+  max-width: 52rem;
+  max-width: 88ch;
 }
 
 .mcg-wrapper--shorter {
@@ -57,26 +58,6 @@
   
   .mcg-grid--library {
     grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  }
-}
-
-@media screen and (min-width: 36em) {
-  .mcg-intro svg {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media screen and (min-width: 52em) {
-  .mcg-intro {
-    postion: absolute;
-    top: 0;
-    right: 0;
-  }
-
-  .mcg-intro svg {
-    width: 400px;
-    height: 400px;
   }
 }
 

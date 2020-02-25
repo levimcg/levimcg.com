@@ -1,9 +1,23 @@
 ---
 title: Projects
-teaser: A running list of projects I'm working on
+description: I like to tinker on lots of projects. Here's a mixed list of day-to-day, free-lance, and side projects.
 ---
 {% extends 'layouts/base.njk' %}
+{% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
-<h1>{{ title }}</h1>
+<div class="mcg-wrapper mcg-wrapper--wider">
+  <h1 class="mcg-sr-only">{{ title }}</h1>
+  <p class="mcg-section-heading mcg-mb-none">{{ description | safe }}</p>
+</div>
+<div class="mcg-wrapper mcg-wrapper--wider">
+  <ol class="mcg-feed-list">
+    {%- for project in projects -%}
+      <li>
+        <a href="{{ project.url }}">{{ project.title }}</a>
+      </li>
+    {%- endfor -%}
+  </ol>
+</div>
+
 {% endblock %}

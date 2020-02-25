@@ -1,5 +1,6 @@
 ---
 title: Focus trapping web component
+description: A Web Component wrapper that makes it easier to manage focus trapping
 date: 2019-06-09
 tags:
   - code
