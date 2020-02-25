@@ -4,7 +4,7 @@
   "description": "Levi McGranahan's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy",
+    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy && npx gulp compileCSS",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "run-p -c serve watch:css",
     "watch:css": "npx gulp watchFiles"
