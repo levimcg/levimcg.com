@@ -11,15 +11,23 @@ module.exports = {
       url: "/posts/"
     },
     {
-      label: "Bookshelf",
-      url: "/bookshelf/"
+      label: "Projects",
+      url: "/projects/"
     },
     {
-      label: "Artwork",
-      url: "/artwork/"
+      label: "About",
+      url: "/about/"
     }
   ],
   links: [
+    {
+      title: "Bookshelf",
+      url: "/bookshelf/"
+    },
+    {
+      title: "Artwork",
+      url: "/artwork/"
+    },
     {
       title: "Twitter",
       url: "https://twitter.com/levimcg/",

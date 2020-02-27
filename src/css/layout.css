@@ -3,7 +3,7 @@
  */
 .mcg-wrapper {
   max-width: 45rem;
-  max-width: 72ch;
+  max-width: 76ch;
   padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 4);
   position: relative;
 }

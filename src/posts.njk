@@ -19,8 +19,8 @@ bodyClass: mcg-posts-page
         <li>
           {{-
             postTeaser({
+              layout: true,
               title: post.data.title,
-              description: post.data.description,
               date: post.date,
               url: post.url,
               external_link: post.data.external_link

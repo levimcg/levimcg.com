@@ -29,8 +29,12 @@
 .mcg-longform h4,
 .mcg-longform h5,
 .mcg-longform h6 {
-  margin-top: 2.5em;
-  font-weight: 500;
+  margin-top: 2em;
+  font-weight: 400;
+}
+
+.mcg-longform h2 {
+  font-size: 1.25em;
 }
 
 .mcg-longform ul, ol {
