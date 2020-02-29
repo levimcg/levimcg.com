@@ -33,5 +33,10 @@ module.exports = [
     title: 'UNVEILED',
     description: 'Another custom WordPress site I designed and built. NOTE: tasteful, but spicy photos ahead 🔥',
     url: 'http://unveiled-photo.com/'
+  },
+  {
+    title: 'Relatives',
+    description: 'I designer an abstract composition everyday for a month and posted them to this website',
+    url: 'https://levimcg.github.io/relatives/'
   }
 ]
