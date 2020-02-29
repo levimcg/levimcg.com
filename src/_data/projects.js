@@ -36,7 +36,7 @@ module.exports = [
   },
   {
     title: 'Relatives',
-    description: 'I designer an abstract composition everyday for a month and posted them to this website',
+    description: 'I designed an abstract composition everyday for a month and posted them to this website',
     url: 'https://levimcg.github.io/relatives/'
   }
 ]
