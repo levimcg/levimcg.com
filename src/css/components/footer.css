@@ -4,8 +4,10 @@
 
 .mcg-footer {
   color: var(--color-text-lighter);
-  padding: calc(var(--spacing-unit) * 4);
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
   font-size: .75rem;
+  background-color: #fafafa;
+  border-top: 1px solid var(--color-ruler);
 }
 
 .mcg-footer p {

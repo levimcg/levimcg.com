@@ -3,7 +3,6 @@
  */
 
 .mcg-main-nav {
-  margin-left: auto;
   margin-top: var(--spacing-unit);
 }
 
@@ -12,6 +11,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  justify-content: center;
 }
 
 .mcg-main-nav ul li:not(:last-child) {
@@ -30,5 +30,10 @@
 @media screen and (min-width: 36em) {
   .mcg-main-nav {
     margin-top: 0;
+    margin-left: auto;
+  }
+  
+  .mcg-main-nav ul {
+    justify-content: flex-start;
   }
 }

@@ -3,7 +3,7 @@
   max-width: 6rem;
   height: auto;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: calc(var(--spacing-unit) * 4);
   margin-right: auto;
   margin-left: auto;
 }
@@ -18,5 +18,6 @@
   .mcg-avatar {
     width: 100%;
     max-width: 100%;
+    margin-bottom: 0;
   }
 }

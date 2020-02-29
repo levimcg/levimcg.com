@@ -1,5 +1,35 @@
 [
   {
+    "title": "Public Domain - Dancer",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/dancer.jpg",
+    "external": true
+  },
+  {
+    "title": "Public Domain - Doubles",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/doubles.jpg",
+    "external": true
+  },
+  {
+    "title": "Public Domain - Everyday",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/everyday.jpg",
+    "external": true
+  },
+  {
+    "title": "Public Domain - Kites",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/kite.jpg",
+    "external": true
+  },
+  {
+    "title": "Public Domain - Sorry",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/sorry.jpg",
+    "external": true
+  },
+  {
+    "title": "Public Domain - Weekend",
+    "url": "https://levimcg-artwork.s3.amazonaws.com/public-domain-collages/weekend.jpg",
+    "external": true
+  },
+  {
     "title": "Lost in 2018 #02",
     "url": "https://s3.amazonaws.com/levimcg-artwork/02-03-2019-02.jpg",
     "external": true

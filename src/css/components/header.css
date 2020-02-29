@@ -3,14 +3,8 @@
  */
 
 .mcg-header {
-  padding: calc(var(--spacing-unit) * 4);
+  padding: calc(var(--spacing-unit) * 2);
   position: relative;
-}
-
-@media screen and (min-width: 36em) {
-  .mcg-header {
-    display: flex;
-  }
 }
 
 .mcg-header a {
@@ -19,4 +13,12 @@
 
 .mcg-header__title {
   color: var(--color-text);
+  display: block;
+  text-align: center;
+}
+@media screen and (min-width: 36em) {
+  .mcg-header {
+    display: flex;
+    padding: calc(var(--spacing-unit) * 4);
+  }
 }

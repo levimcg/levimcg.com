@@ -65,6 +65,7 @@
 }
 
 .mcg-caption {
+  color: var(--color-black-lighter);
   font-size: .825rem;
   margin-top: 1rem;
 }
