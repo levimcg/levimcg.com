@@ -10,8 +10,9 @@
   border-top: 1px solid var(--color-ruler);
 }
 
-.mcg-footer p {
-  margin-top: 0;
+.mcg-footer__copy {
+  display: block;
+  margin-top: var(--spacing-unit);
   margin-bottom: 0;
 }
 
