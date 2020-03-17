@@ -19,5 +19,8 @@
 
   --font-size-base: 1em;
   --spacing-unit: .5em;
+  
+  /* Grid sizing */
+  --auto-grid-min-size: 18rem;
   --grid-gap: 2rem;
 }

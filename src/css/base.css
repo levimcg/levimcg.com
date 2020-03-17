@@ -14,9 +14,9 @@ html {
 
 @media screen and (min-width: 52em) {
   html {
-    font-size: 130%;
+    font-size: 125%;
   }
-
+  
   :root {
     --spacing-unit: 1rem;
   }
@@ -30,7 +30,7 @@ body {
   background-color: var(--color-background);
   font-family: var(--font-base);
   color: var(--color-text);
-  line-height: 1.6;
+  line-height: 1.5;
   padding: 0;
   margin: 0;
 }

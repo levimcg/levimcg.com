@@ -6,11 +6,11 @@
   margin-top: 0;
   margin-bottom: .25em;
   font-size: 1.75em;
+  font-weight: 600;
   line-height: 1.1;
 }
 
 .mcg-post-header time {
-  font-family: var(--font-mono);
   font-size: .825em;
   color: var(--color-text-lighter);
 }

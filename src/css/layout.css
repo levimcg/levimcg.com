@@ -2,7 +2,7 @@
  * Layout
  */
 .mcg-wrapper {
-  max-width: 42rem;
+  max-width: 46rem;
   padding: calc(var(--spacing-unit) * 4) calc(var(--spacing-unit) * 3);
   position: relative;
 }
@@ -20,7 +20,6 @@
 
 .mcg-wrapper--wider {
   max-width: 52rem;
-  max-width: 88ch;
 }
 
 .mcg-wrapper--shorter {
@@ -40,31 +39,18 @@
 /**
  * Grid stuff
  */
+
 .mcg-grid {
   margin-top: 0;
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+  grid-gap: var(--grid-gap);
 }
 
-.mcg-grid__item {
-  margin-bottom: calc(var(--spacing-unit) * 3);
-}
-
-@media screen and (min-width: 360px) {
-  .mcg-grid {
-    display: grid;
-    grid-gap: calc(var(--spacing-unit) * 3);
-    gap: calc(var(--spacing-unit) * 3);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .mcg-grid__item {
-    margin-bottom: 0;
-  }
-  
-  .mcg-grid--library {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
-  }
+.mcg-grid--library {
+  --auto-grid-min-size: 200px;
 }
 
 /* Feed grid */
