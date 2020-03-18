@@ -1,34 +1,36 @@
 ---
-title: Posts
-description: Random thoughts about life, design, books, code, etc. Here's a <a href="/feed.xml">feed</a>, if that's your thing.
+title: Always write it down
+description: My collection of random thoughts about life, design, books, code, etc. Here's an <a href="/feed.xml">RSS feed</a>, if that's your thing.
 bodyClass: mcg-posts-page
 ---
 {% extends 'layouts/base.njk' %}
 {% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
-  <div class="mcg-wrapper mcg-wrapper--wider">
-    <h1 class="mcg-sr-only">{{ title }}</h1>
-    <p class="mcg-section-heading mcg-mb-none">{{ description | safe }}</p>
-  </div>
-  <div class="mcg-wrapper mcg-wrapper--wider">
-    <ol class="mcg-feed-list">
-      {%- for post in collections.post | reverse -%}
-        {# This is a hacky workaround for "draft" functionality #}
-        {% if post.data.draft !== true %}
-        <li>
-          {{-
-            postTeaser({
-              layout: true,
-              title: post.data.title,
-              date: post.date,
-              url: post.url,
-              external_link: post.data.external_link
-            })
-          -}}
-        </li>
-        {% endif %}
-      {%- endfor -%}
-    </ol>
-  </div>
+  <section>
+    <header class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
+      <h1 class="mcg-page-header__title">{{ title }}</h1>
+      <p class="mcg-page-header__description">{{ description | safe }}</p>
+    </header>
+    <div class="mcg-wrapper mcg-wrapper--wider">
+      <ol class="mcg-feed-list">
+        {%- for post in collections.post | reverse -%}
+          {# This is a hacky workaround for "draft" functionality #}
+          {% if post.data.draft !== true %}
+          <li>
+            {{-
+              postTeaser({
+                layout: true,
+                title: post.data.title,
+                date: post.date,
+                url: post.url,
+                external_link: post.data.external_link
+              })
+            -}}
+          </li>
+          {% endif %}
+        {%- endfor -%}
+      </ol>
+    </div>
+  </section>
 {% endblock %}

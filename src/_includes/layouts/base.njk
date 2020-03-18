@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>{{ title }} - {{ site.title }}</title>
+  <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %} - {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" conent="{{ site.tagline }}" />
   {%- include 'misc/meta-cards.njk' -%}

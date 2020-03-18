@@ -8,12 +8,9 @@
 }
 
 .mcg-sub-heading {
-  margin-top: 3em;
-  font-size: .8255em;
-  text-transform: uppercase;
-  letter-spacing: .02rem;
-  color: var(--color-text-lighter);
-  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2em;
 }
 
 /**
@@ -21,8 +18,8 @@
  */
 
 .mcg-longform {
-  margin-top: 4em;
-  line-height: 1.6;
+  margin-top: 3em;
+  line-height: 1.55;
 }
 
 .mcg-longform h2,
@@ -31,7 +28,8 @@
 .mcg-longform h5,
 .mcg-longform h6 {
   margin-top: 2em;
-  font-weight: 400;
+  font-weight: 600;
+  font-family: var(--font-base);
 }
 
 .mcg-longform h2 {

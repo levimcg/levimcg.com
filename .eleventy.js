@@ -17,6 +17,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
   eleventyConfig.addFilter('getYear', getYear);
+  eleventyConfig.addFilter('consoleDump', contents => {
+    console.log(contents);
+  })
   
   eleventyConfig.addCollection('sortedBooks', collection => {
     const allBooks = collection.getFilteredByGlob('**/books/*.md');

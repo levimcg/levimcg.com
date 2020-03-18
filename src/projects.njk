@@ -6,25 +6,27 @@ description: I like to tinker on lots of projects. Here's a mixed list of day-to
 {% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
-<div class="mcg-wrapper mcg-wrapper--wider">
-  <h1 class="mcg-sr-only">{{ title }}</h1>
-  <p class="mcg-section-heading mcg-mb-none">{{ description | safe }}</p>
-</div>
-<div class="mcg-wrapper mcg-wrapper--wider">
-  <ol class="mcg-feed-list">
-    {%- for project in projects -%}
-      <li>
-        {{-
-          postTeaser({
-            title: project.title,
-            description: project.description,
-            url: project.url,
-            external_link: project.data.external_link
-          })
-        -}}
-      </li>
-    {%- endfor -%}
-  </ol>
-</div>
+<section>
+  <header class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
+    <h1 class="mcg-page-header__title">{{ title }}</h1>
+    <p class="mcg-page-header__description">{{ description | safe }}</p>
+  </header>
+  <div class="mcg-wrapper mcg-wrapper--wider">
+    <ol class="mcg-feed-list">
+      {%- for project in projects -%}
+        <li>
+          {{-
+            postTeaser({
+              title: project.title,
+              description: project.description,
+              url: project.url,
+              external_link: project.data.external_link
+            })
+          -}}
+        </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
 
 {% endblock %}

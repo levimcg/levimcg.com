@@ -1,6 +1,6 @@
 {% from 'components/post-teaser.njk' import postTeaser %}
 
-<h2 class="mcg-sub-heading mcg-mt-md">Latest</h2>
+<h2 class="mcg-sub-heading">Latest Posts</h2>
 <ol class="mcg-feed-list">
   {% for post in collections.latestPosts %}
     {# This is a hacky workaround for "draft" functionality #}
