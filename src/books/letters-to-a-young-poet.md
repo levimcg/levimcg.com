@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: "Letters To A Young Poet"
 teaser: Rainer Maria Rilke's classic and most well-know work—I wish I'd read this when I was 21.
 date: 2016-02-15

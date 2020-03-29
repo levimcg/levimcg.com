@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: Pioneers of Spanish Graphic Design
 teaser: This books opened a whole new world of designers to me. This thing is a gold mine of graphic inspiration.
 date: 2015-01-04

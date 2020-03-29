@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: 32 Yolks
 teaser: Just finished reading 32 Yolks Eric Ripert's new memoir. It's lovely and I hope you read it.
 cover: https://s3.amazonaws.com/static.levimcg.com/notes/32-yolks/32-yolks-cover.jpg

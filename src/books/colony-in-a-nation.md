@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: "Colony In A Nation"
 date: 2018-08-14
 author: Chris Hayes

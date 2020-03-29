@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: Sapiens
 date: 2017-10-05
 teaser: A great book that tells the history of modern man from the forming of our species to what we may become in the not too distant future.

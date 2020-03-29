@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: "At the Existentialist Café"
 teaser: A great primer on the history of Existentialism and the lives of it's most influential philosophers.
 date: 2016-03-28

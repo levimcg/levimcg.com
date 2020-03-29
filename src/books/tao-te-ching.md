@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: Tao Te Ching
 teaser: The Eastern philosophy classic. I keep this around as reference like you would a dictionary or encyclopedia.
 date: 2015-01-05

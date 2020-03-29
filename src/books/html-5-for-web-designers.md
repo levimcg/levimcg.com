@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: HTML5 For Web Designers
 teaser: A great intro to writing semantic and well-structured markup. I really enjoyed all the nerdy bits about the history of the HTML and the web.
 date: 2015-01-03

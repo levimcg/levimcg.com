@@ -1,5 +1,4 @@
 ---
-layout: "layouts/post.njk"
 title: "Destiny Disrupted"
 teaser: If you want to understand what's happening in the middle part of the world today, this book is a must read.
 date: 2016-04-14
