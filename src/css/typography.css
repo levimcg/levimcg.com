@@ -18,8 +18,9 @@
  */
 
 .mcg-longform {
-  margin-top: 3em;
+  margin-top: calc(var(--spacing-unit) * 5);
   line-height: 1.6;
+  padding-bottom: calc(var(--spacing-unit) * 3);
 }
 
 .mcg-longform h2,
@@ -56,10 +57,10 @@
 
 .mcg-longform blockquote {
   font-size: 1.25rem;
-  line-height: 1.3;
+  line-height: 1.4;
   margin-left: 0;
-  padding-left: calc(var(--spacing-unit) * 2);
-  border-left: var(--color-ruler) calc(var(--spacing-unit) / 3) solid;
+  padding-left: calc(var(--spacing-unit) * 1.5);
+  border-left: var(--color-ruler) calc(var(--spacing-unit) / 2) solid;
   color: var(--color-black-lighter);
   font-style: italic;
 }
