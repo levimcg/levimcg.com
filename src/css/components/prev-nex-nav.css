@@ -1,0 +1,22 @@
+.mcg-prev-next-nav {
+  display: flex;
+  padding-top: var(--spacing-unit);
+  border-top: 1px solid var(--color-ruler)
+}
+
+.mcg-prev-next-nav__item {
+  text-decoration: none;
+  flex-grow: 1;
+  width: 50%;
+  flex-basis: 50%;
+}
+
+.mcg-prev-next-nav__item:nth-child(even) {
+  text-align: right;
+}
+
+.mcg-prev-next-nav__label {
+  color: var(--color-black-lighter);
+  font-size: .825rem;
+  text-transform: uppercase;
+}

@@ -1,0 +1,31 @@
+{#
+  Thanks! https://github.com/11ty/eleventy/issues/211#issuecomment-419634985
+#}
+{% set currentItemIndex = 0 %}
+{% set countOfItems = collections.post.length %}
+
+{% for item in collections.post %}
+  {% if item.url == page.url %}
+    {% set currentItemIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% set nextItemIndex = currentItemIndex + 1  %}
+{% set previousItemIndex = currentItemIndex - 1  %}
+{% set nextItem = collections.post[nextItemIndex] %}
+{% set previousItem = collections.post[previousItemIndex] %}
+
+<nav class="mcg-prev-next-nav">
+  {% if previousItem %}
+  <a class="mcg-prev-next-nav__item" href="{{ previousItem.url | url }}">
+    <div class="mcg-prev-next-nav__label">Previous:</div>
+    <div class="mcg-prev-next-nav__link-text">{{ previousItem.data.title }}</div>
+  </a>
+  {% endif %}
+  {% if nextItem %}
+  <a class="mcg-prev-next-nav__item" href="{{ nextItem.url | url }}">
+    <div class="mcg-prev-next-nav__label">Next:</div>
+    <div class="mcg-prev-next-nav__link-text">{{ nextItem.data.title }}</div>
+  </a>
+  {% endif %}
+</nav>

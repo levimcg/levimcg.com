@@ -16,6 +16,7 @@
 @import "./components/post-header.css";
 @import "./components/skip-link.css";
 @import "./components/theme-switcher.css";
+@import "./components/prev-nex-nav.css";
 
 @media screen and (min-width: 640px) {
   .mcg-media-object {
