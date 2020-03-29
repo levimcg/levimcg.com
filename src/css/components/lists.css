@@ -9,16 +9,16 @@
 }
 
 .mcg-inline-list li:not(:first-child) {
-  margin-top: var(--spacing-unit);
+  margin-top: calc(var(--spacing-unit) * 2);
 }
 
 @media screen and (min-width: 36em) {
   .mcg-inline-list li {
     display: inline-block;
-    margin-left: calc(var(--spacing-unit) / 2);
   }
   
   .mcg-inline-list li:not(:first-child) {
     margin-top: 0;
+    margin-left: var(--spacing-unit);
   }
 }

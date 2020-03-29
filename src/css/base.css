@@ -33,6 +33,18 @@ body {
   line-height: 1.5;
   padding: 0;
   margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  flex-grow: 0;
+}
+
+main {
+  flex-grow: 1;
 }
 
 a {

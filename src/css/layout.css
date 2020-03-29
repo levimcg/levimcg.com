@@ -59,3 +59,26 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: calc(var(--spacing-unit) * 1.25);
 }
+
+.mcg-flow {
+  --flow-unit: calc(var(--spacing-unit) * 1.5);
+}
+
+.mcg-flow > * {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.mcg-flow > * + * {
+  margin-top: var(--flow-unit);
+}
+
+.mcg-flow > h1,
+.mcg-flow > h2,
+.mcg-flow > h3 {
+  --flow-unit: calc(var(--spacing-unit) * 6);
+}
+
+.mcg-flow h2:first-child {
+  margin-top: 0;
+}

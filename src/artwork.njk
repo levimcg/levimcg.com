@@ -12,18 +12,23 @@ lazyLoad: true
     <h1 class="mcg-page-header__title">{{ title | safe }}</h1>
     <p class="mcg-page-header__description">{{ description | safe }}</p>
   </div>
-  <div class="mcg-wrapper mcg-wrapper--full">
-    <ol class="mcg-grid">
-      {% for item in artwork %}
-      <li class="mcg-grid__item">
-        {% if item.external %}
-          <img class="lazyload" data-src="{{ item.url }}" alt="">
-        {% else %}
-          <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
-        {% endif %}
-        <div class="mcg-caption">{{ item.title }}</div>
-      </li>
-      {% endfor %}
-    </ol>
+  <div class="mcg-wrapper mcg-wrapper--full mcg-flow">
+    {% for art in collections.artwork | reverse %}
+      <h2>{{ art.data.title }}</h2>
+      {% if art.data.images %}
+      <ol class="mcg-grid">
+        {% for item in art.data.images %}
+        <li class="mcg-grid__item">
+          {% if item.external %}
+            <img class="lazyload" data-src="{{ item.url }}" alt="">
+          {% else %}
+            <img class="lazyload" data-src="../img/artwork/{{ item.url }}" alt="">
+          {% endif %}
+          <div class="mcg-caption">{{ item.title }}</div>
+        </li>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    {% endfor %}
   </div>
 {% endblock %}
