@@ -18,9 +18,10 @@
  */
 
 .mcg-longform {
-  margin-top: calc(var(--spacing-unit) * 3);
+  margin-top: 3rem;
   line-height: 1.6;
   padding-bottom: calc(var(--spacing-unit) * 3);
+  font-weight: 375;
 }
 
 .mcg-longform h2,
@@ -29,8 +30,7 @@
 .mcg-longform h5,
 .mcg-longform h6 {
   margin-top: 2em;
-  font-weight: 600;
-  font-family: var(--font-base);
+  font-weight: 450;
 }
 
 .mcg-longform h2 {

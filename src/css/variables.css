@@ -10,12 +10,12 @@
   --color-black-lightest: rgba(34, 31, 43, .08);
   --color-blue: #2858e3;
   --color-blue-lighter: #8faafd;
-
   --color-text: var(--color-black);
   --color-text-lighter: var(--color-black-lighter);
   --color-primary: var(--color-blue);
   --color-ruler: var(--color-black-lightest);
   --color-background: var(--color-white);
+  --color-background-subtle: #fafafa;
 
   --font-size-base: 1em;
   --spacing-unit: .5em;

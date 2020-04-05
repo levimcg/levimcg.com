@@ -35,7 +35,7 @@
   text-decoration: none;
   color: var(--color-text);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 425;
   line-height: 1.1;
   margin-top: -.025rem;
 }
@@ -63,9 +63,20 @@
   }
 }
 
+.mcg-page-header {
+  margin-top: calc(var(--spacing-unit) * 4);
+}
+
+@media screen and (min-width: 36rem) {
+  .mcg-page-header {
+    margin-top: 0;
+  }
+}
+
 .mcg-page-header__title {
   font-weight: 700;
   font-size: 2.25rem;
+  letter-spacing: -.03rem;
   margin-bottom: 0;
 }
 
@@ -75,4 +86,9 @@
   margin-top: var(--spacing-unit);
   margin-bottom: 0;
   line-height: 1.3;
+}
+
+/* Heading anchor tags for blog posts */
+.mcg-anchor {
+  color: var(--color-black-lighter)
 }

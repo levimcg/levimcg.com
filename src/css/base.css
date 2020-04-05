@@ -1,3 +1,15 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
 html {
   font-size: 100%;
 }
@@ -13,9 +25,6 @@ html {
 }
 
 @media screen and (min-width: 52em) {
-  html {
-    font-size: 125%;
-  }
   
   :root {
     --spacing-unit: 1rem;
@@ -28,7 +37,6 @@ html {
 
 body {
   background-color: var(--color-background);
-  font-family: var(--font-base);
   color: var(--color-text);
   line-height: 1.5;
   padding: 0;
