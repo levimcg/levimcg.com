@@ -1,3 +1,5 @@
+let env = process.env.ELEVENTY_ENV;
+
 // 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');

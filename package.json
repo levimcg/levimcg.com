@@ -8,7 +8,8 @@
     "clean": "rm -rf build",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "run-p -c serve watch:css",
-    "watch:css": "npx gulp watchFiles"
+    "watch:css": "npx gulp watchFiles",
+    "stub": "ELEVENTY_ENV=stub npx eleventy"
   },
   "author": "",
   "license": "ISC",
