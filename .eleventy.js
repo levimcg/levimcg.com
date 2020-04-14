@@ -1,3 +1,5 @@
+const htmlMinifier = require('html-minifier');
+
 // 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
@@ -10,6 +12,22 @@ const cssmin = require('./src/filters/cssmin');
 const getYear = require('./src/filters/getYear');
 
 module.exports = function(eleventyConfig) {
+  // HTML minification
+  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
+    if (
+      outputPath &&
+      outputPath.endsWith('.html') &&
+      process.env.ELEVENTY_ENV == 'prod'
+    ) {
+      return htmlMinifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      })
+    }
+    return content;
+  })
+  
   // Plugins
   // NOTE: this plugin is stripping new line/br tags in HTML output.
   eleventyConfig.addPlugin(syntaxHighlight);
