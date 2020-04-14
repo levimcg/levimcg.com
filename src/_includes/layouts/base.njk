@@ -11,8 +11,9 @@
   <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
   <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
   <link rel="stylesheet" href="/css/styles.css">
+  <link type="application/atom+xml" rel="alternate" href="{{ site.baseUrl }}/feed.xml" title="{{ site.title }}">
 </head>
-<body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
   {% include 'components/header.njk' %}
   <main role="main" id="main-content">
     {% block main %}

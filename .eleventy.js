@@ -1,5 +1,3 @@
-let env = process.env.ELEVENTY_ENV;
-
 // 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
@@ -23,8 +21,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('getYear', getYear);
   eleventyConfig.addFilter('consoleDump', contents => {
     console.log(contents);
-  })
-  
+  });
+
   // Collections
   eleventyConfig.addCollection('sortedBooks', collection => {
     const allBooks = collection.getFilteredByGlob('**/books/*.md');
@@ -48,6 +46,7 @@ module.exports = function(eleventyConfig) {
   // Files to watch and copy on change
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
+  
   // Rebuild site when CSS files change
   eleventyConfig.addWatchTarget('./src/css/');
   
