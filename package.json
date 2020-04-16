@@ -4,12 +4,13 @@
   "description": "Levi McGranahan's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy && npx gulp compileCSS",
+    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy && npm run sass:build",
     "clean": "rm -rf build",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
-    "start": "run-p -c serve watch:css",
-    "watch:css": "npx gulp watchFiles",
-    "stub": "ELEVENTY_ENV=stub npx eleventy"
+    "start": "run-p -c serve sass:dev",
+    "stub": "ELEVENTY_ENV=stub npx eleventy",
+    "sass:dev": "npx sass src/scss:build/css --watch",
+    "sass:build": "npx sass --style=compressed src/scss:build/css"
   },
   "author": "",
   "license": "ISC",
@@ -19,12 +20,11 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^1.0.5",
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
     "html-minifier": "^4.0.0",
     "markdown-it": "^8.4.2",
     "markdown-it-anchor": "^5.2.5",
     "npm-run-all": "^4.1.5",
-    "postcss-import": "^12.0.1"
+    "postcss-import": "^12.0.1",
+    "sass": "^1.26.3"
   }
 }

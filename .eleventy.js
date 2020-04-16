@@ -66,7 +66,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/favicon.png');
   
   // Rebuild site when CSS files change
-  eleventyConfig.addWatchTarget('./src/css/');
+  eleventyConfig.addWatchTarget('./src/scss/');
   
   // Configure markdown settings
   const markdownLibrary = markdownIt({
