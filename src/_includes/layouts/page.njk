@@ -1,11 +1,13 @@
 {% extends 'layouts/base.njk' %}
 {% block main %}
-<section class="mcg-wrapper mcg-wrapper--wider">
-  <header class="mcg-page-header">
-    <h1 class="mcg-page-header__title">{{ title }}</h1>
-    <p class="mcg-page-header__description">{{ description | safe }}</p>
-  </header>
+<div class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
+  <h1 class="mcg-page-header__title">{{ title }}</h1>
+  <p class="mcg-page-header__description">{{ description | safe }}</p>
+</div>
+<div class="mcg-wrapper mcg-wrapper--wider">
   {{ content | safe }}
+</div>
+<section class="mcg-wrapper mcg-wrapper--full">
   {%- include "components/instagram.njk" -%}
 </section>
 

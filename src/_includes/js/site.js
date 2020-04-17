@@ -39,13 +39,14 @@ function handleIntersection(entries, observer) {
       const imageSrc = entry.target.dataset.src;
       entry.target.setAttribute('src', imageSrc);
       entry.target.setAttribute('class', 'lazyloaded');
+      entry.target.removeAttribute('data-src');
     }
   });
 }
 
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1
+    threshold: 0.5
   });
 
   images.forEach(image => {
@@ -54,5 +55,6 @@ if ('IntersectionObserver' in window) {
 } else {
   images.forEach(image => {
     image.setAttribute('src', image.dataset.src);
+    image.removeAttribute('data-src');
   })
 }
