@@ -16,10 +16,3 @@
 .mcg-feed-list li {
   border-top: 1px solid var(--color-ruler);
 }
-
-@media screen and (min-width: 640px) {
-  .mcg-feed-list li {
-    padding-top: calc(var(--spacing-unit) * 1.5);
-    padding-bottom: calc(var(--spacing-unit) * 1.5);
-  }
-}

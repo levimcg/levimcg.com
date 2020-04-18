@@ -14,6 +14,10 @@ I've mostly played with the same group of people for a while. A few years ago, o
 
 Life can get pretty hectic with having kids, starting businesses, and changing jobs. Three years later, it's just me and my friend Alan left from the original band of four. We've mostly scrapped all the old songs we wrote durring the first few years of me learning how to play drums. After a four month break at the begining of 2017 we started rehearsing again as a two-piece. By the end of the summer we came away with an EP's worth of material and then some.
 
-![Logo Alan came up with and I drew](https://s3.amazonaws.com/static.levimcg.com/notes/summer-seventeen/meandlevi-logo.png)
+{%- figure {
+  image: 'https://s3.amazonaws.com/static.levimcg.com/notes/summer-seventeen/meandlevi-logo.png',
+  caption: 'Logo Alan came up with and I drew',
+  classes: 'mcg-pt-md mcg-pb-md'
+} -%}
 
 Our current set up is just vocals, a baritone guitar, and drums. There are lots of things I miss about a more traditional instrumentation, but I'm really enjoying how the minimal amount of instruments forces you to work harder on dynamics and phrasing. We've written about half of a new EP since recording this one. We're planing to play a few shows and then go back into the studio in the spring. I feel really positive about the new stuff we are writing and can't wait to share more.

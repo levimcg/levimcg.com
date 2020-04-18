@@ -2,15 +2,17 @@
  * Layout
  */
 .mcg-wrapper {
-  max-width: 46rem;
-  padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 3);
+  max-width: 48rem;
+  padding: calc(var(--spacing-unit) * 3);
   position: relative;
 }
 
 @media screen and (min-width: 36em) {
   .mcg-wrapper {
-    padding-right: calc(var(--spacing-unit) * 4);
-    padding-left: calc(var(--spacing-unit) * 4);
+    padding-top: calc(var(--spacing-unit) * 6);
+    padding-right: calc(var(--spacing-unit) * 8);
+    padding-bottom: calc(var(--spacing-unit) * 6);
+    padding-left: calc(var(--spacing-unit) * 8);
   }
 }
 

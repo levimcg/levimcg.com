@@ -18,13 +18,13 @@
 <nav class="mcg-prev-next-nav">
   {% if previousItem %}
   <a class="mcg-prev-next-nav__item" href="{{ previousItem.url | url }}">
-    <div class="mcg-prev-next-nav__label">Previous:</div>
+    <div class="mcg-prev-next-nav__label">Older:</div>
     <div class="mcg-prev-next-nav__link-text">{{ previousItem.data.title }}</div>
   </a>
   {% endif %}
   {% if nextItem %}
   <a class="mcg-prev-next-nav__item" href="{{ nextItem.url | url }}">
-    <div class="mcg-prev-next-nav__label">Next:</div>
+    <div class="mcg-prev-next-nav__label">Newer:</div>
     <div class="mcg-prev-next-nav__link-text">{{ nextItem.data.title }}</div>
   </a>
   {% endif %}

@@ -31,12 +31,12 @@ When I think about what an ideal `accordion` HTML element might look like, I wou
 
 In fact, this was the first approach I took when I started to build an accordion component. But, as Dave pointed out in his post, it's important to get heading semantics right in an accordion. The ARIA authoring practices guide has pretty clear requirements about how all toggles should be wrapped in elements that have a _heading_ role. Following the approach above could be difficult since I would need to make sure all the appropriate roles (button, heading, etc.) were added manually since custom elements don't have any inherent roles as far as the browser is concerned. I decided to go a different route, especially after reading [Léone Watson's](https://tink.uk/) [great article](https://www.24a11y.com/2019/web-components-and-the-aom/) about some of the limitations around Web Component accessibility. 
 
-## "Container" components
+## Container components
 While doing more research [I came across this](https://github.com/github/tab-container-element/) `<tab-container>` element by the folks at GitHub. As I talked about with my `<focus-trapper>` example earlier. This kind of _wrapper_ approach makes a lot of sense to me. I kind of like to think of this approach as regular old vanilla JavaScript widgets or plugins, except they can be used declaratively in your HTML. So instead of initializing like a normal JS plugin:
 
 ```js
 const myAccordion = new Accordion({
-  // Some optins or whatever 
+  // Some options or whatever 
 });
 ```
 

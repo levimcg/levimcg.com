@@ -11,7 +11,16 @@ const dateFormatted = require('./src/filters/dateFormatted');
 const cssmin = require('./src/filters/cssmin');
 const getYear = require('./src/filters/getYear');
 
+// Shortcodes
+const figure = require('./src/shortcodes/figure');
+const codeSnippet = require('./src/shortcodes/codeSnippet');
+
 module.exports = function(eleventyConfig) {
+  // Shortcodes
+  
+  eleventyConfig.addShortcode('codeSnippet', codeSnippet);
+  eleventyConfig.addShortcode('figure', figure);
+
   // HTML minification
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if (

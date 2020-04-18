@@ -30,8 +30,8 @@
 .mcg-post-header__date::before {
   content: "";
   display: block;
-  width: calc(var(--spacing-unit) * 2);
-  height: calc(var(--spacing-unit) * .5);
+  width: calc(var(--spacing-unit) * 3);
+  height: var(--spacing-unit);
   background-color: var(--color-ruler);
-  margin-bottom: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }

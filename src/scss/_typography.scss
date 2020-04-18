@@ -29,20 +29,17 @@
 .mcg-longform h4,
 .mcg-longform h5,
 .mcg-longform h6 {
-  margin-top: 2em;
-  font-weight: 450;
+  margin-top: calc(var(--spacing-unit) * 6);
+  // font-weight: 600;
 }
 
-.mcg-longform h2 {
-  font-size: 1.5em;
-  margin-bottom: 0
-}
-
+.mcg-longform h2,
 .mcg-longform h3,
 .mcg-longform h4,
 .mcg-longform h5,
 .mcg-longform h5 {
   font-size: 1.25em;
+  font-weight: 625;
   margin-bottom: 0;
 }
 
@@ -65,6 +62,15 @@
   border-left: var(--color-ruler) calc(var(--spacing-unit) / 2) solid;
   color: var(--color-black-lighter);
   font-style: italic;
+}
+
+.mcg-longform figure {
+  margin: 0;
+  
+  figcaption {
+    font-size: .8125rem;
+    color: var(--color-black-lighter);
+  }
 }
 
 .mcg-alt-heading {

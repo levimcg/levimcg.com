@@ -15,7 +15,9 @@ description: I like to tinker on lots of projects. Here's a mixed list of day-to
   <ol class="mcg-scrollable">
     {%- for project in projects -%}
     <li class="mcg-chip">
-      <img class="mcg-chip__image" src="{{ project.image }}" alt="">
+      <div class="mcg-chip__image" >
+        <img src="{{ project.image }}" alt="">
+      </div>
       <div class="mcg-chip__body">
         <h2>
           <a href="{{ project.url }}">{{ project.title }}</a>

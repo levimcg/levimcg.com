@@ -96,28 +96,31 @@
 .mcg-chip {
   position: relative;
   min-width: 300px;
-  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
-  border-radius: 6px;
-  
-  > * + * {
-    margin-top: 1rem;
-  }
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .05);
+  border-radius: 8px;
   
   &__image {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     overflow: hidden;
+    max-height: calc(var(--spacing-unit) * 20);
   }
   
   &__body {
-    padding: calc(var(--spacing-unit) * 3);
+    padding: calc(var(--spacing-unit) * 2);
 
+    > * + * {
+      margin-top: 1rem;
+    }
+    
     h2,
     h3,
     h4,
     h5,
     h6 {
       font-size: 1rem;
+      font-weight: 425;
+      margin-top: 0;
     }
     
     a {
@@ -152,5 +155,20 @@
   
   > *:not(:first-child) {
     margin-left: calc(var(--spacing-unit) * 3);
+  }
+}
+
+@media screen and (min-width: 36em) {
+  .mcg-scrollable {
+    padding-right: calc(var(--spacing-unit) * 8);
+    padding-left: calc(var(--spacing-unit) * 8);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: var(--grid-gap);
+    overflow-x: unset;
+    
+    > *:not(:first-child) {
+      margin: 0;
+    }
   }
 }

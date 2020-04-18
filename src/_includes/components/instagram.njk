@@ -1,13 +1,13 @@
-<div class="mcg-mt-sm mcg-feed-grid">
+<div class="mcg-mt-sm mcg-grid">
   {% if site.env == "dev" %}
     {% for image in instagram_dev.data.slice(0, 9) %}
-    <a href="{{ image.link }}" target="_blank" rel="noopener">
+    <a class="mcg-grid__item" href="{{ image.link }}" target="_blank" rel="noopener">
       <img src="{{ image.images.standard_resolution.url }}" alt="{{ image.caption.text | safe }}">
     </a>
     {% endfor %}
   {% else %}
     {% for image in instagram.data.slice(0, 9) %}
-    <a href="{{ image.link }}" target="_blank" rel="noopener">
+    <a class="mcg-grid__item" href="{{ image.link }}" target="_blank" rel="noopener">
       <img src="{{ image.images.standard_resolution.url }}" alt="{{ image.caption.text | safe }}">
     </a>
     {% endfor %}
