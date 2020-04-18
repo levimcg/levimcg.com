@@ -5,6 +5,11 @@ module.exports = [
     url: 'https://rivet.iu.edu/'
   },
   {
+    title: 'Artwork',
+    description: 'I occasionally make art and illustration pieces. These are a selection of my favorites.',
+    url: '/artwork/'
+  },
+  {
     title: 'Accordion Container Element',
     description: 'A generic Custom Element wrapper that turns some headings and other content into an accessible accordion',
     url: 'https://github.com/levimcg/accordion-container-element'

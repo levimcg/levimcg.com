@@ -12,11 +12,11 @@ images:
     url: "https://levimcg-artwork.s3.amazonaws.com/islands/islands-2.jpg"
     external: true
   -
-    title: "We Are Islands No. 4"
+    title: "We Are Islands No. 3"
     url: "https://levimcg-artwork.s3.amazonaws.com/islands/islands-3.jpg"
     external: true
   -
-    title: "We Are Islands No. 2"
+    title: "We Are Islands No. 4"
     url: "https://levimcg-artwork.s3.amazonaws.com/islands/islands-4.jpg"
     external: true
 ---
