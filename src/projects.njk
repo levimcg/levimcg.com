@@ -11,22 +11,20 @@ description: I like to tinker on lots of projects. Here's a mixed list of day-to
     <h1 class="mcg-page-header__title">{{ title }}</h1>
     <p class="mcg-page-header__description">{{ description | safe }}</p>
   </header>
-  <div class="mcg-wrapper mcg-wrapper--wider">
-    <ol class="mcg-feed-list">
-      {%- for project in projects -%}
-        <li>
-          {{-
-            postTeaser({
-              title: project.title,
-              description: project.description,
-              url: project.url,
-              external_link: project.data.external_link
-            })
-          -}}
-        </li>
-      {%- endfor -%}
-    </ol>
-  </div>
-</section>
 
+  <ol class="mcg-scrollable">
+    {%- for project in projects -%}
+    <li class="mcg-chip">
+      <img class="mcg-chip__image" src="{{ project.image }}" alt="">
+      <div class="mcg-chip__body">
+        <h2>
+          <a href="{{ project.url }}">{{ project.title }}</a>
+        </h2>
+        <p>{{ project.description }}</p>
+      </div>
+    </li>
+    {%- endfor -%}
+  </ol>
+  
+</section>
 {% endblock %}

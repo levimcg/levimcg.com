@@ -2,7 +2,8 @@ module.exports = [
   {
     title: 'Rivet Design System',
     description: 'Indiana University\'s design system for enterprise software development teams',
-    url: 'https://rivet.iu.edu/'
+    url: 'https://rivet.iu.edu/',
+    image: '/img/projects/rivet-2-illo.jpg'
   },
   {
     title: 'Artwork',

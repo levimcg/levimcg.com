@@ -92,3 +92,65 @@
 .mcg-anchor {
   color: var(--color-black-lighter)
 }
+
+.mcg-chip {
+  position: relative;
+  min-width: 300px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+  border-radius: 6px;
+  
+  > * + * {
+    margin-top: 1rem;
+  }
+  
+  &__image {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+  }
+  
+  &__body {
+    padding: calc(var(--spacing-unit) * 3);
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: var(--color-black);
+    }
+    
+    p {
+      color: var(--color-black-lighter);
+      font-size: .825rem;
+      margin-bottom: 0;
+    }
+    
+    a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.mcg-scrollable {
+  list-style: none;
+  margin: 0;
+  padding: calc(var(--spacing-unit) * 6) calc(var(--spacing-unit) * 3);
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  > *:not(:first-child) {
+    margin-left: calc(var(--spacing-unit) * 3);
+  }
+}
