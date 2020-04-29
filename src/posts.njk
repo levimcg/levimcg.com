@@ -8,10 +8,9 @@ bodyClass: mcg-posts-page
 
 {% block main %}
   <section>
-    <header class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
-      <h1 class="mcg-page-header__title">{{ title }}</h1>
-      <p class="mcg-page-header__description">{{ description | safe }}</p>
-    </header>
+    <div class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
+      {% include "components/post-header.njk" %}
+    </div>
     <div class="mcg-wrapper mcg-wrapper--wider">
       <ol class="mcg-feed-list">
         {%- for post in collections.post | reverse -%}

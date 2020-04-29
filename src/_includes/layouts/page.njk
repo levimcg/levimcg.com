@@ -1,8 +1,7 @@
 {% extends 'layouts/base.njk' %}
 {% block main %}
 <div class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
-  <h1 class="mcg-page-header__title">{{ title }}</h1>
-  <p class="mcg-page-header__description">{{ description | safe }}</p>
+  {% include "components/post-header.njk" %}
 </div>
 <div class="mcg-wrapper mcg-wrapper--wider">
   {{ content | safe }}
