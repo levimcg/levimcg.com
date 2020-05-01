@@ -7,10 +7,10 @@ bodyClass: mcg-home-page
 
 {% block main %}
 <div class="mcg-wrapper mcg-wrapper--wider">
-  <div class="mcg-page-header">
-    <h1 class="mcg-page-header__title">{{ title | safe }}</h1>
-    <p class="mcg-page-header__description">{{ site.tagline | safe }}</p>
-  </div>
+  <header class="mcg-post-header">
+    <h1 class="mcg-post-header__title p-name">{{ title | safe }}</h1>
+    <p class="mcg-post-header__description">{{ site.tagline | safe }}</p>
+  </header>
 </div>
 <div class="mcg-wrapper mcg-wrapper--wider">
   {% include "components/recent-posts.njk" %}
