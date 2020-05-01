@@ -23,8 +23,7 @@
 @media screen and (min-width: 600px) {
   .mcg-footer {
     display: flex;
-    padding-top: calc(var(--spacing-unit) * 2);
-    padding-bottom: calc(var(--spacing-unit) * 2)
+    padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 8);
   }
   
   .mcg-footer__copy {

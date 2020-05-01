@@ -1,14 +1,7 @@
-@import url('https://rsms.me/inter/inter.css');
-
 html {
   font-family: 'Inter', sans-serif;
   font-size: 100%;
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+  font-weight: 375;
 }
 
 @media screen and (min-width: 36em) {
