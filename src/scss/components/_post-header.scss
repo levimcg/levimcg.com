@@ -15,7 +15,8 @@
   
   &__description {
     color: var(--color-black-lighter);
-    font-size: 1.125rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
     margin-top: calc(var(--spacing-unit) * 2);
     margin-bottom: 0;
   }
@@ -24,16 +25,7 @@
     color: var(--color-black-lighter);
     display: inline-block;
     font-size: .825rem;
-    margin-top: calc(var(--spacing-unit) * 8);
-  }
-  
-  &__date::before {
-    content: "";
-    display: block;
-    width: calc(var(--spacing-unit) * 3);
-    height: var(--spacing-unit);
-    background-color: var(--color-ruler);
-    margin-bottom: calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 2);
   }
 }
 

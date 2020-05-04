@@ -3,7 +3,8 @@
 {% block main %}
   <article class="mcg-wrapper h-entry">
     {% include 'components/post-header.njk' %}
-    <div class="mcg-longform">
+    <hr class="mcg-mt-lg">
+    <div class="mcg-longform mcg-pt-lg">
       {{ content | safe }}
     </div>
     {% if footnote %}
@@ -11,6 +12,8 @@
       {{ footnote | safe }}
     </div>
     {% endif %}
-    {% include "components/prev-next-nav.njk" %}
   </article>
+  <div class="mcg-wrapper mcg-wrapper--full mcg-wrapper--shorter">
+    {% include "components/prev-next-nav.njk" %}
+  </div>
 {% endblock %}

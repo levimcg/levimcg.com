@@ -18,10 +18,13 @@
  */
 
 .mcg-longform {
-  margin-top: calc(var(--spacing-unit) * 4);
   line-height: 1.6;
   padding-bottom: calc(var(--spacing-unit) * 3);
   font-weight: 375;
+
+  p:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .mcg-longform h2,

@@ -1,6 +1,6 @@
 ---
 title: Accordion Container Web Component
-description: I built a tiny Custom Element wrapper that turns a set of headings and divs into an accessible accordion widget
+description: A Custom Element wrapper that turns a set of headings into an accessible accordion widget
 date: 2020-01-18T18:37:56.677Z
 tags:
   - post

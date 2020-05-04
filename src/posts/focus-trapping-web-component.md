@@ -5,6 +5,7 @@ date: 2019-06-09
 tags:
   - code
   - post
+  - web components
 ---
 I was looking through Microsoft's design system [Fabric](https://developer.microsoft.com/en-us/fabric#/) the other day and came across an interesting component in the _Utilities_ section called [FocusTrapZone](https://developer.microsoft.com/en-us/fabric#/controls/web/focustrapzone). FocusTrapZone is a React component that is used to trap focus inside any HTML element. 
 
