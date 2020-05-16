@@ -8,9 +8,9 @@ lazyLoad: true
 {% extends 'layouts/base.njk' %}
 
 {% block main %}
-  <div class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
-    <h1 class="mcg-page-header__title">{{ title | safe }}</h1>
-    <p class="mcg-page-header__description">{{ description | safe }}</p>
+  <div class="mcg-post-header mcg-wrapper mcg-wrapper--wider">
+    <h1 class="mcg-post-header__title">{{ title | safe }}</h1>
+    <p class="mcg-post-header__description">{{ description | safe }}</p>
   </div>
   <div class="mcg-wrapper mcg-wrapper--full mcg-flow">
     {% for art in collections.artwork | reverse %}
