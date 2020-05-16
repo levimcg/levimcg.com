@@ -20,10 +20,12 @@ description: I like to tinker on lots of projects. Here's a mixed list of day-to
       </div>
       {% endif %}
       <div class="mcg-chip__body">
-        <h2>
-          <a href="{{ project.url }}">{{ project.title }}</a>
-        </h2>
-        <p>{{ project.description }}</p>
+        <div class="mcg-chip__header">
+          <h2 class="mcg-chip__title">
+            <a href="{{ project.url }}">{{ project.title }}</a>
+          </h2>
+        </div>
+        <p class="mcg-chip__description">{{ project.description }}</p>
       </div>
     </li>
     {%- endfor -%}
