@@ -11,12 +11,12 @@ module.exports = {
       url: "/posts/"
     },
     {
-      label: "Projects",
-      url: "/projects/"
-    },
-    {
       label: "About",
       url: "/about/"
+    },
+    {
+      label: "Artwork",
+      url: "https://levimcg.myshopify.com/"
     }
   ],
   links: [
@@ -26,7 +26,7 @@ module.exports = {
     },
     {
       title: "Artwork",
-      url: "/artwork/"
+      url: "https://levimcg.myshopify.com/"
     },
     {
       title: "Twitter",

@@ -3,7 +3,7 @@
  */
 
 .mcg-main-nav {
-  margin-top: var(--spacing-unit);
+  margin-top: calc(var(--spacing-unit) * 4);
 }
 
 .mcg-main-nav ul {
