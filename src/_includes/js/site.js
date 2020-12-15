@@ -1,25 +1,11 @@
-const copyright = (function() {
-  function createCopyright(container) {
-    const containerEl = document.getElementById(container);
-    const currentDate = new Date().getFullYear();
-    containerEl.innerText = currentDate;
+class CopyrightElement extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `&copy; ${new Date().getFullYear()}`;
   }
-
-  function init(container) {
-    document.addEventListener(
-      'DOMContentLoaded',
-      createCopyright(container),
-      false
-    );
-  }
-
-  return {
-    init: init
-  };
-})();
-
-// Kick off copyright
-copyright.init('mcg-copy-year');
+}
+if ('customElements' in window) {
+  window.customElements.define('copyright-element', CopyrightElement);
+}
 
 // Theme switcher
 const theme = new Themur({

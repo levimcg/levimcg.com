@@ -16,8 +16,9 @@ const figure = require('./src/shortcodes/figure');
 const codeSnippet = require('./src/shortcodes/codeSnippet');
 
 module.exports = function(eleventyConfig) {
+  // Merge data E.g. tags on each .md file with directory data "tags" field
+  eleventyConfig.setDataDeepMerge(true);
   // Shortcodes
-  
   eleventyConfig.addShortcode('codeSnippet', codeSnippet);
   eleventyConfig.addShortcode('figure', figure);
 
