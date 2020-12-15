@@ -1,6 +1,7 @@
 ---
 title: "I'll never be good at this"
 teaser: "Dealing with death and loss"
+permalink: "posts/i-will-never-be-good-at-this/"
 date: 2018-09-23
 ---
 We lost [our dog Bowie](../bowie-mcg) earlier this year. It was totally unexpected, and I wrote about the helpless feeling that comes along with death. If you've ever been robbed or had something stolen from you, it feels the same.

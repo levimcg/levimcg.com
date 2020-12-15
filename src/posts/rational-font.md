@@ -7,5 +7,6 @@ teaser: I'm kinda loving this new type family. It's definitely at the top of my 
 external_link: https://www.renebieder.com/retail-fonts/rational-tw
 tags: post
 date: 2016-07-18
+permalink: false
 ---
 Love this font. Moving it to the top of my wishlist.
