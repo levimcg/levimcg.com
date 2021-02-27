@@ -4,7 +4,7 @@
   "description": "Levi McGranahan's personal website",
   "main": ".eleventy.js",
   "scripts": {
-    "build": "rm -rf build && ELEVENTY_ENV=prod npx eleventy && npm run sass:build",
+    "build": "rm -rf build npx eleventy && npm run sass:build",
     "clean": "rm -rf build",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "run-p -c serve sass:dev",
