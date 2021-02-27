@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {
       })
     }
     return content;
-  })
+  });
   
   // Plugins
   // NOTE: this plugin is stripping new line/br tags in HTML output.
