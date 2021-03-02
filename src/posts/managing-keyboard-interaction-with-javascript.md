@@ -2,6 +2,7 @@
 title: Managing keyboard interaction with JavaScript
 date: 2019-01-21
 draft: true
+permalink: false
 ---
 One of the most challenging parts of making accessible interactive components for websites and apps is managing keyboard navigation via JavaScript. Folks that rely on assistive technologies expect UI components like dropdown menus, tabs, etc. to behave in a specific way when interacted with via the keyboard. As developers its our job to make sure the components we're building function as expected.
 
