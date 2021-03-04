@@ -5,7 +5,8 @@ date: 2020-12-15
 tags:
  - snippet
  - code
- - "progressive enhancement"
+ - progressive enhancement
+ - web components
 ---
 It's that time of year again, so I thought I'd do a quick post on the simple bit of JavaScript I use to keep the copyright date current in the static sites I build. Add the `hidden` attribute to your container element markup so that if JS fails for some reason it won't display.
 
