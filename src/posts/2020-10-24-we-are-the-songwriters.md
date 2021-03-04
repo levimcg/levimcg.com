@@ -3,7 +3,6 @@ title: "We Are The Songwriters"
 description: "I recently discovered Nick Cave's wonderful newsletter called \"The Red Hand Files\"."
 date: 2020-10-24
 tags:
-  - post
   - COVID-19
 ---
 The urge to create can feel like a struggle sometimes. Throw in feelings of isolation and hopelessness brought on by living through a global pandemic and trying to make something to put out into the world can seem impossible some days.

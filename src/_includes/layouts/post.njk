@@ -13,6 +13,18 @@
     </div>
     {% endif %}
   </article>
+  
+  <div class="mcg-wrapper mcg-wrapper--shorter">
+    <span id="tags-label" class="mcg-font-14">Tagged:</span>
+    <ul class="mcg-tag-list" role="list" aria-labelledby="tags-label">
+      {% for tag in tags %}
+      {% if tag != 'post' %}
+      <li><a href="/tags/{{ tag | slug }}">{{ tag | capitalize }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  
   <div class="mcg-wrapper mcg-wrapper--full mcg-wrapper--shorter">
     {% include "components/prev-next-nav.njk" %}
   </div>

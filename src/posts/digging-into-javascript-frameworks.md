@@ -1,5 +1,4 @@
 ---
-tags: post
 title: Digging into JavaScript Frameworks
 date: 2018-03-24
 teaser: "I'm betting on plain old JavaScript for the long game, but what's up with these frameworks?"

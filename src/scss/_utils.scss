@@ -116,12 +116,6 @@
   margin-bottom: calc(var(--spacing-unit) * 8) !important;
 }
 
-/* fade image in after load */
-.lazyload,
-.lazyloading {
-  opacity: 0;
-}
-.lazyloaded {
-  opacity: 1;
-  transition: opacity 300ms;
+.mcg-font-14 {
+  font-size: .875rem;
 }

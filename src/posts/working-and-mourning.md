@@ -4,7 +4,7 @@ description: "Trying to stay motivated to get work done during a worldwide pande
 date: 2020-04-13
 tags:
   - post
-  - covid-19
+  - COVID-19
 ---
 I’m not religious, but when I looked out my front window yesterday morning at the church across the street from my house I felt my heart sink a little when I saw a completely empty parking lot. It was Easter morning.
 

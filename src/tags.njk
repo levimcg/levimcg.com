@@ -1,0 +1,37 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - post
+    - sortedBooks
+    - latestPosts
+    - artwork
+permalink: /tags/{{ tag | slug }}/
+---
+{% extends 'layouts/base.njk' %}
+{% from 'components/post-teaser.njk' import postTeaser %}
+
+{% block main %}
+<article class="mcg-wrapper h-entry">
+  <h1>Posts tagged “{{ tag }}”</h1>
+
+  <ol class="mcg-feed-list">
+  {% set taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+    <li>
+      {{-
+        postTeaser({
+          layout: true,
+          title: post.data.title,
+          date: post.date,
+          url: post.url,
+          external_link: post.data.external_link
+        })
+      -}}
+    </li>
+  {% endfor %}
+  </ol>
+</article>  
+{% endblock main %}

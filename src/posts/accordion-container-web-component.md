@@ -6,6 +6,7 @@ tags:
   - post
   - code
   - web components
+  - progressive enhancement
 ---
 One of the things that interests me about Web Components is that they make it possible to build components that can be progressively enhanced. [I recently wrote about](../progressive-enhancement-doesnt-have-to-be-hard/) how I've been making progressive enhancement more of a priority in my work, and the idea putting that into practice with Web Components has me feeling pretty excited.
 
