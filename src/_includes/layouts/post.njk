@@ -19,7 +19,7 @@
     <ul class="mcg-tag-list" role="list" aria-labelledby="tags-label">
       {% for tag in tags %}
       {% if tag != 'post' %}
-      <li><a href="/tags/{{ tag | slug }}">{{ tag | capitalize }}</a></li>
+      <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>
