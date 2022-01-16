@@ -1,35 +1,18 @@
 ---
 title: Always write it down
 description: My collection of random thoughts about life, design, books, code, etc. Here's an <a href="/feed.xml">RSS feed</a>, if that's your thing.
-bodyClass: mcg-posts-page
 ---
 {% extends 'layouts/base.njk' %}
-{% from 'components/post-teaser.njk' import postTeaser %}
 
 {% block main %}
   <section>
-    <div class="mcg-page-header mcg-wrapper mcg-wrapper--wider">
-      {% include "components/post-header.njk" %}
-    </div>
-    <div class="mcg-wrapper mcg-wrapper--wider">
-      <ol class="mcg-feed-list">
-        {%- for post in collections.post | reverse -%}
-          {# This is a hacky workaround for "draft" functionality #}
-          {% if post.data.draft !== true %}
-          <li>
-            {{-
-              postTeaser({
-                layout: true,
-                title: post.data.title,
-                date: post.date,
-                url: post.url,
-                external_link: post.data.external_link
-              })
-            -}}
-          </li>
-          {% endif %}
-        {%- endfor -%}
-      </ol>
-    </div>
+    <h1>{{ title }}</h1>
+    <ol>
+      {%- for post in collections.post | reverse -%}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+      {%- endfor -%}
+    </ol>
   </section>
 {% endblock %}

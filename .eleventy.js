@@ -8,18 +8,15 @@ const markdownItAnchor = require('markdown-it-anchor');
 
 // Import filters
 const dateFormatted = require('./src/filters/dateFormatted');
-const cssmin = require('./src/filters/cssmin');
-const getYear = require('./src/filters/getYear');
 
 // Shortcodes
 const figure = require('./src/shortcodes/figure');
-const codeSnippet = require('./src/shortcodes/codeSnippet');
 
 module.exports = function(eleventyConfig) {
   // Merge data E.g. tags on each .md file with directory data "tags" field
   eleventyConfig.setDataDeepMerge(true);
+
   // Shortcodes
-  eleventyConfig.addShortcode('codeSnippet', codeSnippet);
   eleventyConfig.addShortcode('figure', figure);
 
   // HTML minification
@@ -44,32 +41,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   
   // Filters
-  eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
-  eleventyConfig.addFilter('getYear', getYear);
-  eleventyConfig.addFilter('consoleDump', contents => {
-    console.log(contents);
-  });
-
-  // Collections
-  eleventyConfig.addCollection('sortedBooks', collection => {
-    const allBooks = collection.getFilteredByGlob('**/books/*.md');
-    const bookYears = allBooks.map(item => item.date.getFullYear());
-    // Return a deduped array of sorted books using Set
-    return [...new Set(bookYears)];
-  });
-  
-  eleventyConfig.addCollection('latestPosts', collection => {
-    return collection
-      .getFilteredByGlob('**/posts/*.md')
-      .slice(-5)
-      .reverse();
-  });
-
-  eleventyConfig.addCollection('books', collection => {
-    return collection
-      .getFilteredByGlob('**/books/*.md');
-  });
 
   // Files to watch and copy on change
   eleventyConfig.addPassthroughCopy('src/img');

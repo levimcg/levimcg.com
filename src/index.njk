@@ -1,18 +1,10 @@
 ---
 title: Hey, welcome 👋
 metaTitle: Hey, welcome
-bodyClass: mcg-home-page
 ---
 {% extends 'layouts/base.njk' %}
 
 {% block main %}
-<div class="mcg-wrapper mcg-wrapper--wider">
-  <header class="mcg-post-header">
-    <h1 class="mcg-post-header__title p-name">{{ title | safe }}</h1>
-    <p class="mcg-post-header__description">{{ site.tagline | safe }}</p>
-  </header>
-</div>
-<div class="mcg-wrapper mcg-wrapper--wider">
-  {% include "components/recent-posts.njk" %}
-</div>
+  <h1>{{ title | safe }}</h1>
+  <p>{{ site.tagline | safe }}</p>
 {% endblock %}

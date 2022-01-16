@@ -5,7 +5,7 @@ teaser: "Documenting a snapshot in time with recent pages from my sketchbook"
 tags:
   - post
   - sketchbook
-layout: "layouts/sketchbook.njk"
+layout: "layouts/post.njk"
 sketchbookPages:
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/june-2018/page-1.jpg
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/june-2018/page-2.jpg

@@ -8,15 +8,13 @@
   <meta name="description" content="{% if description %}{{ description | striptags }}{% else %}{{ site.tagline }}{% endif %}" />
   {%- include 'misc/meta-cards.njk' -%}
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth" />
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@375;425;700&display=swap" >
   <link rel="stylesheet" href="/css/styles.css">
   <link type="application/atom+xml" rel="alternate" href="{{ site.baseUrl }}/feed.xml" title="{{ site.title }}">
 </head>
-<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+<body>
   {% include 'components/header.njk' %}
-  <main role="main" id="main-content">
+  <main id="main-content">
     {% block main %}
       {{ content | safe }}
     {% endblock %}

@@ -5,7 +5,7 @@ description: "Documenting a snapshot in time with recent pages from my sketchboo
 tags:
   - post
   - sketchbook
-layout: "layouts/sketchbook.njk"
+layout: "layouts/post.njk"
 sketchbookPages:
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/july-2019/page-1.jpg
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/july-2019/page-2.jpg

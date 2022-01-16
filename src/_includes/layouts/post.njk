@@ -1,31 +1,20 @@
 {% extends 'layouts/base.njk' %}
 
 {% block main %}
-  <article class="mcg-wrapper h-entry">
-    {% include 'components/post-header.njk' %}
-    <hr class="mcg-mt-lg">
-    <div class="mcg-longform mcg-pt-lg">
-      {{ content | safe }}
-    </div>
-    {% if footnote %}
-    <div class="mcg-footnotes">
-      {{ footnote | safe }}
-    </div>
-    {% endif %}
+  <article class="h-entry">
+    <h1>{{ title }}</h1>
+    {{ date | dateFormatted }}
+    {{ content | safe }}
   </article>
+
+  <span id="tags-label" class="mcg-font-14">Tagged:</span>
+  <ul role="list" aria-labelledby="tags-label">
+    {% for tag in tags %}
+    {% if tag != 'post' %}
+    <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
   
-  <div class="mcg-wrapper mcg-wrapper--shorter">
-    <span id="tags-label" class="mcg-font-14">Tagged:</span>
-    <ul class="mcg-tag-list" role="list" aria-labelledby="tags-label">
-      {% for tag in tags %}
-      {% if tag != 'post' %}
-      <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  
-  <div class="mcg-wrapper mcg-wrapper--full mcg-wrapper--shorter">
-    {% include "components/prev-next-nav.njk" %}
-  </div>
+  {% include "components/prev-next-nav.njk" %}
 {% endblock %}
