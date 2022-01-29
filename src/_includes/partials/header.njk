@@ -1,13 +1,17 @@
 <header class="site-header">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <a class="site-title" href="/">{{ site.title }}</a>
-  <nav class="main-nav" role="navigation" aria-label="Global site navigation">
-    <ul>
-      {%- for item in site.navigation -%}
-        <li>
-          <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </nav>
+  <div class="site-header__inner [ container  ]">
+    <a class="site-header__logo" href="/">
+      {% include "partials/logo.njk" %}
+    </a>
+    <nav class="site-header__nav" role="navigation" aria-label="Global">
+      <ul role="list">
+        {%- for item in site.navigation -%}
+          <li>
+            <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div>
 </header>

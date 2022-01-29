@@ -1,0 +1,25 @@
+.site-header {
+  &__logo {
+    width: var(--size-800);
+    height: var(--size-800);
+    color: var(--color-text-medium);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--size-800);
+    padding-bottom: var(--size-800);
+  }
+
+  &__nav ul {
+    padding-left: 0;
+    display: flex;
+  }
+
+  &__nav li:not(:first-child) {
+    margin-left: var(--size-500);
+  }
+}
+

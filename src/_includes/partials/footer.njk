@@ -1,9 +1,11 @@
-<footer class="mcg-footer" role="contentinfo">
-  <ul class="mcg-inline-list">
-    {%- for link in site.links -%}
-      <li class="mcg-inline-list__item">
-        <a class="mcg-footer__link" href="{{ link.url }}"{%- if link.me -%} rel="me"{%- endif -%}>{{ link.title }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <ul class="site-footer__links" role="list">
+      {%- for link in site.links -%}
+        <li>
+          <a href="{{ link.url }}"{%- if link.me -%} rel="me"{%- endif -%}>{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
 </footer>

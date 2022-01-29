@@ -1,0 +1,10 @@
+.site-footer {
+  &__links {
+    padding-left: 0;
+    display: flex;
+  }
+
+  &__links li:not(:first-child) {
+    margin-left: var(--size-600);
+  }
+}
