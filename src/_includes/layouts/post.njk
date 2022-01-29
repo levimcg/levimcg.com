@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="h-entry">
-  <h1>{{ title }}</h1>
+<article class="post flow container">
   {{ date | dateFormatted }}
+  <h1>{{ title }}</h1>
   {{ content | safe }}
 </article>
 
@@ -11,7 +11,7 @@ layout: layouts/base.njk
 <ul role="list" aria-labelledby="tags-label">
   {% for tag in tags %}
   {% if tag != 'post' %}
-  <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
+  <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
   {% endif %}
   {% endfor %}
 </ul>

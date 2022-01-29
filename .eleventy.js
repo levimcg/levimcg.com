@@ -14,8 +14,6 @@ const dateFormatted = require('./src/filters/dateFormatted');
 const figure = require('./src/shortcodes/figure');
 
 module.exports = function(eleventyConfig) {
-  // Merge data E.g. tags on each .md file with directory data "tags" field
-  eleventyConfig.setDataDeepMerge(true);
 
   // Shortcodes
   eleventyConfig.addShortcode('figure', figure);

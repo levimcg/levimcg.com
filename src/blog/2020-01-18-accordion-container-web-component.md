@@ -7,6 +7,7 @@ tags:
   - web components
   - progressive enhancement
 ---
+butts
 One of the things that interests me about Web Components is that they make it possible to build components that can be progressively enhanced. [I recently wrote about](../progressive-enhancement-doesnt-have-to-be-hard/) how I've been making progressive enhancement more of a priority in my work, and the idea putting that into practice with Web Components has me feeling pretty excited.
 
 After read [this post about by Dave Rupert](https://daverupert.com/2019/12/why-details-is-not-an-accordion/) about his experiment building an accordion Web Component out of the native `<details>` element, it got me thinking about how one might go about building an accessible accordion as a Web Component.

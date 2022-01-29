@@ -1,8 +1,7 @@
 ---
-title: What’s Next?
+title: What is next
 description: Taking a quick look at where I started as I move to the next thing
 date: 2017-11-10
-permalink: blog/whats-next
 ---
 I graduated college with a degree in industrial design at the beginning of 2004. I got my first design (unsurprisingly not in industrial design) job in 2006 designing menu screens for DVDs. It was just a few short years before the financial crisis would hit full-swing. Two years later I was told my department was being shut down. I had four months to find a job.
 
