@@ -1,15 +1,19 @@
 ---
-title: Always write it down
+title: Blog
 description: My collection of random thoughts about life, design, books, code, etc. Here's an <a href="/feed.xml">RSS feed</a>, if that's your thing.
 layout: layouts/base.njk
+eleventyNavigation:
+  key: Blog
+  parent: Main
+  order: 2
 ---
-<section>
+<div class="container">
   <h1>{{ title }}</h1>
   <ol>
-    {%- for post in collections.post | reverse -%}
+    {%- for post in collections.post -%}
     <li>
       <a href="{{ post.url }}">{{ post.data.title }}</a>
     </li>
     {%- endfor -%}
   </ol>
-</section>
+</div>

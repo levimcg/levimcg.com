@@ -5,16 +5,6 @@ module.exports = {
   username: "levimcg",
   baseurl: "https://levimcg.com",
   artwork: "https://s3.amazonaws.com/levimcg-artwork",
-  navigation: [
-    {
-      label: "Posts",
-      url: "/posts/"
-    },
-    {
-      label: "Artwork",
-      url: "https://levimcg.myshopify.com/"
-    }
-  ],
   links: [
     {
       title: "Artwork",
@@ -38,6 +28,10 @@ module.exports = {
     {
       title: "RSS",
       url: "/feed.xml"
+    },
+    {
+      title: "Style guide",
+      url: "/style-guide"
     }
   ]
 }

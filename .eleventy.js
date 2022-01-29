@@ -3,6 +3,7 @@ const htmlMinifier = require('html-minifier');
 // 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
@@ -39,6 +40,7 @@ module.exports = function(eleventyConfig) {
   // NOTE: this plugin is stripping new line/br tags in HTML output.
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   
   // Filters
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
@@ -49,6 +51,11 @@ module.exports = function(eleventyConfig) {
   
   // Rebuild site when CSS files change
   eleventyConfig.addWatchTarget('./src/scss/');
+
+  // BrowserSync settings
+  eleventyConfig.setBrowserSyncConfig({
+    open: 'local'
+  });
   
   // Configure markdown settings
   const markdownLibrary = markdownIt({
