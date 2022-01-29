@@ -1,20 +1,19 @@
-{% extends 'layouts/base.njk' %}
+---
+layout: layouts/base.njk
+---
+<article class="h-entry">
+  <h1>{{ title }}</h1>
+  {{ date | dateFormatted }}
+  {{ content | safe }}
+</article>
 
-{% block main %}
-  <article class="h-entry">
-    <h1>{{ title }}</h1>
-    {{ date | dateFormatted }}
-    {{ content | safe }}
-  </article>
+<span id="tags-label" class="mcg-font-14">Tagged:</span>
+<ul role="list" aria-labelledby="tags-label">
+  {% for tag in tags %}
+  {% if tag != 'post' %}
+  <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-  <span id="tags-label" class="mcg-font-14">Tagged:</span>
-  <ul role="list" aria-labelledby="tags-label">
-    {% for tag in tags %}
-    {% if tag != 'post' %}
-    <li><a href="/tags/{{ tag | slug }}">{{ tag }}</a></li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-  
-  {% include "components/prev-next-nav.njk" %}
-{% endblock %}
+{% include "partials/prev-next-nav.njk" %}

@@ -1,9 +1,107 @@
-* {
-  box-sizing: border-box;
+body  {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
 }
 
-body  {
-  font-family: var(--font-base);
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-family: var(--font-sans);
+}
+
+h1 {
+  font-size: var(--size-700);
+}
+
+h2 {
+  font-size: var(--size-600);
+}
+
+h3,
+h4  {
+  font-size: var(--size-500);
+}
+
+img {
+  max-width: min(55rem, 100%);
+}
+
+figcaption {
+  font-size: var(--size-300);
+  font-style: italic;
+  color: var(--color-text-medium);
+  margin-top: 1rem;
+}
+
+blockquote {
+  padding-left: var(--size-600);
+  border-left: 5px solid;
+  font-style: italic;
+}
+
+time {
+  display: inline-block;
+}
+
+hr {
+  height: 1px;
+  border-top: none;
+  border-bottom: 1px solid var(--color-ruler);
+  margin: 0;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+dt {
+  font-weight: 700;
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-primary);
+}
+
+@media (min-width: 45em) {
+  h1 {
+    font-size: var(--size-800);
+  }
+
+  h2 {
+    font-size: var(--size-600);
+  }
+
+  h3,
+  h4 {
+    font-size: var(--size-500);
+  }
+
+  p,
+  ul,
+  ol,
+  dl,
+  time {
+    font-size: var(--size-500);
+  }
+
+  figcaption {
+    font-size: var(--size-400);
+  }
+
+  blockquote p {
+    font-size: var(--size-600);
+    max-width: 40ch;
+  }
 }
 
 /**
@@ -17,4 +115,50 @@ body  {
 
 .skip-link:focus {
   top: 0;
+}
+
+/**
+ * Layout
+ */
+ .container {
+  width: 95vw;
+  width: clamp(16rem, 95vw, 74rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.post {
+  --flow-space: var(--size-600);
+
+  & :is(h2, h3, h4, h5, h6) {
+    --flow-space: var(--size-900);
+    max-width: 42ch;
+  }
+
+  & :is(h2, h3, h4, h5, h6) + * {
+    --flow-space: var(--size-400);
+  }
+
+  p,
+  li,
+  dd,
+  dt {
+    max-width: 68ch;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  figure,
+  figure + * {
+    --flow-space: var(--size-800);
+  }
 }

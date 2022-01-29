@@ -1,4 +1,5 @@
-@import "./variables";
-@import "./base";
-@import "./prism";
-@import "./utils";
+@use "./reset";
+@use "./variables";
+@use "./base";
+@use "./prism";
+@use "./utils";
