@@ -2,7 +2,7 @@
   &__logo {
     width: var(--size-800);
     height: var(--size-800);
-    color: var(--color-text-medium);
+    color: var(--color-text);
   }
 
   &__inner {
@@ -20,6 +20,11 @@
 
   &__nav li:not(:first-child) {
     margin-left: var(--size-500);
+  }
+
+  &__nav li a {
+    text-decoration: none;
+    color: var(--color-text-medium);
   }
 }
 

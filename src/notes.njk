@@ -7,12 +7,20 @@ eleventyNavigation:
   parent: Main
   order: 1
 ---
-<div class="container">
-  <h1>{{ title }}</h1>
-  <ol>
-    {%- for note in collections.note -%}
+<div class="container content">
+  <h1 class="sr-only">{{ title }}</h1>
+  <ol class="note-list" role="list">
+    {%- for note in collections.note | reverse -%}
     <li>
-      <a href="{{ note.url }}">{{ note.data.title }}</a>
+      <article class="note-teaser">
+        <div class="note-teaser__meta">
+          <time class="meta-date">{{ note.date | dateFormatted }}</time>
+        </div>
+        <div class="note-teaser__body post flow">
+          <a class="note-teaser__title" href="{{ note.url }}">{{ note.data.title }}</a>
+          {{ note.templateContent | safe }}
+        </div>
+      </article>
     </li>
     {%- endfor -%}
   </ol>

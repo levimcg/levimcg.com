@@ -44,6 +44,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
 
   // Files to watch and copy on change
+  eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
   

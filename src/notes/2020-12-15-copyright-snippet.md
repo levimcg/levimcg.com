@@ -23,7 +23,6 @@ It's that time of year again, so I thought I'd do a quick post on the simple bit
 })();
 ```
 
-## Custom Element
 As a bonus, here's a tiny custom element I made that does the same thing. This way you can just wrap your static text in a `<copyright-element>` tag and as long as the browser is capable and you scripts loaded, you get an upgraded, up-to-date footer copyright date.
 
 ```js

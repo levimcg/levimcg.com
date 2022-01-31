@@ -1,0 +1,9 @@
+<span id="tags-label" class="mcg-font-14">Tagged:</span>
+<ul role="list" aria-labelledby="tags-label">
+  {% set denyList = "post note" %}
+  {% for tag in tags %}
+  {% if tag not in denyList %}
+  <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
+  {% endif %}
+  {% endfor %}
+</ul>

@@ -1,3 +1,4 @@
+@use "./fonts";
 @use "./reset";
 @use "./variables";
 @use "./base";
@@ -5,3 +6,47 @@
 @use "./utils";
 @use "./site-header";
 @use "./site-footer";
+
+.note-list {
+  padding-left: 0;
+
+  li {
+    margin-bottom: calc(var(--size-900) * 2);
+  }
+}
+
+.note-teaser {
+  &__title {
+    font-size: var(--size-600);
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-text);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  .note-teaser {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--size-600);
+
+    &__meta time {
+      font-size: var(--size-400);
+    }
+
+    &__title {
+      // font-size: var(--size-700);
+      margin-top: 0;
+    }
+  }
+}
+
+.meta-date {
+  color: var(--color-text-medium);
+  font-size: var(--size-400);
+  font-family: var(--font-mono);
+}

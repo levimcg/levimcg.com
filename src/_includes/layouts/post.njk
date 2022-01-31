@@ -1,19 +1,14 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="post flow container">
-  {{ date | dateFormatted }}
-  <h1>{{ title }}</h1>
+<article class="post flow container content">
+  <div class="post-intro">
+    <time class="meta-date">{{ date | dateFormatted }}</time>
+    <h1>{{ title }}</h1>
+  </div>
   {{ content | safe }}
 </article>
 
-<span id="tags-label" class="mcg-font-14">Tagged:</span>
-<ul role="list" aria-labelledby="tags-label">
-  {% for tag in tags %}
-  {% if tag != 'post' %}
-  <li><a href="/tags/{{ tag | slugify }}">{{ tag }}</a></li>
-  {% endif %}
-  {% endfor %}
-</ul>
+{% include "partials/meta-tags.njk" %}
 
 {% include "partials/prev-next-nav.njk" %}
