@@ -2,6 +2,7 @@
 title: Family Portraits August 2016
 description: My wife has been asking me to do some portraits of our family and I finally got around to it.
 date: 2016-08-28
+tags: art
 ---
 My wife and son were out of town for the weekend visiting some family, so I got a house all to myself. I spent all of Friday night drawing and listening to records. It was so much fun and totally refreshing.
 

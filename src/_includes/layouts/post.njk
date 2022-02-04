@@ -6,9 +6,10 @@ layout: layouts/base.njk
     <time class="meta-date">{{ date | dateFormatted }}</time>
     <h1>{{ title }}</h1>
   </div>
+  <hr>
   {{ content | safe }}
 </article>
-
-{% include "partials/meta-tags.njk" %}
-
+<div class="container">
+  {% include "partials/meta-tags.njk" %}
+</div>
 {% include "partials/prev-next-nav.njk" %}

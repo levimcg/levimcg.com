@@ -2,6 +2,9 @@
 title: The Tangled Bank
 description: A quick thought on the benefit and drawbacks of systematized design
 date: 2019-05-23
+tags:
+  - quotes
+  - books
 ---
 I finished _Where Good Ideas Come From_ by Stephen Johnson a couple of weeks ago. I really enjoyed this bit from the final chapter:
 

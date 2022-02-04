@@ -43,17 +43,29 @@ module.exports = function(eleventyConfig) {
   // Filters
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
 
+  // Creates a list of all tags
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "note"].indexOf(tag) === -1);
+  }
+
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+
+    return filterTagList([...tagSet]);
+  });
+
   // Files to watch and copy on change
   eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
-  
-  // Rebuild site when CSS files change
-  eleventyConfig.addWatchTarget('./src/scss/');
 
   // BrowserSync settings
   eleventyConfig.setBrowserSyncConfig({
-    open: 'local'
+    open: 'local',
+    files: ['build/css/styles.css']
   });
   
   // Configure markdown settings

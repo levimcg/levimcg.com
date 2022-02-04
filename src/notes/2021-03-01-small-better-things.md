@@ -3,8 +3,9 @@ title: "Smaller Better Things"
 description: "This mini documentary has me thinking about doing less, but better work"
 date: 2021-03-01
 tags:
-- "COVID-19"
-- work
+  - "COVID-19"
+  - work
+  - quotes
 ---
 I watched [this mini documentary](https://twitter.com/FoodInsider/status/1364454054332612608?s=20) about a French butter maker the other day that makes high-end butter with old techniques that very few places use anymore.
 

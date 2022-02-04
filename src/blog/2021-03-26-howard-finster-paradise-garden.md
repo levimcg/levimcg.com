@@ -3,8 +3,8 @@ title: "Howard Finster and Paradise Garden"
 description: "A quick trip to Chattanooga with an unexpected detour at this fascinating place in rural Georgia"
 date: 2021-03-26
 tags:
-- Travel
-- Art
+- travel
+- art
 ---
 We traveled last week for first time this year. It was a quick trip down to Chattanooga to spend some time with my parter’s sister, brother-in-law, and our niece. We had a great time out hiking in the mountains, and eating some of the [best chicken wings](https://pigeonmtcountrystore.webs.com/) I’ve ever had.
 

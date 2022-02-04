@@ -2,6 +2,7 @@
 title: Paper Cut Ups
 description: I did some quick paper cut compositions last week. It's always great to get back to actually using your hands every once in a while.
 date: 2016-05-05
+tags: art
 ---
 I did some quick paper cut compositions last week. It's always great to get back to actually using your hands every once in a while.
 

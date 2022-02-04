@@ -7,13 +7,41 @@ eleventyNavigation:
   parent: Main
   order: 2
 ---
-<div class="container">
-  <h1>{{ title }}</h1>
-  <ol>
-    {%- for post in collections.post -%}
-    <li>
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-    </li>
-    {%- endfor -%}
-  </ol>
+<div class="container content">
+  <h1 class="sr-only">{{ title }}</h1>
+  <div class="sidebar-layout">
+    <ol class="post-list">
+      {%- for post in collections.post | reverse -%}
+      <li>
+        <article class="post-teaser">
+          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+          <div class="post-teaser__meta">
+            <time datetime="{{ post.date }}" class="post-teaser__date">{{ post.date | dateFormatted }}</time>
+            <div class="tag-list">
+              <ul role="list">
+                {% set denyList = "post note" %}
+                {% for tag in post.data.tags %}
+                {% if tag not in denyList %}
+                <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </article>
+      </li>
+      {%- endfor -%}
+    </ol>
+    <div class="sidebar">
+      <div class="tag-list tag-list--cloud">
+        <ul role="list">
+          {% for item in collections.tagList %}
+          <li>
+            <a href="/tags/{{ item | slugify }}">#{{ item }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>

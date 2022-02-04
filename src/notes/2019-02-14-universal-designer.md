@@ -2,6 +2,9 @@
 title: "Universal Designer"
 description: If you can design one thing, you can design most things
 date: 2019-02-14
+tags:
+  - design
+  - quotes
 ---
 I made this shitty stool in design school. It was supposed be able to hold the weight of a person. It did not. I don't know why, or how I ended up hanging on to it for all these years. I was a bad designer and I’m not quite sure how I graduated. 
 

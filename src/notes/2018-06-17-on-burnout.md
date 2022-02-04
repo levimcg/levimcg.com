@@ -2,6 +2,9 @@
 title: Burnout and knowing when to walk away
 description: A short note about recognizing burnout
 date: 2018-06-17
+tags:
+  - burnout
+  - work
 ---
 I've been feeling a lot of the tell-tale signs of burnout. I can't stay focused on complex tasks, it feels like I won't ever finish anything, and I keep working when I know I shouldn't.
 
