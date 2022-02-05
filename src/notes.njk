@@ -25,7 +25,7 @@ eleventyNavigation:
           {{ note.templateContent | safe }}
 
           <div class="tag-list">
-            <span class="tag-list__label" id="tags-label">Tags:</span>
+            <span class="sr-only" id="tags-label">Note tags</span>
             <ul role="list" aria-labelledby="tags-label">
               {% for tag in note.data.tags %}
               {% if tag != "note" %}

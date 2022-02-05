@@ -1,5 +1,5 @@
 .site-footer {
-  margin-top: var(--size-800);
+  margin-top: var(--size-900);
   
   &__links {
     padding-left: 0;
@@ -8,5 +8,14 @@
 
   &__links li:not(:first-child) {
     margin-left: var(--size-600);
+  }
+
+  &__links li {
+    font-size: var(--size-400);
+  }
+
+  &__links li a {
+    text-decoration: none;
+    color: var(--color-text-medium);
   }
 }

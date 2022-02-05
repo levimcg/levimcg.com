@@ -1,0 +1,58 @@
+.post {
+  --flow-space: var(--size-600);
+
+  h1 {
+    max-width: 25ch;
+    font-weight: 300;
+  }
+
+  hr,
+  hr + * {
+    --flow-space: var(--size-800);
+  }
+
+  & :is(h2, h3, h4, h5, h6) {
+    --flow-space: var(--size-900);
+    max-width: 36ch;
+  }
+
+  & :is(h2, h3, h4, h5, h6) + * {
+    --flow-space: var(--size-400);
+  }
+
+  p,
+  li,
+  dd,
+  dt,
+  img {
+    max-width: 60ch;
+    line-height: 1.66;
+    color: var(--color-text-medium);
+  }
+
+  pre {
+    max-width: 96ch;
+  }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  figure,
+  figure + *,
+  blockquote,
+  blockquote + *,
+  pre,
+  pre + * {
+    --flow-space: var(--size-900);
+  }
+
+  blockquote {
+    border-left-color: var(--color-primary);
+  }
+
+  blockquote p {
+    max-width: 46ch;
+  }
+}
