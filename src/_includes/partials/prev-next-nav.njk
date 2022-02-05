@@ -1,31 +1,18 @@
-{#
-  Thanks! https://github.com/11ty/eleventy/issues/211#issuecomment-419634985
-#}
-{% set currentItemIndex = 0 %}
-{% set countOfItems = collections.post.length %}
+{% set mainCollection = tags[0] %}
+{% set previousPost = collections[mainCollection] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[mainCollection] | getNextCollectionItem(page) %}
 
-{% for item in collections.post %}
-  {% if item.url == page.url %}
-    {% set currentItemIndex = loop.index0 %}
-  {% endif %}
-{% endfor %}
-
-{% set nextItemIndex = currentItemIndex + 1  %}
-{% set previousItemIndex = currentItemIndex - 1  %}
-{% set nextItem = collections.post[nextItemIndex] %}
-{% set previousItem = collections.post[previousItemIndex] %}
-
-<nav class="mcg-prev-next-nav">
-  {% if previousItem %}
-  <a class="mcg-prev-next-nav__item" href="{{ previousItem.url | url }}">
-    <div class="mcg-prev-next-nav__label">Older:</div>
-    <div class="mcg-prev-next-nav__link-text">{{ previousItem.data.title }}</div>
+<nav class="series-nav">
+  {% if previousPost %}
+  <a class="series-nav__item" href="{{ previousPost.url | url }}">
+    <div class="series-nav__label">Older</div>
+    <div class="series-nav__link-text">{{ previousPost.data.title }}</div>
   </a>
   {% endif %}
-  {% if nextItem %}
-  <a class="mcg-prev-next-nav__item" href="{{ nextItem.url | url }}">
-    <div class="mcg-prev-next-nav__label">Newer:</div>
-    <div class="mcg-prev-next-nav__link-text">{{ nextItem.data.title }}</div>
+  {% if nextPost %}
+  <a class="series-nav__item" href="{{ nextPost.url | url }}">
+    <div class="series-nav__label">Newer</div>
+    <div class="series-nav__link-text">{{ nextPost.data.title }}</div>
   </a>
   {% endif %}
 </nav>
