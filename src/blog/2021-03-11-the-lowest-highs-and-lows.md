@@ -1,6 +1,6 @@
 ---
 title: "The lowest highs AND lows"
-description: "My second pandemic birthday is tomorrow."
+description: "My second pandemic birthday is tomorrow and I wasn't ready for it."
 date: 2021-03-11
 tags:
 - COVID-19

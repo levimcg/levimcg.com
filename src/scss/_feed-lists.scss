@@ -15,3 +15,31 @@
     margin-bottom: calc(var(--size-900) * 2.5);
   }
 }
+
+.grid-list {
+  list-style: "";
+  padding-left: 0;
+  display: grid;
+  gap: var(--size-800);
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+.teaser-list {
+  list-style: "";
+  padding-left: 0;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--size-400);
+  }
+
+  li a {
+    text-decoration: none;
+    font-size: var(--size-400);
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+}

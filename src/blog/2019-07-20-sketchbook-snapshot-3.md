@@ -15,3 +15,7 @@ sketchbookPages:
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/july-2019/page-8.jpg
 ---
 It's been a while since I posted a sketchbook snapshot. Seems like I'm mostly writing documents and briefs these days so my notebook is mostly full of to-do lists.
+
+{% for sketch in sketchbookPages %}
+  <img loading="lazy" src="{{ sketch }}">
+{% endfor %}

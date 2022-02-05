@@ -15,3 +15,7 @@ sketchbookPages:
   - https://s3.amazonaws.com/static.levimcg.com/sketchbook/february-2019/mr-fahrenheit.jpg
 ---
 It's been a while since I did a sketchbook snapshot. I was cleaning and organizing my home office this afternoon when I found a bunch of drawings from late 2018 that I've only ever posted on Instagram. These were all done with my [Krink K60](https://shop.krink.com/products/k-60-paint-marker). I love that marker!
+
+{% for sketch in sketchbookPages %}
+  <img loading="lazy" src="{{ sketch }}">
+{% endfor %}

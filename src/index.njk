@@ -1,12 +1,48 @@
 ---
 title: Hey, welcome 👋
 metaTitle: Hey, welcome
+layout: layouts/base.njk
 eleventyNavigation:
   key: Main
 ---
-{% extends 'layouts/base.njk' %}
+<div class="container space-top-900">
 
-{% block main %}
-  <h1>{{ title | safe }}</h1>
-  <p>{{ site.tagline | safe }}</p>
-{% endblock %}
+  <div class="page-intro">
+    <h1 class="sr-only">Welcome</h1>
+    <p><strong>Hey, my name is Levi</strong>. I'm a designer that codes and I'm currently working on design systems in higher education.</p>
+  </div>
+  <div class="space-top-1000 sidebar-layout">
+    <div>
+      <h2 class="color-text-medium font-size-500">Posts</h2>
+      <ul class="grid-list">
+        {% for post in collections.post.slice(-6) | reverse  %}
+        <li>
+          <article class="card">
+            <img loading="lazy" width="400" height="225" src="{{ post.data.coverImage if post.data.coverImage else '/img/cover-images/cover-placeholder.jpg' }}" alt="">
+            <div class="card__body">
+              <time class="meta-date">{{ post.date | dateFormatted }}</time>
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+              <p>{{ post.data.description }}</p>
+            </div>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="space-top-800">
+        <a class="font-size-500" href="/blog">All posts</a> 
+      </div>
+    </div>
+    <div class="flow">
+      <h2 class="color-text-medium font-size-500">Notes</h2>
+      <p class="font-size-400">I post small notes to myself a little more frequently. You can catch the whole feed <a href="/notes">over here</a> if you want.</p>
+      <ul class="teaser-list">
+        {% for note in collections.note.slice(-6) | reverse %}
+        <li>
+          <time class="meta-date">{{ note.date | dateFormatted }}</time>
+          <a href="{{ note.url }}">{{ note.data.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

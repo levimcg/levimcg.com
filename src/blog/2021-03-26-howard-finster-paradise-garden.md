@@ -2,6 +2,7 @@
 title: "Howard Finster and Paradise Garden"
 description: "A quick trip to Chattanooga with an unexpected detour at this fascinating place in rural Georgia"
 date: 2021-03-26
+coverImage: /img/cover-images/cover-finster.jpg
 tags:
 - travel
 - art

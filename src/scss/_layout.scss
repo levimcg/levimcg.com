@@ -3,7 +3,7 @@
  */
  .container {
   width: 95vw;
-  width: clamp(16rem, 95vw, 74rem);
+  width: clamp(16rem, 95vw, 80rem);
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -14,11 +14,14 @@
   margin-top: var(--flow-space, 1em);
 }
 
+.sidebar-layout {
+  display: grid;
+  gap: var(--size-800);
+}
+
 @media (min-width: 45em) {
   .sidebar-layout {
-    display: grid;
-    gap: var(--size-800);
-    grid-template-columns: 1fr 360px;
+    grid-template-columns: 1fr 340px;
   }
 
   .sidebar {

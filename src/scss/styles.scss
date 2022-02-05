@@ -40,3 +40,40 @@
     background-color: var(--color-secondary);
   }
 }
+
+.page-intro {
+  p {
+    font-size: var(--size-600);
+  }
+}
+
+@media (min-width: 45em) {
+  .page-intro {
+    p {
+      font-size: var(--size-800);
+    }
+  }
+}
+
+.card {
+  &__body {
+    margin-top: var(--size-300);
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: var(--color-text);
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--color-primary);
+    }
+
+    p {
+      font-size: var(--size-400);
+      color: var(--color-text-medium);
+      margin-top: var(--size-300);
+    }
+  }
+}
