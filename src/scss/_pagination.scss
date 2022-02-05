@@ -1,0 +1,22 @@
+.pagination {
+  ol {
+    list-style: "";
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ol li {
+    color: var(--color-text-medium);
+  }
+
+  ol > li + li {
+    margin-left: var(--size-300);
+  }
+
+  ol li a {
+    display: inline-block;
+    padding: var(--size-300);
+  }
+}

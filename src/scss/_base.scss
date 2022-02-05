@@ -169,7 +169,8 @@ code {
   p,
   li,
   dd,
-  dt {
+  dt,
+  img {
     max-width: 60ch;
     line-height: 1.66;
     color: var(--color-text-medium);
