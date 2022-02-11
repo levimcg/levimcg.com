@@ -36,7 +36,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #2d2d2d;
+	background: var(--color-background-medium);
 }
 
 /* Inline code */
@@ -62,7 +62,7 @@ pre[class*="language-"] {
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-	color: #e2777a;
+	color: var(--color-tertiary);
 }
 
 .token.function-name {
@@ -79,7 +79,7 @@ pre[class*="language-"] {
 .token.class-name,
 .token.constant,
 .token.symbol {
-	color: #f8c555;
+	color: var(--color-tertiary);
 }
 
 .token.selector,
@@ -87,7 +87,7 @@ pre[class*="language-"] {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-	color: #cc99cd;
+	color: var(--color-primary);
 }
 
 .token.string,

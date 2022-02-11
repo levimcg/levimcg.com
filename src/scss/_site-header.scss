@@ -26,5 +26,10 @@
     text-decoration: none;
     color: var(--color-text-medium);
   }
+
+  &__nav li a[aria-current] {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
 }
 

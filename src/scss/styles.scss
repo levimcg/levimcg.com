@@ -14,6 +14,7 @@
 @use "./post-teaser";
 @use "./post";
 @use "./layout";
+@use "./card";
 
 .meta-date {
   color: var(--color-text-medium);
@@ -55,25 +56,3 @@
   }
 }
 
-.card {
-  &__body {
-    margin-top: var(--size-300);
-
-    a {
-      display: block;
-      text-decoration: none;
-      color: var(--color-text);
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: var(--color-primary);
-    }
-
-    p {
-      font-size: var(--size-400);
-      color: var(--color-text-medium);
-      margin-top: var(--size-300);
-    }
-  }
-}

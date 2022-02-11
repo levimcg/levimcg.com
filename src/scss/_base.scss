@@ -34,6 +34,7 @@ h4  {
 
 img {
   max-width: min(55rem, 100%);
+  height: auto;
 }
 
 figcaption {
@@ -70,8 +71,12 @@ dt {
 }
 
 code {
-  color: var(--color-secondary);
+  background-color: var(--color-background-light);
+  color: var(--color-text);
   font-family: var(--font-mono);
+  padding-right: .5rem;
+  padding-left: .5rem;
+  border-radius: .25rem;
 }
 
 ::selection {

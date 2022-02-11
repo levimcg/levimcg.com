@@ -1,14 +1,18 @@
 :root {
   --color-black: hsl(256, 29%, 15%);
+  --color-black-medium: hsl(256, 26%, 20%);
+  --color-black-light: hsl(256, 20%, 30%);
   --color-white: hsl(256, 10%, 95%);
   --color-white-medium: hsl(256, 10%, 75%);
   --color-white-light: hsl(256, 10%, 35%);
   --color-green: hsl(150, 53%, 50%);
   --color-green-medium: hsl(150, 53%, 75%);
-  --color-red: hsl(360, 62%, 55%);
+  --color-red: hsl(355, 62%, 60%);
   --color-blue: hsl(216, 90%, 65%);
 
   --color-background: var(--color-black);
+  --color-background-medium: var(--color-black-medium);
+  --color-background-light: var(--color-black-light);
   --color-text: var(--color-white);
   --color-text-medium: var(--color-white-medium);
   --color-text-light: var(--color-white-light);
