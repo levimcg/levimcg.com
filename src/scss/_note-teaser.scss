@@ -17,6 +17,11 @@
     grid-template-columns: 240px 1fr;
     gap: var(--size-600);
 
+    &__body.post .breakout {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     &__meta time {
       font-size: var(--size-400);
     }

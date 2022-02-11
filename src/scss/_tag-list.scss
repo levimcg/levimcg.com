@@ -6,11 +6,12 @@
   ul {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     padding-left: 0;
   }
 
-  ul li:not(:first-child) {
-    margin-left: var(--size-400);
+  ul li:not(:last-child) {
+    margin-right: var(--size-400);
   }
 
   ul li a {

@@ -17,23 +17,24 @@ Here are some random photos I shot on my phone during our visit. I'm horrible at
 
 {%- figure {
   image: 'https://s3.amazonaws.com/static.levimcg.com/posts/finster-paradise-gardens/finster-sanctuary.jpeg',
-  caption: 'The iconic sanctuary, church steeple is the first thing you see'
+  caption: 'The iconic sanctuary, church steeple is the first thing you see',
+  classes: 'breakout'
 } -%}
 
 {%- figure {
   image: 'https://s3.amazonaws.com/static.levimcg.com/posts/finster-paradise-gardens/finster-sign.jpeg',
   caption: 'One of many hand-painted signs',
-  classes: 'mcg-mt-md mcg-mb-md'
+  classes: 'breakout'
 } -%}
 
 {%- figure {
   image: 'https://s3.amazonaws.com/static.levimcg.com/posts/finster-paradise-gardens/finster-kieth-haring.jpeg',
   caption: 'The Kieth Haring sculpture I mentioned earlier',
-  classes: 'mcg-mt-md mcg-mb-md'
+  classes: 'breakout'
 } -%}
 
 {%- figure {
   image: 'https://s3.amazonaws.com/static.levimcg.com/posts/finster-paradise-gardens/finster-mirrors.jpeg',
   caption: 'Inside the mirror tree house',
-  classes: 'mcg-mt-md'
+  classes: 'breakout'
 } -%}

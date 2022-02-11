@@ -56,3 +56,17 @@
   }
 }
 
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+}
+
+@media (min-width: 45em) {
+  .avatar {
+    width: 140px;
+    height: 140px;
+  }
+}
+

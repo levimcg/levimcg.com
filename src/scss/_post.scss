@@ -21,13 +21,22 @@
   }
 
   p,
-  li,
+  ul,
+  ol,
   dd,
   dt,
   img {
     max-width: 60ch;
     line-height: 1.66;
     color: var(--color-text-medium);
+  }
+
+  & > ol {
+    padding-left: 24px;
+  }
+ 
+  & > ul {
+    padding-left: 20px;
   }
 
   pre {
@@ -46,6 +55,29 @@
   pre,
   pre + * {
     --flow-space: var(--size-900);
+  }
+
+  .breakout {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    aspect-ratio: 3/2;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    figcaption {
+      margin-left: var(--size-300);
+    }
+  }
+
+  @media (min-width: 45em) {
+    .breakout figcaption {
+      margin-left: var(--size-600);
+    }
   }
 
   blockquote {

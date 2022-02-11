@@ -1,4 +1,15 @@
 .card {
+  &__image {
+    aspect-ratio: 3 / 2;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &__body {
     margin-top: var(--size-300);
 

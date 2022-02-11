@@ -9,40 +9,29 @@ eleventyNavigation:
 
   <div class="page-intro">
     <h1 class="sr-only">{{ title }}</h1>
-    <p><strong>Hey, my name is Levi</strong>. I'm a designer that codes and I'm currently working on design systems in higher education.</p>
+    <p><strong>Hey, my name is Levi</strong>. I'm a designer that likes to code and I'm currently working on <a href="https://v2.rivet.iu.edu/">design systems</a> in higher education.</p>
   </div>
-  <div class="space-top-1000 sidebar-layout">
-    <div>
-      <h2 class="color-text-medium font-size-500">Posts</h2>
-      <ul class="grid-list">
-        {% for post in collections.post.slice(-6) | reverse  %}
-        <li>
-          <article class="card">
-            <img loading="lazy" width="400" height="225" src="{{ post.data.coverImage if post.data.coverImage else '/img/cover-images/cover-placeholder.jpg' }}" alt="">
-            <div class="card__body">
-              <time class="meta-date">{{ post.date | dateFormatted }}</time>
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
-              <p>{{ post.data.description }}</p>
-            </div>
-          </article>
-        </li>
-        {% endfor %}
-      </ul>
-      <div class="space-top-800">
-        <a class="font-size-500" href="/blog">All posts</a> 
-      </div>
-    </div>
-    <div class="flow">
-      <h2 class="color-text-medium font-size-500">Notes</h2>
-      <p class="font-size-400">I post small notes to myself a little more frequently. You can catch the whole feed <a href="/notes">over here</a> if you want.</p>
-      <ul class="teaser-list">
-        {% for note in collections.note.slice(-6) | reverse %}
-        <li>
-          <time class="meta-date">{{ note.date | dateFormatted }}</time>
-          <a href="{{ note.url }}">{{ note.data.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+  <div class="space-top-1000">
+    <h2 class="color-text-medium font-size-500">Latest posts</h2>
+    <ul class="grid-list space-top-800">
+      {% for post in collections.post.slice(-6) | reverse  %}
+
+      <li>
+        <article class="card">
+          <div class="card__image">
+            <img loading="lazy" width="300" height="200" src="{{ post.data.coverImage if post.data.coverImage else '/img/cover-images/cover-placeholder.png' }}" alt="">
+          </div>
+          <div class="card__body">
+            <time class="meta-date">{{ post.date | dateFormatted }}</time>
+            <a href="{{ post.url }}">{{ post.data.title }}</a>
+            <p>{{ post.data.description }}</p>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="space-top-800">
+      <a class="font-size-500" href="/blog">All posts</a> 
     </div>
   </div>
 </div>
