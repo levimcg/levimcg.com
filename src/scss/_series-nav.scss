@@ -1,0 +1,35 @@
+.series-nav {
+  margin-top: var(--size-600);
+  border-top: 1px solid var(--color-text-light);
+
+  &__item {
+    flex-grow: 1;
+    text-decoration: none;
+    padding: var(--size-500);
+  }
+
+  &__item:hover &__link-text {
+    text-decoration: underline;
+  }
+
+  &__label {
+    font-family: var(--font-mono);
+    color: var(--color-text-medium);
+  }
+}
+
+@media (min-width: 45em) {
+  .series-nav {
+    display: flex;
+    margin-top: var(--size-800);
+
+    &__item:first-child {
+      border-right: 1px solid var(--color-text-light);
+    }
+
+    &__link-text {
+      font-size: var(--size-500);
+    }
+  }
+  
+}

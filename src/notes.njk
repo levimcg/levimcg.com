@@ -1,0 +1,44 @@
+---
+title: Notes
+description: Short thoughts and ideas as they come
+layout: layouts/base.njk
+pagination:
+  data: collections.note
+  size: 5
+  reverse: true
+eleventyNavigation:
+  key: Notes
+  parent: Main
+  order: 1
+---
+<div class="container content">
+  <h1 class="sr-only">{{ title }}</h1>
+  <ol class="note-list" role="list">
+    {%- for note in pagination.items -%}
+    <li>
+      <article class="note-teaser">
+        <div class="note-teaser__meta">
+          <time class="meta-date">{{ note.date | dateFormatted }}</time>
+        </div>
+        <div class="note-teaser__body post flow">
+          <a class="note-teaser__title" href="{{ note.url }}">{{ note.data.title }}</a>
+          {{ note.templateContent | safe }}
+
+          <div class="tag-list">
+            <span class="sr-only" id="tags-label">Note tags</span>
+            <ul role="list" aria-labelledby="tags-label">
+              {% for tag in note.data.tags %}
+              {% if tag != "note" %}
+              <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+
+        </div>
+      </article>
+    </li>
+    {%- endfor -%}
+  </ol>
+  {% include "partials/pagination.njk" %}
+</div>

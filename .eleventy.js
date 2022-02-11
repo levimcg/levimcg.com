@@ -3,23 +3,19 @@ const htmlMinifier = require('html-minifier');
 // 11ty plugins
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 
 // Import filters
 const dateFormatted = require('./src/filters/dateFormatted');
-const cssmin = require('./src/filters/cssmin');
-const getYear = require('./src/filters/getYear');
 
 // Shortcodes
 const figure = require('./src/shortcodes/figure');
-const codeSnippet = require('./src/shortcodes/codeSnippet');
 
 module.exports = function(eleventyConfig) {
-  // Merge data E.g. tags on each .md file with directory data "tags" field
-  eleventyConfig.setDataDeepMerge(true);
+
   // Shortcodes
-  eleventyConfig.addShortcode('codeSnippet', codeSnippet);
   eleventyConfig.addShortcode('figure', figure);
 
   // HTML minification
@@ -42,41 +38,35 @@ module.exports = function(eleventyConfig) {
   // NOTE: this plugin is stripping new line/br tags in HTML output.
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
   
   // Filters
-  eleventyConfig.addFilter('cssmin', cssmin);
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
-  eleventyConfig.addFilter('getYear', getYear);
-  eleventyConfig.addFilter('consoleDump', contents => {
-    console.log(contents);
-  });
 
-  // Collections
-  eleventyConfig.addCollection('sortedBooks', collection => {
-    const allBooks = collection.getFilteredByGlob('**/books/*.md');
-    const bookYears = allBooks.map(item => item.date.getFullYear());
-    // Return a deduped array of sorted books using Set
-    return [...new Set(bookYears)];
-  });
-  
-  eleventyConfig.addCollection('latestPosts', collection => {
-    return collection
-      .getFilteredByGlob('**/posts/*.md')
-      .slice(-5)
-      .reverse();
-  });
+  // Creates a list of all tags
+  function filterTagList(tags) {
+    return (tags || []).filter(tag => ["all", "nav", "post", "note"].indexOf(tag) === -1);
+  }
 
-  eleventyConfig.addCollection('books', collection => {
-    return collection
-      .getFilteredByGlob('**/books/*.md');
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    });
+
+    return filterTagList([...tagSet]);
   });
 
   // Files to watch and copy on change
+  eleventyConfig.addPassthroughCopy('src/fonts');
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
-  
-  // Rebuild site when CSS files change
-  eleventyConfig.addWatchTarget('./src/scss/');
+
+  // BrowserSync settings
+  eleventyConfig.setBrowserSyncConfig({
+    open: 'local',
+    files: ['build/css/styles.css']
+  });
   
   // Configure markdown settings
   const markdownLibrary = markdownIt({

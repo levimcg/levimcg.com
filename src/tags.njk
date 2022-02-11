@@ -1,37 +1,44 @@
 ---
+layout: layouts/base.njk
 pagination:
   data: collections
   size: 1
   alias: tag
   filter:
     - post
-    - sortedBooks
-    - latestPosts
-    - artwork
-permalink: /tags/{{ tag | slug }}/
+permalink: /tags/{{ tag | slugify }}/
 ---
-{% extends 'layouts/base.njk' %}
-{% from 'components/post-teaser.njk' import postTeaser %}
+<article class="container content">
+  <h1 class="section-heading">
+    <span class="font-weight-regular color-text-medium">Tagged /</span> {{ tag }}
+  </h1>
 
-{% block main %}
-<article class="mcg-wrapper h-entry">
-  <h1>Posts tagged “{{ tag }}”</h1>
-
-  <ol class="mcg-feed-list">
+  <hr>
+  
   {% set taglist = collections[ tag ] %}
-  {% for post in taglist | reverse %}
-    <li>
-      {{-
-        postTeaser({
-          layout: true,
-          title: post.data.title,
-          date: post.date,
-          url: post.url,
-          external_link: post.data.external_link
-        })
-      -}}
-    </li>
-  {% endfor %}
-  </ol>
-</article>  
-{% endblock main %}
+  <ol class="post-list">
+      {%- for post in taglist | reverse -%}
+      <li>
+        <article class="post-teaser">
+          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+          <div class="post-teaser__meta">
+            {% set type = post.data.tags[0] %}
+            <span class="badge {{ 'badge--secondary' if type == 'note' else 'badge--primary' }}">{{ type | capitalize }}</span>
+            <time datetime="{{ post.date }}" class="post-teaser__date">{{ post.date | dateFormatted }}</time>
+            <div class="tag-list">
+              <ul role="list">
+                {% set denyList = "post note" %}
+                {% for tag in post.data.tags %}
+                {% if tag not in denyList %}
+                <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </article>
+      </li>
+      {%- endfor -%}
+    </ol>
+  
+</article>

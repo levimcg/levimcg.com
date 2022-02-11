@@ -1,0 +1,35 @@
+.site-header {
+  &__logo {
+    width: var(--size-800);
+    height: var(--size-800);
+    color: var(--color-text);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: var(--size-800);
+    padding-bottom: var(--size-800);
+  }
+
+  &__nav ul {
+    padding-left: 0;
+    display: flex;
+  }
+
+  &__nav li:not(:first-child) {
+    margin-left: var(--size-500);
+  }
+
+  &__nav li a {
+    text-decoration: none;
+    color: var(--color-text-medium);
+  }
+
+  &__nav li a[aria-current] {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}
+

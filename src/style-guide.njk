@@ -1,0 +1,157 @@
+---
+title: Style guide
+layout: layouts/base.njk
+---
+<style>
+  .style-guide-item {
+    
+  }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: var(--size-500);
+  }
+
+  .color-grid > * {
+    padding: var(--size-400);
+  }
+
+  .color-bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .color-bg-secondary {
+    background-color: var(--color-secondary);
+  }
+
+  .color-bg-tertiary {
+    background-color: var(--color-tertiary);
+  }
+
+  .color-bg-text {
+    background-color: var(--color-text);
+  }
+
+  .color-bg-text-medium {
+    background-color: var(--color-text-medium);
+  }
+
+  .color-bg-background {
+    background-color: var(--color-background);
+  }
+
+  .style-guide-heading {
+    color: var(--color-text-medium);
+    font-weight: 400;
+  }
+</style>
+<div class="container space-top-900">
+  <div class="post flow">
+    <h1>{{ title }}</h1>
+    
+    <h2 class="style-guide-heading">Colors</h2>
+    <div class="style-guide-item">
+      <div class="color-grid">
+        <div class="color-bg-primary">Primary</div>
+        <div class="color-bg-secondary">Secondary</div>
+        <div class="color-bg-tertiary">Tertiary</div>
+        <div class="color-bg-text">Text</div>
+        <div class="color-bg-text-medium">Text medium</div>
+        <div class="color-bg-background" style="border: 1px solid var(--color-text);">Background</div>
+      </div>
+    </div>
+
+    <h2 class="style-guide-heading">Headings</h2>
+    <h1>Heading 1 Lorem ipsum dolor sit amet consectetur adipisicing</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore, libero. Vero soluta dolore accusamus culpa, sequi labore officia, facere deleniti iure exercitationem perspiciatis quis suscipit maiores cum at? In, animi.</p>
+    <h2>Heading 2 Lorem ipsum dolor sit amet consectetur adipisicing</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ex corporis, excepturi mollitia numquam animi. Magnam, consequuntur est voluptatibus dicta minus vitae earum sunt voluptates inventore mollitia sequi nostrum totam.</p>
+    <h3>Heading 3 Lorem ipsum dolor sit amet consectetur adipisicing</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quas voluptatum eveniet mollitia consectetur ad corrupti numquam, tempora illum repellendus expedita natus enim atque? Optio, quibusdam! Minus optio ducimus ipsam!</p>
+    <h4>Heading 4 ipsum dolor sit amet consectetur adipisicing</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nulla expedita quo velit! Voluptate, possimus culpa debitis fugiat doloribus asperiores minus fugit ipsam in reiciendis a reprehenderit quibusdam harum ducimus.</p>
+
+    <h2 class="style-guide-heading">Blockquote</h2>
+    <blockquote>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus alias quae quos, fugiat minus impedit molestias fugit repellat animi asperiores. Iste at laboriosam facilis beatae nobis illum sapiente deserunt explicabo.</p>
+    </blockquote>
+
+    <h2 class="style-guide-heading">Lists</h2>
+    <ul>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+      <li>Unordered list item</li>
+    </ul>
+
+    <ol>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+      <li>Ordered list item</li>
+    </ol>
+
+    <dl>
+      <dt>Definition term</dt>
+      <dd>Description item</dd>
+      <dt>Definition term</dt>
+      <dd>Description item</dd>
+      <dt>Definition term</dt>
+      <dd>Description item</dd>
+      <dt>Definition term</dt>
+      <dd>Description item</dd>
+    </dl>
+
+    <h2 class="style-guide-heading">Code</h2>
+    <p>Lorem ipsum dolor sit <code>this is code</code> consectetur, adipisicing elit. Asperiores animi in quod quae iure impedit necessitatibus assumenda! Laboriosam vel cum veritatis consequatur in! Neque soluta ducimus excepturi quisquam ut a?</p>
+
+    <pre>
+      <code>
+        const levi = document.querySelector('levi')
+      </code>
+    </pre>
+
+    <h2 class="style-guide-heading">Tables</h2>
+    <table>
+      <caption class="rvt-sr-only">Default table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Services</th>
+          <th scope="col">Description</th>
+          <th scope="col">URL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Item one</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor ea repudiandae in voluptatum ullam. Reiciendis quibusdam dolorem ullam ducimus eveniet deserunt ea natus nihil perspiciatis. Quam libero nihil molestiae!</td>
+          <td><a href="#">A link</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Item two</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor ea repudiandae in voluptatum ullam. Reiciendis quibusdam dolorem ullam ducimus eveniet deserunt ea natus nihil perspiciatis. Quam libero nihil molestiae!</td>
+          <td><a href="#">A link</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Item three</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor ea repudiandae in voluptatum ullam. Reiciendis quibusdam dolorem ullam ducimus eveniet deserunt ea natus nihil perspiciatis. Quam libero nihil molestiae!</td>
+          <td><a href="#">A link</a></td>
+        </tr>
+        <tr>
+          <th scope="row">Item four</th>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, dolor ea repudiandae in voluptatum ullam. Reiciendis quibusdam dolorem ullam ducimus eveniet deserunt ea natus nihil perspiciatis. Quam libero nihil molestiae!</td>
+          <td><a href="#">A link</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="style-guide-heading">Figure</h2>
+    <figure>
+      <img src="https://via.placeholder.com/600x400" alt="">
+      <figcaption>A placeholder image</figcaption>
+    </figure>
+
+
+  </div>
+</div>

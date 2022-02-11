@@ -1,0 +1,18 @@
+{% set mainCollection = tags[0] %}
+{% set previousPost = collections[mainCollection] | getPreviousCollectionItem(page) %}
+{% set nextPost = collections[mainCollection] | getNextCollectionItem(page) %}
+
+<nav class="series-nav">
+  {% if previousPost %}
+  <a class="series-nav__item" href="{{ previousPost.url | url }}">
+    <div class="series-nav__label">Older</div>
+    <div class="series-nav__link-text">{{ previousPost.data.title }}</div>
+  </a>
+  {% endif %}
+  {% if nextPost %}
+  <a class="series-nav__item" href="{{ nextPost.url | url }}">
+    <div class="series-nav__label">Newer</div>
+    <div class="series-nav__link-text">{{ nextPost.data.title }}</div>
+  </a>
+  {% endif %}
+</nav>

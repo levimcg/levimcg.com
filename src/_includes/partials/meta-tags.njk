@@ -1,0 +1,11 @@
+<div class="tag-list">
+  <span class="sr-only" id="tags-label">Post tags</span>
+  <ul role="list" aria-labelledby="tags-label">
+    {% set denyList = "post note" %}
+    {% for tag in tags %}
+    {% if tag not in denyList %}
+    <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+.note-teaser {
+  &__title {
+    font-size: var(--size-600);
+    font-weight: var(--font-weight-regular);
+    text-decoration: none;
+    color: var(--color-text);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  .note-teaser {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: var(--size-600);
+
+    &__body.post .breakout {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__meta time {
+      font-size: var(--size-400);
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+  }
+}
