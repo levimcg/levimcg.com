@@ -1,14 +1,14 @@
+@use "sass:map";
+@use "./tokens" as *;
+  
 :root {
-  --color-black: hsl(256, 29%, 15%);
-  --color-black-medium: hsl(256, 26%, 20%);
-  --color-black-light: hsl(256, 20%, 30%);
-  --color-white: hsl(256, 10%, 95%);
-  --color-white-medium: hsl(256, 10%, 75%);
-  --color-white-light: hsl(256, 10%, 35%);
-  --color-green: hsl(150, 53%, 50%);
-  --color-green-medium: hsl(150, 53%, 75%);
-  --color-red: hsl(355, 62%, 60%);
-  --color-blue: hsl(216, 90%, 65%);
+  @each $key, $value in map.get($tokens, "size") {
+    --size-#{$key}: #{$value};
+  }
+
+  @each $color, $value in map.get($tokens, "color") {
+    --color-#{$color}: #{$value};
+  }
 
   --color-background: var(--color-black);
   --color-background-medium: var(--color-black-medium);
@@ -28,13 +28,4 @@
   --font-weight-regular: 300;
   --font-weight-bold: 600;
 
-  --size-200: 0.25rem;
-  --size-300: 0.75rem;
-  --size-400: 1rem;
-  --size-500: 1.33rem;
-  --size-600: 1.77rem;
-  --size-700: 2.36rem;
-  --size-800: 3.15rem;
-  --size-900: 4.2rem;
-  --size-1000: calc(var(--size-900) * 1.77);
 }
