@@ -20,12 +20,12 @@
     --flow-space: var(--size-400);
   }
 
-  p,
-  ul,
-  ol,
-  dd,
-  dt,
-  img {
+  > p,
+  > ul,
+  > ol,
+  > dd,
+  > dt,
+  > img {
     max-width: 60ch;
     line-height: 1.66;
     color: var(--color-text-medium);

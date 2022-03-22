@@ -50,6 +50,11 @@ blockquote {
   font-style: italic;
 }
 
+blockquote p {
+  font-size: var(--size-600);
+  line-height: 1.2;
+}
+
 time {
   display: inline-block;
 }
@@ -74,8 +79,6 @@ code {
   background-color: var(--color-background-light);
   color: var(--color-text);
   font-family: var(--font-mono);
-  padding-right: .5rem;
-  padding-left: .5rem;
   border-radius: .25rem;
 }
 
@@ -111,7 +114,7 @@ code {
   }
 
   blockquote p {
-    font-size: var(--size-600);
+    font-size: var(--size-700);
     max-width: 40ch;
   }
 
@@ -124,7 +127,7 @@ code {
  * Skip Link
  */
 
- .skip-link {
+.skip-link {
   position: fixed;
   top: -6em;
 }
