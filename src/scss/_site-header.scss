@@ -16,10 +16,7 @@
   &__nav ul {
     padding-left: 0;
     display: flex;
-  }
-
-  &__nav li:not(:first-child) {
-    margin-left: var(--size-500);
+    gap: var(--size-600);
   }
 
   &__nav li a {
