@@ -9,51 +9,20 @@
 @use "./pagination";
 @use "./series-nav";
 @use "./tag-list";
-@use "./note-teaser";
-@use "./feed-lists";
 @use "./post-teaser";
+@use "./feed-lists";
 @use "./post";
 @use "./layout";
 @use "./card";
 
 .meta-date {
   color: var(--color-text-medium);
-  font-size: var(--size-400);
   font-family: var(--font-mono);
+  font-size: var(--size-400);
 }
 
 .section-heading {
   font-size: var(--size-600);
-}
-
-.badge {
-  font-size: var(--size-400);
-  font-family: var(--font-mono);
-  background-color: var(--color-text-light);
-  color: var(--color-text);
-  padding: 0 var(--size-200);
-
-  &--primary {
-    background-color: var(--color-primary);
-  }
-
-  &--secondary {
-    background-color: var(--color-secondary);
-  }
-}
-
-.page-intro {
-  p {
-    font-size: var(--size-600);
-  }
-}
-
-@media (min-width: 45em) {
-  .page-intro {
-    p {
-      font-size: var(--size-800);
-    }
-  }
 }
 
 .avatar {

@@ -2,7 +2,6 @@
  * Layout
  */
  .container {
-  width: 95vw;
   width: clamp(16rem, 95vw, 80rem);
   margin-left: auto;
   margin-right: auto;
@@ -12,20 +11,4 @@
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
-}
-
-.sidebar-layout {
-  display: grid;
-  gap: var(--size-800);
-}
-
-@media (min-width: 45em) {
-  .sidebar-layout {
-    grid-template-columns: 1fr 340px;
-  }
-
-  .sidebar {
-    border-left: 1px solid var(--color-text-light);
-    padding-left: var(--size-800);
-  }
 }

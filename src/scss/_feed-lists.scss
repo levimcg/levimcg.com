@@ -1,24 +1,15 @@
 .post-list {
+  padding-left: 0;
   list-style: "";
-  padding-left: 0;
-  margin-top: 0;
 
   > li {
-    margin-bottom: var(--size-800);
-  }
-}
-
-.note-list {
-  padding-left: 0;
-
-  > li {
-    margin-bottom: var(--size-1000);
+    margin-bottom: var(--size-900);
   }
 }
 
 @media (min-width: 45em) {
-  .note-list > li {
-    margin-bottom: calc(var(--size-900) * 2.5);
+  .post-list > li {
+    margin-bottom: var(--size-1000) ;
   }
 }
 

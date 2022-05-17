@@ -1,9 +1,11 @@
 .post {
   --flow-space: var(--size-600);
+  line-height: 1.66;
+  max-width: 85ch;
+  margin-inline: auto;
 
   h1 {
-    max-width: 25ch;
-    font-weight: 300;
+    margin-top: var(--size-300);
   }
 
   hr,
@@ -13,7 +15,6 @@
 
   & :is(h2, h3, h4, h5, h6) {
     --flow-space: var(--size-900);
-    max-width: 36ch;
   }
 
   & :is(h2, h3, h4, h5, h6) + * {
@@ -25,9 +26,7 @@
   > ol,
   > dd,
   > dt,
-  > img {
-    max-width: 60ch;
-    line-height: 1.66;
+  > td {
     color: var(--color-text-medium);
   }
 
@@ -37,10 +36,6 @@
  
   & > ul {
     padding-left: 20px;
-  }
-
-  pre {
-    max-width: 96ch;
   }
 
   img {
@@ -75,9 +70,17 @@
   }
 
   @media (min-width: 45em) {
+    .breakout {
+      margin-left: calc(-20vw + 20%);
+      margin-right: calc(-20vw + 20%);
+    }
     .breakout figcaption {
       margin-left: var(--size-600);
     }
+  }
+
+  h1 + p {
+    margin-top: var(--size-900);
   }
 
   blockquote {

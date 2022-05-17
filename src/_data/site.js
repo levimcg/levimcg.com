@@ -7,6 +7,10 @@ module.exports = {
   artwork: "https://s3.amazonaws.com/levimcg-artwork",
   links: [
     {
+      title: "Bio",
+      url: "/about/"
+    },
+    {
       title: "Artwork",
       url: "https://levimcg.myshopify.com/"
     },
@@ -28,10 +32,6 @@ module.exports = {
     {
       title: "RSS",
       url: "/feed.xml"
-    },
-    {
-      title: "Style guide",
-      url: "/style-guide"
     }
   ]
 }

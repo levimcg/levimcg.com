@@ -20,21 +20,24 @@ permalink: /tags/{{ tag | slugify }}/
       {%- for post in taglist | reverse -%}
       <li>
         <article class="post-teaser">
-          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
           <div class="post-teaser__meta">
-            {% set type = post.data.tags[0] %}
-            <span class="badge {{ 'badge--secondary' if type == 'note' else 'badge--primary' }}">{{ type | capitalize }}</span>
-            <time datetime="{{ post.date }}" class="post-teaser__date">{{ post.date | dateFormatted }}</time>
+            <time class="meta-date">{{ post.date | dateFormatted }}</time>
+          </div>
+          <div class="post-teaser__body [ flow ]">
+            <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+            <p>{{ post.data.description }}</p>
+
             <div class="tag-list">
-              <ul role="list">
-                {% set denyList = "post note" %}
+              <span class="sr-only" id="tags-label">Post tags</span>
+              <ul role="list" aria-labelledby="tags-label">
                 {% for tag in post.data.tags %}
-                {% if tag not in denyList %}
+                {% if tag != "post" %}
                 <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
                 {% endif %}
                 {% endfor %}
               </ul>
             </div>
+
           </div>
         </article>
       </li>

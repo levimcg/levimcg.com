@@ -1,5 +1,6 @@
 ---
 title: Corita Kent on making
+description: Wise words from Corita Kent on what it means to make stuff
 date: 2022-02-18
 tags:
   - quotes
