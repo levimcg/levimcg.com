@@ -28,8 +28,8 @@ permalink: /tags/{{ tag | slugify }}/
             <p>{{ post.data.description }}</p>
 
             <div class="tag-list">
-              <span class="sr-only" id="tags-label">Post tags</span>
-              <ul role="list" aria-labelledby="tags-label">
+              <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
+              <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
                 {% for tag in post.data.tags %}
                 {% if tag != "post" %}
                 <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>

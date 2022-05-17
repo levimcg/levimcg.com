@@ -17,6 +17,9 @@
   &__links li a {
     text-decoration: none;
     color: var(--color-text-medium);
+    display: inline-block;
+    padding-top: var(--size-300);
+    padding-bottom: var(--size-300);
   }
 }
 
