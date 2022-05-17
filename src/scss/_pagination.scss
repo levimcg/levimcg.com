@@ -1,22 +1,23 @@
 .pagination {
-  ol {
-    list-style: "";
-    padding-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-600);
+
+  a {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: var(--size-300);
   }
 
-  ol li {
-    color: var(--color-text-medium);
+  a:hover {
+    text-decoration: underline;
   }
+}
 
-  ol > li + li {
-    margin-left: var(--size-300);
-  }
-
-  ol li a {
-    display: inline-block;
-    padding: var(--size-300);
+@media (min-width: 45em) {
+  .pagination a {
+    font-size: var(--size-500);
   }
 }

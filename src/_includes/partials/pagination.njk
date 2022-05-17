@@ -1,9 +1,19 @@
 <nav aria-labelledby="my-pagination" class="pagination">
-    <h2 id="my-pagination" class="sr-only">This is my Pagination</h2>
-    {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}">Newer posts</a>
-    {% endif %}
-    {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}">Older posts</a>
-    {% endif %}
-  </nav>
+  <h2 id="my-pagination" class="sr-only">This is my Pagination</h2>
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">
+      <svg class="icon" aria-hidden="true">
+        <use href="#left-arrow"></use>
+      </svg>
+      <span>Newer posts</span>
+    </a>
+  {% endif %}
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">
+      <span>Older posts</span>
+      <svg class="icon" aria-hidden="true">
+        <use href="#right-arrow"></use>
+      </svg>
+    </a>
+  {% endif %}
+</nav>

@@ -15,6 +15,18 @@
 @use "./layout";
 @use "./card";
 
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (min-width: 45rem) {
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
 .meta-date {
   color: var(--color-text-medium);
   font-family: var(--font-mono);
