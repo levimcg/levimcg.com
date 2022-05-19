@@ -1,5 +1,4 @@
 .series-nav {
-  margin-top: var(--size-600);
   border-top: 1px solid var(--color-text-light);
 
   &__item {
@@ -25,7 +24,6 @@
 @media (min-width: 45em) {
   .series-nav {
     display: flex;
-    margin-top: var(--size-800);
 
     &__item {
       flex-basis: 100%;
@@ -39,5 +37,5 @@
       font-size: var(--size-500);
     }
   }
-  
+
 }

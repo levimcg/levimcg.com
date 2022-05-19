@@ -4,6 +4,7 @@ description: I got a good start on my 2022 backyard garden
 date: 2022-05-17
 tags:
   - gardening
+  - notes
 ---
 I'm glad the weather is finally starting to turn and it really feels like Spring. We've had a run of warm days and nights this last week and all my transplants and seedlings are starting to take off. I love all the potential of this time of year.
 
@@ -22,8 +23,8 @@ Here's what I've got that's either already planted or ready to.
 - 10 lettuce
 - 5 arugula
 - 3 purple broccoli
-- 3 marigold 
+- 3 marigold
 - 2 nasturtiums
-- 4 fennel 
+- 4 fennel
 - Lots of radish
 

@@ -1,6 +1,4 @@
 .tag-list {
-  display: flex;
-  align-items: center;
   margin-top: var(--size-500);
 
   ul {
@@ -8,10 +6,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding-left: 0;
-  }
-
-  ul li:not(:last-child) {
-    margin-right: var(--size-400);
+    gap: var(--size-400);
   }
 
   ul li a {
