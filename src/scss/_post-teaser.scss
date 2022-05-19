@@ -3,6 +3,7 @@
     color: var(--color-text);
     font-size: var(--size-600);
     text-decoration: none;
+    line-height: 1.2;
 
     &:hover {
       text-decoration: underline;
@@ -26,6 +27,7 @@
 
     &__title {
       margin-top: 0;
+      font-size: var(--size-700);
     }
   }
 }

@@ -23,6 +23,7 @@
 
 @media (min-width: 45em) {
   .series-nav {
+    --flow-space: var(--size-900);
     display: flex;
 
     &__item {

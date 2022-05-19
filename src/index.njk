@@ -20,7 +20,7 @@ eleventyNavigation:
         </div>
         <div class="post-teaser__body flow">
           <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-          <p>{{ post.data.description }}</p>
+          <p>{{ post.data.description | safe }}</p>
 
           <div class="tag-list">
             <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
