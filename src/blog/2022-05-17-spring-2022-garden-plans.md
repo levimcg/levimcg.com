@@ -12,9 +12,9 @@ Here's what I've got that's either already planted or ready to.
 
 - 10 pepper plants
 - 13 tomato
-- 3 Kale plants
+- 3 kale
 - 2 rows of beets (~ 8-12 beets)
-- 3 Swiss chard
+- 3 swiss chard
 - 4 cilantro
 - 3 thyme
 - 2 oregano
@@ -26,5 +26,5 @@ Here's what I've got that's either already planted or ready to.
 - 3 marigold
 - 2 nasturtiums
 - 4 fennel
-- Lots of radish
+- lots of radish
 
