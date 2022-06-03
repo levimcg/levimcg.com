@@ -1,0 +1,52 @@
+---
+title: New post
+description: Create a new post
+layout: layouts/base.njk
+---
+<div class="container content" style="margin-top: var(--size-600);">
+  <form data-new-post class="flow">
+    <fieldset class="flow">
+      <legend class="sr-only">Create a new post</legend>
+      <div style="max-width: 30ch;">
+        <label for="filename">File name slug</label>
+        <input name="filename" type="text" id="filename">
+      </div>
+      <div>
+        <label for="title">Title</label>
+        <input name="title" type="text" id="title">
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <input name="description" type="text" id="description">
+      </div>
+      <div>
+        <label for="content">Content</label>
+        <textarea name="content" id="content"></textarea>
+      </div>
+    </fieldset>
+    <button type="submit">Post</button>
+  </form>
+</div>
+
+<script>
+  const postForm = document.querySelector('[data-new-post]')
+
+  postForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const postData = new FormData(postForm)
+
+    const template = `---
+title: ${postData.get('title')}
+description: ${postData.get('description')}
+date: ${new Date().toISOString()}
+---
+${postData.get('content')}
+`
+
+    const encodedPost = encodeURIComponent(template)
+    const encodedSlug = encodeURIComponent(postData.get('filename'))
+    const message = `Added+new+post`
+    const githubQueryURL = `https://github.com/levimcg/levimcg.com/new/main/src/blog/?filename=${encodedSlug}.md&value=${encodedPost}&message=${message}`
+    window.location.href = githubQueryURL
+  })
+</script>
