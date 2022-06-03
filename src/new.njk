@@ -46,7 +46,7 @@ ${postData.get('content')}
     const encodedPost = encodeURIComponent(template)
     const encodedSlug = encodeURIComponent(postData.get('filename'))
     const message = `Added+new+post`
-    const githubQueryURL = `https://github.com/levimcg/levimcg.com/new/main/src/blog/?filename=${encodedSlug}.md&value=${encodedPost}&message=${message}`
+    const githubQueryURL = `https://github.com/levimcg/levimcg.com/new/main/src/blog/?filename=blog%2F${encodedSlug}.md&value=${encodedPost}&message=${message}`
     window.location.href = githubQueryURL
   })
 </script>
