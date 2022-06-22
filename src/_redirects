@@ -1,0 +1,2 @@
+# Redirects old "posts" urls
+/posts/*  /blog/:splat

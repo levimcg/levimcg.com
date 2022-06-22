@@ -33,13 +33,13 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-  
+
   // Plugins
   // NOTE: this plugin is stripping new line/br tags in HTML output.
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  
+
   // Filters
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
 
@@ -62,13 +62,14 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/img');
   eleventyConfig.addPassthroughCopy('src/favicon.png');
   eleventyConfig.addPassthroughCopy('src/icon.svg');
+  eleventyConfig.addPassthroughCopy('src/_redirects');
 
   // BrowserSync settings
   eleventyConfig.setBrowserSyncConfig({
     open: 'local',
     files: ['build/css/styles.css']
   });
-  
+
   // Configure markdown settings
   const markdownLibrary = markdownIt({
     html: true,
@@ -80,7 +81,7 @@ module.exports = function(eleventyConfig) {
     permalinkClass: 'mcg-anchor',
     permalinkSymbol: '#'
   });
-  
+
   // Markdown settings for 11ty
   eleventyConfig.setLibrary('md', markdownLibrary);
 
