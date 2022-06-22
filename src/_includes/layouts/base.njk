@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %} - {{ site.title }}</title>
+  {% if page.url == "/new/" %}<meta name="robots" content="noindex">{% endif %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if description %}{{ description | striptags }}{% else %}{{ site.tagline }}{% endif %}" />
   {%- include 'partials/meta-cards.njk' -%}
