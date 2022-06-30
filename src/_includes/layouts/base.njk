@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if description %}{{ description | striptags }}{% else %}{{ site.tagline }}{% endif %}" />
   {%- include 'partials/meta-cards.njk' -%}
+  <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
