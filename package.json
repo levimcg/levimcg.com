@@ -8,8 +8,8 @@
     "clean": "rm -rf build",
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "run-p -c serve sass:dev",
-    "sass:dev": "npx sass src/scss:build/css --watch",
-    "sass:build": "npx sass --style=compressed src/scss:build/css"
+    "sass:dev": "sass src/scss:build/css --watch",
+    "sass:build": "sass --style=compressed src/scss:build/css"
   },
   "author": "",
   "license": "ISC",

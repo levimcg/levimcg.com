@@ -1,9 +1,6 @@
-@use "./fonts";
-@use "./reset";
-@use "./variables";
+@use "./custom-properties";
 @use "./base";
-@use "./prism";
-@use "./utils";
+@use "./utilities";
 @use "./site-header";
 @use "./site-footer";
 @use "./pagination";
@@ -14,19 +11,7 @@
 @use "./post";
 @use "./layout";
 @use "./card";
-@use "./forms";
-
-.icon {
-  width: 1rem;
-  height: 1rem;
-}
-
-@media (min-width: 45rem) {
-  .icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-}
+@use "./icons";
 
 .meta-date {
   color: var(--color-text-medium);

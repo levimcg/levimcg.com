@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "./abstracts/tokens" as *;
+
+:root {
+  @each $key, $value in map.get($tokens, "size") {
+    --size-#{$key}: #{$value};
+  }
+
+  @each $color, $value in map.get($tokens, "color", "palette") {
+    --color-#{$color}: #{$value};
+  }
+
+  @each $color, $value in map.get($tokens, "color", "tokens") {
+    --color-#{$color}: #{$value};
+  }
+
+  @each $key, $value in map.get($tokens, "font", "family") {
+    --font-#{$key}: #{$value};
+  }
+
+  @each $key, $value in map.get($tokens, "font", "weight") {
+    --font-#{$key}: #{$value};
+  }
+}

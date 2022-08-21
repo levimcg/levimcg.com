@@ -118,16 +118,3 @@ code {
     font-size: calc(var(--size-500) * .9);
   }
 }
-
-/**
- * Skip Link
- */
-
-.skip-link {
-  position: fixed;
-  top: -6em;
-}
-
-.skip-link:focus {
-  top: 0;
-}

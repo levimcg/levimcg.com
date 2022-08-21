@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "../abstracts/tokens" as *;
+
+.space-top-200 {
+  margin-top: var(--size-200);
+}
+
+.space-top-300 {
+  margin-top: var(--size-300);
+}
+
+.space-top-400 {
+  margin-top: var(--size-400);
+}
+
+.space-top-500 {
+  margin-top: var(--size-500);
+}
+
+.space-top-600 {
+  margin-top: var(--size-600);
+}
+
+.space-top-700 {
+  margin-top: var(--size-700);
+}
+
+.space-top-800 {
+  margin-top: var(--size-500);
+}
+
+.space-top-900 {
+  margin-top: var(--size-600);
+}
+
+.space-top-1000 {
+  margin-top: var(--size-700);
+}
+
+@media (min-width: 45em) {
+  .space-top-800 {
+    margin-top: var(--size-800);
+  }
+
+  .space-top-900 {
+    margin-top: var(--size-900);
+  }
+
+  .space-top-1000 {
+    margin-top: var(--size-1000);
+  }
+}
