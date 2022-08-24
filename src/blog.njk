@@ -1,35 +1,39 @@
 ---
+title: Blog
+description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
 layout: layouts/base.njk
 pagination:
-  data: collections
-  size: 1
-  alias: tag
-  filter:
-    - post
-permalink: /tags/{{ tag | slugify }}/
+  data: collections.post
+  size: 8
+  reverse: true
+eleventyNavigation:
+  parent: Main
+  key: Blog
+  order: 1
 ---
-{%- set taglist = collections[ tag ] -%}
-
-<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-600);">
+<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
   <div class="post-header">
-    <h1 class="post-header__title"><span class="fw-regular color-text-medium">Tags |</span> {{ tag }}</h1>
-    <div class="post-header__metadata">
-      <span class="post-header__metadata-item"><strong>{{ taglist.length }}</strong> Posts tagged “{{ tag }}”</span>
-    </div>
+    <h1 class="post-header__title">{{ title }}</h1>
+    <p class="post-header__description">{{ description | safe }}</p>
   </div>
 </div>
 
 <div class="bg-color-background-light">
   <div class="container">
+    <div class="post-count">
+      <div class="post-count__number">{{ collections.post.length }}</div>
+      <div class="post-count__label">Posts</div>
+    </div>
+
     <ol class="post-list" role="list">
-      {%- for post in taglist | reverse -%}
+      {%- for post in pagination.items -%}
       <li>
         <article class="post-teaser">
           <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-          <p class="post-teaser__description">{{ post.data.description }}</p>
+          <p class="post-teaser__description">{{ post.data.description | safe }}</p>
           <div class="post-teaser__metadata">
             <time class="date">{{ post.date | dateFormatted }}</time>
-            <span aria-hidden="true">|</span>
+            {% if post.data.tags.length > 1 %}<span aria-hidden="true">|</span>{% endif %}
             <div class="tag-list">
               <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
               <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
@@ -40,11 +44,10 @@ permalink: /tags/{{ tag | slugify }}/
                 {% endfor %}
               </ul>
             </div>
-          </div>
         </article>
       </li>
       {%- endfor -%}
     </ol>
-
+    {% include "partials/pagination.njk" %}
   </div>
- </div>
+</div>

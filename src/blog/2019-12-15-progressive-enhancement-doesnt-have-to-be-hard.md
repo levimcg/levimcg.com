@@ -1,5 +1,5 @@
 ---
-title: Progressive enhancement doesn't have to be hard
+title: Progressive enhancement doesn’t have to be hard
 description: Implementing a strategy for progressive enhancement might be easier than you think
 date: 2019-12-15
 permalink: "blog/progressive-enhancement-doesnt-have-to-be-hard/"
@@ -19,7 +19,7 @@ You can look more closely at [the source code](https://github.com/levimcg/themur
 
 1. Hide the toggle button using the `hidden` attribute in your button markup by default
 2. Remove the `hidden` attribute in the `setUpInitialState` function once you're sure JavaScript is available
-3. That's it! 
+3. That's it!
 
 ```html
 <!-- Toggle button markup -->
@@ -30,7 +30,7 @@ You can look more closely at [the source code](https://github.com/levimcg/themur
 export default class Themur {
   constructor(options) {
     // Call our set up function
-    this.setUpInitialState();	
+    this.setUpInitialState();
   }
 
   setUpInitialState() {

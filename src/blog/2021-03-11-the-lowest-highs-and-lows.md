@@ -1,5 +1,5 @@
 ---
-title: "The lowest highs AND lows"
+title: "The lowest highs"
 description: "My second pandemic birthday is tomorrow and I wasn't ready for it."
 date: 2021-03-11
 tags:

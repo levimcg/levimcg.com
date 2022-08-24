@@ -1,10 +1,10 @@
 .series-nav {
-  border-top: 1px solid var(--color-text-light);
+  border-top: 1px solid var(--color-ruler);
 
   &__item {
     flex-grow: 1;
     text-decoration: none;
-    padding: var(--size-500);
+    padding: var(--space-200);
   }
 
   &__item:hover &__link-text {
@@ -12,7 +12,8 @@
   }
 
   &__label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
+    font-size: var(--fs-000);
     color: var(--color-text-medium);
   }
 
@@ -23,7 +24,7 @@
 
 @media (min-width: 45em) {
   .series-nav {
-    --flow-space: var(--size-900);
+    --flow-space: var(--space-600);
     display: flex;
 
     &__item {
@@ -31,12 +32,7 @@
     }
 
     &__item:not(:first-child) {
-      border-left: 1px solid var(--color-text-light);
-    }
-
-    &__link-text {
-      font-size: var(--size-500);
+      border-left: 1px solid var(--color-ruler);
     }
   }
-
 }

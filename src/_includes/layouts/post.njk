@@ -1,12 +1,32 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="container">
-  <div class="post flow space-top-900">
-    <time class="meta-date">{{ date | dateFormatted }}</time>
-    <h1>{{ title }}</h1>
+<article class="post-container">
+  <div class="post flow">
+    <div class="post-header">
+      <a class="post-header__back-link" href="/blog/">
+        <svg class="icon" aria-hidden="true">
+          <use href="#left-arrow"></use>
+        </svg>
+        <span>Blog</span>
+      </a>
+      <h1 class="post-header__title">{{ title }}</h1>
+      <div class="post-header__metadata">
+        <time class="date">{{ date | dateFormatted }}</time>
+        {% if tags.length > 1 %}<span aria-hidden="true">|</span>{% endif %}
+        <div class="tag-list">
+          <span class="sr-only" id="tags-label-{{ title | slugify }}">Post tags</span>
+          <ul role="list" aria-labelledby="tags-label-{{ title | slugify }}">
+            {% for tag in tags %}
+            {% if tag != "post" %}
+            <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
     {{ content | safe }}
-    {% include "partials/meta-tags.njk" %}
     {% include "partials/prev-next-nav.njk" %}
   </div>
 </article>

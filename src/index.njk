@@ -9,34 +9,13 @@ pagination:
 eleventyNavigation:
   key: Main
 ---
-<div class="container space-top-900">
-  <h1 class="sr-only">{{ title }}</h1>
-  <ol class="post-list" role="list">
-    {%- for post in pagination.items -%}
-    <li>
-      <article class="post-teaser">
-        <div class="post-teaser__meta">
-          <time class="meta-date">{{ post.date | dateFormatted }}</time>
-        </div>
-        <div class="post-teaser__body flow">
-          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-          <p>{{ post.data.description | safe }}</p>
-
-          <div class="tag-list">
-            <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
-            <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
-              {% for tag in post.data.tags %}
-              {% if tag != "post" %}
-              <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
-
-        </div>
-      </article>
-    </li>
-    {%- endfor -%}
-  </ol>
-  {% include "partials/pagination.njk" %}
+<style>
+  strong {
+    color: var(--color-text);
+  }
+</style>
+<div class="container flow" style="--flow-space: var(--space-500); --container-padding-block-start: var(--space-600);">
+  {# <h1 class="sr-only">{{ title }}</h1> #}
+  <p style="font-size: var(--fs-800); line-height: 1.1; letter-spacing: -.05rem; color: var(--color-text-medium); max-width: 25ch;">Hey, <strong>I’m Levi</strong>. I build <strong>fast and accessible websites</strong> that also look great.</p>
+  <p style="color: var(--color-text-medium); font-size: var(--fs-300); font-weight: 300; max-width: 45ch;">I’m a web designer and front-end developer. I'm currently leading the <a href="https://rivet.iu.edu">Design Systems team</a> at Indiana University.</p>
 </div>

@@ -1,11 +1,12 @@
-.color-text {
-  color: var(--color-text);
-}
+@use "sass:map";
+@use "../abstracts/tokens" as *;
 
-.color-text-medium {
-  color: var(--color-text-medium);
-}
+@each $key, $value in map.get($tokens, "color", "tokens") {
+  .color-#{$key} {
+    color: #{$value};
+  }
 
-.color-text-light {
-  color: var(--color-text-light);
+  .bg-color-#{$key} {
+    background-color: #{$value};
+  }
 }

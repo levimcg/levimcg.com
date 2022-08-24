@@ -30,13 +30,13 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-	padding: var(--size-500);
+	padding: var(--space-300);
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: var(--color-background-medium);
+	background: var(--color-text);
 }
 
 /* Inline code */

@@ -9,7 +9,8 @@
     "serve": "ELEVENTY_ENV=dev npx eleventy --serve",
     "start": "run-p -c serve sass:dev",
     "sass:dev": "sass src/scss:build/css --watch",
-    "sass:build": "sass --style=compressed src/scss:build/css"
+    "sass:build": "sass --style=compressed src/scss:build/css",
+    "fonts:copy": "node scripts/fonts.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,9 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@fontsource/source-sans-pro": "^4.5.11",
+    "@fontsource/source-serif-pro": "^4.5.9",
+    "fs-jetpack": "^4.3.1",
     "html-minifier": "^4.0.0",
     "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.4.1",

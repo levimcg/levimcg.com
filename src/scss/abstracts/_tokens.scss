@@ -1,51 +1,41 @@
 @use "sass:map";
 
 $tokens: (
-  size: (
-    200: .25rem,
-    300: .75rem,
-    400: 1rem,
-    500: 1.33rem,
-    600: 1.77rem,
-    700: 2.36rem,
-    800: 3.15rem,
-    900: 4.2rem,
-    1000: 7.43rem
-  ),
   color: (
     palette: (
-      "black": hsl(256, 29%, 15%),
-      "black-medium": hsl(256, 26%, 20%),
-      "black-light": hsl(256, 20%, 30%),
-      "white": hsl(256, 10%, 95%),
-      "white-medium": hsl(256, 10%, 75%),
-      "white-light": hsl(256, 10%, 35%),
-      "green": hsl(150, 53%, 50%),
-      "green-medium": hsl(150, 53%, 75%),
-      "red": hsl(355, 62%, 60%),
-      "blue": hsl(216, 90%, 65%)
+      "black": hsl(256, 25%, 15%),
+      "black-medium": hsl(256, 15%, 35%),
+      "black-light": hsl(256, 8%, 85%),
+      "white": hsl(48, 20%, 92%),
+      "white-light": hsl(48, 20%, 95%),
+      "white-dark": hsl(48, 20%, 89%),
+      "green": hsl(150, 72%, 29%),
+      "green-medium": hsl(143, 52%, 60%),
+      "red": hsl(4, 82%, 49%),
+      "blue": hsl(216, 100%, 42%)
     ),
     tokens: (
-      "background": var(--color-black),
-      "background-medium": var(--color-black-medium),
-      "background-light": var(--color-black-light),
-      "text": var(--color-white),
-      "text-medium": var(--color-white-medium),
-      "text-light": var(--color-white-light),
+      "background": var(--color-white),
+      "background-light": var(--color-white-light),
+      "background-dark": var(--color-white-dark),
+      "text": var(--color-black),
+      "text-medium": var(--color-black-medium),
+      "text-light": var(--color-black-light),
       "primary": var(--color-green),
-      "primary-medium": var(--color-green-medium),
-      "secondary": var(--color-green-blue),
-      "secondary-medium": var(--color-red)
+      "secondary": var(--color-blue),
+      "secondary-medium": var(--color-red),
+      "ruler": var(--color-black-light)
     )
   ),
   font: (
     family: (
-      "sans": "'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "sans": "'Source Sans Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+      "serif": "'Source Serif Pro', serif",
       "mono": "'Source Code Pro', monospace"
     ),
     weight: (
-      "regular": 300,
-      "bold": 600
+      "regular": 400,
+      "bold": 700
     )
   )
 );

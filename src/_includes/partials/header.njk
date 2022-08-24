@@ -1,10 +1,12 @@
 <header class="site-header">
   <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="site-header__inner [ container  ]">
+  <div class="site-header__inner [ container ]">
     <a class="site-header__logo" href="/" aria-label="{{ site.title }}">
-      {% include "partials/logo.njk" %}
+      <svg aria-hidden="true" width="48" height="48">
+        <use href="#logo"></use>
+      </svg>
     </a>
-    {# <nav class="site-header__nav" role="navigation" aria-label="Global">
+    <nav class="site-header__nav" role="navigation" aria-label="Global">
       <ul role="list">
         {%- for item in collections.all | eleventyNavigation("Main") -%}
           <li>
@@ -12,6 +14,6 @@
           </li>
         {%- endfor -%}
       </ul>
-    </nav> #}
+    </nav>
   </div>
 </header>
