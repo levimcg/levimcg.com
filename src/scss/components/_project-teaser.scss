@@ -1,0 +1,18 @@
+.project-teaser {
+  position: relative;
+  background-color: var(--color-text);
+
+  &__body {
+    background-color: var(--color-background);
+    position: absolute;
+    bottom: var(--space-400);
+    left: var(--space-400);
+    padding: var(--space-200);
+    width: 50%;
+  }
+
+  &__title {
+    font-size: var(--fs-300);
+    font-weight: var(--font-regular);
+  }
+}

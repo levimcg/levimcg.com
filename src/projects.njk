@@ -1,15 +1,38 @@
 ---
 title: Projects
-description: A sample of work I have done in the last few years
+description: Some of the design and development work I have done in the last few years.
 layout: layouts/base.njk
 eleventyNavigation:
   parent: Main
   key: Projects
   order: 2
 ---
-<div class="container" style="--container-padding-block-start: var(--space-700);">
+<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
   <div class="post-header">
     <h1 class="post-header__title">{{ title }}</h1>
     <p class="post-header__description">{{ description | safe }}</p>
+  </div>
+</div>
+
+<div class="bg-color-background-light">
+  <div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
+    <ul class="project-list" role="list">
+      {% for project in collections.project %}
+      <li>
+        <div class="project-teaser">
+          <figure class="project-teaser__image">
+            <img src="{{ project.data.coverImage }}" alt="">
+          </figure>
+          <div class="project-teaser__body">
+            <h2 class="project-teaser__title">
+              {{ project.data.title }}
+            </h2>
+            <p class="project-teaser__description">{{ project.data.description }}</p>
+            <a class="button" href="{{ project.url }}">View project</a>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
