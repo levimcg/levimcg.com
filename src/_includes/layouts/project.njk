@@ -2,5 +2,20 @@
 layout: layouts/base.njk
 ---
 <article class="post-container">
-  {{ content | safe }}
+  <div class="post flow">
+    <div class="post-header">
+      <a class="post-header__back-link" href="/projects/">
+        <svg class="icon" aria-hidden="true">
+          <use href="#left-arrow"></use>
+        </svg>
+        <span>Projects</span>
+      </a>
+      <h1 class="post-header__title">{{ title }}</h1>
+      <p class="post-header__description">{{ description }}</p>
+      <div class="post-header__metadata">
+        {# Year completed: <time class="date">{{ yearCompleted }}</time> #}
+      </div>
+    </div>
+    {{ content | safe }}
+  </div>
 </article>
