@@ -1,18 +1,47 @@
 .project-teaser {
   position: relative;
-  background-color: var(--color-text);
 
   &__body {
+    padding: var(--space-400);
     background-color: var(--color-background);
-    position: absolute;
-    bottom: var(--space-400);
-    left: var(--space-400);
-    padding: var(--space-200);
-    width: 50%;
   }
 
   &__title {
-    font-size: var(--fs-300);
-    font-weight: var(--font-regular);
+    font-size: var(--fs-400);
+    line-height: 1.2;
+  }
+
+  &__description {
+    margin-top: var(--space-100);
+    font-family: var(--font-sans);
+    color: var(--color-text-medium);
+  }
+
+  .button {
+    margin-top: var(--space-300);
+  }
+}
+
+@media (min-width: 45rem) {
+  .project-teaser {
+    position: relative;
+
+    &__body {
+      position: absolute;
+      bottom: var(--space-400);
+      left: var(--space-400);
+      width: 50%;
+    }
+
+    .button {
+      transition: all .2s ease;
+      margin-block-start: var(--space-400);
+    }
+
+    .button:hover {
+      background-color: transparent;
+      color: var(--color-primary);
+      transform: scale(1.1);
+    }
   }
 }
