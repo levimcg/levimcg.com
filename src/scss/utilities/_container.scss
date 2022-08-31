@@ -1,9 +1,9 @@
 .container {
-  --container-max-width: 80rem;
-  --container-padding-block-start: var(--space-300);
-  --container-padding-block-end: var(--space-300);
+  --container-max-width: 1140px;
+  --container-padding-block-start: var(--space-200);
+  --container-padding-block-end: var(--space-200);
 
-  max-width: min(var(--container-max-width), calc(100% - var(--space-600)));
+  max-width: min(100% - var(--space-600), var(--container-max-width));
   margin-inline: auto;
   padding-block-start: var(--container-padding-block-start);
   padding-block-end: var(--container-padding-block-end);

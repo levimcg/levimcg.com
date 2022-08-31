@@ -7,7 +7,8 @@
   }
 
   &__title {
-    font-size: var(--fs-400);
+    font-size: var(--fs-300);
+    font-weight: var(--font-regular);
     line-height: 1.2;
   }
 
@@ -19,6 +20,20 @@
 
   .button {
     margin-top: var(--space-300);
+    font-size: var(--fs-000);
+    width: 100%;
+    justify-content: center;
+  }
+
+  &--new::before {
+    content: "NEW!";
+    position: absolute;
+    font-family: var(--font-sans);
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    left: 0;
+    top: var(--space-500);
+    padding: var(--space-000) var(--space-100);
   }
 }
 
@@ -36,6 +51,7 @@
     .button {
       transition: all .2s ease;
       margin-block-start: var(--space-400);
+      width: auto;
     }
 
     .button:hover {

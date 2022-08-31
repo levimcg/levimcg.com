@@ -37,7 +37,7 @@
   .breakout {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
 
     img {
       display: block;
@@ -51,6 +51,10 @@
     }
   }
 
+  * + .breakout {
+    --flow-space: var(--space-600);
+  }
+
   blockquote,
   blockquote + *  {
     --flow-space: var(--space-500);
@@ -58,11 +62,23 @@
 
   @media (min-width: 45em) {
     .breakout {
-      margin-left: calc(-20vw + 20%);
-      margin-right: calc(-20vw + 20%);
+      margin-left: calc(-25vw + 25%);
+      margin-right: calc(-25vw + 25%);
     }
     .breakout figcaption {
       margin-left: var(--size-600);
     }
   }
+}
+
+.post .new-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+.post > * + .new-section,
+.post > .new-section + * {
+  --flow-space: var(--space-600);
 }

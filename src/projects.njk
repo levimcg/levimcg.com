@@ -1,6 +1,6 @@
 ---
 title: Projects
-description: Some of the design and development work I have done in the last few years.
+description: Have a look at some of the design and development work I have done in the last few years.
 layout: layouts/base.njk
 eleventyNavigation:
   parent: Main
@@ -19,7 +19,7 @@ eleventyNavigation:
     <ul class="project-list" role="list" style="margin-top: -6rem;">
       {% for project in collections.project %}
       <li>
-        <div class="project-teaser">
+        <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
           <figure class="project-teaser__image">
             <img src="{{ project.data.coverImage }}" alt="">
           </figure>
