@@ -5,3 +5,12 @@
 @use "./icon";
 @use "./font";
 @use "./color";
+@use "./border";
+
+.flex {
+  display: flex;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}

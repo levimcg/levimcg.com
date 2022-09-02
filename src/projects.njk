@@ -7,14 +7,14 @@ eleventyNavigation:
   key: Projects
   order: 2
 ---
-<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-800);">
+<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-900);">
   <div class="post-header">
-    <h1 class="post-header__title">{{ title }}</h1>
+    <h1 class="post-header__title">{{ title | safe }}</h1>
     <p class="post-header__description">{{ description | safe }}</p>
   </div>
 </div>
 
-<div class="bg-color-background-light">
+<div class="bg-color-background-light border-top-background-dark">
   <div class="container" style="--container-padding-block-end: var(--space-700);">
     <ul class="project-list" role="list" style="margin-top: -6rem;">
       {% for project in collections.project %}

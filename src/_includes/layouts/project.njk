@@ -5,15 +5,25 @@ layout: layouts/base.njk
   <div class="post flow">
     <div class="post-header">
       <a class="post-header__back-link" href="/projects/">
-        <svg class="icon" aria-hidden="true">
-          <use href="#left-arrow"></use>
-        </svg>
         <span>Projects</span>
       </a>
       <h1 class="post-header__title">{{ title }}</h1>
       <p class="post-header__description">{{ description }}</p>
       <div class="post-header__metadata">
-        {# <time class="date">{{ yearCompleted }}</time> #}
+        <dl class="project-info [ flex-grow ]">
+          <div>
+            <dt>My role</dt>
+            <dd>{{ myRole }}</dd>
+          </div>
+          <div>
+            <dt>When</dt>
+            <dd>{{ projectDate }}</dd>
+          </div>
+          <div>
+            <dt>For</dt>
+            <dd>{{ client }}</dd>
+          </div>
+        </dl>
       </div>
     </div>
 

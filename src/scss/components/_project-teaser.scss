@@ -1,5 +1,14 @@
 .project-teaser {
   position: relative;
+  background-color: var(--color-background-light);
+  box-shadow:
+    0 6px 10px hsla(0, 0%, 0%, 0.05),
+    0 10px 14px hsla(0, 0%, 0%, 0.08);
+
+  &__image {
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
 
   &__body {
     padding: var(--space-400);
@@ -14,13 +23,12 @@
 
   &__description {
     margin-top: var(--space-100);
-    font-family: var(--font-sans);
+    line-height: 1.5;
     color: var(--color-text-medium);
   }
 
   .button {
     margin-top: var(--space-300);
-    font-size: var(--fs-000);
     width: 100%;
     justify-content: center;
   }
@@ -37,15 +45,25 @@
   }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 50rem) {
+  .project-list li:nth-child(even) > .project-teaser {
+    flex-direction: row-reverse;
+  }
+
   .project-teaser {
     position: relative;
+    display: flex;
+    align-items: center;
 
     &__body {
-      position: absolute;
-      bottom: var(--space-400);
-      left: var(--space-400);
-      width: 50%;
+      padding: var(--space-600);
+      background-color: transparent;
+      width: 30rem;
+      flex-shrink: 0;
+    }
+
+    &__title {
+      margin-top: 0;
     }
 
     .button {

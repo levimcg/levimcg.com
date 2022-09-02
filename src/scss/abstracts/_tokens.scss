@@ -10,6 +10,7 @@ $tokens: (
       "white-light": hsl(48, 20%, 95%),
       "white-dark": hsl(48, 20%, 89%),
       "green": hsl(150, 72%, 29%),
+      "green-dark": hsl(150, 72%, 18%),
       "green-medium": hsl(143, 52%, 60%),
       "red": hsl(4, 82%, 49%),
       "red-dark": hsl(4, 82%, 35%),
@@ -22,8 +23,8 @@ $tokens: (
       "text": var(--color-black),
       "text-medium": var(--color-black-medium),
       "text-light": var(--color-black-light),
-      "primary": var(--color-red),
-      "primary-dark": var(--color-red-dark),
+      "primary": var(--color-green),
+      "primary-dark": var(--color-green-dark),
       "secondary": var(--color-blue),
       "secondary-medium": var(--color-red),
       "ruler": var(--color-black-light)

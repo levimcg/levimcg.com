@@ -1,34 +1,28 @@
 ---
 title: Rivet Design System
 description: Enterprise design system for a world-renowned research university
-coverImage: https://www.fillmurray.com/1280/640
-myRole: "Project lead, Front-end development, documentation"
-yearCompleted: 2022
-# new: true
+coverImage: /img/projects/rivet/rivet-cover-image.jpg
+myRole: "Project lead"
+projectDate: "2017–Present"
+client: Indiana University
 ---
 ## Background
 
 Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
-
-{% figure {
-  image: 'https://www.fillmurray.com/1280/640',
-  caption: 'The iconic sanctuary, church steeple is the first thing you see',
-  classes: 'breakout'
-} %}
-
-### Audience (who was if for?)
-
-Product and development teams at IU use Rivet to create consistent products and websites faster. By removing the guesswork around usability, accessibility, and branding, it saves designers and developers time allowing them to focus on user needs and solving tough design problems.
-
-### The problem
-
-Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
 <div class="new-section">
   <div class="container">
     test
   </div>
 </div>
+
+### Audience
+
+Product and development teams at IU use Rivet to create consistent products and websites faster. By removing the guesswork around usability, accessibility, and branding, it saves designers and developers time allowing them to focus on user needs and solving tough design problems.
+
+### The problem
+
+Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
 At the time my team was a part of the newly-formed User Experience Office (UXO) and were tasked by the Vice President for Information Technology's office with taking steps to improve the UX of IU's systems and applications. The lack of a consistent, IU-branded pattern library was a clear opportunity to have an impact on accomplishing UXO's goals of improving the consistency, usability, and accessibility of our digital systems. We started initial research and design work on Rivet shortly after in the Spring of 2018.
 
@@ -37,8 +31,6 @@ At the time my team was a part of the newly-formed User Experience Office (UXO) 
 I was the lead of design and development on the project. For the first three month phase, I oversaw a team of UX designers, UX architects, and developers that conducted initial research and design exploration. After the initial exploratory phase, I spent the next six months doing the majority of the front-end development and writing documentation for the first version released in Spring of 2019.
 
 ## Process
-
-### Project kick-off
 
 The project started with a workshop that brought together UX/UI designers, developers, and content specialists stakeholders from various units at the University. The goal of the workshop was to identify the bare minimum requirements for a design system prototype.
 
@@ -65,11 +57,9 @@ The project started with a workshop that brought together UX/UI designers, devel
 
 ## Outcome
 
-### The solution
-
 Version two of Rivet brings a much expanded set of components for both content-driven brochure sites and task-driven applications. It is made up of four main parts: design tokens, utilities, components, and layouts and includes a newly re-design documentation site with completely re-written documentation that is more clear and consistent.
 
-### Quantifiable Results
+### Results
 
 In a 2021 IU Developer survey conducted by the User Experience Office's developer advocate, 65% of developers surveyed at IU reported using or planning to use Rivet in one of their projects. That was a nearly 20% increase compared to the same survey results from 2019.
 
@@ -79,7 +69,7 @@ In addition to the steady increase in adoption by developer, we saw several spec
 
 > Rivet makes it so much easier to make good applications.
 
-### Non-quantitative impact of my work
+### Impact of my work
 
 Since initial release in 2018, Rivet has widely been seen as an exemplar of design systems in the higher education space. As project lead, I have been contacted by and met with several design and development teams at other universities that were trying to get their own design systems projects started.
 

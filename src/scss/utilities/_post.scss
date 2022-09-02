@@ -6,11 +6,13 @@
 .post {
   --post-max-width: 72ch;
 
+  line-height: 1.6;
   max-width: min(var(--post-max-width), 100% - var(--space-600));
   margin-inline: auto;
 
   :is(h1, h2, h3, h4, h5, h6) {
     --flow-space: var(--space-600);
+    scroll-margin-block-start: var(--space-100);
   }
 
   h2 {
@@ -60,6 +62,16 @@
     --flow-space: var(--space-500);
   }
 
+  .heading-anchor {
+    visibility: hidden;
+  }
+
+  :is(h2, h3, h4, h5, h6):hover {
+    .heading-anchor {
+      visibility: visible;
+    }
+  }
+
   @media (min-width: 45em) {
     .breakout {
       margin-left: calc(-25vw + 25%);
@@ -69,16 +81,15 @@
       margin-left: var(--size-600);
     }
   }
-}
 
-.post .new-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  background-color: var(--color-text);
-  color: var(--color-background);
-}
+  .new-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: var(--color-background-dark);
+  }
 
-.post > * + .new-section,
-.post > .new-section + * {
-  --flow-space: var(--space-600);
+  > * + .new-section,
+  > .new-section + * {
+    --flow-space: var(--space-600);
+  }
 }

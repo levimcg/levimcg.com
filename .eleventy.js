@@ -78,7 +78,7 @@ module.exports = function(eleventyConfig) {
     typographer: true
   }).use(markdownItAnchor, {
     permalink: true,
-    permalinkClass: 'mcg-anchor',
+    permalinkClass: 'heading-anchor',
     permalinkSymbol: '#'
   });
 

@@ -43,3 +43,26 @@
   text-decoration: none;
   box-shadow: -6px 6px 0 0 var(--color-primary-dark);
 }
+
+.project-info {
+  display: flex;
+  gap: var(--space-100);
+
+  > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  dt,
+  dd {
+    font-family: var(--font-sans);
+    font-size: var(--fs-000);
+  }
+
+  dt {
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    // font-weight: var(--font-bold);
+  }
+}

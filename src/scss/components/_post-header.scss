@@ -7,10 +7,11 @@
 
   &__back-link {
     font-family: var(--font-sans);
+    font-weight: var(--font-bold);
     font-size: var(--fs-000);
     text-transform: uppercase;
     text-decoration: none;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     &:hover {
@@ -44,7 +45,7 @@
   &__title {
     font-size: var(--fs-800);
     line-height: 1;
-    margin-block-start: var(--space-100);
+    margin-block-start: var(--space-000);
   }
 
   &__description {
