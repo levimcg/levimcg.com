@@ -63,6 +63,15 @@
     color: var(--color-primary);
     text-transform: uppercase;
     letter-spacing: .05rem;
-    // font-weight: var(--font-bold);
+  }
+
+  dd a {
+    color: var(--color-text-medium);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
   }
 }

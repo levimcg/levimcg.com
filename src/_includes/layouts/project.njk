@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="post-container">
+<article class="p-top-700">
   <div class="post flow">
     <div class="post-header">
       <a class="post-header__back-link" href="/projects/">
@@ -19,14 +19,28 @@ layout: layouts/base.njk
             <dt>When</dt>
             <dd>{{ projectDate }}</dd>
           </div>
+          {% if client %}
           <div>
             <dt>For</dt>
             <dd>{{ client }}</dd>
           </div>
+          {% endif %}
+          {% if projectLink %}
+          <div>
+            <dt>Link</dt>
+            <dd>
+              <a href="{{ projectLink }}">{{ projectLink | replace('https://', '') }}</a>
+            </dd>
+          </div>
+          {% endif %}
         </dl>
       </div>
     </div>
+  </div>
 
-    {{ content | safe }}
+  <div class="bg-color-background-light border-top-background-dark m-top-600 p-top-600 p-bottom-600">
+    <div class="post flow">
+      {{ content | safe }}
+    </div>
   </div>
 </article>

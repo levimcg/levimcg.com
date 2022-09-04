@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../abstracts/tokens" as *;
+
+@each $key in map.get($tokens, "space") {
+  .p-top-#{$key} {
+    padding-block-start: var(--space-#{$key});
+  }
+
+  .m-top-#{$key} {
+    margin-block-start: var(--space-#{$key});
+  }
+
+  .p-bottom-#{$key} {
+    padding-block-end: var(--space-#{$key});
+  }
+
+  .m-bottom-#{$key} {
+    margin-block-end: var(--space-#{$key});
+  }
+}

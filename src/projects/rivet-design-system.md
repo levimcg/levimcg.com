@@ -4,17 +4,11 @@ description: Enterprise design system for a world-renowned research university
 coverImage: /img/projects/rivet/rivet-cover-image.jpg
 myRole: "Project lead"
 projectDate: "2017–Present"
-client: Indiana University
+projectLink: https://rivet.iu.edu
 ---
 ## Background
 
 Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
-
-<div class="new-section">
-  <div class="container">
-    test
-  </div>
-</div>
 
 ### Audience
 
@@ -23,6 +17,12 @@ Product and development teams at IU use Rivet to create consistent products and 
 ### The problem
 
 Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
+
+<div class="new-section">
+  <div class="container">
+    test
+  </div>
+</div>
 
 At the time my team was a part of the newly-formed User Experience Office (UXO) and were tasked by the Vice President for Information Technology's office with taking steps to improve the UX of IU's systems and applications. The lack of a consistent, IU-branded pattern library was a clear opportunity to have an impact on accomplishing UXO's goals of improving the consistency, usability, and accessibility of our digital systems. We started initial research and design work on Rivet shortly after in the Spring of 2018.
 
