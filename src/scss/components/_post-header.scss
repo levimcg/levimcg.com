@@ -7,7 +7,6 @@
 
   &__back-link {
     font-family: var(--font-sans);
-    font-weight: var(--font-bold);
     font-size: var(--fs-000);
     text-transform: uppercase;
     text-decoration: none;
@@ -28,7 +27,7 @@
     gap: var(--space-200);
 
     [aria-hidden] {
-      color: var(--color-text-light);
+      color: var(--color-ruler);
     }
   }
 
@@ -49,7 +48,7 @@
   }
 
   &__description {
-    margin-top: var(--space-400);
+    margin-top: var(--space-300);
     font-size: var(--fs-300);
     font-family: var(--font-sans);
     line-height: 1.3;

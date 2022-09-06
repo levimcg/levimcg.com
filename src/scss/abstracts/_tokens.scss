@@ -3,31 +3,35 @@
 $tokens: (
   color: (
     palette: (
-      "black": hsl(256, 25%, 15%),
-      "black-medium": hsl(256, 15%, 35%),
-      "black-light": hsl(256, 8%, 87%),
-      "white": hsl(48, 20%, 92%),
-      "white-light": hsl(48, 20%, 95%),
-      "white-dark": hsl(38, 15%, 90%),
+      "black-000": hsl(205, 5%, 97%),
+      "black-100": hsl(205, 10%, 95%),
+      "black-200": hsl(205, 10%, 85%),
+      "black-300": hsl(205, 40%, 35%),
+      "black-400": hsl(205, 78%, 15%),
+      "white-000": hsl(27, 69%, 97%),
+      "white-100": hsl(27, 50%, 95%),
+      "white-200": hsl(27, 50%, 90%),
+      "white-300": hsl(27, 50%, 95%),
+      "white-400": hsl(27, 50%, 95%),
       "green": hsl(150, 72%, 29%),
       "green-dark": hsl(150, 72%, 18%),
-      "red": hsl(4, 82%, 49%),
+      "red": hsl(4, 94%, 44%),
       "red-dark": hsl(4, 82%, 35%),
       "blue": hsl(216, 100%, 42%),
       "blue-dark": hsl(216, 100%, 30%)
     ),
     tokens: (
-      "background": var(--color-white),
-      "background-light": var(--color-white-light),
-      "background-dark": var(--color-white-dark),
-      "text": var(--color-black),
-      "text-medium": var(--color-black-medium),
-      "text-light": var(--color-black-light),
+      "background": var(--color-white-100),
+      "background-light": var(--color-white-000),
+      "background-dark": var(--color-white-200),
+      "text": var(--color-black-400),
+      "text-medium": var(--color-black-300),
+      "text-light": var(--color-black-200),
       "primary": var(--color-red),
       "primary-dark": var(--color-red-dark),
       "secondary": var(--color-blue),
       "secondary-dark": var(--color-blue-dark),
-      "ruler": var(--color-black-light)
+      "ruler": var(--color-black-200)
     )
   ),
   font: (

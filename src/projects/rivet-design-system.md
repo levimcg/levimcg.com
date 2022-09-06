@@ -18,7 +18,7 @@ Product and development teams at IU use Rivet to create consistent products and 
 
 Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
-<div class="new-section">
+<div class="new-section bg-color-background">
   <div class="container">
     test
   </div>

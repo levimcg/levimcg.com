@@ -1,13 +1,15 @@
 .project-teaser {
   position: relative;
   background-color: var(--color-background-light);
-  box-shadow:
-    0 6px 10px hsla(0, 0%, 0%, 0.05),
-    0 10px 14px hsla(0, 0%, 0%, 0.08);
 
   &__image {
-    aspect-ratio: 3 / 2;
-    object-fit: cover;
+    aspect-ratio: 1 / 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__body {
@@ -25,12 +27,22 @@
     margin-top: var(--space-100);
     line-height: 1.5;
     color: var(--color-text-medium);
+    font-family: var(--font-sans);
   }
 
   .button {
     margin-top: var(--space-300);
     width: 100%;
     justify-content: center;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
   }
 
   &--new::before {
@@ -51,15 +63,17 @@
   }
 
   .project-teaser {
-    position: relative;
     display: flex;
     align-items: center;
 
     &__body {
       padding: var(--space-600);
       background-color: transparent;
-      width: 30rem;
-      flex-shrink: 0;
+    }
+
+    &__body,
+    &__image {
+      width: 50%;
     }
 
     &__title {
@@ -67,7 +81,6 @@
     }
 
     .button {
-      transition: all .2s ease;
       margin-block-start: var(--space-400);
       width: auto;
     }
@@ -75,7 +88,6 @@
     .button:hover {
       background-color: transparent;
       color: var(--color-primary);
-      transform: scale(1.1);
     }
   }
 }
