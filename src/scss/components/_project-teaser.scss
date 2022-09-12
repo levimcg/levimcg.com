@@ -1,6 +1,7 @@
 .project-teaser {
   position: relative;
   background-color: var(--color-background-light);
+  z-index: 1;
 
   &__image {
     aspect-ratio: 1 / 1;
@@ -14,13 +15,27 @@
 
   &__body {
     padding: var(--space-400);
-    background-color: var(--color-background);
   }
 
   &__title {
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
     font-weight: var(--font-regular);
     line-height: 1.2;
+  }
+
+  &__title a {
+    text-decoration: none;
+    color: var(--color-text);
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+    }
   }
 
   &__description {
@@ -30,30 +45,45 @@
     font-family: var(--font-sans);
   }
 
-  .button {
-    margin-top: var(--space-300);
-    width: 100%;
-    justify-content: center;
+  &__cta {
+    --flow-space: var(--space-300);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-000);
+    position: relative;
+    font-family: var(--font-sans);
 
     &::after {
-      position: absolute;
       content: "";
-      top: 0;
-      right: 0;
-      bottom: 0;
+      display: block;
+      background-color: var(--color-primary-light);
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: calc(var(--space-000) * -1);
       left: 0;
+      transition: all .3s ease;
     }
   }
 
-  &--new::before {
-    content: "NEW!";
-    position: absolute;
-    font-family: var(--font-sans);
+  &:hover &__cta {
+    color: var(--color-primary);
+  }
+
+  &:hover &__cta::after {
     background-color: var(--color-primary);
-    color: var(--color-background);
-    left: 0;
-    top: var(--space-500);
-    padding: var(--space-000) var(--space-100);
+  }
+
+  &:hover &__cta svg {
+    transition: all .3s ease;
+  }
+
+  &:hover &__cta > svg {
+    transform: translateX(8px)
+  }
+
+  &:hover &__cta::after {
+    width: calc(100% + 8px);
   }
 }
 
@@ -80,14 +110,16 @@
       margin-top: 0;
     }
 
-    .button {
-      margin-block-start: var(--space-400);
-      width: auto;
+    &__image {
+      background-color: var(--color-text);
+
+      img {
+        transition: all .3s ease;
+      }
     }
 
-    .button:hover {
-      background-color: transparent;
-      color: var(--color-primary);
+    &:hover &__image img {
+      opacity: .2;
     }
   }
 }

@@ -9,30 +9,36 @@ eleventyNavigation:
 ---
 <div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
   <div class="post-header">
+    <a class="post-header__back-link" href="/">
+      <span>Home</span>
+    </a>
     <h1 class="post-header__title">{{ title | safe }}</h1>
     <p class="post-header__description">{{ description | safe }}</p>
   </div>
 </div>
 
-<div class="bg-color-background-light">
-  <div>
-    <ul class="project-list" role="list">
-      {% for project in collections.project %}
-      <li>
-        <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
-          <figure class="project-teaser__image">
-            <img src="{{ project.data.coverImage }}" alt="" loading="lazy">
-          </figure>
-          <div class="project-teaser__body">
-            <h2 class="project-teaser__title">
-              {{ project.data.title }}
-            </h2>
-            <p class="project-teaser__description">{{ project.data.description }}</p>
-            <a class="button" href="{{ project.url }}">View project</a>
+<div class="p-bottom-700 container" style="--container-padding-block-start: 0;">
+  <ul class="project-list" role="list">
+    {% for project in collections.project %}
+    <li>
+      <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
+        <figure class="project-teaser__image">
+          <img src="{{ project.data.coverImage }}" alt="" loading="lazy">
+        </figure>
+        <div class="project-teaser__body flow">
+          <h2 class="project-teaser__title">
+            <a href="{{ project.url }}">{{ project.data.title }}</a>
+          </h2>
+          <p class="project-teaser__description">{{ project.data.description }}</p>
+          <div class="project-teaser__cta">
+            View project
+            <svg class="icon" aria-hidden="true">
+              <use href="#right-arrow"></use>
+            </svg>
           </div>
         </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

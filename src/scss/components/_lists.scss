@@ -16,5 +16,12 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
+  gap: var(--space-700);
+  max-width: 1440px;
 }
+
+// @media (min-width: 50rem) {
+//   .project-list {
+//     gap: 0;
+//   }
+// }

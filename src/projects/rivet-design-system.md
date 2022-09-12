@@ -10,8 +10,6 @@ projectLink: https://rivet.iu.edu
 
 Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
 
-### Audience
-
 Product and development teams at IU use Rivet to create consistent products and websites faster. By removing the guesswork around usability, accessibility, and branding, it saves designers and developers time allowing them to focus on user needs and solving tough design problems.
 
 ### The problem

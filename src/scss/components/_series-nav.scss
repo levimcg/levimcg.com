@@ -4,8 +4,8 @@
   &__item {
     flex-grow: 1;
     text-decoration: none;
-    color: var(--color-text);
     padding: var(--space-200);
+    font-family: var(--font-sans);
   }
 
   &__item:hover &__link-text {
@@ -13,7 +13,6 @@
   }
 
   &__label {
-    font-family: var(--font-sans);
     font-size: var(--fs-000);
     color: var(--color-text-medium);
   }
