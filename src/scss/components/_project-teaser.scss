@@ -1,6 +1,6 @@
 .project-teaser {
   position: relative;
-  background-color: var(--color-background);
+  background-color: var(--color-text);
   z-index: 1;
 
   &__image {
@@ -18,14 +18,13 @@
   }
 
   &__title {
-    font-size: var(--fs-400);
-    font-weight: var(--font-regular);
-    line-height: 1.2;
+    font-size: var(--fs-500);
+    line-height: 1.1;
   }
 
   &__title a {
     text-decoration: none;
-    color: var(--color-text);
+    color: var(--color-accent);
 
     &::after {
       position: absolute;
@@ -41,7 +40,7 @@
   &__description {
     margin-top: var(--space-100);
     line-height: 1.5;
-    color: var(--color-text-medium);
+    color: var(--color-accent);
     font-family: var(--font-sans);
   }
 
@@ -52,6 +51,7 @@
     gap: var(--space-000);
     position: relative;
     font-family: var(--font-sans);
+    color: var(--color-background);
 
     &::after {
       content: "";
@@ -66,12 +66,8 @@
     }
   }
 
-  &:hover &__cta {
-    color: var(--color-primary);
-  }
-
   &:hover &__cta::after {
-    background-color: var(--color-primary);
+    background-color: var(--color-text-medium);
   }
 
   &:hover &__cta svg {
@@ -116,10 +112,6 @@
       img {
         transition: all .3s ease;
       }
-    }
-
-    &:hover &__image img {
-      opacity: .2;
     }
   }
 }

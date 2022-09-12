@@ -1,6 +1,7 @@
 .post {
   --post-max-width: 72ch;
 
+  position: relative;
   line-height: 1.6;
   max-width: min(var(--post-max-width), 100% - var(--space-600));
   margin-inline: auto;
@@ -91,18 +92,19 @@
       margin-left: calc(-25vw + 25%);
       margin-right: calc(-25vw + 25%);
     }
+
     .breakout figcaption {
       margin-left: var(--size-600);
     }
   }
 
-  .new-section {
+  .post-section {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
   }
 
-  > * + .new-section,
-  > .new-section + * {
+  > * + .post-section,
+  > .post-section + * {
     --flow-space: var(--space-600);
   }
 }

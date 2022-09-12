@@ -1,5 +1,5 @@
 .container {
-  --container-max-width: 1240px;
+  --container-max-width: 1280px;
   --container-padding-block-start: var(--space-200);
   --container-padding-block-end: var(--space-200);
 
@@ -7,4 +7,5 @@
   margin-inline: auto;
   padding-block-start: var(--container-padding-block-start);
   padding-block-end: var(--container-padding-block-end);
+  position: relative;
 }
