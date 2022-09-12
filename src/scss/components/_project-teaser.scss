@@ -1,6 +1,6 @@
 .project-teaser {
   position: relative;
-  background-color: var(--color-background-light);
+  background-color: var(--color-background);
   z-index: 1;
 
   &__image {
@@ -56,9 +56,9 @@
     &::after {
       content: "";
       display: block;
-      background-color: var(--color-primary-light);
+      background-color: var(--color-accent);
       width: 100%;
-      height: 3px;
+      height: .25rem;
       position: absolute;
       bottom: calc(var(--space-000) * -1);
       left: 0;

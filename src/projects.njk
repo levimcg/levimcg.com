@@ -17,7 +17,9 @@ eleventyNavigation:
   </div>
 </div>
 
-<div class="p-bottom-700 container" style="--container-padding-block-start: 0;">
+<div class="bg-color-background-light p-top-600 p-bottom-700">
+
+<div class="container" style="--container-padding-block-start: 0;">
   <ul class="project-list" role="list">
     {% for project in collections.project %}
     <li>
@@ -30,15 +32,18 @@ eleventyNavigation:
             <a href="{{ project.url }}">{{ project.data.title }}</a>
           </h2>
           <p class="project-teaser__description">{{ project.data.description }}</p>
-          <div class="project-teaser__cta">
-            View project
-            <svg class="icon" aria-hidden="true">
-              <use href="#right-arrow"></use>
-            </svg>
+          <div class="project-teaser__cta" aria-hidden="true">
+            <span>
+              View project
+              <svg class="icon" aria-hidden="true">
+                <use href="#right-arrow"></use>
+              </svg>
+            </span>
           </div>
         </div>
       </div>
     </li>
     {% endfor %}
   </ul>
+</div>
 </div>
