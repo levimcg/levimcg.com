@@ -1,10 +1,10 @@
 .post {
-  --post-max-width: 72ch;
+  --post-max-width: 840px;
+  margin-inline: auto;
+  max-width: min(var(--post-max-width), 100% - var(--space-600));
 
   position: relative;
   line-height: 1.6;
-  max-width: min(var(--post-max-width), 100% - var(--space-600));
-  margin-inline: auto;
 
   :is(h1, h2, h3, h4, h5, h6) {
     --flow-space: var(--space-600);
@@ -99,8 +99,18 @@
   }
 
   .post-section {
+    background-color: var(--post-section-bg, var(--color-background));
     width: 100vw;
     margin-left: calc(-50vw + 50%);
+
+    * {
+      color: var(--post-section-color, var(--color-text));
+    }
+  }
+
+  .post-section--dark {
+    --post-section-bg: var(--color-text);
+    --post-section-color: var(--color-background);
   }
 
   > * + .post-section,

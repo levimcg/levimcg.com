@@ -11,12 +11,7 @@ const fonts = {
     `source-serif-pro-latin-700-italic.woff`,
     `source-serif-pro-latin-700-italic.woff2`,
     `source-serif-pro-latin-700-normal.woff`,
-    `source-serif-pro-latin-700-normal.woff2`,
-    `source-serif-pro-latin-600-italic.woff`,
-    `source-serif-pro-latin-600-italic.woff2`,
-    `source-serif-pro-latin-600-normal.woff`,
-    `source-serif-pro-latin-600-normal.woff2`,
-
+    `source-serif-pro-latin-700-normal.woff2`
   ],
   'source-sans-pro': [
     `source-sans-pro-latin-400-normal.woff`,

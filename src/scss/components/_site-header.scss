@@ -13,7 +13,7 @@
     transition: color .2s ease;
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-text);
     }
 
     svg {
@@ -36,7 +36,7 @@
       position: relative;
 
       &[aria-current] {
-        color: var(--color-primary);
+        color: var(--color-text);
       }
 
       &[aria-current]::after {
@@ -44,7 +44,7 @@
         display: block;
         height: .25rem;
         width: 100%;
-        background-color: var(--color-primary-light);
+        background-color: var(--color-accent);
         position: absolute;
       }
     }

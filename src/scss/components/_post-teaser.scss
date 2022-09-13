@@ -3,10 +3,11 @@
   &__title {
     text-decoration: none;
     font-size: var(--fs-300);
+    font-weight: var(--font-bold);
     color: var(--color-text);
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-text);
       text-decoration: underline;
     }
   }

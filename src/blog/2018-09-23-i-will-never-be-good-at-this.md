@@ -1,5 +1,5 @@
 ---
-title: "I'll never be good at this"
+title: "I’ll never be good at this"
 description: "Dealing with death and loss"
 date: 2018-09-23
 ---

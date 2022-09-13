@@ -84,7 +84,7 @@
 }
 
 @media (min-width: 50rem) {
-  .project-list li:nth-child(even) > .project-teaser {
+  .project-list li:nth-child(odd) > .project-teaser {
     flex-direction: row-reverse;
   }
 
