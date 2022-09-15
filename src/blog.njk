@@ -11,7 +11,7 @@ eleventyNavigation:
   key: Blog
   order: 1
 ---
-<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
+<div class="container p-top-700 p-bottom-700">
   <div class="post-header">
     <a class="post-header__back-link" href="/">
       <span>← Home</span>
@@ -21,7 +21,7 @@ eleventyNavigation:
   </div>
 </div>
 
-<div class="bg-color-background-light">
+<div class="bg-color-background-light p-bottom-400">
   <div class="container">
     <div class="post-count">
       <div class="post-count__number">{{ collections.post.length }}</div>
@@ -42,7 +42,7 @@ eleventyNavigation:
               <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
                 {% for tag in post.data.tags %}
                 {% if tag != "post" %}
-                <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+                <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
                 {% endif %}
                 {% endfor %}
               </ul>

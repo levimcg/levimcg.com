@@ -9,13 +9,15 @@ pagination:
 eleventyNavigation:
   key: Main
 ---
-<style>
-  strong {
-    color: var(--color-text);
-  }
-</style>
-<div class="container flow" style="--flow-space: var(--space-500); --container-padding-block-start: var(--space-600);">
-  {# <h1 class="sr-only">{{ title }}</h1> #}
-  <p style="font-size: var(--fs-800); line-height: 1.1; letter-spacing: -.05rem; color: var(--color-text-medium); max-width: 25ch;">Hey, <strong>I’m Levi</strong>. I build <strong>fast and accessible websites</strong> that also look great.</p>
-  <p style="color: var(--color-text-medium); font-size: var(--fs-300); font-weight: 300; max-width: 45ch;">I’m a web designer and front-end developer. I'm currently leading the <a href="https://rivet.iu.edu">Design Systems team</a> at Indiana University.</p>
+<div class="container p-top-700 p-bottom-700">
+  <div class="post-header">
+    <h1 class="sr-only">{{ title }}</h1>
+    <p class="post-header__title color-text-medium">Hey, <strong>I’m Levi</strong>. I build <strong>fast and accessible websites</strong> that also look great.</p>
+    <p class="post-header__description">I’m a web designer and front-end developer. I'm currently leading the <a href="https://rivet.iu.edu">Design Systems team</a> at Indiana University.</p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Projects</h2>
+  <p>A combination of projects from my full-time job and freelance design and development work I have done in the last few years.</p>
 </div>

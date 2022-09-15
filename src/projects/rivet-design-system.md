@@ -1,21 +1,17 @@
 ---
 title: Rivet Design System
 description: Enterprise design system for a world-renowned research university
-coverImage: /img/projects/rivet/rivet-cover-image.jpg
+coverImage: /img/projects/rivet/rivet-thumbnail.png
 myRole: "Project lead"
 projectDate: "2017–Present"
 projectLink: https://rivet.iu.edu
+date: 2022-09-13
 ---
-<div class="post-section post-section--dark p-top-500 p-bottom-500">
-  <div class="container">
-    <div class="feature">
+<div class="post-section post-section--dark p-top-500">
+  <div class="container container--narrow">
 		{%- figure {
-			image: coverImage
+			image: "/img/projects/rivet/rivet-cover-image.png"
 		} -%}
-		{%- figure {
-			image: coverImage
-		} -%}
-		</div>
   </div>
 </div>
 
@@ -66,11 +62,11 @@ In addition to the steady increase in adoption by developer, we saw several spec
 
 > Rivet saves developers a lot of time.
 
-> Rivet makes it so much easier to make good applications.
-
 ### Impact of my work
 
 Since initial release in 2018, Rivet has widely been seen as an exemplar of design systems in the higher education space. As project lead, I have been contacted by and met with several design and development teams at other universities that were trying to get their own design systems projects started.
+
+> Rivet makes it so much easier to make good applications.
 
 Rivet has also been cited in several lists and articles as one of the most accessible design systems.
 

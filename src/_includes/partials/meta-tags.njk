@@ -4,7 +4,7 @@
     {% set denyList = "post note" %}
     {% for tag in tags %}
     {% if tag not in denyList %}
-    <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+    <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
     {% endif %}
     {% endfor %}
   </ul>

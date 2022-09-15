@@ -10,7 +10,7 @@ permalink: /tags/{{ tag | slugify }}/
 ---
 {%- set taglist = collections[ tag ] -%}
 
-<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-600);">
+<div class="container p-top-700 p-bottom-600">
   <div class="post-header">
     <h1 class="post-header__title"><span class="fw-regular color-text-medium">Tags |</span> {{ tag }}</h1>
     <div class="post-header__metadata">
@@ -19,7 +19,7 @@ permalink: /tags/{{ tag | slugify }}/
   </div>
 </div>
 
-<div class="bg-color-background-light">
+<div class="bg-color-background-light p-top-400 p-bottom-500">
   <div class="container">
     <ol class="post-list" role="list">
       {%- for post in taglist | reverse -%}

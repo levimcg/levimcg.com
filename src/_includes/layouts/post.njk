@@ -19,7 +19,7 @@ layout: layouts/base.njk
           <ul role="list" aria-labelledby="tags-label-{{ title | slugify }}">
             {% for tag in tags %}
             {% if tag != "post" %}
-            <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+            <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
             {% endif %}
             {% endfor %}
           </ul>

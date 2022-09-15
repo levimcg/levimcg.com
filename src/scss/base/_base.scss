@@ -58,7 +58,7 @@ a {
 
 blockquote {
   padding-inline-start: var(--space-200);
-  border-left: var(--space-000) solid var(--color-ruler);
+  border-left: var(--space-000) solid var(--color-accent);
 
   p {
     font-size: var(--fs-400);
@@ -79,4 +79,8 @@ pre,
 code {
   font-family: var(--font-mono);
   font-size: var(--fs-000);
+}
+
+strong {
+  color: var(--color-text);
 }

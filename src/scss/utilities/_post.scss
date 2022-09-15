@@ -32,10 +32,14 @@
     display: inline-block;
   }
 
-  > p, > li {
+  > p,
+  > ul li,
+  > ol li {
 
     a {
       position: relative;
+      white-space: nowrap;
+      word-break: break-all;
     }
 
     a::after {
@@ -99,7 +103,7 @@
   }
 
   .post-section {
-    background-color: var(--post-section-bg, var(--color-background));
+    background-color: var(--post-section-bg, var(--color-background-light));
     width: 100vw;
     margin-left: calc(-50vw + 50%);
 

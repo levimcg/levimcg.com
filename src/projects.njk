@@ -7,7 +7,7 @@ eleventyNavigation:
   key: Projects
   order: 2
 ---
-<div class="container" style="--container-padding-block-start: var(--space-700); --container-padding-block-end: var(--space-700);">
+<div class="container p-top-700 p-bottom-700">
   <div class="post-header">
     <a class="post-header__back-link" href="/">
       <span>← Home</span>
@@ -17,9 +17,9 @@ eleventyNavigation:
   </div>
 </div>
 
-<div class="container" style="--container-padding-block-start: 0;">
+<div class="container p-bottom-500">
   <ul class="project-list" role="list">
-    {% for project in collections.project %}
+    {% for project in collections.project | reverse %}
     <li>
       <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
         <figure class="project-teaser__image">
