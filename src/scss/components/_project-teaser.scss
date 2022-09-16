@@ -24,7 +24,7 @@
 
   &__title a {
     text-decoration: none;
-    color: var(--color-accent);
+    color: var(--color-background);
 
     &::after {
       position: absolute;
@@ -40,8 +40,7 @@
   &__description {
     margin-top: var(--space-100);
     line-height: 1.5;
-    color: var(--color-accent);
-    font-family: var(--font-sans);
+    color: var(--color-background);
   }
 
   &__cta {
@@ -50,7 +49,6 @@
     align-items: center;
     gap: var(--space-000);
     position: relative;
-    font-family: var(--font-sans);
     color: var(--color-background);
 
     &::after {

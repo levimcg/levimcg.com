@@ -1,5 +1,5 @@
 .post-header {
-  max-width: 85ch;
+  max-width: 1024px;
 
   + * {
     --flow-space: var(--space-600);
@@ -58,6 +58,7 @@
     font-size: var(--fs-800);
     line-height: 1;
     margin-block-start: var(--space-000);
+    letter-spacing: -.1rem;
   }
 
   &__description {
