@@ -1,13 +1,10 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="p-top-700">
-  <div class="post flow">
+<article class="post-layout [ container p-top-700 ]">
+  <div class="post-layout__intro">
     <div class="post-header">
       <a class="post-header__back-link" href="/blog/">
-        {# <svg class="icon" aria-hidden="true">
-          <use href="#left-arrow"></use>
-        </svg> #}
         <span>← Blog</span>
       </a>
       <h1 class="post-header__title">{{ title }}</h1>
@@ -27,7 +24,7 @@ layout: layouts/base.njk
       </div>
     </div>
   </div>
-  <div class="m-top-600 p-bottom-600">
+  <div class=" post-layout__content m-top-600 p-bottom-600">
     <div class="post flow">
       {{ content | safe }}
       {% include "partials/prev-next-nav.njk" %}

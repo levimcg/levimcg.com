@@ -2,6 +2,7 @@
 title: IU gateway
 description: Redesign of the Indiana University gateway website
 coverImage: https://www.fillmurray.com/1200/800
+heroImage: /img/projects/iu-gateway/iu-gateway-hero-image.webp
 myRole: "Project lead, UX/UI Designer"
 projectDate: "2020"
 projectLink: https://iu.edu
@@ -10,6 +11,8 @@ date: 2020-09-13
 ## Background
 
 iu.edu is Indiana University's (IU) system-wide gateway website where prospective students and their parents can go to find information about any of IU’s nine campuses.
+
+<div style="grid-column: 3 / 4;">Test note</div>
 
 ### Audience
 
@@ -43,7 +46,7 @@ For the wireframes we focused on a small modular set of design patterns that cou
 
 At the same time wireframes were being created, the development team worked to first create a proxy data store we could use to aggregate data from external systems and feed it to our new site via a consistent application programming interface (API)
 
-### What were the deliverables
+### Deliverables
 
 With wireframes in place, I created a set of high fidelity visual design mockups for each of the main page types on the site. In addition to finalizing the visual design before developer hand-off, the UI mockups also gave our team the opportunity to pilot new component and patterns for the next version of [our design system](https://rivet.iu.edu).
 
@@ -59,11 +62,11 @@ In addition to the new user-facing site, the development team build a new API to
 
 (screenshots of mobile app explore content)
 
-### Quantifiable Results
+### Results
 
 In the months after the new gateway launch, the analytics team saw a 110% increase in organic search traffic. The newly designed site and content strategy also led to a 124% increase in referrals to the main IU admissions website.
 
-### Impact of my work
+### Impact
 
 After launch the team I led was partially dissolved to move on to work on other COVID-19 response projects. That included me going back to resume work on version two of [our design system Rivet](link to Rivet case study). The team that took over the design and development continued to build on the design styles and patterns we established, including consolidating the main university COVID-19 information site in the new gateway.
 

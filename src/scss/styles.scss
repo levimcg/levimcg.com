@@ -47,12 +47,8 @@
 
 .project-info {
   display: flex;
-  gap: var(--space-100);
-
-  > * {
-    flex-grow: 1;
-    flex-basis: 0;
-  }
+  gap: var(--space-400);
+  flex-direction: column;
 
   dt,
   dd {
@@ -62,7 +58,9 @@
 
   dt {
     text-transform: uppercase;
+    font-family: var(--font-mono);
     letter-spacing: .05rem;
+    color: var(--color-text-medium);
   }
 
   dd a {
@@ -83,7 +81,7 @@
 
 @media (min-width: 45rem) {
   .feature {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
     align-items: center;
   }
 }

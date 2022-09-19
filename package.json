@@ -19,6 +19,8 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@fontsource/public-sans": "^4.5.10",
+    "@fontsource/source-code-pro": "^4.5.12",
     "@fontsource/source-sans-pro": "^4.5.11",
     "@fontsource/source-serif-pro": "^4.5.9",
     "fs-jetpack": "^4.3.1",

@@ -1,20 +1,13 @@
 ---
 title: Rivet Design System
-description: Enterprise design system for a world-renowned research university
+description: Creating an enterprise design system for a world-renowned research university
 coverImage: /img/projects/rivet/rivet-thumbnail.png
+heroImage: /img/projects/rivet/rivet-hero-image.webp
 myRole: "Project lead"
 projectDate: "2017–Present"
 projectLink: https://rivet.iu.edu
 date: 2022-09-13
 ---
-<div class="post-section post-section--dark p-top-500">
-  <div class="container container--narrow">
-		{%- figure {
-			image: "/img/projects/rivet/rivet-cover-image.png"
-		} -%}
-  </div>
-</div>
-
 ## Background
 
 Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
@@ -25,6 +18,22 @@ Product and development teams at IU use Rivet to create consistent products and 
 
 Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
+<div class="post-layout__hero p-top-500 m-top-600 p-bottom-400 bg-color-green-200">
+	<div class="container">
+		<div class="feature">
+			{%- figure {
+				image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp"
+			} -%}
+			{%- figure {
+				image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp"
+			} -%}
+			{%- figure {
+				image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp"
+			} -%}
+		</div>
+	</div>
+</div>
+
 At the time my team was a part of the newly-formed User Experience Office (UXO) and were tasked by the Vice President for Information Technology's office with taking steps to improve the UX of IU's systems and applications. The lack of a consistent, IU-branded pattern library was a clear opportunity to have an impact on accomplishing UXO's goals of improving the consistency, usability, and accessibility of our digital systems. We started initial research and design work on Rivet shortly after in the Spring of 2018.
 
 ### My Role
@@ -33,22 +42,23 @@ I was the lead of design and development on the project. For the first three mon
 
 ## Process
 
-The project started with a workshop that brought together UX/UI designers, developers, and content specialists stakeholders from various units at the University. The goal of the workshop was to identify the bare minimum requirements for a design system prototype.
+The project started with a workshop that brought together UX/UI designers, developers, and content specialists stakeholders from various units at the University. The goal of the workshop was to identify the bare minimum requirements for a design system prototype. We set constraint of three months to develop the initial design system prototype. At the end of three months we would present to the prototype to our leadership team and decided whether or not to continue working toward a full version one.
 
-- Set constraint of 3 months for a prototype
-- Prototype was successful enough to get sign off on building a full v1
-- Set a goal to have v1 ready to launch in six months
-	- I was given permission to focus full-time for the six month period
-- I did the bulk of the design and development work for v1 with periodic review with members from the initial exploratory team.
-- Spring of 2018 we held our first _town hall_ meeting to share progress and demo components and documentation for v1
-- Released v1 in May of 2018
-	- Adoption was slow at first but started to tick up through 2018 and in to 2019
-	- Additional components, held workshops, created *Add-ons*
-- Started planning for v2 in late 2019
-	- In collaboration with Office of Vice President of Communications and Marketing
-	- Expanded the scope to be flexible to apply to sites and applications.
-- Work put on hold during pandemic, but resumed in spring 2021
-- Released v2 summer of 2022
+The prototype we produced was successful enough to get permission from leadership for me to focus full-time for the next six months building version one. In late spring of 2018 we publish v1.0.0 of the design system and held our fist _town hall_ discussion introducing the design system.
+
+## Adoption and planning for v2
+
+Adoption of Rivet grew slowly through the second half of 2018 and then started to tick up. By late 2019 Rivet was the default front-end starting point for all new software development projects in the University Information Technology Services (UITS) unit at IU.
+
+By late 2019 we began planning for version two of Rivet in collaboration with the Office of Vice President of Communications and Marketing. The goal for version two was to expand the design system to be flexible enough to all of IU's digital properties including static content-focused websites and applications.
+
+<div class="post-layout__hero p-top-500 m-top-600">
+	<div class="container">
+		{%- figure {
+			image: "/img/projects/rivet/rivet-components-and-layouts.webp"
+		} -%}
+	</div>
+</div>
 
 ## Outcome
 
@@ -62,7 +72,7 @@ In addition to the steady increase in adoption by developer, we saw several spec
 
 > Rivet saves developers a lot of time.
 
-### Impact of my work
+### Impact
 
 Since initial release in 2018, Rivet has widely been seen as an exemplar of design systems in the higher education space. As project lead, I have been contacted by and met with several design and development teams at other universities that were trying to get their own design systems projects started.
 

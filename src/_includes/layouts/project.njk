@@ -1,46 +1,52 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="p-top-700">
-  <div class="post flow">
+<article class="post-layout [ container p-top-700 ]">
+  <div class="post-layout__intro">
     <div class="post-header">
       <a class="post-header__back-link" href="/projects/">
         <span>← Projects</span>
       </a>
       <h1 class="post-header__title">{{ title }}</h1>
       <p class="post-header__description">{{ description }}</p>
-      {# <div class="post-header__metadata">
-        <dl class="project-info [ flex-grow ]">
-          <div>
-            <dt>My role</dt>
-            <dd>{{ myRole }}</dd>
-          </div>
-          <div>
-            <dt>When</dt>
-            <dd>{{ projectDate }}</dd>
-          </div>
-          {% if client %}
-          <div>
-            <dt>For</dt>
-            <dd>{{ client }}</dd>
-          </div>
-          {% endif %}
-          {% if projectLink %}
-          <div>
-            <dt>Link</dt>
-            <dd>
-              <a href="{{ projectLink }}">{{ projectLink | replace('https://', '') }}</a>
-            </dd>
-          </div>
-          {% endif %}
-        </dl>
-      </div> #}
     </div>
   </div>
-
-  <div class="m-top-600 p-bottom-600">
-    <div class="post flow">
-      {{ content | safe }}
+  {% if heroImage %}
+  <div class="post-layout__hero post-layout__hero--dark p-top-500 m-top-600">
+    <div class="container container--narrow">
+      {%- figure {
+        image: heroImage
+      } -%}
     </div>
+  </div>
+  {% endif %}
+  <div class="post-layout__sidebar [ p-top-500 ]">
+    <dl class="project-info p-top-000">
+      <div>
+        <dt>My role</dt>
+        <dd>{{ myRole }}</dd>
+      </div>
+      <div>
+        <dt>When</dt>
+        <dd>{{ projectDate }}</dd>
+      </div>
+      {% if client %}
+      <div>
+        <dt>For</dt>
+        <dd>{{ client }}</dd>
+      </div>
+      {% endif %}
+      {% if projectLink %}
+      <div>
+        <dt>Link</dt>
+        <dd>
+          <a href="{{ projectLink }}">{{ projectLink | replace('https://', '') }}</a>
+        </dd>
+      </div>
+      {% endif %}
+    </dl>
+  </div>
+  <div class="post-layout__content post flow p-top-500 p-bottom-600">
+    {{ content | safe }}
   </div>
 </article>
