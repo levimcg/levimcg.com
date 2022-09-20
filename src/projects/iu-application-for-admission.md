@@ -1,7 +1,7 @@
 ---
 title: IU Application for Admission
 description: Redesign of the common application for admission for all of IU's nine campuses
-coverImage: https://www.fillmurray.com/1200/800
+thumbnailImage: /img/projects/iu-application-for-admission/iu-application-for-admission-thumbnail.png
 myRole: "UX/UI Designer"
 projectDate: "2017"
 projectLink: https://apply.iu.edu

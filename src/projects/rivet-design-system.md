@@ -1,8 +1,9 @@
 ---
 title: Rivet Design System
 description: Creating an enterprise design system for a world-renowned research university
-coverImage: /img/projects/rivet/rivet-thumbnail.png
+thumbnailImage: /img/projects/rivet/rivet-thumbnail.png
 heroImage: /img/projects/rivet/rivet-hero-image.webp
+heroImageAltText: "Screenshots of the Rivet home page mocked up in a web browser"
 myRole: "Project lead"
 projectDate: "2017–Present"
 projectLink: https://rivet.iu.edu
@@ -22,13 +23,16 @@ Outside of a set of content management system (CMS) templates that were being us
 	<div class="container">
 		<div class="feature">
 			{%- figure {
-				image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp"
+				image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp",
+				altText: "The Rivet components page mocked up on a mobile phone"
 			} -%}
 			{%- figure {
-				image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp"
+				image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp",
+				altText: "The Rivet layouts page mocked up on a mobile phone"
 			} -%}
 			{%- figure {
-				image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp"
+				image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp",
+				altText: "The Rivet utilities page mocked up on a mobile phone"
 			} -%}
 		</div>
 	</div>
@@ -55,7 +59,8 @@ By late 2019 we began planning for version two of Rivet in collaboration with th
 <div class="post-layout__hero p-top-500 m-top-600">
 	<div class="container">
 		{%- figure {
-			image: "/img/projects/rivet/rivet-components-and-layouts.webp"
+			image: "/img/projects/rivet/rivet-components-and-layouts.webp",
+			altText: "A web page showing filterable lists of components and CSS utilities"
 		} -%}
 	</div>
 </div>
@@ -80,8 +85,8 @@ Since initial release in 2018, Rivet has widely been seen as an exemplar of desi
 
 Rivet has also been cited in several lists and articles as one of the most accessible design systems.
 
-- [Web Accessible Code Libraries and Design Patterns](http://www.webaxe.org/web-accessible-code-library-design-systems-patterns/)
-- [Stark - Examples of the best design systems that focuses more on accessibility.](https://www.getstark.co/library/design-systems)
+- [webaxe.org](http://www.webaxe.org/web-accessible-code-library-design-systems-patterns/) — Web Accessible Code Libraries and Design Patterns
+- [Stark](https://www.getstark.co/library/design-systems) — Examples of the best design systems that focus on accessibility.
 
 ### Lessons learned
 
