@@ -81,6 +81,15 @@ code {
   font-size: var(--fs-000);
 }
 
+code {
+  color: var(--color-text);
+  position: relative;
+  white-space: nowrap;
+  word-break: break-all;
+  background-color: hsl(4, 80%, 94%);
+  padding-inline: 2px;
+}
+
 strong {
   color: var(--color-text);
 }

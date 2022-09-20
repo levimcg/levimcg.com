@@ -1,5 +1,7 @@
-{% set previousPost = collections.post | getPreviousCollectionItem(page) %}
-{% set nextPost = collections.post | getNextCollectionItem(page) %}
+{% macro previousNextNav(collection, page) %}
+
+{% set previousPost = collection | getPreviousCollectionItem(page) %}
+{% set nextPost = collection | getNextCollectionItem(page) %}
 
 <nav class="series-nav">
   {% if previousPost %}
@@ -15,3 +17,4 @@
   </a>
   {% endif %}
 </nav>
+{% endmacro %}

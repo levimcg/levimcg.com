@@ -9,31 +9,6 @@
   color: var(--color-text-medium);
 }
 
-.post-count {
-  margin-top: calc(var(--space-300) * -1);
-  display: inline-block;
-
-  &__number {
-    font-family: var(--font-sans);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    width: var(--space-500);
-    height: var(--space-500);
-    background-color: var(--color-accent);
-    color: var(--color-text);
-    font-weight: var(--font-bold);
-  }
-
-  &__label {
-    font-family: var(--font-sans);
-    font-size: var(--fs-000);
-    color: var(--color-text-medium);
-    text-transform: uppercase;
-  }
-}
-
 .button {
   display: inline-flex;
   border: 2px solid var(--color-text);

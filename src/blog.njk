@@ -11,23 +11,21 @@ eleventyNavigation:
   key: Blog
   order: 1
 ---
-<div class="container p-top-700 p-bottom-700">
+<div class="container p-top-700 p-bottom-600">
   <div class="post-header">
     <a class="post-header__back-link" href="/">
       <span>← Home</span>
     </a>
     <h1 class="post-header__title">{{ title }}</h1>
     <p class="post-header__description">{{ description | safe }}</p>
+    <div class="post-header__metadata">
+      <span class="post-header__metadata-item"><strong>{{ collections.post.length }}</strong> Posts</span>
+    </div>
   </div>
 </div>
 
-<div class="bg-color-background-light p-bottom-400">
+<div class="bg-color-background-light p-top-200 p-bottom-500">
   <div class="container">
-    <div class="post-count">
-      <div class="post-count__number">{{ collections.post.length }}</div>
-      <div class="post-count__label">Posts</div>
-    </div>
-
     <ol class="post-list" role="list">
       {%- for post in pagination.items -%}
       <li>

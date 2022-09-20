@@ -1,6 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
+{% from 'partials/prev-next-nav.njk' import previousNextNav %}
+
 <article class="post-layout [ container p-top-700 ]">
   <div class="post-layout__intro">
     <div class="post-header">
@@ -27,7 +29,7 @@ layout: layouts/base.njk
   <div class=" post-layout__content m-top-600 p-bottom-600">
     <div class="post flow">
       {{ content | safe }}
-      {% include "partials/prev-next-nav.njk" %}
+      {{ previousNextNav(collections.post, page) }}
     </div>
   </div>
 </article>
