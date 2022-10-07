@@ -1,7 +1,7 @@
 @use "sass:map";
-@use "../abstracts/tokens" as *;
+@use "../abstracts" as *;
 
-@each $key in map.get($tokens, "space") {
+@each $key in $scale {
   .p-top-#{$key} {
     padding-block-start: var(--space-#{$key});
   }

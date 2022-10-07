@@ -9,42 +9,21 @@ pagination:
 permalink: /tags/{{ tag | slugify }}/
 ---
 {%- set taglist = collections[ tag ] -%}
-
-<div class="container p-top-700 p-bottom-600">
-  <div class="post-header">
-    <h1 class="post-header__title"><span class="fw-regular color-text-medium">Tags |</span> {{ tag }}</h1>
-    <div class="post-header__metadata">
-      <span class="post-header__metadata-item"><strong>{{ taglist.length }}</strong> Posts tagged “{{ tag }}”</span>
-    </div>
-  </div>
-</div>
-
-<div class="bg-color-background-light p-top-400 p-bottom-500">
-  <div class="container">
-    <ol class="post-list" role="list">
-      {%- for post in taglist | reverse -%}
-      <li>
-        <article class="post-teaser">
-          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-          <p class="post-teaser__description">{{ post.data.description }}</p>
-          <div class="post-teaser__metadata">
-            <time class="date">{{ post.date | dateFormatted }}</time>
-            <span aria-hidden="true">|</span>
-            <div class="tag-list">
-              <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
-              <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
-                {% for tag in post.data.tags %}
-                {% if tag != "post" %}
-                <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
-                {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </article>
-      </li>
-      {%- endfor -%}
-    </ol>
-
-  </div>
- </div>
+<h1><span>Tags |</span> {{ tag }}</h1>
+<ol role="list">
+  {%- for post in taglist | reverse -%}
+  <li>
+    <article>
+      <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+      <p class="post-teaser__description">{{ post.data.description }}</p>
+      <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
+        {% for tag in post.data.tags %}
+        {% if tag != "post" %}
+        <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </article>
+  </li>
+  {%- endfor -%}
+</ol>

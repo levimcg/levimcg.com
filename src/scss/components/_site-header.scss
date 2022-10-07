@@ -6,7 +6,7 @@
   }
 
   &__logo {
-    color: var(--color-text-medium);
+    color: var(--color-text-muted);
     display: block;
     width: var(--space-500);
     height: var(--space-500);
@@ -31,8 +31,8 @@
     li a {
       text-decoration: none;
       font-family: var(--font-sans);
-      font-size: var(--fs-100);
-      color: var(--color-text-medium);
+      font-size: var(--font-size-100);
+      color: var(--color-text-muted);
       position: relative;
 
       &[aria-current] {
@@ -44,7 +44,7 @@
         display: block;
         height: .25rem;
         width: 100%;
-        background-color: var(--color-accent);
+        background-color: var(--color-accent-primary);
         position: absolute;
       }
     }

@@ -11,44 +11,7 @@ eleventyNavigation:
   key: Blog
   order: 1
 ---
-<div class="container p-top-700 p-bottom-600">
-  <div class="post-header">
-    <a class="post-header__back-link" href="/">
-      <span>← Home</span>
-    </a>
-    <h1 class="post-header__title">{{ title }}</h1>
-    <p class="post-header__description">{{ description | safe }}</p>
-    <div class="post-header__metadata">
-      <span class="post-header__metadata-item"><strong>{{ collections.post.length }}</strong> Posts</span>
-    </div>
-  </div>
-</div>
-
-<div class="bg-color-background-light p-top-200 p-bottom-500">
-  <div class="container">
-    <ol class="post-list" role="list">
-      {%- for post in pagination.items -%}
-      <li>
-        <article class="post-teaser">
-          <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-          <p class="post-teaser__description">{{ post.data.description | safe }}</p>
-          <div class="post-teaser__metadata">
-            <time class="date">{{ post.date | dateFormatted }}</time>
-            {% if post.data.tags.length > 1 %}<span aria-hidden="true">|</span>{% endif %}
-            <div class="tag-list">
-              <span class="sr-only" id="tags-label-{{ loop.index }}">Post tags</span>
-              <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
-                {% for tag in post.data.tags %}
-                {% if tag != "post" %}
-                <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
-                {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-        </article>
-      </li>
-      {%- endfor -%}
-    </ol>
-    {% include "partials/pagination.njk" %}
-  </div>
-</div>
+<a href="/">
+  <span>← Home</span>
+</a>
+<h1>{{ title }}</h1>

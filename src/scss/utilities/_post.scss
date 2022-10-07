@@ -1,48 +1,3 @@
-.post-layout {
-  &__hero {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    background-color: var(--hero-area-bg, var(--color-background-light));
-
-    * {
-      color: var(--hero-area-color, var(--color-text));
-    }
-  }
-
-  &__hero + * {
-    --flow-space: var(--space-600);
-  }
-
-  &__hero--dark {
-    --hero-area-bg: var(--color-text);
-    --hero-area-color: var(--color-background);
-  }
-}
-
-@media (min-width: 65rem) {
-  .post-layout {
-    display: grid;
-    grid-template-columns: 1fr min(800px, 100%) 1fr;
-    gap: 0 var(--space-400);
-
-    &__intro {
-      grid-column: 1 / 3;
-    }
-
-    &__hero {
-      grid-column: 1 / -1;
-    }
-
-    &__sidebar {
-      grid-column: 1 / auto;
-    }
-
-    &__content {
-      grid-column: 2 / auto;
-    }
-  }
-}
-
 .post {
   position: relative;
   line-height: 1.6;
@@ -54,19 +9,19 @@
   }
 
   h2 {
-    font-size: var(--fs-300);
+    font-size: var(--font-size-300);
   }
 
   h3 {
-    font-size: var(--fs-200);
+    font-size: var(--font-size-200);
   }
 
   h4 {
-    font-size: var(--fs-200);
+    font-size: var(--font-size-200);
   }
 
   :where(p, li, dd, dt, figcaption, time) {
-    color: var(--color-text-medium);
+    color: var(--color-text-muted);
   }
 
   h1 + time {
@@ -92,30 +47,9 @@
       left: -.25rem;
       width: calc(100% + .5rem);
       height: var(--space-300);
-      background-color: var(--color-accent);
+      background-color: var(--color-accent-primary);
       z-index: -1;
     }
-  }
-
-  .breakout {
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    aspect-ratio: 16/9;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    figcaption {
-      margin-left: var(--size-300);
-    }
-  }
-
-  * + .breakout {
-    --flow-space: var(--space-600);
   }
 
   blockquote,
@@ -130,17 +64,6 @@
   :is(h2, h3, h4, h5, h6):hover {
     .heading-anchor {
       visibility: visible;
-    }
-  }
-
-  @media (min-width: 55em) {
-    .breakout {
-      margin-left: calc(-25vw + 25%);
-      margin-right: calc(-25vw + 25%);
-    }
-
-    .breakout figcaption {
-      margin-left: var(--size-600);
     }
   }
 }

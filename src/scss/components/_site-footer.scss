@@ -2,7 +2,7 @@
   background-color: var(--color-background);
 
   &__copyright {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
   }
 
   &__links {
@@ -13,9 +13,9 @@
   }
 
   &__links li a {
-    font-family: var(--font-sans);
+    font-family: var(--font-family-sans);
     text-decoration: none;
-    color: var(--color-text-medium);
+    color: var(--color-text-muted);
   }
 }
 
@@ -35,7 +35,7 @@
 
     &__copyright,
     &__links li a {
-      font-size: var(--fs-000);
+      font-size: var(--font-size-000);
     }
   }
 }

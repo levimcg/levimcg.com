@@ -4,8 +4,8 @@ html {
 }
 
 body {
-  font-size: var(--fs-100);
-  font-family: var(--font-sans);
+  font-size: var(--font-size-100);
+  font-family: var(--font-family-sans);
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -20,36 +20,36 @@ main {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  font-weight: var(--font-bold);
+  font-weight: var(--font-weight-bold);
 }
 
 h1 {
-  font-size: var(--fs-600);
+  font-size: var(--font-size-600);
   line-height: 1.1;
 }
 
 h2 {
-  font-size: var(--fs-500);
+  font-size: var(--font-size-500);
 }
 
 h3 {
-  font-size: var(--fs-400);
+  font-size: var(--font-size-400);
 }
 
 h4 {
-  font-size: var(--fs-300);
+  font-size: var(--font-size-300);
 }
 
 h5 {
-  font-size: var(--fs-200);
+  font-size: var(--font-size-200);
 }
 
 h6 {
-  font-size: var(--fs-100);
+  font-size: var(--font-size-100);
 }
 
 a {
-  color: var(--color-text);
+  color: var(--color-link);
 
   &:hover {
     text-decoration: none;
@@ -58,10 +58,10 @@ a {
 
 blockquote {
   padding-inline-start: var(--space-200);
-  border-left: var(--space-000) solid var(--color-accent);
+  border-left: var(--space-000) solid var(--color-accent-primary);
 
   p {
-    font-size: var(--fs-400);
+    font-size: var(--font-size-400);
     font-style: italic;
     line-height: 1.2;
   }
@@ -71,25 +71,21 @@ figure {
   margin-left: 0;
 
   figcaption {
-    font-size: var(--fs-000);
+    font-size: var(--font-size-000);
   }
 }
 
 pre,
 code {
-  font-family: var(--font-mono);
-  font-size: var(--fs-000);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-000);
 }
 
 code {
-  color: var(--color-text);
+  color: var(--color-code-text);
   position: relative;
   white-space: nowrap;
   word-break: break-all;
-  background-color: hsl(4, 80%, 94%);
+  background-color: var(--color-code-background);
   padding-inline: 2px;
-}
-
-strong {
-  color: var(--color-text);
 }

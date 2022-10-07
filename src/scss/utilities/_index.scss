@@ -1,17 +1,5 @@
-@use "./visibility";
-@use "./flow";
 @use "./container";
+@use "./flow";
 @use "./post";
-@use "./icon";
-@use "./font";
-@use "./color";
-@use "./border";
 @use "./space";
-
-.flex {
-  display: flex;
-}
-
-.flex-grow {
-  flex-grow: 1;
-}
+@use "./visibility";

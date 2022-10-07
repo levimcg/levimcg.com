@@ -7,38 +7,7 @@ eleventyNavigation:
   key: Projects
   order: 2
 ---
-<div class="container p-top-700 p-bottom-700">
-  <div class="post-header">
-    <a class="post-header__back-link" href="/">
-      <span>← Home</span>
-    </a>
-    <h1 class="post-header__title">{{ title | safe }}</h1>
-    <p class="post-header__description">{{ description | safe }}</p>
-  </div>
-</div>
-
-<div class="container p-bottom-500">
-  <ul class="project-list" role="list">
-    {% for project in collections.project | reverse %}
-    <li>
-      <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
-        <figure class="project-teaser__image">
-          <img src="{{ project.data.thumbnailImage }}" alt="" loading="lazy">
-        </figure>
-        <div class="project-teaser__body flow">
-          <h2 class="project-teaser__title">
-            <a href="{{ project.url }}">{{ project.data.title }}</a>
-          </h2>
-          <p class="project-teaser__description">{{ project.data.description }}</p>
-          <div class="project-teaser__cta" aria-hidden="true">
-              View project
-              <svg class="icon" aria-hidden="true">
-                <use href="#right-arrow"></use>
-              </svg>
-          </div>
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<a href="/">
+  <span>← Home</span>
+</a>
+<h1>{{ title }}</h1>

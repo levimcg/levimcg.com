@@ -10,39 +10,5 @@ eleventyNavigation:
   key: Main
 ---
 <div class="container p-top-700 p-bottom-700">
-  <div class="post-header">
-    <h1 class="sr-only">{{ title }}</h1>
-    <p class="post-header__title color-text-medium">Hey, <strong>I’m Levi</strong>. I build <strong>fast and accessible websites</strong> that also look great.</p>
-    <p class="post-header__description">I’m a web designer and front-end developer. I'm currently leading the <a href="https://rivet.iu.edu">Design Systems team</a> at Indiana University.</p>
-  </div>
-</div>
-
-<div class="container">
-  <h2>Projects</h2>
-  <p>A combination of projects from my full-time job and freelance design and development work I have done in the last few years.</p>
-
-  <ul class="project-list" role="list">
-    {% for project in collections.project | reverse %}
-    <li>
-      <div class="project-teaser {{ 'project-teaser--new' if project.data.new else '' }}">
-        <figure class="project-teaser__image">
-          <img src="{{ project.data.thumbnailImage }}" alt="" loading="lazy">
-        </figure>
-        <div class="project-teaser__body flow">
-          <h2 class="project-teaser__title">
-            <a href="{{ project.url }}">{{ project.data.title }}</a>
-          </h2>
-          <p class="project-teaser__description">{{ project.data.description }}</p>
-          <div class="project-teaser__cta" aria-hidden="true">
-              View project
-              <svg class="icon" aria-hidden="true">
-                <use href="#right-arrow"></use>
-              </svg>
-          </div>
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
 
 </div>
