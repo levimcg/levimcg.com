@@ -1,8 +1,15 @@
 .site-header {
+  border-bottom: 1px solid var(--color-ruler);
+  padding-inline-start: var(--space-600);
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-left: 1px solid var(--color-accent-secondary);
+    padding-block-start: var(--space-400);
+    padding-block-end: var(--space-400);
+    padding-inline-start: var(--space-400);
   }
 
   &__logo {

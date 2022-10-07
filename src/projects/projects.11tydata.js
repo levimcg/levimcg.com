@@ -1,5 +1,5 @@
 module.exports = {
   layout: 'layouts/project.njk',
-  tags: 'project',
+  tags: 'projects',
   permalink: 'projects/{{ title | slugify }}/'
 }

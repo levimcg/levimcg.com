@@ -2,34 +2,22 @@
 layout: layouts/base.njk
 ---
 {% from 'partials/prev-next-nav.njk' import previousNextNav %}
-
-<article class="post-layout [ container p-top-700 ]">
-  <div class="post-layout__intro">
-    <div class="post-header">
-      <a class="post-header__back-link" href="/blog/">
-        <span>← Blog</span>
-      </a>
-      <h1 class="post-header__title">{{ title }}</h1>
-      <div class="post-header__metadata">
-        <time class="date">{{ date | dateFormatted }}</time>
-        {% if tags.length > 1 %}<span aria-hidden="true">|</span>{% endif %}
-        <div class="tag-list">
-          <span class="sr-only" id="tags-label-{{ title | slugify }}">Post tags</span>
-          <ul role="list" aria-labelledby="tags-label-{{ title | slugify }}">
-            {% for tag in tags %}
-            {% if tag != "post" %}
-            <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
-            {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
+<article>
+  <a href="/blog/">
+    <span>← Blog</span>
+  </a>
+  <h1>{{ title }}</h1>
+  <time>{{ date | dateFormatted }}</time>
+  <div class="tag-list">
+    <span class="sr-only" id="tags-label-{{ title | slugify }}">Post tags</span>
+    <ul role="list" aria-labelledby="tags-label-{{ title | slugify }}">
+      {% for tag in tags %}
+      {% if tag != "post" %}
+      <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </div>
-  <div class=" post-layout__content m-top-600 p-bottom-600">
-    <div class="post flow">
-      {{ content | safe }}
-      {{ previousNextNav(collections.post, page) }}
-    </div>
-  </div>
+  {{ content | safe }}
+  {{ previousNextNav(collections.post, page) }}
 </article>

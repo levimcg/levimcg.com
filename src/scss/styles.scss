@@ -1,3 +1,21 @@
 @use "./base";
 @use "./components";
 @use "./utilities";
+
+// Article header
+
+.article-header {
+  max-width: 48rem;
+
+  &__title {
+    font-size: var(--font-size-700);
+    font-weight: var(--font-weight-bold);
+    line-height: 1.1;
+  }
+
+  &__description {
+    font-size: var(--font-size-200);
+    color: var(--color-text-muted);
+    margin-top: var(--space-400);
+  }
+}

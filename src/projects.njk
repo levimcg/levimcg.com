@@ -11,3 +11,8 @@ eleventyNavigation:
   <span>← Home</span>
 </a>
 <h1>{{ title }}</h1>
+<ul role="list">
+  {% for project in collections.projects %}
+    <li><a href="{{ project.url }}">{{ project.data.title }}</a></li>
+  {% endfor %}
+</ul>
