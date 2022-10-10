@@ -9,15 +9,19 @@ const fonts = {
     `source-code-pro-latin-400-normal.woff`,
     `source-code-pro-latin-400-normal.woff2`,
   ],
-  'public-sans': [
-    `public-sans-latin-400-normal.woff`,
-    `public-sans-latin-400-normal.woff2`,
-    `public-sans-latin-400-italic.woff`,
-    `public-sans-latin-400-italic.woff2`,
-    `public-sans-latin-700-normal.woff`,
-    `public-sans-latin-700-normal.woff2`,
-    `public-sans-latin-700-italic.woff`,
-    `public-sans-latin-700-italic.woff2`
+  'source-sans-pro': [
+    `source-sans-pro-latin-400-normal.woff`,
+    `source-sans-pro-latin-400-normal.woff2`,
+    `source-sans-pro-latin-400-italic.woff`,
+    `source-sans-pro-latin-400-italic.woff2`,
+    `source-sans-pro-latin-700-normal.woff`,
+    `source-sans-pro-latin-700-normal.woff2`,
+    `source-sans-pro-latin-700-italic.woff`,
+    `source-sans-pro-latin-700-italic.woff2`,
+    `source-sans-pro-latin-900-normal.woff`,
+    `source-sans-pro-latin-900-normal.woff2`,
+    `source-sans-pro-latin-900-italic.woff`,
+    `source-sans-pro-latin-900-italic.woff2`
   ]
 }
 

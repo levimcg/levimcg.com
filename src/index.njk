@@ -10,16 +10,65 @@ eleventyNavigation:
   key: Main
 ---
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-600 p-bottom-600 ]">
+  <div class="layout-container__inner [ p-top-700 p-bottom-600 ]">
     <h1 class="sr-only">{{ title }}</h1>
     <div class="article-header">
-      <p class="article-header__title [ font-size-800 ]">Oh hey, <br> my name is Levi.</p>
-      <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> at Indiana University.</p>
+      <div class="article-header__body">
+        <p class="article-header__title [ font-size-800 ]">Oh hey, <br> my name is <span class="marker-primary" style="--marker-bg-size: 183px 89px; --marker-position-top: 10%; --marker-position-left: -5%;">Levi.</span></p>
+        <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> at Indiana University.</p>
+      </div>
     </div>
   </div>
 </div>
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-600 ]">
-    <p>test</p>
+  <div class="layout-container__inner [ p-top-600 p-bottom-600 ]">
+    <div class="sidebar-layout content-container">
+      <!-- projects container -->
+      <div class="flow post">
+        <h2>
+          <span class="marker-secondary" style="--marker-bg-size: 127px 49px;">Projects</span>
+        </h2>
+        <p>I’m a web designer and front-end developer. I'm currently leading the Design Systems team in the Enterprise Experience group at Indiana University.</p>
+        <ul class="project-list [ m-top-500 list-reset ]">
+          {% for project in collections.projects | reverse %}
+          <li class="project-list__item">
+            <div class="project-teaser">
+              <div class="project-teaser__image">
+                <img src="{{ project.data.thumbnailImage }}" alt="">
+              </div>
+              <div class="project-teaser__body">
+                <a href="{{ project.url }}">{{ project.data.title }}</a>
+                <p>{{ project.data.description }}</p>
+                <div class="project-teaser__cta">Case study →</div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+        <div class="m-top-500">
+          <a href="/projects/">All projects →</a>
+        </div>
+      </div>
+
+      <!-- recent posts container -->
+      <div class="flow post">
+        <h2>
+          <span class="marker-tertiary" style="--marker-bg-size: 197px 49px;">Recent posts</span>
+        </h2>
+        <p>A long-running collection of notes and and a few articles I've manged to write down.</p>
+        <ol class="post-list [ list-reset m-top-400 ]">
+          {%- set reversedPosts = collections.post | reverse -%}
+          {% for post in reversedPosts.slice(0, 5) %}
+          <li class="post-list__item">
+            <div class="post-teaser">
+              <time>{{ post.date | dateFormatted }}</time>
+              <a href="{{ post.url }}">{{ post.data.title }}</a>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+        <a href="/blog/">All posts →</a>
+      </div>
+    </div>
   </div>
 </div>

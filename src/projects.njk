@@ -7,12 +7,53 @@ eleventyNavigation:
   key: Projects
   order: 2
 ---
-<a href="/">
-  <span>← Home</span>
-</a>
-<h1>{{ title }}</h1>
-<ul role="list">
-  {% for project in collections.projects %}
-    <li><a href="{{ project.url }}">{{ project.data.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-700 ]">
+    <div class="sidebar-layout content-container">
+      <div class="article-header">
+        <div class="article-header__body [ p-bottom-600 ]">
+          <a
+            class="article-header__back-link [ marker-secondary ]"
+            href="/"
+            style="--marker-bg-size: 105px 28px;"
+          >
+            <span>← Home</span>
+          </a>
+          <p class="article-header__title">{{ title }}</p>
+          <p class="article-header__description">{{ description }}</p>
+        </div>
+        {% if heroImage %}
+        <div class="article-header__hero">
+          {%- figure {
+            image: heroImage,
+            altText: heroImageAltText
+          } -%}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-400 ]">
+    <div class="flow post content-container">
+      <ul class="project-list [ list-reset ]">
+        {% for project in collections.projects | reverse %}
+        <li class="project-list__item">
+          <div class="project-teaser project-teaser--spacious">
+            <div class="project-teaser__image">
+              <img src="{{ project.data.thumbnailImage }}" alt="">
+            </div>
+            <div class="project-teaser__body">
+              <a href="{{ project.url }}">{{ project.data.title }}</a>
+              <p>{{ project.data.description }}</p>
+              <div class="project-teaser__cta">Case study →</div>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

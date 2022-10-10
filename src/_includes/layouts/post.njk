@@ -2,22 +2,51 @@
 layout: layouts/base.njk
 ---
 {% from 'partials/prev-next-nav.njk' import previousNextNav %}
+
 <article>
-  <a href="/blog/">
-    <span>← Blog</span>
-  </a>
-  <h1>{{ title }}</h1>
-  <time>{{ date | dateFormatted }}</time>
-  <div class="tag-list">
-    <span class="sr-only" id="tags-label-{{ title | slugify }}">Post tags</span>
-    <ul role="list" aria-labelledby="tags-label-{{ title | slugify }}">
-      {% for tag in tags %}
-      {% if tag != "post" %}
-      <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
-      {% endif %}
-      {% endfor %}
-    </ul>
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-700 ]">
+      <div class="sidebar-layout content-container">
+        <div class="article-header">
+          <div class="article-header__body [ p-bottom-600 ]">
+            <a
+              class="article-header__back-link [ marker-primary ]"
+              href="/blog/"
+              style="--marker-bg-size: 105px 28px;"
+            >
+              <span>← Blog</span>
+            </a>
+            <p class="article-header__title">{{ title }}</p>
+            <p class="article-header__description">{{ description }}</p>
+          </div>
+          {% if heroImage %}
+          <div class="article-header__hero">
+            {%- figure {
+              image: heroImage,
+              altText: heroImageAltText
+            } -%}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
-  {{ content | safe }}
-  {{ previousNextNav(collections.post, page) }}
+
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
+      <div class="article-layout content-container">
+        {% if about %}
+        <div class="article-layout__aside [ post flow ]">
+          <h2 class="marker-primary">About</h2>
+          <p>{{ about}}</p>
+        </div>
+        {% endif %}
+        <div class="article-layout__main post flow">
+          {{ content | safe }}
+          {{ previousNextNav(collections.post, page) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
 </article>

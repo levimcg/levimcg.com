@@ -1,9 +1,11 @@
 .content-container {
-  max-width: min(100% - var(--space-400), var(--container-max-width, 1180px));
+  max-width: min(
+    100% - var(--space-300), var(--container-max-width, 1220px)
+  );
 }
 
 .layout-container {
-  padding-left: var(--space-600);
+  padding-left: var(--space-700);
 
   &__inner {
     border-left: 1px solid var(--color-accent-secondary);

@@ -20,7 +20,7 @@ main {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-black);
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-size-500);
+  font-size: var(--font-size-400);
 }
 
 h3 {
@@ -71,6 +71,8 @@ figure {
   margin-left: 0;
 
   figcaption {
+    font-size: var(--font-size-000);
+    padding: var(--space-100);
     font-size: var(--font-size-000);
   }
 }

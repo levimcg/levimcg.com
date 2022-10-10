@@ -3,18 +3,19 @@
 
 @each $key in $scale {
   .p-top-#{$key} {
-    padding-block-start: var(--space-#{$key});
-  }
-
-  .m-top-#{$key} {
-    margin-block-start: var(--space-#{$key});
+    padding-block-start: var(--space-#{$key}) !important;
   }
 
   .p-bottom-#{$key} {
-    padding-block-end: var(--space-#{$key});
+    padding-block-end: var(--space-#{$key}) !important;
   }
 
+  .m-top-#{$key} {
+    margin-block-start: var(--space-#{$key}) !important;
+  }
+
+
   .m-bottom-#{$key} {
-    margin-block-end: var(--space-#{$key});
+    margin-block-end: var(--space-#{$key}) !important;
   }
 }

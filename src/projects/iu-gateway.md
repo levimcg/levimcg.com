@@ -1,6 +1,6 @@
 ---
 title: IU gateway
-description: Redesign of the Indiana University gateway website
+description: Redesign of the gateway site for all nine of Indiana University’s campuses
 thumbnailImage: /img/projects/iu-gateway/iu-gateway-thumbnail.png
 heroImage: /img/projects/iu-gateway/iu-gateway-hero-image.webp
 myRole: "Project lead, UX/UI Designer"
@@ -36,13 +36,13 @@ In addition designing components and screens for new content, my team was respon
 
 First, my team worked with the content strategist to create wireframes based on the page tables they supplied.
 
-<div class="post-layout__hero p-top-500 p-bottom-500 m-top-600 bg-color-green-200">
-	<div class="container">
+<div class="article-layout__hero">
+  <div class="container">
     {%- figure {
       image: "/img/projects/iu-gateway/iu-gateway-wireframes.png",
       caption: "Wireframes for main page templates"
     } -%}
-	</div>
+  </div>
 </div>
 
 For the wireframes we focused on a small modular set of design patterns that could be mixed and matched throughout the site. This made it easier for us quickly iterate on designs for the different page templates and layouts.
@@ -53,14 +53,10 @@ At the same time wireframes were being created, the development team worked to f
 
 With wireframes in place, I created a set of high fidelity visual design mockups for each of the main page types on the site. In addition to finalizing the visual design before developer hand-off, the UI mockups also gave our team the opportunity to pilot new component and patterns for the next version of [our design system](https://rivet.iu.edu).
 
-<div class="post-layout__hero p-top-500 p-bottom-500 m-top-600 bg-color-green-200">
-	<div class="container">
-    {%- figure {
-      image: "/img/projects/iu-gateway/iu-gateway-hifi-mockups.png",
-      caption: "High fidelity design mockups"
-    } -%}
-	</div>
-</div>
+{% figure {
+  image: "/img/projects/iu-gateway/iu-gateway-hifi-mockups.png",
+  caption: "High fidelity design mockups"
+} %}
 
 ## Outcome
 
@@ -68,20 +64,18 @@ We completed the project in October of 2020, about six months after we started t
 
 In addition to the new user-facing site, the development team build a new API to feed the IU Mobile app. The API integrates with the same content management system the site is built on. This integration allows the content team to update the mobile app explore content at the same time as regular site content.
 
-<div class="post-layout__hero p-top-500 m-top-600 p-bottom-400 bg-color-green-200">
-	<div class="container">
-		<div class="feature">
-			{%- figure {
-				image: "/img/projects/iu-gateway/iu-gateway-admissions-getting-started-mobile-mockup.png"
-			} -%}
-			{%- figure {
-				image: "/img/projects/iu-gateway/iu-gateway-financial-aid-help-mobile-mockup.png"
-			} -%}
-			{%- figure {
-				image: "/img/projects/iu-gateway/iu-gateway-how-to-apply-mobile-mockup.png"
-			} -%}
-		</div>
-	</div>
+<div class="article-layout__hero">
+  <div class="feature">
+    {%- figure {
+      image: "/img/projects/iu-gateway/iu-gateway-admissions-getting-started-mobile-mockup.png"
+    } -%}
+    {%- figure {
+      image: "/img/projects/iu-gateway/iu-gateway-financial-aid-help-mobile-mockup.png"
+    } -%}
+    {%- figure {
+      image: "/img/projects/iu-gateway/iu-gateway-how-to-apply-mobile-mockup.png"
+    } -%}
+  </div>
 </div>
 
 ### Results

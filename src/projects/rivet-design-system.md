@@ -1,6 +1,7 @@
 ---
 title: Rivet Design System
 description: Creating an enterprise design system for a world-renowned research university
+about: "Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU."
 thumbnailImage: /img/projects/rivet/rivet-thumbnail.png
 heroImage: /img/projects/rivet/rivet-hero-image.webp
 heroImageAltText: "Screenshots of the Rivet home page mocked up in a web browser"
@@ -11,30 +12,26 @@ date: 2022-09-13
 ---
 ## Background
 
-Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
-
 Product and development teams at IU use Rivet to create consistent products and websites faster. By removing the guesswork around usability, accessibility, and branding, it saves designers and developers time allowing them to focus on user needs and solving tough design problems.
 
 ### The problem
 
 Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
-<div class="post-layout__hero p-top-500 m-top-600 p-bottom-400 bg-color-green-200">
-	<div class="container">
-		<div class="feature">
-			{%- figure {
-				image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp",
-				altText: "The Rivet components page mocked up on a mobile phone"
-			} -%}
-			{%- figure {
-				image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp",
-				altText: "The Rivet layouts page mocked up on a mobile phone"
-			} -%}
-			{%- figure {
-				image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp",
-				altText: "The Rivet utilities page mocked up on a mobile phone"
-			} -%}
-		</div>
+<div class="article-layout__hero">
+	<div class="feature">
+		{%- figure {
+			image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp",
+			altText: "The Rivet components page mocked up on a mobile phone"
+		} -%}
+		{%- figure {
+			image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp",
+			altText: "The Rivet layouts page mocked up on a mobile phone"
+		} -%}
+		{%- figure {
+			image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp",
+			altText: "The Rivet utilities page mocked up on a mobile phone"
+		} -%}
 	</div>
 </div>
 

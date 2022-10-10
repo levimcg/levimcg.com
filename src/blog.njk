@@ -11,10 +11,33 @@ eleventyNavigation:
   key: Blog
   order: 1
 ---
-<a href="/">
-  <span>← Home</span>
-</a>
-<h1>{{ title }}</h1>
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-700 ]">
+    <div class="sidebar-layout content-container">
+      <div class="article-header">
+        <div class="article-header__body [ p-bottom-600 ]">
+          <a
+            class="article-header__back-link [ marker-primary ]"
+            href="/"
+            style="--marker-bg-size: 105px 28px;"
+          >
+            <span>← Home</span>
+          </a>
+          <p class="article-header__title">{{ title }}</p>
+          <p class="article-header__description">{{ description | safe }}</p>
+        </div>
+        {% if heroImage %}
+        <div class="article-header__hero">
+          {%- figure {
+            image: heroImage,
+            altText: heroImageAltText
+          } -%}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
 <ul role="list">
   {% for post in collections.post | reverse %}
     <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>

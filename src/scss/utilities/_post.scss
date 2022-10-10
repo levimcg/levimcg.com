@@ -1,6 +1,5 @@
 .post {
   position: relative;
-  line-height: 1.6;
 
   :is(h1, h2, h3, h4, h5, h6) {
     --flow-space: var(--space-600);
@@ -30,8 +29,8 @@
   }
 
   > p,
-  > ul li,
-  > ol li {
+  > ul li:not([class]),
+  > ol li:not([class]) {
 
     a {
       position: relative;
