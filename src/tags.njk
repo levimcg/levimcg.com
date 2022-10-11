@@ -9,21 +9,56 @@ pagination:
 permalink: /tags/{{ tag | slugify }}/
 ---
 {%- set taglist = collections[ tag ] -%}
-<h1><span>Tags |</span> {{ tag }}</h1>
-<ol role="list">
-  {%- for post in taglist | reverse -%}
-  <li>
-    <article>
-      <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-      <p class="post-teaser__description">{{ post.data.description }}</p>
-      <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
-        {% for tag in post.data.tags %}
-        {% if tag != "post" %}
-        <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-700 ]">
+    <div class="sidebar-layout content-container">
+      <div class="article-header">
+        <div class="article-header__body [ p-bottom-600 ]">
+          <a
+            class="article-header__back-link [ marker-primary ]"
+            href="/blog/"
+            style="--marker-bg-size: 105px 28px;"
+          >
+            <span>← Blog</span>
+          </a>
+          <h1 class="article-header__title">
+            <span>Tags |</span> {{ tag }}
+          </h1>
+          <p class="article-header__description">{{ description }}</p>
+        </div>
+        {% if heroImage %}
+        <div class="article-header__hero">
+          {%- figure {
+            image: heroImage,
+            altText: heroImageAltText
+          } -%}
+        </div>
         {% endif %}
-        {% endfor %}
-      </ul>
-    </article>
-  </li>
-  {%- endfor -%}
-</ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
+    <div class="flow content-container">
+      <ol role="list" class="list-reset">
+        {%- for post in taglist | reverse -%}
+        <li>
+          <article>
+            <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+            <p class="post-teaser__description">{{ post.data.description }}</p>
+            <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
+              {% for tag in post.data.tags %}
+              {% if tag != "post" %}
+              <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </article>
+        </li>
+        {%- endfor -%}
+      </ol>
+    </div>
+  </div>
+</div>

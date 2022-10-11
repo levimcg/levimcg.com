@@ -65,4 +65,9 @@
       visibility: visible;
     }
   }
+
+  * + pre,
+  pre + * {
+    --flow-space: var(--space-500);
+  }
 }

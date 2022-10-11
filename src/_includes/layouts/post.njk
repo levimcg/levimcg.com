@@ -18,7 +18,8 @@ layout: layouts/base.njk
             </a>
             <p class="article-header__title">{{ title }}</p>
             <p class="article-header__description">{{ description }}</p>
-          </div>
+          </div><!-- end body -->
+
           {% if heroImage %}
           <div class="article-header__hero">
             {%- figure {
@@ -35,12 +36,40 @@ layout: layouts/base.njk
   <div class="layout-container">
     <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
       <div class="article-layout content-container">
-        {% if about %}
-        <div class="article-layout__aside [ post flow ]">
-          <h2 class="marker-primary">About</h2>
-          <p>{{ about}}</p>
+        <div class="article-layout__aside [ flow ]">
+
+          <div class="metadata [ flow m-bottom-500 ]">
+            <div class="icon-label">
+              <div class="icon">
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#calendar"></use>
+                </svg>
+              </div>
+              <time>{{ date | dateFormatted }}</time>
+            </div>
+            {% if tags.length > 1 %}
+            <div class="icon-label">
+              <div class="icon">
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#tag"></use>
+                </svg>
+              </div>
+              <div class="tag-list">
+                <span class="sr-only" id="tags-label">Post tags</span>
+                <ul role="list" aria-labelledby="tags-label">
+                  {% set denyList = "post note" %}
+                  {% for tag in tags %}
+                  {% if tag not in denyList %}
+                  <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+          </div><!-- end metadata -->
         </div>
-        {% endif %}
+
         <div class="article-layout__main post flow">
           {{ content | safe }}
           {{ previousNextNav(collections.post, page) }}

@@ -38,8 +38,15 @@ eleventyNavigation:
     </div>
   </div>
 </div>
-<ul role="list">
-  {% for post in collections.post | reverse %}
-    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-  {% endfor %}
-</ul>
+
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
+    <div class="flow content-container">
+      <ul role="list" class="list-reset">
+        {% for post in collections.post | reverse %}
+          <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
