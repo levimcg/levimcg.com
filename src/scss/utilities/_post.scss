@@ -7,18 +7,6 @@
     letter-spacing: -.04rem;
   }
 
-  h2 {
-    font-size: var(--font-size-300);
-  }
-
-  h3 {
-    font-size: var(--font-size-200);
-  }
-
-  h4 {
-    font-size: var(--font-size-200);
-  }
-
   :where(p, li, dd, dt, figcaption, time) {
     color: var(--color-text-muted);
   }

@@ -51,23 +51,27 @@ eleventyNavigation:
       </div>
 
       <!-- recent posts container -->
-      <div class="flow post">
-        <h2>
-          <span class="marker-tertiary" style="--marker-bg-size: 197px 49px;">Recent posts</span>
-        </h2>
-        <p>A long-running collection of notes and and a few articles I've manged to write down.</p>
-        <ol class="post-list [ list-reset m-top-400 ]">
-          {%- set reversedPosts = collections.post | reverse -%}
-          {% for post in reversedPosts.slice(0, 5) %}
-          <li class="post-list__item">
-            <div class="post-teaser">
-              <time>{{ post.date | dateFormatted }}</time>
-              <a href="{{ post.url }}">{{ post.data.title }}</a>
-            </div>
-          </li>
-          {% endfor %}
-        </ol>
-        <a href="/blog/">All posts →</a>
+      <div class="flow">
+        <div class="post flow">
+          <h2>
+            <span class="marker-tertiary" style="--marker-bg-size: 197px 49px;">Recent posts</span>
+          </h2>
+          <p>A long-running collection of notes and and a few articles I've manged to write down.</p>
+        </div>
+        <div class="flow">
+          <ol class="post-list post-list--compact [ list-reset m-top-400 ]">
+            {%- set reversedPosts = collections.post | reverse -%}
+            {% for post in reversedPosts.slice(0, 5) %}
+            <li>
+              <div class="post-teaser">
+                <a class="post-teaser__title [ font-size-100 ]" href="{{ post.url }}">{{ post.data.title }}</a>
+                <time>{{ post.date | dateFormatted }}</time>
+              </div>
+            </li>
+            {% endfor %}
+          </ol>
+          <a class="cta [ m-top-400 ]" href="/blog/">All posts →</a>
+        </div>
       </div>
     </div>
   </div>

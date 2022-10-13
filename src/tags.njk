@@ -42,20 +42,13 @@ permalink: /tags/{{ tag | slugify }}/
 <div class="layout-container">
   <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
     <div class="flow content-container">
-      <ol role="list" class="list-reset">
+      <ol role="list" class="list-reset post-list">
         {%- for post in taglist | reverse -%}
         <li>
-          <article>
-            <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-            <p class="post-teaser__description">{{ post.data.description }}</p>
-            <ul role="list" aria-labelledby="tags-label-{{ loop.index }}">
-              {% for tag in post.data.tags %}
-              {% if tag != "post" %}
-              <li><a href="/tags/{{ tag | slugify }}">#{{ tag }}</a></li>
-              {% endif %}
-              {% endfor %}
-            </ul>
-          </article>
+           <div class="post-teaser">
+              <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+              <time>{{ post.date | dateFormatted }}</time>
+            </div>
         </li>
         {%- endfor -%}
       </ol>

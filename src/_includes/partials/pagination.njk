@@ -2,18 +2,12 @@
   <h2 id="my-pagination" class="sr-only">This is my Pagination</h2>
   {% if pagination.href.previous %}
     <a href="{{ pagination.href.previous }}">
-      <svg class="icon" aria-hidden="true">
-        <use href="#left-arrow"></use>
-      </svg>
-      <span>Newer posts</span>
+      <span>← Newer posts</span>
     </a>
   {% endif %}
   {% if pagination.href.next %}
     <a href="{{ pagination.href.next }}">
-      <span>Older posts</span>
-      <svg class="icon" aria-hidden="true">
-        <use href="#right-arrow"></use>
-      </svg>
+      <span>Older posts →</span>
     </a>
   {% endif %}
 </nav>

@@ -198,16 +198,31 @@
 }
 
 .post-list {
-  &__item {
-      position: relative;
-      padding: var(--space-100) var(--space-000);
-      border-top: 1px solid var(--color-ruler);
-    }
+  li {
+    border-bottom: 1px solid var(--color-ruler);
+    padding-top: var(--space-200);
+    padding-bottom: var(--space-200);
+    padding-left: var(--space-500);
+    margin-left: calc(var(--space-500) * -1);
   }
+
+  li:first-child {
+    padding-top: 0;
+  }
+
+  &--compact li {
+    margin-left: 0;
+    padding-left: var(--space-100);
+  }
+}
 
 .post-teaser {
   time {
     font-size: calc(.825 * var(--font-size-000));
+  }
+
+  &__title {
+    font-size: var(--font-size-200);
   }
 
   a {
@@ -250,4 +265,23 @@
 
 .marker-tertiary::after {
   background-image: url("/img/mark-3.png");
+}
+
+.pagination {
+  display: flex;
+  gap: var(--space-300);
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    background-color: var(--color-accent-primary);
+  }
+}
+
+// TODO: Finish styling this
+.cta {
+  display: inline-flex;
 }

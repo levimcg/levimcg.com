@@ -41,12 +41,34 @@ eleventyNavigation:
 
 <div class="layout-container">
   <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
-    <div class="flow content-container">
-      <ul role="list" class="list-reset">
-        {% for post in collections.post | reverse %}
-          <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-        {% endfor %}
-      </ul>
+    <div class="sidebar-layout content-container">
+      <div class="flow">
+        <ol role="list" class="list-reset post-list">
+          {% for post in pagination.items %}
+            <li>
+              <div class="post-teaser">
+                <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+                <time>{{ post.date | dateFormatted }}</time>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        <div class="m-top-600">
+          {% include "partials/pagination.njk" %}
+        </div>
+      </div>
+      <div class="flow">
+        <h2 class="marker-secondary" style="--marker-bg-size: 145px 49px; --marker-position-left: -10px;">Favorites</h2>
+        <ul role="list" class="post-list post-list--compact list-reset">
+          {% for favorite in collections.favorite %}
+          <li>
+            <div class="post-teaser">
+              <a href="{{ favorite.url }}">{{ favorite.data.title }}</a>
+            </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 </div>
