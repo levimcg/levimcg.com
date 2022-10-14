@@ -58,16 +58,16 @@ eleventyNavigation:
         {% endfor %}
       </div>
       <div class="flow">
-        <h2 class="marker-secondary" style="--marker-bg-size: 145px 49px; --marker-position-left: -10px;">Favorites</h2>
+        <h2 class="marker-tertiary" style="--marker-bg-size: 145px 49px; --marker-position-left: -10px;">Favorites</h2>
         <ul role="list" class="list-reset list-plain">
-          {% for favorite in collections.favorite %}
+          {% for favorite in collections.favorite | reverse %}
           <li>
             <a href="{{ favorite.url }}">{{ favorite.data.title }}</a>
             <time class="block">{{ favorite.date | dateFormatted }}</time>
           </li>
           {% endfor %}
         </ul>
-        <h2 class="marker-tertiary m-top-400">Tags</h2>
+        <h2 class="marker-secondary m-top-400">Tags</h2>
         <div class="tag-list m-top-100">
           <ul role="list" class="list-reset ">
             {% for tag in collections.tagList %}

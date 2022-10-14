@@ -8,7 +8,6 @@
   }
 
   &__logo {
-    // color: var(--color-text-muted);
     display: block;
     width: var(--space-500);
     height: var(--space-500);
@@ -44,10 +43,11 @@
       &[aria-current]::after {
         content: "";
         display: block;
-        height: .25rem;
+        height: .4rem;
         width: 100%;
-        background-color: var(--color-accent-primary);
+        background-color: var(--color-text-muted);
         position: absolute;
+        bottom: calc(var(--space-400) * -1);
       }
     }
   }

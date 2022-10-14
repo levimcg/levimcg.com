@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  gap: var(--space-300);
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    background-color: var(--color-accent-primary);
+  }
+}

@@ -2,7 +2,7 @@
   position: relative;
 
   :is(h1, h2, h3, h4, h5, h6) {
-    --flow-space: var(--space-600);
+    --flow-space: var(--space-500);
     scroll-margin-block-start: var(--space-100);
     letter-spacing: -.03rem;
   }

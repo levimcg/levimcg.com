@@ -6,6 +6,7 @@ permalink: "blog/progressive-enhancement-doesnt-have-to-be-hard/"
 tags:
   - code
   - "progressive enhancement"
+  - favorite
 ---
 I maintain a lightweight JavaScript theme switcher library called [*Themur*](https://github.com/levimcg/themur). The other day I was adding a new feature that automatically detects a user’s OS theme settings by looking at the `prefers-color-scheme` media query and got to thinking about what would happen to Themur if for some reason JS wasn't available or the script failed to load. I'll be the first to admit that a lot of the JavaScript I've written in the past has been pretty poor in terms of considering progressive enhancement, but it's and area where I want to do better. As I made this somewhat un-related update to my code, I also took the opportunity to consider how I might progressively layer on the functionality that Themur provides.
 

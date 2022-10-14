@@ -1,0 +1,18 @@
+.post-teaser {
+  time {
+    font-size: calc(.825 * var(--font-size-000));
+  }
+
+  &__title {
+    font-size: var(--font-size-200);
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

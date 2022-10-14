@@ -68,3 +68,16 @@
     }
   }
 }
+
+.metadata {
+  --flow-space: var(--space-100);
+
+  > * {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-000);
+  }
+
+  time {
+    display: inline-block;
+  }
+}
