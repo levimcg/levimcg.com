@@ -21,10 +21,12 @@ layout: layouts/base.njk
           </div>
           {% if heroImage %}
           <div class="article-header__hero">
-            {%- figure {
-              image: heroImage,
-              altText: heroImageAltText
-            } -%}
+            {%
+              image
+              heroImage,
+              heroImageAltText,
+              "(min-width: 45rem) 50vw, 100vw"
+            %}
           </div>
           {% endif %}
         </div>
@@ -38,7 +40,7 @@ layout: layouts/base.njk
         {% if about %}
         <div class="article-layout__aside [ post flow ]">
           <h2 class="marker-primary">About</h2>
-          <p>{{ about | safe }}</p>
+          {{ about | markdownify | safe }}
         </div>
         {% endif %}
         <div class="article-layout__main post flow">

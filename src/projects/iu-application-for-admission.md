@@ -2,7 +2,8 @@
 title: IU Application for Admission
 description: Redesign of the common application for admission for all of IU's nine campuses
 thumbnailImage: /img/projects/iu-application-for-admission/iu-application-for-admission-thumbnail.png
-heroImage: /img/projects/iu-application-for-admission/iu-application-for-admission-hero-image.png
+heroImage: ./src/img/projects/iu-application-for-admission/iu-application-for-admission-hero-image.png
+heroImageAltText: "Browser screenshot of the iu.edu website"
 myRole: "UX/UI Designer"
 projectDate: "2017"
 projectLink: https://apply.iu.edu

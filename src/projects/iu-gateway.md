@@ -2,18 +2,13 @@
 title: IU gateway
 description: Redesign of the gateway site for all nine of Indiana University’s campuses
 thumbnailImage: /img/projects/iu-gateway/iu-gateway-thumbnail.png
-heroImage: /img/projects/iu-gateway/iu-gateway-hero-image.webp
-myRole: "Project lead, UX/UI Designer"
-projectDate: "2020"
-projectLink: https://iu.edu
+heroImage: ./src/img/projects/iu-gateway/iu-gateway-hero-image.webp
+heroImageAltText: "Browser screenshot of the iu.edu website"
+about: |
+  [iu.edu](https://iu.edu) is Indiana University's (IU) system-wide gateway website where prospective students and their parents can go to find information about any of IU’s nine campuses.
 date: 2020-09-13
 ---
 ## Background
-
-iu.edu is Indiana University's (IU) system-wide gateway website where prospective students and their parents can go to find information about any of IU’s nine campuses.
-
-### Audience
-
 This site's main audience is prospective students and their parents. It was built to them quickly and easily find important information about tuition rates, application processes, and admissions standards.
 
 ### The problem
@@ -38,10 +33,11 @@ First, my team worked with the content strategist to create wireframes based on 
 
 <div class="article-layout__hero">
   <div class="container">
-    {%- figure {
-      image: "/img/projects/iu-gateway/iu-gateway-wireframes.png",
-      caption: "Wireframes for main page templates"
-    } -%}
+    {% image
+      "./src/img/projects/iu-gateway/iu-gateway-wireframes.png",
+      "Wireframes layouts for main page templates",
+      "(min-width: 45rem) 50vw, 100vw"
+    %}
   </div>
 </div>
 
@@ -51,12 +47,15 @@ At the same time wireframes were being created, the development team worked to f
 
 ### Deliverables
 
-With wireframes in place, I created a set of high fidelity visual design mockups for each of the main page types on the site. In addition to finalizing the visual design before developer hand-off, the UI mockups also gave our team the opportunity to pilot new component and patterns for the next version of [our design system](https://rivet.iu.edu).
+With wireframes in place, I created a set of high fidelity visual design mockups for each of the main page types on the site. In addition to finalizing the visual design before developer hand-off, the UI mockups also gave our team the opportunity to pilot new component and patterns for the next version of our design system.
 
-{% figure {
-  image: "/img/projects/iu-gateway/iu-gateway-hifi-mockups.png",
-  caption: "High fidelity design mockups"
-} %}
+<div class="article-layout__hero">
+  {% image
+    "./src/img/projects/iu-gateway/iu-gateway-hifi-mockups.png",
+    "Screenshots of visual design mockups",
+    "(min-width: 45rem) 50vw, 100vw"
+  %}
+</div>
 
 ## Outcome
 

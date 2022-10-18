@@ -1,13 +1,13 @@
 ---
 title: Rivet Design System
 description: Creating an enterprise design system for a world-renowned research university
-about: "Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU."
+about: |
+  Rivet is Indiana University's (IU) digital design system. It is a collection of templates, components, tools, and guidelines for designing digital interfaces at IU.
+
+  [Visit the site](https://rivet.iu.edu/)
 thumbnailImage: /img/projects/rivet/rivet-thumbnail.png
-heroImage: /img/projects/rivet/rivet-hero-image.webp
+heroImage: ./src/img/projects/rivet/rivet-hero-image.webp
 heroImageAltText: "Screenshots of the Rivet home page mocked up in a web browser"
-myRole: "Project lead"
-projectDate: "2017–Present"
-projectLink: https://rivet.iu.edu
 date: 2022-09-13
 ---
 ## Background
@@ -19,20 +19,23 @@ Product and development teams at IU use Rivet to create consistent products and 
 Outside of a set of content management system (CMS) templates that were being used to create brochure and informational websites, there was no common pattern library across product and software development teams before we started building Rivet. Typically, teams would choose generic pattern libraries like Bootstrap as the starting point for their apps and sites. This led to fragmented user experience (UX) across the systems students use to complete many essential tasks like the application for admission, academic planning, paying bursar bills, etc.
 
 <div class="article-layout__hero">
-	<div class="feature">
-		{%- figure {
-			image: "/img/projects/rivet/rivet-components-page-mobile-mockup.webp",
-			altText: "The Rivet components page mocked up on a mobile phone"
-		} -%}
-		{%- figure {
-			image: "/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp",
-			altText: "The Rivet layouts page mocked up on a mobile phone"
-		} -%}
-		{%- figure {
-			image: "/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp",
-			altText: "The Rivet utilities page mocked up on a mobile phone"
-		} -%}
-	</div>
+  <div class="feature">
+    {% image
+      "./src/img/projects/rivet/rivet-components-page-mobile-mockup.webp",
+      "Mockup of components page on a mobile phone",
+      "(min-width: 720px) 420px, 100vw"
+    %}
+    {% image
+      "./src/img/projects/rivet/rivet-layouts-page-mobile-mockup.webp",
+      "Mockup of layouts page on a mobile phone",
+      "(min-width: 720px) 420px, 100vw"
+    %}
+    {% image
+      "./src/img/projects/rivet/rivet-utilities-page-mobile-mockup.webp",
+      "Mockup of utilities page on a mobile phone",
+      "(min-width: 720px) 420px, 100vw"
+    %}
+  </div>
 </div>
 
 At the time my team was a part of the newly-formed User Experience Office (UXO) and were tasked by the Vice President for Information Technology's office with taking steps to improve the UX of IU's systems and applications. The lack of a consistent, IU-branded pattern library was a clear opportunity to have an impact on accomplishing UXO's goals of improving the consistency, usability, and accessibility of our digital systems. We started initial research and design work on Rivet shortly after in the Spring of 2018.
@@ -53,13 +56,12 @@ Adoption of Rivet grew slowly through the second half of 2018 and then started t
 
 By late 2019 we began planning for version two of Rivet in collaboration with the Office of Vice President of Communications and Marketing. The goal for version two was to expand the design system to be flexible enough to all of IU's digital properties including static content-focused websites and applications.
 
-<div class="post-layout__hero p-top-500 m-top-600">
-	<div class="container">
-		{%- figure {
-			image: "/img/projects/rivet/rivet-components-and-layouts.webp",
-			altText: "A web page showing filterable lists of components and CSS utilities"
-		} -%}
-	</div>
+<div class="article-layout__hero p-top-500 m-top-600">
+  {% image
+    "./src/img/projects/rivet/rivet-components-and-layouts.webp",
+    "Website screenshot",
+    "(min-width: 45rem) 50vw, 100vw"
+  %}
 </div>
 
 ## Outcome

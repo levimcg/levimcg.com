@@ -16,3 +16,13 @@
 .layout-container + .layout-container {
   border-top: 1px solid var(--color-ruler);
 }
+
+@media (max-width: 45rem) {
+  .layout-container {
+    padding-left: var(--space-400);
+
+    &__inner {
+      padding-left: var(--space-400);
+    }
+  }
+}

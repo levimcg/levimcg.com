@@ -18,11 +18,11 @@
 .article-layout {
   &__hero {
     --flow-space: var(--space-600);
+    border-bottom: 1px solid var(--color-ruler);
   }
 
   &__aside {
     p {
-      // --flow-space: var(--space-200);
       font-size: var(--font-size-000);
     }
   }
@@ -51,7 +51,6 @@
       margin-left: calc(var(--space-500) * -1);
       margin-right: calc(-50vw + 50%);
       max-width: 1280px;
-      border-bottom: 1px solid var(--color-ruler);
     }
   }
 }

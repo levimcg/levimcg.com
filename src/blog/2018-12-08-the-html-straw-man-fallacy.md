@@ -13,7 +13,7 @@ For example:
 ```html
 <div class="profile profile--compact">
   <div class="profile__image profile__image--large">
-    <img src="pat/to/image">
+    <img src="path/to/image">
   </div>
   <div class="profile__bio">
     <!-- Profile content -->
