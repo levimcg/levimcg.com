@@ -43,3 +43,9 @@
     margin-top: var(--space-400);
   }
 }
+
+@media (min-width: 45rem) {
+  p.article-header__title {
+    font-size: var(--font-size-800)
+  }
+}

@@ -8,7 +8,6 @@
   }
 
   &__logo {
-    color: var(--color-text-muted);
     display: block;
     width: var(--space-500);
     height: var(--space-500);
@@ -34,7 +33,6 @@
       text-decoration: none;
       font-family: var(--font-sans);
       font-size: var(--font-size-100);
-      color: var(--color-text-muted);
       position: relative;
 
       &[aria-current] {
