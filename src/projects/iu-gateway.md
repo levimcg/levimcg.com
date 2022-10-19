@@ -8,6 +8,7 @@ about: |
 date: 2020-09-13
 ---
 ## Background
+
 This site's main audience is prospective students and their parents. It was built to them quickly and easily find important information about tuition rates, application processes, and admissions standards.
 
 ### The problem

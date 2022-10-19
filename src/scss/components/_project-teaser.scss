@@ -2,7 +2,7 @@
   display: flex;
   gap: var(--space-400);
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: 1px solid var(--color-ruler);
   padding-left: var(--space-400);
   position: relative;
@@ -61,6 +61,6 @@
 @media (min-width: 45rem) {
   .project-teaser--spacious .project-teaser__body {
     padding-inline: var(--space-500);
-    padding-bottom: 0;
+    padding-block-end: var(--space-500);
   }
 }

@@ -34,7 +34,12 @@ eleventyNavigation:
           <li class="project-list__item">
             <div class="project-teaser">
               <div class="project-teaser__image">
-                <img src="{{ project.data.thumbnailImage }}" alt="">
+                {%
+                  image
+                  project.data.heroImage,
+                  project.data.heroImageAltText,
+                  "(min-width: 45rem) 50vw, 100vw"
+                %}
               </div>
               <div class="project-teaser__body">
                 <a href="{{ project.url }}">{{ project.data.title }}</a>
