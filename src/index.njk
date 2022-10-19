@@ -59,7 +59,7 @@ eleventyNavigation:
         <div class="flow">
           <ol class="post-list post-list--compact [ list-reset m-top-400 ]">
             {%- set reversedPosts = collections.post | reverse -%}
-            {% for post in reversedPosts.slice(0, 5) %}
+            {% for post in reversedPosts.slice(0, 4) %}
             <li>
               <div class="post-teaser">
                 <a class="post-teaser__title [ font-size-100 ]" href="{{ post.url }}">{{ post.data.title }}</a>

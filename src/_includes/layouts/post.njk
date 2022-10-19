@@ -22,10 +22,12 @@ layout: layouts/base.njk
 
           {% if heroImage %}
           <div class="article-header__hero">
-            {%- figure {
-              image: heroImage,
-              altText: heroImageAltText
-            } -%}
+            {%
+              image
+              heroImage,
+              heroImageAltText,
+              "(min-width: 45rem) 50vw, 100vw"
+            %}
           </div>
           {% endif %}
         </div>
@@ -37,7 +39,6 @@ layout: layouts/base.njk
     <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
       <div class="article-layout content-container">
         <div class="article-layout__aside [ flow ]">
-
           <div class="metadata [ flow m-bottom-500 ]">
             <div class="icon-label">
               <div class="icon">
