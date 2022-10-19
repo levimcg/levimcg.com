@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  {% include "partials/head-meta-tags.njk" %}
+  {% include "partials/head-meta-links.njk" %}
   <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %} - {{ site.title }}</title>
-  {% if page.url == "/new/" %}<meta name="robots" content="noindex">{% endif %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{% if description %}{{ description | striptags }}{% else %}{{ site.tagline }}{% endif %}" />
   {%- include 'partials/meta-cards.njk' -%}
-  <meta name="generator" content="{{ eleventy.generator }}">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
-  <link rel="stylesheet" href="/css/styles.css">
-  <link type="application/atom+xml" rel="alternate" href="{{ site.baseUrl }}/feed.xml" title="{{ site.title }}">
 </head>
 <body class="{{ ('projects' | slugify) if 'projects' in page.url else (title | slugify) }}">
   {% include "partials/icon-sprite.html" %}
