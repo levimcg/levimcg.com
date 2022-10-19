@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link type="application/atom+xml" rel="alternate" href="{{ site.baseUrl }}/feed.xml" title="{{ site.title }}">
 </head>
-<body>
+<body class="{{ ('projects' | slugify) if 'projects' in page.url else (title | slugify) }}">
   {% include "partials/icon-sprite.html" %}
   {% include 'partials/header.njk' %}
   <main id="main-content">

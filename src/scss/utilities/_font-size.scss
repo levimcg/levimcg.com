@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+@each $key in $scale {
+  .font-size-#{$key} {
+    font-size: var(--font-size-#{$key}) !important;
+  }
+}

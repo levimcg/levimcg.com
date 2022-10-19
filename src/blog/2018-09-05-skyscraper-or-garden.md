@@ -2,6 +2,8 @@
 title: "Skyscraper or garden?"
 description: "Some thoughts on how we define and then evolve design standards"
 date: 2018-09-05
+tags:
+  - favorite
 ---
 I've been the lead on a [design system project](https://rivet.iu.edu/) that serves dozens of development teams across a fairly large organization for a little over a year now. I've done a lot of work defining and documenting design standards in that time and have really enjoyed it.
 

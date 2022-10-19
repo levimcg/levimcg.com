@@ -1,0 +1,83 @@
+---
+title: Blog
+description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
+layout: layouts/base.njk
+pagination:
+  data: collections.post
+  size: 8
+  reverse: true
+eleventyNavigation:
+  parent: Main
+  key: Blog
+  order: 1
+---
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-700 ]">
+    <div class="sidebar-layout content-container">
+      <div class="article-header">
+        <div class="article-header__body [ p-bottom-600 ]">
+          <a
+            class="article-header__back-link [ marker-primary ]"
+            href="/"
+            style="--marker-bg-size: 105px 28px;"
+          >
+            <span>← Home</span>
+          </a>
+          <p class="article-header__title">{{ title }}</p>
+          <p class="article-header__description">{{ description | safe }}</p>
+        </div>
+        {% if heroImage %}
+        <div class="article-header__hero">
+          {%- figure {
+            image: heroImage,
+            altText: heroImageAltText
+          } -%}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
+    <div class="sidebar-layout content-container">
+      <div class="flow">
+        {% for year, postsInYear in collections.postsByYear %}
+        <h2 class="font-size-500" style="--flow-space: var(--space-600);">{{ year }}</h2>
+        <ol role="list" class="list-reset post-list">
+          {% for post in postsInYear | reverse %}
+            <li>
+              <div class="post-teaser">
+                <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+                <time>{{ post.date | dateFormatted }}</time>
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+        {% endfor %}
+      </div>
+      <div class="flow">
+        <h2 class="marker-tertiary" style="--marker-bg-size: 145px 49px; --marker-position-left: -10px;">Favorites</h2>
+        <ul role="list" class="list-reset list-plain">
+          {% for favorite in collections.favorite | reverse %}
+          <li>
+            <a href="{{ favorite.url }}">{{ favorite.data.title }}</a>
+            <time class="block">{{ favorite.date | dateFormatted }}</time>
+          </li>
+          {% endfor %}
+        </ul>
+        <h2 class="marker-secondary m-top-400">Tags</h2>
+        <div class="tag-list m-top-100">
+          <ul role="list" class="list-reset ">
+            {% for tag in collections.tagList %}
+            <li>
+              <a class="font-size-000" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

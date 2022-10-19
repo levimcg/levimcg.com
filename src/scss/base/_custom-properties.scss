@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1140,26,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8,s-l */
+/* @link https://utopia.fyi/type/calculator?c=320,14,1.2,1140,19,1.2,9,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  /* Type */
+  --font-size-000: clamp(1.00rem, calc(0.93rem + 0.37vw), 1.19rem);
+  --font-size-100: clamp(1.20rem, calc(1.11rem + 0.44vw), 1.43rem);
+  --font-size-200: clamp(1.44rem, calc(1.33rem + 0.53vw), 1.71rem);
+  --font-size-300: clamp(1.73rem, calc(1.60rem + 0.63vw), 2.05rem);
+  --font-size-400: clamp(2.07rem, calc(1.92rem + 0.76vw), 2.46rem);
+  --font-size-500: clamp(2.49rem, calc(2.31rem + 0.91vw), 2.96rem);
+  --font-size-600: clamp(2.99rem, calc(2.77rem + 1.09vw), 3.55rem);
+  --font-size-700: clamp(3.58rem, calc(3.32rem + 1.31vw), 4.26rem);
+  --font-size-800: clamp(4.30rem, calc(3.99rem + 1.57vw), 5.11rem);
+  --font-size-900: clamp(5.16rem, calc(4.78rem + 1.89vw), 6.13rem);
+
+  /* Space */
+  --space-000: clamp(0.25rem, calc(0.18rem + 0.37vw), 0.44rem);
+  --space-100: clamp(0.50rem, calc(0.38rem + 0.61vw), 0.81rem);
+  --space-200: clamp(0.75rem, calc(0.55rem + 0.98vw), 1.25rem);
+  --space-300: clamp(1.00rem, calc(0.76rem + 1.22vw), 1.63rem);
+  --space-400: clamp(1.50rem, calc(1.13rem + 1.83vw), 2.44rem);
+  --space-500: clamp(2.00rem, calc(1.51rem + 2.44vw), 3.25rem);
+  --space-600: clamp(3.00rem, calc(2.27rem + 3.66vw), 4.88rem);
+  --space-700: clamp(4.00rem, calc(3.02rem + 4.88vw), 6.50rem);
+  --space-800: clamp(6.00rem, calc(4.54rem + 7.32vw), 9.75rem);
+  --space-900: clamp(8.00rem, calc(6.05rem + 9.76vw), 13.00rem);
+
+  /* Fonts */
+  @each $key, $value in map.get($fonts, "family") {
+    --font-family-#{$key}: #{$value};
+  }
+
+  @each $key, $value in map.get($fonts, "weight") {
+    --font-weight-#{$key}: #{$value};
+  }
+
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+
+  --color-text: var(--color-dark-400);
+  --color-text-muted: var(--color-dark-300);
+  --color-background: var(--color-neutral-100);
+  --color-ruler: var(--color-dark-100);
+  --color-link: var(--color-dark-400);
+  --color-code-text: var(--color-dark-400);
+  --color-code-background: var(--color-neutral-200);
+}

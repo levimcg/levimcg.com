@@ -1,12 +1,82 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="container">
-  <div class="post flow space-top-900">
-    <time class="meta-date">{{ date | dateFormatted }}</time>
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
-    {% include "partials/meta-tags.njk" %}
-    {% include "partials/prev-next-nav.njk" %}
+{% from 'partials/prev-next-nav.njk' import previousNextNav %}
+
+<article>
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-700 ]">
+      <div class="sidebar-layout content-container">
+        <div class="article-header">
+          <div class="article-header__body [ p-bottom-600 ]">
+            <a
+              class="article-header__back-link [ marker-primary ]"
+              href="/blog/"
+              style="--marker-bg-size: 105px 28px;"
+            >
+              <span>← Blog</span>
+            </a>
+            <p class="article-header__title">{{ title }}</p>
+            <p class="article-header__description">{{ description }}</p>
+          </div><!-- end body -->
+
+          {% if heroImage %}
+          <div class="article-header__hero">
+            {%
+              image
+              heroImage,
+              heroImageAltText,
+              "(min-width: 45rem) 50vw, 100vw"
+            %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
+      <div class="article-layout content-container">
+        <div class="article-layout__aside [ flow ]">
+          <div class="metadata [ flow m-bottom-500 ]">
+            <div class="icon-label">
+              <div class="icon">
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#calendar"></use>
+                </svg>
+              </div>
+              <time>{{ date | dateFormatted }}</time>
+            </div>
+            {% if tags.length > 1 %}
+            <div class="icon-label">
+              <div class="icon">
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#tag"></use>
+                </svg>
+              </div>
+              <div class="tag-list">
+                <span class="sr-only" id="tags-label">Post tags</span>
+                <ul role="list" aria-labelledby="tags-label">
+                  {% set denyList = "post note" %}
+                  {% for tag in tags %}
+                  {% if tag not in denyList %}
+                  <li><a href="/tags/{{ tag | slugify }}"><span>#</span>{{ tag }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+          </div><!-- end metadata -->
+        </div>
+
+        <div class="article-layout__main post flow">
+          {{ content | safe }}
+          {{ previousNextNav(collections.post, page) }}
+        </div>
+      </div>
+    </div>
+  </div>
+
 </article>

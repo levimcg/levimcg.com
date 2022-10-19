@@ -1,11 +1,12 @@
 ---
-title: Progressive enhancement doesn't have to be hard
+title: Progressive enhancement doesn’t have to be hard
 description: Implementing a strategy for progressive enhancement might be easier than you think
 date: 2019-12-15
 permalink: "blog/progressive-enhancement-doesnt-have-to-be-hard/"
 tags:
   - code
   - "progressive enhancement"
+  - favorite
 ---
 I maintain a lightweight JavaScript theme switcher library called [*Themur*](https://github.com/levimcg/themur). The other day I was adding a new feature that automatically detects a user’s OS theme settings by looking at the `prefers-color-scheme` media query and got to thinking about what would happen to Themur if for some reason JS wasn't available or the script failed to load. I'll be the first to admit that a lot of the JavaScript I've written in the past has been pretty poor in terms of considering progressive enhancement, but it's and area where I want to do better. As I made this somewhat un-related update to my code, I also took the opportunity to consider how I might progressively layer on the functionality that Themur provides.
 
@@ -19,7 +20,7 @@ You can look more closely at [the source code](https://github.com/levimcg/themur
 
 1. Hide the toggle button using the `hidden` attribute in your button markup by default
 2. Remove the `hidden` attribute in the `setUpInitialState` function once you're sure JavaScript is available
-3. That's it! 
+3. That's it!
 
 ```html
 <!-- Toggle button markup -->
@@ -30,7 +31,7 @@ You can look more closely at [the source code](https://github.com/levimcg/themur
 export default class Themur {
   constructor(options) {
     // Call our set up function
-    this.setUpInitialState();	
+    this.setUpInitialState();
   }
 
   setUpInitialState() {

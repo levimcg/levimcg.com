@@ -11,10 +11,6 @@ module.exports = {
       url: "/about/"
     },
     {
-      title: "Artwork",
-      url: "https://levimcg.myshopify.com/"
-    },
-    {
       title: "Twitter",
       url: "https://twitter.com/levimcg/",
       me: true

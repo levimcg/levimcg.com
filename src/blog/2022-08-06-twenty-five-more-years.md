@@ -2,6 +2,8 @@
 title: Twenty-five more years
 description: Swapping out some parts on a guitar i've had for years made me think about some things
 date: 2022-08-07T03:05:02.178Z
+tags:
+  - notes
 ---
 I Gave my old bass a makeover today—a quick list of what I upgraded.
 

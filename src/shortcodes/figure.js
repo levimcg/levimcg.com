@@ -1,6 +1,6 @@
-module.exports= params => `
-<figure class="${params.classes || ''}">
-  <img loading="lazy" src="${params.image}">
-  <figcaption>${params.caption || '' }</figcaption>
+module.exports= props => `
+<figure class="${props.classes || ''}">
+  <img loading="lazy" src="${props.image}" alt="${props.altText || ''}">
+  ${props.caption ? `<figcaption>${props.caption}</figcaption>` : ''}
 </figure>
 `;

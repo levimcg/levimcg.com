@@ -1,0 +1,28 @@
+.content-container {
+  max-width: min(
+    100% - var(--space-300), var(--container-max-width, 1220px)
+  );
+}
+
+.layout-container {
+  padding-left: var(--space-700);
+
+  &__inner {
+    border-left: 1px solid var(--color-accent-secondary);
+    padding-left: var(--space-500);
+  }
+}
+
+.layout-container + .layout-container {
+  border-top: 1px solid var(--color-ruler);
+}
+
+@media (max-width: 45rem) {
+  .layout-container {
+    padding-left: var(--space-400);
+
+    &__inner {
+      padding-left: var(--space-400);
+    }
+  }
+}

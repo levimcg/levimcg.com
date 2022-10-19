@@ -1,0 +1,50 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-700 ]">
+      <div class="sidebar-layout content-container">
+        <div class="article-header">
+          <div class="article-header__body [ p-bottom-600 ]">
+            <a
+              class="article-header__back-link [ marker-{{ markerStyle }} ]"
+              href="/blog/"
+              style="--marker-bg-size: 105px 28px;"
+            >
+              <span>← Home</span>
+            </a>
+            <p class="article-header__title">{{ title }}</p>
+            <p class="article-header__description">{{ description }}</p>
+          </div>{# end body #}
+
+          {% if heroImage %}
+          <div class="article-header__hero">
+            {%- figure {
+              image: heroImage,
+              altText: heroImageAltText
+            } -%}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout-container">
+    <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
+      <div class="article-layout content-container">
+        {% if asideContent %}
+        <div class="article-layout__aside [ flow ]">
+          {{ asideContent | safe }}
+        </div>
+        {% endif %}
+
+        <div class="article-layout__main post flow">
+          {{ content | safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</article>

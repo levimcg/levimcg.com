@@ -4,6 +4,7 @@ description: You don't need to worry about the size of your HTML if you're using
 date: 2018-12-08
 tags:
   - code
+  - favorite
 ---
 When I write CSS I generally favor clarity over brevity when choosing the way I name classes/components. I will admit that this can make for some pretty long class names and can look a little weird if you're using a naming convention like BEM.
 
@@ -12,7 +13,7 @@ For example:
 ```html
 <div class="profile profile--compact">
   <div class="profile__image profile__image--large">
-    <img src="pat/to/image">
+    <img src="path/to/image">
   </div>
   <div class="profile__bio">
     <!-- Profile content -->

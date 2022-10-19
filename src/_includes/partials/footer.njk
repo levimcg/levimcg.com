@@ -1,12 +1,14 @@
-<footer class="site-footer" role="contentinfo">
-  <div class="site-footer__inner container">
-    <p class="site-footer__copyright">&copy; Levi McGranahan</p>
-    <ul class="site-footer__links" role="list">
-      {%- for link in site.links -%}
-        <li>
-          <a href="{{ link.url }}"{%- if link.me -%} rel="me"{%- endif -%}>{{ link.title }}</a>
-        </li>
-      {%- endfor -%}
-    </ul>
+<footer class="site-footer [ layout-container ]" role="contentinfo">
+  <div class="layout-container__inner">
+    <div class="site-footer__inner [ p-top-300 p-bottom-300 content-container ]">
+      <p class="site-footer__copyright">&copy; Levi McGranahan</p>
+      <ul class="site-footer__links" role="list">
+        {%- for link in site.links -%}
+          <li>
+            <a href="{{ link.url }}"{%- if link.me -%} rel="me"{%- endif -%}>{{ link.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
   </div>
 </footer>

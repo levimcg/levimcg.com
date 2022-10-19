@@ -1,0 +1,61 @@
+.post {
+  position: relative;
+
+  :is(h1, h2, h3, h4, h5, h6) {
+    --flow-space: var(--space-500);
+    scroll-margin-block-start: var(--space-100);
+    letter-spacing: -.03rem;
+  }
+
+  :where(p, li, dd, dt, figcaption, time) {
+    color: var(--color-text-muted);
+  }
+
+  h1 + time {
+    --flow-space: var(--space-500);
+    display: inline-block;
+  }
+
+  > p,
+  > ul li:not([class]),
+  > ol li:not([class]) {
+
+    a {
+      position: relative;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+
+    a::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: -.25rem;
+      width: calc(100% + .5rem);
+      height: var(--space-300);
+      background-color: var(--color-accent-primary);
+      z-index: -1;
+    }
+  }
+
+  blockquote,
+  blockquote + *  {
+    --flow-space: var(--space-500);
+  }
+
+  .heading-anchor {
+    visibility: hidden;
+  }
+
+  :is(h2, h3, h4, h5, h6):hover {
+    .heading-anchor {
+      visibility: visible;
+    }
+  }
+
+  * + pre,
+  pre + * {
+    --flow-space: var(--space-500);
+  }
+}
