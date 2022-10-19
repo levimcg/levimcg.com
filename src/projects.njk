@@ -36,14 +36,19 @@ eleventyNavigation:
 </div>
 
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-400 p-bottom-700 ]">
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
     <div class="flow post content-container">
       <ul class="project-list [ list-reset ]">
         {% for project in collections.projects | reverse %}
         <li class="project-list__item">
           <div class="project-teaser project-teaser--spacious">
             <div class="project-teaser__image">
-              <img src="{{ project.data.thumbnailImage }}" alt="">
+              {%
+                image
+                project.data.heroImage,
+                project.data.heroImageAltText,
+                "(min-width: 45rem) 50vw, 100vw"
+              %}
             </div>
             <div class="project-teaser__body">
               <a href="{{ project.url }}">{{ project.data.title }}</a>
