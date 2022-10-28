@@ -120,7 +120,7 @@ layout: base.webc
 someData: "Eleventy front matter data"
 ---
 <!--
-  This DOES note work in a page-level template.
+  This DOES not work in a page-level template.
   The heading prop gets render as the string "someData".
 -->
 <list-component @heading="someData"></list-component>
