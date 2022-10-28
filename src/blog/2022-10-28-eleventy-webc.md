@@ -28,8 +28,8 @@ I see a lot of potential here. You could do some very cool things when combined 
 
 ```html
 <site-header>
-	<site-header-logo slot="logo"></site-header-logo>
-	<site-header-nav slot="nav"></site-header-nav>
+  <site-header-logo slot="logo"></site-header-logo>
+  <site-header-nav slot="nav"></site-header-nav>
 </site-header>
 ```
 
@@ -40,12 +40,12 @@ I see a lot of potential here. You could do some very cool things when combined 
 ```html
 <h2><slot></slot></h2>
 <ul>
-	<script webc:type="render" webc:is="template">
-	function renderItems() {
-		const numbers = ['One', 'Two', 'Three']
-		return numbers.map(number => `<li>${number}</li>`).join('')
-	}
-	</script>
+  <script webc:type="render" webc:is="template">
+    function renderItems() {
+      const numbers = ['One', 'Two', 'Three']
+      return numbers.map(number => `<li>${number}</li>`).join('')
+    }
+  </script>
 </ul>
 ```
 
@@ -61,44 +61,74 @@ Maybe a lot of folks are going to prefer what feels, in my opinion, more like JS
 
 ###  Data with props and attributes
 
-Passing props a component for example from some front matter data. Everything ends up passed as a string instead of being rendered as the front matter content. See quote from the docs below.
+In this example I'm trying to pass some front matter data from a template to a `@heading` prop on a component and render that data in the component. `someData` ends up passed as a string instead of being rendered as the value of the `someData` variable from the front matter. I'm almost sure I'm missing something here as it relates to `@propName` vs. dynamic attributes (ex. `:attributeName`).
 
-So far something like this works using a slot for the heading.
+#### Test case
+
+Given this component:
+
+```html
+<!-- list-component.webc -->
+
+<h2>
+  <slot></slot>
+</h2>
+<ul>
+  <script webc:type="render" webc:is="template">
+    function renderItems() {
+      const numbers = ['One', 'Two', 'Three']
+      return numbers.map(number => `<li>${number}</li>`).join('')
+    }
+  </script>
+</ul>
+```
+
+And that component used in a template like this everything works great. "Eleventy front matter data" is rendered in the default `<slot>` as a child of the `<h2>`.
 
 ```html
 ---
 layout: base.webc
 someData: "Eleventy front matter data"
 ---
-<!-- This works -->
+<!-- This works in a page-level template -->
 <list-component>
-	<template @html="someData" webc:nokeep></template>
+  <template @html="someData" webc:nokeep></template>
 </list-component>
-
-<!-- This does not -->
-<list-component heading="someData"></list-component>
 ```
+
+But given this WebC component:
 
 ```html
 <!-- list-component.webc -->
 
-<!-- This does not work -->
-<h2 @html="this.heading">
-	<!-- This DOES works -->
-	<slot></slot>
-	<!-- This also does not -->
-	<template @html="this.heading" webc:nokeep></template>
-</h2>
+<h2 @html="this.heading"></h2>
 <ul>
-	<script webc:type="render" webc:is="template">
-	function renderItems() {
-		const numbers = ['One', 'Two', 'Three']
-		return numbers.map(number => `<li>${number}</li>`).join('')
-	</script>
+  <script webc:type="render" webc:is="template">
+    function renderItems() {
+      const numbers = ['One', 'Two', 'Three']
+      return numbers.map(number => `<li>${number}</li>`).join('')
+    }
+  </script>
 </ul>
 ```
 
-I *think* I found the [answer to this](https://www.11ty.dev/docs/languages/webc/#front-matter) on the 11ty WebC plugin docs:
+And that component used in a layout like this:
+
+```html
+---
+layout: base.webc
+someData: "Eleventy front matter data"
+---
+<!--
+  This DOES note work in a page-level template.
+  The heading prop gets render as the string "someData".
+-->
+<list-component @heading="someData"></list-component>
+```
+
+The `@heading` prop is rendered as the string "someData" instead of the value of the front matter variable passed in as the `@heading` prop on the `<list-component>` element.
+
+I *think* [this bit from the docs](https://www.11ty.dev/docs/languages/webc/#front-matter) on the 11ty site may have something to do with this:
 
 > Notable note: front matter (per standard Eleventy conventions) is supported in page-level templates only (.webc files in your input directory) and not in components...
 
