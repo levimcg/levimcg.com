@@ -65,6 +65,8 @@ In this example I'm trying to pass some front matter data from a template to a `
 
 #### Test case
 
+I put the test repo I've been working out of with these [examples up on GitHub](https://github.com/levimcg/11ty-webc-sandbox).
+
 Given this component:
 
 ```html
