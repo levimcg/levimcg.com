@@ -2,6 +2,12 @@
 title: Blog
 description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
 layout: layouts/base.njk
+backLink:
+  text: Home
+  url: /
+marker:
+  variant: primary
+  size: "105px 28px"
 pagination:
   data: collections.post
   size: 8
@@ -14,27 +20,7 @@ eleventyNavigation:
 <div class="layout-container">
   <div class="layout-container__inner [ p-top-700 ]">
     <div class="sidebar-layout content-container">
-      <div class="article-header">
-        <div class="article-header__body [ p-bottom-600 ]">
-          <a
-            class="article-header__back-link [ marker-primary ]"
-            href="/"
-            style="--marker-bg-size: 105px 28px;"
-          >
-            <span>← Home</span>
-          </a>
-          <h1 class="article-header__title">{{ title }}</h1>
-          <p class="article-header__description">{{ description | safe }}</p>
-        </div>
-        {% if heroImage %}
-        <div class="article-header__hero">
-          {%- figure {
-            image: heroImage,
-            altText: heroImageAltText
-          } -%}
-        </div>
-        {% endif %}
-      </div>
+      {% include "partials/article-header.njk" %}
     </div>
   </div>
 </div>

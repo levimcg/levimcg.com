@@ -1,0 +1,18 @@
+<div class="article-header">
+  <div class="article-header__body [ p-bottom-600 ]">
+    <a
+      class="article-header__back-link [ marker-{{ marker.variant }} ]"
+      href="{{ backLink.url if backLink.url else "/" }}"
+      style="--marker-bg-size: {{ marker.size if marker.size else '105px 28px' }};"
+    >
+      <span>← {{ backLink.text if backLink.text else "Home" }}</span>
+    </a>
+    <h1 class="article-header__title">{{ title }}</h1>
+    <p class="article-header__description">{{ description | safe }}</p>
+  </div>
+  {% if hero %}
+  <div class="article-header__hero">
+    {% image hero.url, hero.altText, "(min-width: 45rem) 50vw, 100vw" %}
+  </div>
+  {% endif %}
+</div>

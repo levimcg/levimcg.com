@@ -2,6 +2,12 @@
 title: Projects
 description: A combination of projects from my full-time job and freelance design and development work I have done in the last few years.
 layout: layouts/base.njk
+backLink:
+  text: Home
+  url: /
+marker:
+  variant: secondary
+  size: "105px 28px"
 eleventyNavigation:
   parent: Main
   key: Projects
@@ -10,27 +16,7 @@ eleventyNavigation:
 <div class="layout-container">
   <div class="layout-container__inner [ p-top-700 ]">
     <div class="sidebar-layout content-container">
-      <div class="article-header">
-        <div class="article-header__body [ p-bottom-600 ]">
-          <a
-            class="article-header__back-link [ marker-secondary ]"
-            href="/"
-            style="--marker-bg-size: 105px 28px;"
-          >
-            <span>← Home</span>
-          </a>
-          <h1 class="article-header__title">{{ title }}</h1>
-          <p class="article-header__description">{{ description }}</p>
-        </div>
-        {% if heroImage %}
-        <div class="article-header__hero">
-          {%- figure {
-            image: heroImage,
-            altText: heroImageAltText
-          } -%}
-        </div>
-        {% endif %}
-      </div>
+      {% include "partials/article-header.njk" %}
     </div>
   </div>
 </div>
@@ -45,8 +31,8 @@ eleventyNavigation:
             <div class="project-teaser__image">
               {%
                 image
-                project.data.heroImage,
-                project.data.heroImageAltText,
+                project.data.hero.url,
+                project.data.hero.altText,
                 "(min-width: 45rem) 50vw, 100vw"
               %}
             </div>

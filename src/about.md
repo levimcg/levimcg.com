@@ -3,7 +3,12 @@ title: About me
 description: "A quick summary about me and what I've been up to lately"
 metaTitle: Web designer and developer working on Rivet design system
 layout: layouts/page.njk
-markerStyle: tertiary
+backLink:
+  text: Home
+  url: /
+marker:
+  variant: tertiary
+  size: "105px 28px"
 eleventyNavigation:
   parent: Main
   key: About

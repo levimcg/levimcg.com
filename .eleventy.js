@@ -4,6 +4,8 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation")
 const { EleventyRenderPlugin } = require("@11ty/eleventy")
 const figure = require('./src/shortcodes/figure')
+const articleHero = require('./src/shortcodes/article-hero')
+const feature = require('./src/shortcodes/feature')
 const dateFormatted = require('./src/filters/dateFormatted')
 const _ = require('lodash')
 const htmlMinifier = require('html-minifier')
@@ -35,8 +37,11 @@ module.exports = function(eleventyConfig) {
 
   // Shortcodes
 
-  eleventyConfig.addShortcode('figure', figure);
-  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addShortcode('figure', figure)
+  eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
+  eleventyConfig.addPairedShortcode('hero', articleHero)
+  eleventyConfig.addPairedShortcode('feature', feature)
+
 
   // HTML minification
 
@@ -120,11 +125,13 @@ module.exports = function(eleventyConfig) {
     breaks: true,
     linkify: true,
     typographer: true
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: 'heading-anchor',
-    permalinkSymbol: '#'
-  });
+  })
+    .disable('code')
+    .use(markdownItAnchor, {
+      permalink: true,
+      permalinkClass: 'heading-anchor',
+      permalinkSymbol: '#'
+    });
 
   // Markdown settings for 11ty
   eleventyConfig.setLibrary('md', markdownLibrary);

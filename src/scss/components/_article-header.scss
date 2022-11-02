@@ -25,6 +25,10 @@
     letter-spacing: .0125rem;
   }
 
+  &__back-link:hover {
+    text-decoration: underline;
+  }
+
   &__title {
     font-size: var(--font-size-700);
     font-weight: var(--font-weight-black);
