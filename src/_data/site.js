@@ -11,8 +11,8 @@ module.exports = {
       url: "/about/"
     },
     {
-      title: "Twitter",
-      url: "https://twitter.com/levimcg/",
+      title: "Mastodon",
+      url: "https://mastodon.social/@levimcg",
       me: true
     },
     {
