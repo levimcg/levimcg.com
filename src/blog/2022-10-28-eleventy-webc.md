@@ -1,6 +1,6 @@
 ---
 title: My notes on Eleventy WebC components
-description: WebC is a compiler for single file Web Components that has some very exciting implications for Eleventy!
+description: WebC is a compiler for single file Web Components that brings first-class component model to Eleventy!
 date: 2022-10-28
 tags:
   - code
@@ -8,8 +8,6 @@ tags:
   - progressive enhancement
   - eleventy
 ---
-## A first-class component model for 11ty!
-
 The WebC plugin brings a component model similar to frameworks like Vue and Svelte to [Eleventy](https://www.11ty.dev/). It allows you to create HTML-only components (basically includes) all the way up to interactive Web Components with shadow DOM and all the benefits it offers.
 
 I generally get by just fine without components in 11ty. Nunjucks macros are fine, but they never really felt like true components to me. They also are super clunky to work with, IMO.
@@ -49,7 +47,7 @@ I see a lot of potential here. You could do some very cool things when combined 
 </ul>
 ```
 
-## Concepts I need more time with
+## Concepts I need a bit more time with
 
 It usually takes me a while to really wrap my head around new concepts like this. I'm sure I'll get there once I have the chance to work through some real-world use cases, but are some things that aren't quite clicking for me yet.
 
