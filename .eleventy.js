@@ -7,6 +7,7 @@ const figure = require('./src/shortcodes/figure')
 const articleHero = require('./src/shortcodes/article-hero')
 const feature = require('./src/shortcodes/feature')
 const dateFormatted = require('./src/filters/dateFormatted')
+const datetimeFormat = require('./src/filters/datetimeFormat')
 const _ = require('lodash')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
@@ -77,6 +78,7 @@ module.exports = function(eleventyConfig) {
     return md.render(content)
   })
   eleventyConfig.addFilter('dateFormatted', dateFormatted);
+  eleventyConfig.addFilter('datetimeFormat', datetimeFormat);
 
   // Collections
 
