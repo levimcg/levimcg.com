@@ -3,34 +3,11 @@ layout: layouts/base.njk
 ---
 {% from 'partials/prev-next-nav.njk' import previousNextNav %}
 
-<article>
+<article class="h-entry">
   <div class="layout-container">
     <div class="layout-container__inner [ p-top-600 ]">
       <div class="sidebar-layout content-container">
-        <div class="article-header">
-          <div class="article-header__body [ p-bottom-600 ]">
-            <a
-              class="article-header__back-link [ marker-primary ]"
-              href="/blog/"
-              style="--marker-bg-size: 105px 28px;"
-            >
-              <span>← Blog</span>
-            </a>
-            <h1 class="article-header__title">{{ title }}</h1>
-            <p class="article-header__description">{{ description }}</p>
-          </div><!-- end body -->
-
-          {% if heroImage %}
-          <div class="article-header__hero">
-            {%
-              image
-              heroImage,
-              heroImageAltText,
-              "(min-width: 45rem) 50vw, 100vw"
-            %}
-          </div>
-          {% endif %}
-        </div>
+        {% include "partials/article-header.njk" %}
       </div>
     </div>
   </div>
@@ -46,7 +23,7 @@ layout: layouts/base.njk
                   <use href="#calendar"></use>
                 </svg>
               </div>
-              <time>{{ date | dateFormatted }}</time>
+              <time class="dt-published" datetime="{{ date | datetimeFormat }}">{{ date | dateFormatted }}</time>
             </div>
             {% if tags.length > 1 %}
             <div class="icon-label">
@@ -71,7 +48,7 @@ layout: layouts/base.njk
           </div><!-- end metadata -->
         </div>
 
-        <div class="article-layout__main post flow">
+        <div class="article-layout__main post flow e-content">
           {{ content | safe }}
           {{ previousNextNav(collections.post, page) }}
         </div>

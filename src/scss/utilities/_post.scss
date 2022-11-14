@@ -58,4 +58,8 @@
   pre + * {
     --flow-space: var(--space-500);
   }
+
+  li + li {
+    margin-block-start: var(--space-300);
+  }
 }

@@ -7,8 +7,8 @@
     >
       <span>← {{ backLink.text if backLink.text else "Home" }}</span>
     </a>
-    <h1 class="article-header__title">{{ title }}</h1>
-    <p class="article-header__description">{{ description | safe }}</p>
+    <h1 class="article-header__title p-name">{{ title }}</h1>
+    <p class="article-header__description p-summary">{{ description | safe }}</p>
   </div>
   {% if hero %}
   <div class="article-header__hero">
