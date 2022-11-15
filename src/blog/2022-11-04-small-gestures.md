@@ -1,7 +1,7 @@
 ---
 title: A small, but significant gesture
 description: It nice when someone takes the time to send you a link
-date: 2022-11-04
+date: 2022-11-04T16:33:00
 tags:
   - notes
   - music

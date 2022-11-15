@@ -10,3 +10,13 @@
 .block {
   display: block;
 }
+
+.show-on-large {
+  display: none;
+}
+
+@media (min-width: 45rem) {
+  .show-on-large {
+    display: flex;
+  }
+}

@@ -1,7 +1,7 @@
 ---
 title: Static site generator fatigue
 description: Thinking about moving my site to a new platform with an actual CMS
-date: 2022-11-13
+date: 2022-11-13T17:20:00
 tags:
   - web development
   - eleventy

@@ -14,6 +14,14 @@
               <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
             </li>
           {%- endfor -%}
+           <li class="show-on-large">
+              <a href="/feed.xml">
+                <span>RSS</span>
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#rss"></use>
+                </svg>
+              </a>
+            </li>
         </ul>
       </nav>
     </div>

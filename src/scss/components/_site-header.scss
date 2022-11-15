@@ -1,5 +1,4 @@
 .site-header {
-  border-top: 1px solid var(--color-ruler);
   border-bottom: 1px solid var(--color-ruler);
 
   &__inner {
@@ -35,6 +34,13 @@
       font-family: var(--font-sans);
       font-size: var(--font-size-100);
       position: relative;
+      display: flex;
+      align-items: center;
+      gap: var(--space-100);
+
+      &:hover {
+        text-decoration: underline;
+      }
 
       &[aria-current] {
         color: var(--color-text);
@@ -50,11 +56,5 @@
         bottom: calc(var(--space-400) * -1);
       }
     }
-  }
-}
-
-@media (min-width: 45rem) {
-  .site-header {
-    border-top: none;
   }
 }
