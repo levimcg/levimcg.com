@@ -6,8 +6,7 @@ const { EleventyRenderPlugin } = require("@11ty/eleventy")
 const figure = require('./src/shortcodes/figure')
 const articleHero = require('./src/shortcodes/article-hero')
 const feature = require('./src/shortcodes/feature')
-const dateFormatted = require('./src/filters/dateFormatted')
-const datetimeFormat = require('./src/filters/datetimeFormat')
+const dateFilters = require('./src/filters/dates')
 const _ = require('lodash')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
@@ -77,8 +76,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('markdownify', content => {
     return md.render(content)
   })
-  eleventyConfig.addFilter('dateFormatted', dateFormatted);
-  eleventyConfig.addFilter('datetimeFormat', datetimeFormat);
+
+  Object.keys(dateFilters).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, dateFilters[filterName])
+  })
 
   // Collections
 
