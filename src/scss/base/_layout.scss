@@ -4,7 +4,7 @@
   gap: var(--space-700);
 
   > * + * {
-    flex-basis: var(--sidebar-ideal-size, 22rem);
+    flex-basis: var(--sidebar-ideal-size, 20rem);
     flex-grow: 1;
   }
 

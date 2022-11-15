@@ -45,10 +45,20 @@ permalink: /tags/{{ tag | slugify }}/
       <ol role="list" class="list-reset post-list">
         {%- for post in taglist | reverse -%}
         <li>
-           <div class="post-teaser">
-              <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-              <time>{{ post.date | dateFormatted }}</time>
+          <div class="post-teaser flow">
+            <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+            {% if post.data.description %}
+            <p class="post-teaser__description">{{ post.data.description }}</p>
+            {% endif %}
+            <div class="icon-label m-top-300">
+              <div class="icon">
+                <svg aria-hidden="true" width="24" height="24">
+                  <use href="#calendar"></use>
+                </svg>
+              </div>
+              <time class="dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
             </div>
+          </div>
         </li>
         {%- endfor -%}
       </ol>
