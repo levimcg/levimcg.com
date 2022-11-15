@@ -1,50 +1,34 @@
-const Image = require('@11ty/eleventy-img')
+// Plugins
 const syntaxHighlightPlugin = require('@11ty/eleventy-plugin-syntaxhighlight')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation")
-const { EleventyRenderPlugin } = require("@11ty/eleventy")
-const figure = require('./src/shortcodes/figure')
-const articleHero = require('./src/shortcodes/article-hero')
-const feature = require('./src/shortcodes/feature')
-const dateFilters = require('./src/filters/dates')
+// Shortcodes
+const imageShortcode = require('./src/_11ty/shortcodes/image')
+const figure = require('./src/_11ty/shortcodes/figure')
+const articleHero = require('./src/_11ty/shortcodes/article-hero')
+const feature = require('./src/_11ty/shortcodes/feature')
+// Filters
+const filters = require('./src/_11ty/filters')
+// External libraries
 const _ = require('lodash')
 const htmlMinifier = require('html-minifier')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 
-// Shortcodes
-async function imageShortcode(src, alt, sizes) {
-  let metadata = await Image(src, {
-    widths: [420, 780, 1280],
-    formats: ["webp", "jpeg"],
-    outputDir: './build/img/'
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes, {
-    whitespaceMode: 'inline'
-  });
-}
-
 module.exports = function(eleventyConfig) {
+  // Filters
+  Object.keys(filters).forEach(filterName => {
+    eleventyConfig.addFilter(filterName, filters[filterName])
+  })
 
   // Shortcodes
-
-  eleventyConfig.addShortcode('figure', figure)
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode)
+  eleventyConfig.addShortcode('figure', figure)
   eleventyConfig.addPairedShortcode('hero', articleHero)
   eleventyConfig.addPairedShortcode('feature', feature)
 
 
-  // HTML minification
-
+  // Transforms
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if (
       outputPath &&
@@ -61,25 +45,9 @@ module.exports = function(eleventyConfig) {
   });
 
   // Plugins
-
   eleventyConfig.addPlugin(syntaxHighlightPlugin);
   eleventyConfig.addPlugin(rssPlugin);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
-
-  // Filters
-
-  const md = new markdownIt({
-    html: true
-  })
-
-  eleventyConfig.addFilter('markdownify', content => {
-    return md.render(content)
-  })
-
-  Object.keys(dateFilters).forEach(filterName => {
-    eleventyConfig.addFilter(filterName, dateFilters[filterName])
-  })
 
   // Collections
 
