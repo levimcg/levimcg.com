@@ -1,7 +1,7 @@
 ---
 title: The web feels exciting again
 description: The recent Twitter mass exodus has me feeling nostalgic about some of my early experiences on the web
-date: 2022-11-16T2:23:00
+date: 2022-11-16T14:23:00
 tags:
   - web development
 ---
