@@ -1,13 +1,11 @@
 ---
 title: Blog
-description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
+#description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
 layout: layouts/base.njk
+bodyClass: blog
 backLink:
   text: Home
   url: /
-marker:
-  variant: primary
-  size: "105px 28px"
 pagination:
   data: collections.post
   size: 8
@@ -56,7 +54,7 @@ eleventyNavigation:
         {% endfor %}
       </div>
       <div class="flow">
-        <h2 class="marker-secondary">Tags</h2>
+        <h2>Tags</h2>
         <div class="tag-list m-top-100">
           <ul role="list" class="list-reset ">
             {% for tag in collections.tagList %}

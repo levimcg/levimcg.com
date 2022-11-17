@@ -8,5 +8,6 @@ module.exports = {
   marker: {
     variant: 'secondary'
   },
-  permalink: 'projects/{{ title | slugify }}/'
+  permalink: 'projects/{{ title | slugify }}/',
+  bodyClass: 'projects'
 }

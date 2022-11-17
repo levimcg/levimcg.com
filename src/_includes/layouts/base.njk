@@ -6,7 +6,7 @@
   <title>{% if metaTitle %}{{ metaTitle }}{% else %}{{ title }}{% endif %} - {{ site.title }}</title>
   {%- include 'partials/meta-cards.njk' -%}
 </head>
-<body class="{{ ('projects' | slugify) if 'projects' in page.url else (title | slugify) }}">
+<body class="{{ bodyClass }}">
   {% include "partials/icon-sprite.html" %}
   {% include 'partials/header.njk' %}
   <main id="main-content">

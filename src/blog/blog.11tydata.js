@@ -6,7 +6,5 @@ module.exports = {
     url: '/blog/',
     text: 'Blog'
   },
-  marker: {
-    variant: 'primary'
-  }
+  bodyClass: 'blog'
 }

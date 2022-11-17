@@ -14,7 +14,7 @@ eleventyNavigation:
     <h1 class="sr-only">{{ title }}</h1>
     <div class="article-header">
       <div class="article-header__body">
-        <p class="article-header__title">Oh hey, <br> my name is <span class="marker-primary" style="--marker-bg-size: 183px 89px; --marker-position-top: 10%; --marker-position-left: -5%;">Levi.</span></p>
+        <p class="article-header__title">Oh hey, <br> my name is <span class="color-accent-primary">Levi</span>.</p>
         <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> at Indiana University.</p>
       </div>
     </div>
@@ -25,9 +25,7 @@ eleventyNavigation:
     <div class="sidebar-layout content-container">
       <!-- projects container -->
       <div class="flow post">
-        <h2>
-          <span class="marker-secondary" style="--marker-bg-size: 127px 49px;">Projects</span>
-        </h2>
+        <h2>Projects</h2>
         <p>I’m a web designer and front-end developer. I'm currently leading the Design Systems team in the Enterprise Experience group at Indiana University.</p>
         <ul class="project-list [ m-top-500 list-reset ]">
           {% for project in collections.projects | reverse %}
@@ -56,9 +54,7 @@ eleventyNavigation:
       <!-- recent posts container -->
       <div class="flow">
         <div class="post flow">
-          <h2>
-            <span class="marker-tertiary" style="--marker-bg-size: 197px 49px;">Recent posts</span>
-          </h2>
+          <h2>Recent posts</h2>
           <p>A long-running collection of notes and and a few articles I've manged to write down.</p>
         </div>
         <div class="flow">

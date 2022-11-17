@@ -21,8 +21,11 @@
   &__back-link {
     text-decoration: none;
     font-size: var(--font-size-000);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     letter-spacing: .0125rem;
+    display: inline-block;
+    color: var(--color-accent-primary);
   }
 
   &__back-link:hover {
@@ -52,4 +55,16 @@
   p.article-header__title {
     font-size: var(--font-size-800)
   }
+}
+
+.blog .article-header__back-link {
+  color: var(--color-accent-primary);
+}
+
+.projects .article-header__back-link {
+  color: var(--color-accent-secondary);
+}
+
+.about .article-header__back-link {
+  color: var(--color-accent-tertiary);
 }

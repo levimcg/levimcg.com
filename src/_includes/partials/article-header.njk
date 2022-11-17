@@ -1,9 +1,8 @@
 <div class="article-header">
   <div class="article-header__body [ p-bottom-600 ]">
     <a
-      class="article-header__back-link [ marker-{{ marker.variant }} ]"
+      class="article-header__back-link"
       href="{{ backLink.url if backLink.url else '/' }}"
-      style="--marker-bg-size: {{ marker.size if marker.size else '105px 28px' }};"
     >
       <span>← {{ backLink.text if backLink.text else "Home" }}</span>
     </a>

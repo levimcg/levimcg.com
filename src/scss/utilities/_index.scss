@@ -20,3 +20,17 @@
     display: flex;
   }
 }
+
+.color-accent {
+  &-primary {
+    color: var(--color-accent-primary);
+  }
+
+  &-secondary {
+    color: var(--color-accent-secondary);
+  }
+
+  &-tertiary {
+    color: var(--color-accent-tertiary);
+  }
+}

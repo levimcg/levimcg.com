@@ -43,7 +43,7 @@
       }
 
       &[aria-current] {
-        color: var(--color-text);
+        color: var(--color-accent-primary);
       }
 
       &[aria-current]::after {
@@ -51,10 +51,30 @@
         display: block;
         height: .4rem;
         width: 100%;
-        background-color: var(--color-text-muted);
+        background-color: var(--color-accent-primary);
         position: absolute;
-        bottom: calc(var(--space-400) * -1);
+        bottom: calc(var(--space-400) * -.93);
       }
+    }
+  }
+}
+
+.projects {
+  .site-header a[aria-current] {
+    color: var(--color-accent-secondary);
+
+    &::after {
+      background-color: var(--color-accent-secondary);
+    }
+  }
+}
+
+.about {
+  .site-header a[aria-current] {
+    color: var(--color-accent-tertiary);
+
+    &::after {
+      background-color: var(--color-accent-tertiary);
     }
   }
 }
