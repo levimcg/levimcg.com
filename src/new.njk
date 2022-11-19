@@ -3,29 +3,34 @@ title: New post
 description: Create a new post
 layout: layouts/base.njk
 ---
-<div class="container content" style="margin-top: var(--size-600);">
-  <form data-new-post class="flow">
-    <fieldset class="flow">
-      <legend class="sr-only">Create a new post</legend>
-      <div style="max-width: 30ch;">
-        <label for="filename">File name slug <br> (e.g. 2022-06-22-new-post)</label>
-        <input name="filename" type="text" id="filename">
-      </div>
-      <div>
-        <label for="title">Title</label>
-        <input name="title" type="text" id="title">
-      </div>
-      <div>
-        <label for="description">Description</label>
-        <input name="description" type="text" id="description">
-      </div>
-      <div>
-        <label for="content">Content</label>
-        <textarea name="content" id="content"></textarea>
-      </div>
-    </fieldset>
-    <button type="submit">Post</button>
-  </form>
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-400 p-bottom-500 ]">
+    <div class="content-container">
+      <form data-new-post class="flow">
+        <fieldset class="flow">
+          <legend class="sr-only">Create a new post</legend>
+          <div class="flow">
+            <label for="filename">File name slug</label>
+            <span id="date-format-note">For example 2022-06-22-new-post</span>
+            <input name="filename" type="text" id="filename" aria-describedby="date-format-note">
+          </div>
+          <div>
+            <label for="title">Title</label>
+            <input name="title" type="text" id="title">
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <input name="description" type="text" id="description">
+          </div>
+          <div>
+            <label for="content">Content</label>
+            <textarea name="content" id="content"></textarea>
+          </div>
+        </fieldset>
+        <button type="submit" class="cta cta--primary">Post</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <script>

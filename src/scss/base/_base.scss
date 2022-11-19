@@ -100,3 +100,35 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type],
+textarea,
+select {
+  display: block;
+  width: 100%;
+  max-width: 45ch;
+  background-color: transparent;
+  border: 2px solid var(--color-dark-100);
+}
+
+form label + span {
+  --flow-space: .25rem;
+  display: block;
+  font-size: var(--font-size-000);
+  color: var(--color-text-muted);
+}
+
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: .125em;
+}
