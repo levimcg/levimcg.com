@@ -51,3 +51,16 @@
   --color-code-text: var(--color-dark-400);
   --color-code-background: var(--color-neutral-200);
 }
+
+.projects {
+  --color-interactive: var(--color-accent-secondary);
+}
+
+.blog,
+.tags {
+  --color-interactive: var(--color-accent-primary);
+}
+
+.about {
+  --color-interactive: var(--color-accent-tertiary);
+}

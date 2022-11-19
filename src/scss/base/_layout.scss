@@ -83,3 +83,14 @@
     display: inline-block;
   }
 }
+
+.auto-grid {
+  display: grid;
+  gap: var(--space-400);
+}
+
+@media (min-width: 45rem) {
+  .auto-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

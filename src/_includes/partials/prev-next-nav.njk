@@ -5,13 +5,13 @@
 
 <nav class="series-nav">
   {% if previousPost %}
-  <a class="series-nav__item" href="{{ previousPost.url | url }}">
+  <a class="series-nav__item series-nav__older" href="{{ previousPost.url | url }}">
     <div class="series-nav__label">Older</div>
     <div class="series-nav__link-text">{{ previousPost.data.title }}</div>
   </a>
   {% endif %}
   {% if nextPost %}
-  <a class="series-nav__item" href="{{ nextPost.url | url }}">
+  <a class="series-nav__item series-nav__item--newer" href="{{ nextPost.url | url }}">
     <div class="series-nav__label">Newer</div>
     <div class="series-nav__link-text">{{ nextPost.data.title }}</div>
   </a>

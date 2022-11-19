@@ -10,68 +10,58 @@ eleventyNavigation:
   key: Main
 ---
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-700 p-bottom-600 ]">
+  <div class="layout-container__inner [ p-top-700 p-bottom-500 ]">
     <h1 class="sr-only">{{ title }}</h1>
-    <div class="article-header">
-      <div class="article-header__body">
-        <p class="article-header__title">Oh hey, <br> my name is <span class="color-accent-primary">Levi</span>.</p>
-        <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> at Indiana University.</p>
+    <div class="article-header p-right-300">
+      <div class="article-header__body" style="--body-ideal-width: 620px;">
+        <p class="article-header__title">Oh hey, <br> my name is Levi.</p>
+        <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> in higher ed.</p>
+      </div>
+      <div class="article-header__hero">
+        {% image "./src/img/hero-image.png", "Abstract collage", "(min-width: 45rem) 50vw, 100vw" %}
       </div>
     </div>
   </div>
 </div>
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-600 p-bottom-600 ]">
-    <div class="sidebar-layout content-container">
-      <!-- projects container -->
-      <div class="flow post">
-        <h2>Projects</h2>
-        <p>I’m a web designer and front-end developer. I'm currently leading the Design Systems team in the Enterprise Experience group at Indiana University.</p>
-        <ul class="project-list [ m-top-500 list-reset ]">
-          {% for project in collections.projects | reverse %}
-          <li class="project-list__item">
-            <div class="project-teaser">
-              <div class="project-teaser__image">
-                {%
-                  image
-                  project.data.hero.url,
-                  project.data.hero.altText,
-                  "(min-width: 45rem) 50vw, 100vw"
-                %}
-              </div>
-              <div class="project-teaser__body">
-                <a href="{{ project.url }}">{{ project.data.title }}</a>
-                <p>{{ project.data.description }}</p>
-                <div class="project-teaser__cta">Case study →</div>
-              </div>
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
+    <div class="content-container flow">
+      <h2 class="section-header section-header--primary">Recent <span>posts</span></h2>
+      <ol class="list-reset auto-grid m-top-500">
+      {% set recentPosts = collections.post | reverse %}
+      {% for post in recentPosts.slice(0, 3) %}
+        <li>
+          <div class="card flow border-top p-top-300">
+            <a class="card__title" href="{{ post.url }}">{{ post.data.title }}</a>
+            <p class="card__description">{{ post.data.description }}</p>
+            <time class="card__date dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
+          </div>
+        </li>
+      {% endfor %}
+      </ol>
+      <a href="/blog/" class="cta cta--primary [ m-top-500 ]">All posts →</a>
+    </div>
+  </div>
+</div>
+<div class="layout-container">
+  <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
+    <div class="content-container flow">
+      <h2 class="section-header section-header--secondary">Work &amp; <span>Projects</span></h2>
+      <ol class="list-reset auto-grid m-top-500">
+      {% set recentProjects = collections.projects | reverse %}
+      {% for project in recentProjects.slice(0, 3) %}
+        <li>
+          <div class="card flow">
+            <div class="card__image">
+              {% image project.data.coverImage, "Project screenshot", "(min-width: 45rem) 50vw, 100vw" %}
             </div>
-          </li>
-          {% endfor %}
-        </ul>
-        <a class="cta [ m-top-600 ]" href="/projects/">All projects →</a>
-      </div>
-
-      <!-- recent posts container -->
-      <div class="flow">
-        <div class="post flow">
-          <h2>Recent posts</h2>
-          <p>A long-running collection of notes and and a few articles I've manged to write down.</p>
-        </div>
-        <div class="flow">
-          <ol class="post-list post-list--compact [ list-reset m-top-400 ]">
-            {%- set reversedPosts = collections.post | reverse -%}
-            {% for post in reversedPosts.slice(0, 4) %}
-            <li>
-              <div class="post-teaser">
-                <a class="post-teaser__title [ font-size-100 ]" href="{{ post.url }}">{{ post.data.title }}</a>
-                <time>{{ post.date | dateFormatted }}</time>
-              </div>
-            </li>
-            {% endfor %}
-          </ol>
-          <a class="cta [ m-top-500 ]" href="/blog/">All posts →</a>
-        </div>
-      </div>
+            <a class="card__title" href="{{ project.url }}">{{ project.data.title }}</a>
+            <p class="card__description">{{ project.data.description }}</p>
+          </div>
+        </li>
+      {% endfor %}
+      </ol>
+      <a href="/projects/" class="cta cta--secondary [ m-top-500 ]">All Projects →</a>
     </div>
   </div>
 </div>

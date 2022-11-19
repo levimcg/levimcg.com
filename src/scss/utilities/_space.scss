@@ -6,6 +6,10 @@
     padding-block-start: var(--space-#{$key}) !important;
   }
 
+  .p-right-#{$key} {
+    padding-inline-end: var(--space-#{$key}) !important;
+  }
+
   .p-bottom-#{$key} {
     padding-block-end: var(--space-#{$key}) !important;
   }

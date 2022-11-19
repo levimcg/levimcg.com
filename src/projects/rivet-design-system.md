@@ -1,6 +1,7 @@
 ---
 title: Rivet Design System
 description: Creating an enterprise design system for a world-renowned research university
+coverImage: "./src/img/projects/rivet/rivet-cover-image.png"
 hero:
   url: "./src/img/projects/rivet/rivet-hero-image.webp"
   altText: "Screenshots of the Rivet home page mocked up in a web browser"

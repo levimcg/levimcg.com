@@ -2,7 +2,6 @@
 @use "./flow";
 @use "./font-size";
 @use "./lists";
-@use "./marker";
 @use "./post";
 @use "./space";
 @use "./visibility";
@@ -33,4 +32,8 @@
   &-tertiary {
     color: var(--color-accent-tertiary);
   }
+}
+
+.border-top {
+  border-top: 1px solid var(--color-ruler);
 }

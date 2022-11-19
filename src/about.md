@@ -4,6 +4,10 @@ description: "A quick summary about me and what I've been up to lately"
 metaTitle: Web designer and developer working on Rivet design system
 layout: layouts/page.njk
 bodyClass: about
+hero:
+  url: "./src/img/hero-image-4.png"
+  altText: "Abstract illustration"
+  idealWidth: 580px
 backLink:
   text: Home
   url: /

@@ -28,11 +28,11 @@
     display: flex;
 
     &__item {
-      flex-basis: 100%;
+      width: 50%;
     }
 
-    &__item:not(:first-child) {
-      border-left: 1px solid var(--color-ruler);
+    &__item--newer {
+      text-align: right;
     }
   }
 }

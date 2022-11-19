@@ -5,6 +5,7 @@
     --flow-space: var(--space-500);
     scroll-margin-block-start: var(--space-100);
     letter-spacing: -.03rem;
+    line-height: 1;
   }
 
   :where(p, li, dd, dt, figcaption, time) {
@@ -24,7 +25,7 @@
       position: relative;
       white-space: nowrap;
       word-break: break-all;
-      color: var(--color-accent-primary);
+      color: var(--color-interactive);
     }
   }
 

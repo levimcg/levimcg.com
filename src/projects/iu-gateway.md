@@ -1,6 +1,7 @@
 ---
 title: IU gateway
 description: Redesign of the gateway site for all nine of Indiana University’s campuses
+coverImage: "./src/img/projects/iu-gateway/iu-gateway-cover-image.png"
 hero:
   url: "./src/img/projects/iu-gateway/iu-gateway-hero-image.webp"
   altText: "Browser screenshot of the iu.edu website"

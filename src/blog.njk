@@ -1,8 +1,12 @@
 ---
 title: Blog
-#description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
+description: A long-running collection of notes and and a few articles I've manged to write down. Grab my <a href="/feed.xml">RSS feed</a> if that’s you’re thing.
 layout: layouts/base.njk
 bodyClass: blog
+hero:
+  url: "./src/img/hero-image-2.png"
+  altText: "Abstract illustration"
+  idealWidth: 580px
 backLink:
   text: Home
   url: /
@@ -16,8 +20,8 @@ eleventyNavigation:
   order: 1
 ---
 <div class="layout-container">
-  <div class="layout-container__inner [ p-top-600 ]">
-    <div class="sidebar-layout content-container">
+  <div class="layout-container__inner [ p-top-600 p-bottom-500 ]">
+    <div class="content-container">
       {% include "partials/article-header.njk" %}
     </div>
   </div>

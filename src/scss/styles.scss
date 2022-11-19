@@ -1,3 +1,56 @@
 @use "./base";
 @use "./components";
 @use "./utilities";
+
+.section-header {
+  --color-section-accent: var(--color-text-muted);
+
+  font-size: var(--font-size-500);
+
+  > span {
+    color: var(--color-section-accent);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: var(--space-400);
+    height: var(--space-100);
+    background-color: var(--color-section-accent);
+  }
+}
+
+.section-header--primary {
+  --color-section-accent: var(--color-accent-primary);
+}
+
+.section-header--secondary {
+  --color-section-accent: var(--color-accent-secondary);
+}
+
+
+.card {
+  &__title {
+    font-size: var(--font-size-300);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-accent-primary);
+    }
+  }
+
+  &__description {
+    font-size: var(--font-size-000);
+    color: var(--color-text-muted);
+  }
+
+  &__date {
+    display: flex;
+    font-size: var(--font-size-000);
+    color: var(--color-text-muted);
+  }
+}
