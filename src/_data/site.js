@@ -11,6 +11,10 @@ module.exports = {
       url: "/about/"
     },
     {
+      title: "Now",
+      url: "/now/"
+    },
+    {
       title: "Mastodon",
       url: "https://indieweb.social/@levimcg"
     },

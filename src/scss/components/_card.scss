@@ -1,0 +1,25 @@
+.card {
+  &__title {
+    font-size: var(--font-size-300);
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    line-height: 1;
+    display: block;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-accent-primary);
+    }
+  }
+
+  &__description {
+    font-size: var(--font-size-000);
+    color: var(--color-text-muted);
+  }
+
+  &__date {
+    display: flex;
+    font-size: var(--font-size-000);
+    color: var(--color-text-muted);
+  }
+}

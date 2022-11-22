@@ -1,6 +1,6 @@
 ---
 title: About me
-description: "A quick summary about me and what I've been up to lately"
+description: A quick summary about me and what I've been up to lately
 metaTitle: Web designer and developer working on Rivet design system
 layout: layouts/page.njk
 bodyClass: about

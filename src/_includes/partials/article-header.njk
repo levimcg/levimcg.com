@@ -8,7 +8,7 @@
     </a>
     <h1 class="article-header__title p-name">{{ title }}</h1>
     {% if description %}
-    <p class="article-header__description p-summary">{{ description | safe }}</p>
+    <p class="article-header__description p-summary">{{- description | safe -}}</p>
     {% endif %}
   </div>
   {% if hero %}

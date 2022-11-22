@@ -28,28 +28,38 @@
   --color-section-accent: var(--color-accent-secondary);
 }
 
-.card {
-  &__title {
-    font-size: var(--font-size-300);
-    text-decoration: none;
-    font-weight: var(--font-weight-bold);
-    line-height: 1;
+.timeline {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-600);
+  border-left: 1px solid var(--color-ruler);
+  margin-top: 0;
+
+  li {
+    padding-left: var(--space-400);
+    position: relative;
+  }
+
+  li::before {
+    position: absolute;
+    content: "";
     display: block;
-
-    &:hover {
-      text-decoration: underline;
-      color: var(--color-accent-primary);
-    }
+    width: var(--space-300);
+    height: var(--space-300);
+    background-color: var(--color-accent-primary);
+    top: .5rem;
+    left: calc(var(--space-300) * -.5);
+    border-radius: 50%;
+    border: var(--space-000) solid var(--color-background);
   }
+}
 
-  &__description {
-    font-size: var(--font-size-000);
-    color: var(--color-text-muted);
-  }
-
-  &__date {
-    display: flex;
-    font-size: var(--font-size-000);
-    color: var(--color-text-muted);
+.timeline-teaser {
+  &__title {
+    // font-size: var(--font-size-400);
+    // font-weight: var(--font-weight-400);
+    color: var(--color-text);
+    line-height: 1;
   }
 }

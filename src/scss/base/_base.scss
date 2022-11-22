@@ -54,6 +54,11 @@ a {
   &:hover {
     text-decoration: none;
   }
+
+  &:focus-visible {
+    outline: 3px dashed var(--color-accent-primary);
+    outline-offset: var(--space-000);
+  }
 }
 
 blockquote {

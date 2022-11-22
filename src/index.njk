@@ -14,7 +14,7 @@ eleventyNavigation:
     <h1 class="sr-only">{{ title }}</h1>
     <div class="article-header p-right-300">
       <div class="article-header__body" style="--body-ideal-width: 620px;">
-        <p class="article-header__title">Oh hey, <br> my name is Levi.</p>
+        <h2 class="article-header__title">Oh hey, <br> my name is Levi.</h2>
         <p class="article-header__description">I’m a web designer and front-end developer. I'm currently working on <a href="https://rivet.iu.edu/">Design Systems</a> in higher ed.</p>
       </div>
       <div class="article-header__hero">
@@ -53,7 +53,7 @@ eleventyNavigation:
         <li>
           <div class="card flow">
             <div class="card__image">
-              {% image project.data.coverImage, "Project screenshot", "(min-width: 45rem) 50vw, 100vw" %}
+              {% image project.data.coverImage, project.data.title + " project screenshot", "(min-width: 45rem) 50vw, 100vw" %}
             </div>
             <a class="card__title" href="{{ project.url }}">{{ project.data.title }}</a>
             <p class="card__description">{{ project.data.description }}</p>

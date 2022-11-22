@@ -1,0 +1,26 @@
+---
+title: Now page
+description: A timeline of what going on in my life. I try to check in every month or so.
+about: |
+  ## About now pages
+
+  Now pages are sort of like a chronological social media feed but with fewer updates. Check out [this explainer](https://nownownow.com/about) for a, well, explainer.
+layout: layouts/page.njk
+bodyClass: now
+---
+<ol class="timeline" role="list">
+  {% for post in collections.now | reverse %}
+    <li>
+      <article class="timeline-teaser flow">
+        <h2 class="timeline-teaser__title">{{ post.data.title }}</h2>
+        {% if post.data.excerpt %}
+        {% set excerptContent %}{{ post.data.excerpt }}{% endset %}
+        {{ excerptContent | markdownify | safe }}
+        {% else %}
+        <p>{{ post.data.description }}</p>
+        {% endif %}
+        <a class="cta cta--primary" href="{{ post.url }}">Full post →</a>
+      </article>
+    </li>
+  {% endfor %}
+</ol>

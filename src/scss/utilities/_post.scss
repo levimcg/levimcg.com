@@ -21,10 +21,7 @@
   > ul li:not([class]),
   > ol li:not([class]) {
 
-    a {
-      position: relative;
-      white-space: nowrap;
-      word-break: break-all;
+    > a {
       color: var(--color-interactive);
     }
   }
