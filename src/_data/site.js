@@ -12,18 +12,15 @@ module.exports = {
     },
     {
       title: "Mastodon",
-      url: "https://mastodon.social/@levimcg",
-      me: true
+      url: "https://indieweb.social/@levimcg"
     },
     {
       title: "Instagram",
-      url: "https://www.instagram.com/levimcg/",
-      me: true
+      url: "https://www.instagram.com/levimcg/"
     },
     {
       title: "GitHub",
-      url: "https://github.com/levimcg/",
-      me: true
+      url: "https://github.com/levimcg"
     },
     {
       title: "RSS",
