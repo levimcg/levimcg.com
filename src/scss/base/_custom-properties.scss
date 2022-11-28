@@ -52,7 +52,7 @@
   --color-code-background: var(--color-neutral-200);
 }
 
-.projects {
+:where(.projects) {
   --color-interactive: var(--color-accent-secondary);
 }
 
