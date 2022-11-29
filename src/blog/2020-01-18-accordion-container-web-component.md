@@ -53,7 +53,7 @@ You could maybe just put it in a `<script>` tag and then use it in your HTML.
 ```
 
 ## My accordion-container element
-This is the approach I took for the `<accordion-container>` Custom Element I build over my holiday break. It fully follows the ARIA Authoring Practices [recommendations for accordions](https://w3c.github.io/aria-practices/#accordion) and is progressively enchanced so if JS isn't available or fails for some reason, you still will see all of the accordion content. [The source is available on GitHub](https://github.com/levimcg/accordion-container-element) where you can find documentation about how to use it, and here's a quick CodePen demo.
+This is the approach I took for the `<accordion-container>` Custom Element I build over my holiday break. It fully follows the ARIA Authoring Practices [recommendations for accordions](https://w3c.github.io/aria-practices/#accordion) and is progressively enhanced so if JS isn't available or fails for some reason, you still will see all of the accordion content. [The source is available on GitHub](https://github.com/levimcg/accordion-container-element) where you can find documentation about how to use it, and here's a quick CodePen demo.
 
 <p class="codepen" data-height="431" data-theme-id="13463" data-default-tab="result" data-user="levimcg" data-slug-hash="ZEYapRY" style="height: 431px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Accordion container element demo">
   <span>See the Pen <a href="https://codepen.io/levimcg/pen/ZEYapRY">

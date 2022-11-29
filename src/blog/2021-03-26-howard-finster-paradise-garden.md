@@ -6,7 +6,7 @@ tags:
 - travel
 - art
 ---
-We traveled last week for first time this year. It was a quick trip down to Chattanooga to spend some time with my parter’s sister, brother-in-law, and our niece. We had a great time out hiking in the mountains, and eating some of the [best chicken wings](https://pigeonmtcountrystore.webs.com/) I’ve ever had.
+We traveled last week for first time this year. It was a quick trip down to Chattanooga to spend some time with my partner’s sister, brother-in-law, and our niece. We had a great time out hiking in the mountains, and eating some of the [best chicken wings](https://pigeonmtcountrystore.webs.com/) I’ve ever had.
 
 Before heading back to Chattanooga, my brother-in-law suggested we stop at [Howard Finster’s Paradise Garden](https://paradisegardenfoundation.org/) in nearby Summerville, Georgia. Finster was a fascinating and prolific artist who found some success in the art world later in life after claiming to receive a message from God in 1976 to create 5000 "sacred works" at the age of 59. He ended up going on to produce nearly 47,000 works of art before his death in 2001!
 

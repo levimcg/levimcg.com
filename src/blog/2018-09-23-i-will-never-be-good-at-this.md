@@ -9,7 +9,7 @@ I took our dog Malcolm to the vet last week to get a bump on his rib cage checke
 
 He's still happy, and doesn't appear to be suffering at all, but we have a plan for when he starts to show more severe symptoms. That's a different feeling all together—having _a plan_. Its a different kind of guilt and sadness that comes with planning _for_ a death.
 
-![Malcom and me in bed the morning after his vet visit](../../img/posts/malcolm.jpg)
+![Malcolm and me in bed the morning after his vet visit](../../img/posts/malcolm.jpg)
 
 I was tore up the day I found out, but I've had some time to think and realized that this is probably the best-case scenario. We have some time to enjoy, and I plan to. I'll never get any better at dealing with this, but I also hope I never do.
 

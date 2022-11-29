@@ -25,7 +25,7 @@ Looking back, here are few questions I wish I would've thought more deeply about
 - **What happens when designers/developers deviate form the system?**
     - What if the result of their deviation is good and would be a valuable addition to the system?
     - What if it's really inaccessible, or bad UX design?
-- **How will you define the lifecycles of your design system?**
+- **How will you define the lifecycle of your design system?**
     - How often will you do releases?
     - How do you retire components from your design system?
     - How do you deal with breaking changes?

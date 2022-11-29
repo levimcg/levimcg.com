@@ -9,7 +9,7 @@ hero:
 about: |
   UNVEILED is a photography studio in Bloomington, Indiana specializing in boudoir and modern glamour photo shoots.
 
-  [Visit the site](https://unveiled-photo.com/)
+  <a href="https://rivet.iu.edu/" class="cta cta--secondary">Visit the site</a>
 ---
 I worked with UNVEILED to create a custom Wordpress admin interface that would allow team members to create custom page layouts based on changing marketing campaigns and promotions.
 

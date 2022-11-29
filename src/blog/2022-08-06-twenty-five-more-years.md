@@ -7,7 +7,7 @@ tags:
 ---
 I Gave my old bass a makeover today—a quick list of what I upgraded.
 
-- Pickup(s) — Seymore Duncan Quareter Pound
+- Pickup(s) — Seymour Duncan Quarter Pound
 - Fender Hight Mass bridge
 - New pickguard
 - Chrome knobs
