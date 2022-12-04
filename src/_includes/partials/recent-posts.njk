@@ -1,0 +1,14 @@
+<h2 class="section-header section-header--primary">Recent <span>posts</span></h2>
+<ol class="list-reset auto-grid m-top-500">
+{% set recentPosts = collections.post | reverse %}
+{% for post in recentPosts.slice(0, 3) %}
+  <li>
+    <div class="card flow border-top p-top-300">
+      <a class="card__title" href="{{ post.url }}">{{ post.data.title }}</a>
+      <p class="card__description">{{ post.data.description }}</p>
+      <time class="card__date dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
+    </div>
+  </li>
+{% endfor %}
+</ol>
+<a href="/blog/" class="cta cta--primary [ m-top-500 ]">All posts →</a>
