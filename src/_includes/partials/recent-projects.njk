@@ -1,0 +1,16 @@
+<h2 class="section-header section-header--secondary">Work &amp; <span>Projects</span></h2>
+<ol class="list-reset auto-grid m-top-500">
+{% set recentProjects = collections.projects | reverse %}
+{% for project in recentProjects.slice(0, 3) %}
+  <li>
+    <div class="card flow">
+      <div class="card__image">
+        {% image project.data.coverImage, project.data.title + " project screenshot", "(min-width: 45rem) 50vw, 100vw" %}
+      </div>
+      <a class="card__title" href="{{ project.url }}">{{ project.data.title }}</a>
+      <p class="card__description">{{ project.data.description }}</p>
+    </div>
+  </li>
+{% endfor %}
+</ol>
+<a href="/projects/" class="cta cta--secondary [ m-top-500 ]">All Projects →</a>
