@@ -6,7 +6,12 @@
     <div class="card flow border-top p-top-300">
       <a class="card__title" href="{{ post.url }}">{{ post.data.title }}</a>
       <p class="card__description">{{ post.data.description }}</p>
-      <time class="card__date dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
+      <div class="card__date">
+        <svg aria-hidden="true" width="20" height="20">
+          <use href="#calendar"></use>
+        </svg>
+        <time class="dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
+      </div>
     </div>
   </li>
 {% endfor %}

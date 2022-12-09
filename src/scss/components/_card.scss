@@ -19,6 +19,8 @@
 
   &__date {
     display: flex;
+    align-items: center;
+    gap: var(--space-000);
     font-size: var(--font-size-000);
     color: var(--color-text-muted);
   }
