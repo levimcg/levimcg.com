@@ -8,9 +8,9 @@
     line-height: 1;
   }
 
-  :where(p, li, dd, dt, figcaption, time) {
-    color: var(--color-text-muted);
-  }
+  // :where(p, li, dd, dt, figcaption, time) {
+  //   color: var(--color-text-muted);
+  // }
 
   h1 + time {
     --flow-space: var(--space-500);
