@@ -1,13 +1,13 @@
 .pagination {
   display: flex;
-  gap: var(--space-300);
+  gap: var(--space-400);
 
   a {
     text-decoration: none;
+    color: var(--color-accent-primary);
   }
 
   a:hover {
     text-decoration: underline;
-    background-color: var(--color-accent-primary);
   }
 }

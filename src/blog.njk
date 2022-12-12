@@ -6,7 +6,7 @@ bodyClass: blog
 hero:
   url: "./src/img/hero-image-2.png"
   altText: "Abstract illustration"
-  idealWidth: 580px
+  idealWidth: 700px
 pagination:
   data: collections.post
   size: 8
@@ -28,39 +28,42 @@ eleventyNavigation:
   <div class="layout-container__inner [ p-top-600 p-bottom-700 ]">
     <div class="sidebar-layout content-container">
       <div class="flow">
-        {% for year, postsInYear in collections.postsByYear %}
-        {% if loop.index != 1 %}
-        <h2 class="font-size-500 font-weight-regular" style="--flow-space: var(--space-600);">{{ year }}</h2>
-        {% endif %}
-        <ol role="list" class="list-reset post-list">
-          {% for post in postsInYear | reverse %}
-            <li>
-              <div class="post-teaser flow">
-                <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
-                {% if post.data.description %}
-                <p class="post-teaser__description">{{ post.data.description }}</p>
-                {% endif %}
-                <div class="icon-label m-top-300">
-                  <div class="icon">
-                    <svg aria-hidden="true" width="20" height="20">
-                      <use href="#calendar"></use>
-                    </svg>
-                  </div>
-                  <time class="dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
+        <ol class="list-reset post-list">
+          {% for post in pagination.items %}
+          <li>
+            <div class="post-teaser flow">
+              <a class="post-teaser__title" href="{{ post.url }}">{{ post.data.title }}</a>
+              {% if post.data.description %}
+              <p class="post-teaser__description">{{ post.data.description }}</p>
+              {% endif %}
+              <div class="icon-label m-top-300">
+                <div class="icon">
+                  <svg aria-hidden="true" width="24" height="24">
+                    <use href="#calendar"></use>
+                  </svg>
                 </div>
+                <time class="dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
               </div>
-            </li>
+            </div>
+          </li>
           {% endfor %}
         </ol>
-        {% endfor %}
+        <div class="pagination">
+          {% if pagination.href.previous %}
+          <a class="m-top-500" href="{{ pagination.href.previous }}">← Newer posts</a>
+          {% endif %}
+          {% if pagination.href.next %}
+          <a class="m-top-500" href="{{ pagination.href.next }}">Older posts →</a>
+          {% endif %}
+        </div>
       </div>
       <div class="flow">
         <h2>Tags</h2>
         <div class="tag-list m-top-100">
-          <ul role="list" class="list-reset ">
+          <ul role="list" class="list-reset">
             {% for tag in collections.tagList %}
             <li>
-              <a class="font-size-000" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
+              <a class="font-size-000 color-accent-primary" href="/tags/{{ tag | slugify }}/">#{{ tag }}</a>
             </li>
             {% endfor %}
           </ul>

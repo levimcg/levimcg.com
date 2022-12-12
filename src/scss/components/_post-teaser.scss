@@ -1,13 +1,13 @@
 .post-teaser {
   &__title {
-    font-size: var(--font-size-300);
+    font-size: var(--font-size-400);
     line-height: 1.1;
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-black);
+    letter-spacing: -.04rem;
   }
 
   &__description {
-    --flow-space: var(--space-100);
-    font-size: var(--font-size-000);
+    margin-block-start: var(--space-300);
     color: var(--color-text-muted);
   }
 
