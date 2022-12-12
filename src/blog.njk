@@ -36,12 +36,10 @@ eleventyNavigation:
               {% if post.data.description %}
               <p class="post-teaser__description">{{ post.data.description }}</p>
               {% endif %}
-              <div class="icon-label m-top-300">
-                <div class="icon">
-                  <svg aria-hidden="true" width="24" height="24">
-                    <use href="#calendar"></use>
-                  </svg>
-                </div>
+              <div class="post-teaser__date">
+                <svg aria-hidden="true" width="20" height="20">
+                  <use href="#calendar"></use>
+                </svg>
                 <time class="dt-published" datetime="{{ post.date | datetimeFormat }}">{{ post.date | dateFormatted }}</time>
               </div>
             </div>

@@ -11,9 +11,19 @@
     color: var(--color-text-muted);
   }
 
-  time {
-    color: var(--color-text-muted);
+  &__date {
+    display: flex;
+    align-items: center;
     font-size: var(--font-size-000);
+    gap: var(--space-000);
+
+    time {
+      color: var(--color-text-muted);
+    }
+
+    svg {
+      color: var(--color-dark-200);
+    }
   }
 
   a {
